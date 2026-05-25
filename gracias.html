@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¡Recibido! — Sky Marketing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .gracias-wrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 5% 60px;
+      text-align: center;
+      position: relative;
+    }
+
+    /* subtle radial glow */
+    .gracias-wrap::before {
+      content: '';
+      position: fixed;
+      top: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(126,220,255,0.10) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .check-icon {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: rgba(126,220,255,0.12);
+      border: 2px solid rgba(126,220,255,0.35);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 32px;
+      animation: pop 0.5s cubic-bezier(0.34,1.56,0.64,1) both;
+    }
+    .check-icon svg { width: 36px; height: 36px; }
+
+    @keyframes pop {
+      from { opacity: 0; transform: scale(0.5); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    .gracias-eyebrow {
+      font-size: 0.82rem; font-weight: 600; letter-spacing: 2px;
+      color: var(--sky); text-transform: uppercase;
+      margin-bottom: 16px;
+      animation: fadeUp 0.5s 0.15s ease both;
+    }
+    .gracias-h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800; line-height: 1.15;
+      margin-bottom: 20px;
+      animation: fadeUp 0.5s 0.2s ease both;
+    }
+    .gracias-h1 span { color: var(--sky); }
+    .gracias-sub {
+      font-size: 1.05rem; color: var(--muted);
+      max-width: 520px; margin: 0 auto 48px;
+      animation: fadeUp 0.5s 0.25s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Steps */
+    .steps-row {
+      display: flex; gap: 16px; flex-wrap: wrap;
+      justify-content: center;
+      max-width: 860px;
+      margin: 0 auto 48px;
+      animation: fadeUp 0.5s 0.32s ease both;
+    }
+    .step-card {
+      flex: 1 1 220px; max-width: 260px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(126,220,255,0.10);
+      border-radius: var(--radius);
+      padding: 28px 22px;
+      text-align: left;
+    }
+    .step-num {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px;
+      color: var(--sky); text-transform: uppercase;
+      margin-bottom: 10px; opacity: 0.85;
+    }
+    .step-title {
+      font-size: 0.97rem; font-weight: 700;
+      margin-bottom: 6px; color: var(--light);
+    }
+    .step-desc {
+      font-size: 0.84rem; color: var(--muted); line-height: 1.55;
+    }
+
+    /* CTA */
+    .wa-cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #25D366; color: #fff;
+      font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1rem;
+      padding: 16px 32px; border-radius: 100px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      margin-bottom: 20px;
+      animation: fadeUp 0.5s 0.4s ease both;
+    }
+    .wa-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(37,211,102,0.35);
+    }
+    .wa-cta svg { width: 22px; height: 22px; flex-shrink: 0; }
+
+    .back-link {
+      font-size: 0.85rem; color: var(--muted);
+      text-decoration: underline; text-underline-offset: 3px;
+      transition: color var(--t);
+      animation: fadeUp 0.5s 0.45s ease both;
+    }
+    .back-link:hover { color: var(--sky); }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo-light.png" alt="Sky Marketing"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+        <span class="logo-fallback" style="display:none">Sky</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="servicios.html" class="nav-link">Servicios</a>
+        <a href="nosotros.html" class="nav-link">Nosotros</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+        <a href="index.html#formulario" class="btn-nav">Aplicar ahora</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <main class="gracias-wrap">
+    <div class="check-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#7EDCFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+    </div>
+
+    <p class="gracias-eyebrow">Aplicación recibida</p>
+    <h1 class="gracias-h1">Gracias, <span id="nombre">estamos listos</span>.</h1>
+    <p class="gracias-sub">
+      Tu solicitud llegó sin problema. En menos de 24 horas te contactamos para revisar si somos un buen fit y armar el plan.
+    </p>
+
+    <!-- Next steps -->
+    <div class="steps-row">
+      <div class="step-card">
+        <p class="step-num">Paso 01</p>
+        <p class="step-title">Revisamos tu perfil</p>
+        <p class="step-desc">Analizamos la información que nos enviaste para entender dónde está tu negocio hoy.</p>
+      </div>
+      <div class="step-card">
+        <p class="step-num">Paso 02</p>
+        <p class="step-title">Te escribimos por WhatsApp</p>
+        <p class="step-desc">En menos de 24 horas te contactamos para agendar una llamada de 20 minutos.</p>
+      </div>
+      <div class="step-card">
+        <p class="step-num">Paso 03</p>
+        <p class="step-title">Diagnóstico gratuito</p>
+        <p class="step-desc">En la llamada hacemos un diagnóstico rápido de tus anuncios y te mostramos qué cambiaríamos.</p>
+      </div>
+    </div>
+
+    <!-- WhatsApp CTA -->
+    <a id="waCta" href="https://wa.me/573182258333?text=Hola%20Sky%20Marketing%2C%20acabo%20de%20llenar%20el%20formulario%20de%20aplicaci%C3%B3n." class="wa-cta" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.524 5.847L.057 23.882l6.197-1.624A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.001-1.374l-.36-.213-3.68.965.981-3.595-.234-.369A9.818 9.818 0 012.182 12C2.182 6.578 6.578 2.182 12 2.182S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/>
+      </svg>
+      Escríbenos por WhatsApp
+    </a>
+    <br/>
+    <a href="index.html" class="back-link">← Volver al inicio</a>
+  </main>
+
+  <!-- WhatsApp float -->
+  <a href="https://wa.me/573182258333?text=Hola%20Sky%20Marketing%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.524 5.847L.057 23.882l6.197-1.624A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.001-1.374l-.36-.213-3.68.965.981-3.595-.234-.369A9.818 9.818 0 012.182 12C2.182 6.578 6.578 2.182 12 2.182S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/>
+    </svg>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Read URL params to personalize
+    const params = new URLSearchParams(window.location.search);
+    const nombre = params.get('name');
+    const wa     = params.get('wa');
+
+    if (nombre) {
+      document.getElementById('nombre').textContent = nombre.split(' ')[0];
+    }
+
+    if (wa) {
+      const msg = encodeURIComponent(
+        `Hola Sky Marketing, soy ${nombre || 'cliente'} y acabo de llenar el formulario de aplicación. ¿Cuándo podemos hablar?`
+      );
+      document.getElementById('waCta').href = `https://wa.me/57${wa.replace(/\D/g,'')}?text=${msg}`;
+    }
+  </script>
+</body>
+</html>

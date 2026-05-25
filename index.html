@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sky Marketing — Meta Ads para Ecommerce en Colombia</title>
+  <meta name="description" content="Duplicamos las ventas de tu ecommerce en menos de 90 días con el método PAC. +200M COP en inversión gestionada." />
+
+  <!-- Meta Pixel placeholder — reemplaza YOUR_PIXEL_ID -->
+  <!--
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','YOUR_PIXEL_ID');fbq('track','PageView');
+  </script>
+  -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* ── HERO ─────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 130px 5% 80px;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 70% 55% at 50% -5%, rgba(75,143,216,0.2) 0%, transparent 65%),
+        radial-gradient(ellipse 35% 40% at 85% 85%, rgba(126,220,255,0.07) 0%, transparent 60%);
+    }
+    /* grid overlay */
+    .hero::after {
+      content: '';
+      position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(126,220,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(126,220,255,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 30%, transparent 100%);
+    }
+    .hero-inner { position: relative; z-index: 1; max-width: 780px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(126,220,255,0.09);
+      border: 1px solid rgba(126,220,255,0.22);
+      border-radius: 100px; padding: 7px 18px;
+      font-size: 0.76rem; font-weight: 600;
+      color: var(--sky); letter-spacing: 0.04em; text-transform: uppercase;
+      margin-bottom: 28px;
+      opacity: 0; animation: fadeUp 0.7s 0.1s forwards;
+    }
+    .dot {
+      width: 7px; height: 7px; background: var(--mint);
+      border-radius: 50%; flex-shrink: 0;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity:1; transform:scale(1); }
+      50%      { opacity:0.45; transform:scale(1.5); }
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5.5vw, 3.9rem);
+      font-weight: 800; line-height: 1.09; letter-spacing: -2px;
+      margin-bottom: 22px;
+      opacity: 0; animation: fadeUp 0.7s 0.22s forwards;
+    }
+    .hero h1 em { font-style: normal; color: var(--sky); }
+    .hero-desc {
+      font-size: clamp(1rem, 2vw, 1.18rem);
+      color: var(--muted); max-width: 520px; margin: 0 auto 40px;
+      line-height: 1.65;
+      opacity: 0; animation: fadeUp 0.7s 0.36s forwards;
+    }
+    .hero-cta {
+      display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;
+      opacity: 0; animation: fadeUp 0.7s 0.5s forwards;
+    }
+    .hero-stats {
+      display: flex; align-items: center; justify-content: center;
+      flex-wrap: wrap; gap: 0; margin-top: 60px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px; padding: 22px 32px;
+      opacity: 0; animation: fadeUp 0.7s 0.65s forwards;
+    }
+    .stat { text-align: center; padding: 0 28px; }
+    .stat strong { display: block; font-size: 1.8rem; font-weight: 800; color: var(--sky); letter-spacing: -1px; }
+    .stat span { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+    .stat-divider { width: 1px; height: 44px; background: rgba(255,255,255,0.1); }
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(22px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo-light.png" alt="Sky Marketing"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+        <span class="logo-fallback">Sky</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link active">Inicio</a>
+        <a href="servicios.html" class="nav-link">Servicios</a>
+        <a href="nosotros.html" class="nav-link">Nosotros</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+        <a href="#formulario" class="btn-nav">Diagnóstico gratis →</a>
+      </nav>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Meta Ads para ecommerce · Colombia
+      </div>
+      <h1>Duplicamos tus ventas<br /><em>en menos de 90 días.</em></h1>
+      <p class="hero-desc">
+        Con el método PAC — validado con más de $200M COP en pauta —
+        hacemos que cada peso invertido en Meta trabaje para ti.
+      </p>
+      <div class="hero-cta">
+        <a href="#formulario" class="btn-primary">Ver si califico →</a>
+        <a href="servicios.html" class="btn-ghost">Conocer el método</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <strong>+$200M</strong>
+          <span>COP en pauta gestionada</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <strong>+5 años</strong>
+          <span>de experiencia</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <strong>6+</strong>
+          <span>marcas escaladas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTES BAR -->
+  <div class="clientes-bar reveal">
+    <div class="container">
+      <p class="clientes-label">Marcas que han confiado en Sky Marketing</p>
+      <div class="logos-row">
+        <span class="logo-pill">Javier Jiménez</span>
+        <span class="logo-pill">Valenzza Men</span>
+        <span class="logo-pill">Comiendo Sano</span>
+        <span class="logo-pill">Lamaite</span>
+        <span class="logo-pill">Kendi Panama</span>
+        <span class="logo-pill">Laserati</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROBLEMA -->
+  <section class="section bg-dark2" id="problema">
+    <div class="container reveal">
+      <div class="section-label">El problema</div>
+      <h2 class="section-title">¿Te suena alguna de estas <em>situaciones</em>?</h2>
+      <p class="section-sub">La mayoría de ecommerce en Colombia invierten en Meta Ads sin un proceso claro — y eso les cuesta caro.</p>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="pain-icon">📉</div>
+          <h3>El ROAS cae cuando escalas</h3>
+          <p>Subes el presupuesto y tus anuncios dejan de ser rentables. No sabes cuándo ni cómo escalar sin arriesgar todo.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">🎲</div>
+          <h3>Crear anuncios es cuestión de suerte</h3>
+          <p>No tienes un proceso claro. Lanzas creativos a ver qué pasa y dependes de uno o dos anuncios que ya no duran.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">💸</div>
+          <h3>Inviertes pero no sabes si estás ganando</h3>
+          <p>No hay métricas claras, no hay reportes, no hay control. Solo la sensación de que la plata se va.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">💬</div>
+          <h3>Gastas en creadores sin estrategia</h3>
+          <p>Mandas el producto sin guion, recibes un video editado sin variedad para testear. UGC sin proceso no funciona.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">🪝</div>
+          <h3>Tienes tráfico pero no ventas</h3>
+          <p>Tu Shopify recibe visitas pero la conversión es baja. El problema puede estar en el anuncio, la audiencia o la oferta.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">🤝</div>
+          <h3>Otras agencias ya te fallaron</h3>
+          <p>Prometieron resultados, gestionaron campañas y no entendiste qué hicieron. Necesitas proceso documentado, no promesas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÉTODO PAC -->
+  <section class="section bg-dark3" id="metodo">
+    <div class="container reveal">
+      <div class="section-label">Nuestro método</div>
+      <h2 class="section-title">El sistema <em>PAC</em>: anuncios que venden por diseño</h2>
+      <p class="section-sub">No improvisamos. Cada anuncio sigue un proceso validado de principio a fin para maximizar la diversidad creativa y los resultados.</p>
+      <div class="pac-grid">
+        <div class="pac-card">
+          <div class="pac-letter">P</div>
+          <div class="pac-num">01 — Producto</div>
+          <h3>Brief del producto</h3>
+          <p>Analizamos a fondo tu producto, tu mercado y tu competencia. Entendemos qué diferencia lo tuyo y por qué tu cliente ideal debería comprarte — y no a otro.</p>
+          <span class="pac-tag">Investigación estratégica</span>
+        </div>
+        <div class="pac-card">
+          <div class="pac-letter">A</div>
+          <div class="pac-num">02 — Ángulos</div>
+          <h3>Ángulos de venta</h3>
+          <p>Con IA y metodología propia, generamos de 20 a 50 ángulos de venta en distintos niveles de consciencia para llegar a tu cliente en el momento exacto del proceso de compra.</p>
+          <span class="pac-tag">IA + estrategia creativa</span>
+        </div>
+        <div class="pac-card">
+          <div class="pac-letter">C</div>
+          <div class="pac-num">03 — Creación</div>
+          <h3>Creación con IA</h3>
+          <p>Convertimos cada ángulo en hooks, guiones y conceptos basados en anuncios validados por la industria. Resultado: de 50 a 100 variaciones por guion para darle volumen y calidad real a Meta.</p>
+          <span class="pac-tag">50–100 anuncios por guion</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LO QUE INCLUYE -->
+  <section class="section bg-dark2">
+    <div class="container reveal">
+      <div class="section-label">El servicio</div>
+      <h2 class="section-title">Todo lo que hacemos por <em>tu negocio</em></h2>
+      <p class="section-sub">Un sistema completo de gestión publicitaria. Nada por fuera, nada improvisado.</p>
+      <div class="incluye-grid">
+        <div class="incluye-item">
+          <div class="check">✓</div>
+          <div>
+            <strong>Configuración de activos digitales</strong>
+            <span>Fanpage, cuenta publicitaria, Pixel, API de conversiones, WhatsApp Business y más.</span>
+          </div>
+        </div>
+        <div class="incluye-item">
+          <div class="check">✓</div>
+          <div>
+            <strong>Estudio de mercado</strong>
+            <span>Análisis profundo del cliente ideal, la competencia y las oportunidades de tu nicho.</span>
+          </div>
+        </div>
+        <div class="incluye-item">
+          <div class="check">✓</div>
+          <div>
+            <strong>Estrategia personalizada</strong>
+            <span>Diseñada según tu presupuesto, objetivos de ventas y canal principal (Shopify o WhatsApp).</span>
+          </div>
+        </div>
+        <div class="incluye-item">
+          <div class="check">✓</div>
+          <div>
+            <strong>Guiones para anuncios</strong>
+            <span>Guiones persuasivos con ángulos de venta validados y niveles de consciencia definidos.</span>
+          </div>
+        </div>
+        <div class="incluye-item">
+          <div class="check">✓</div>
+          <div>
+            <strong>Creación de piezas gráficas</strong>
+            <span>Diseño y edición de todos los creativos necesarios para las campañas.</span>
+          </div>
+        </div>
+        <div class="incluye-item">
+          <div class="check">✓</div>
+          <div>
+            <strong>Seguimiento y optimización diaria</strong>
+            <span>Revisión permanente de campañas para maximizar el rendimiento de cada peso invertido.</span>
+          </div>
+        </div>
+        <div class="incluye-item">
+          <div class="check">✓</div>
+          <div>
+            <strong>Reporte quincenal</strong>
+            <span>Resultados claros cada dos semanas. Sabes exactamente qué está pasando con tu pauta.</span>
+          </div>
+        </div>
+        <div class="incluye-item">
+          <div class="check">✓</div>
+          <div>
+            <strong>Informe mensual con plan de acción</strong>
+            <span>Métricas clave, conclusiones y próximos pasos para seguir escalando rentablemente.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="section bg-dark3">
+    <div class="container reveal">
+      <div class="section-label">Cómo trabajamos</div>
+      <h2 class="section-title">El proceso de arranque, <em>paso a paso</em></h2>
+      <p class="section-sub">En 7 días hábiles tenemos todo listo. Sin improvisación, sin demoras.</p>
+      <div class="proceso-steps">
+        <div class="step"><div class="step-num">1</div><span>Conexión de activos digitales</span></div>
+        <div class="step"><div class="step-num">2</div><span>Optimización inicial de la cuenta</span></div>
+        <div class="step"><div class="step-num">3</div><span>Brief con el cliente</span></div>
+        <div class="step"><div class="step-num">4</div><span>Análisis y benchmarking de competencia</span></div>
+        <div class="step"><div class="step-num">5</div><span>Creación de guiones y piezas gráficas</span></div>
+        <div class="step"><div class="step-num">6</div><span>Grabación, edición y lanzamiento</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO -->
+  <section class="section bg-dark2" id="formulario">
+    <div class="container reveal">
+      <div style="text-align:center">
+        <div class="section-label">¿Calificás?</div>
+        <h2 class="section-title">Cuéntanos sobre <em>tu negocio</em></h2>
+        <p class="section-sub" style="margin:0 auto 48px">
+          Completa el formulario y en menos de 24 horas agendamos tu diagnóstico gratis.
+        </p>
+      </div>
+      <div class="form-card">
+        <form id="calForm">
+          <div class="form-group">
+            <label for="nombre">Tu nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamas?" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Tu email</label>
+            <input type="email" id="email" name="email" placeholder="correo@empresa.com" required />
+          </div>
+          <div class="form-group">
+            <label for="whatsapp">Tu WhatsApp</label>
+            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+57 300 000 0000" required />
+          </div>
+          <div class="form-group">
+            <label for="inversion">¿Cuánto inviertes en Meta Ads al mes?</label>
+            <div class="select-wrap">
+              <select id="inversion" name="inversion" required>
+                <option value="">Selecciona tu rango</option>
+                <option value="menos3m">Menos de $3M COP</option>
+                <option value="3m-8m">$3M – $8M COP</option>
+                <option value="8m-50m">$8M – $50M COP</option>
+                <option value="mas50m">+$50M COP</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="objetivo">¿Cuál es tu objetivo principal?</label>
+            <div class="select-wrap">
+              <select id="objetivo" name="objetivo" required>
+                <option value="">Selecciona una opción</option>
+                <option value="ventas-shopify">Aumentar ventas en Shopify</option>
+                <option value="ventas-whatsapp">Aumentar ventas por WhatsApp</option>
+                <option value="mejorar-roas">Mejorar el ROAS de mis campañas actuales</option>
+                <option value="conseguir-leads">Conseguir más leads o clientes</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="msgNoCalifica" class="msg-no-cal" style="display:none">
+            <p>Por ahora trabajamos con marcas que invierten más de $3M COP al mes.
+            <a href="no-califica.html">Igual te dejamos recursos gratuitos que te van a servir →</a></p>
+          </div>
+
+          <button type="submit" class="btn-form" id="btnSubmit">Ver si califico →</button>
+          <p class="form-note">Sin costo · Sin compromiso · Respuesta en &lt; 24 horas</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="assets/logo-light.png" alt="Sky Marketing"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+          <span class="logo-fallback">Sky</span>
+        </a>
+        <p>Agencia de Meta Ads especializada en ecommerce. Más de $200M COP en inversión gestionada y +5 años escalando marcas en Colombia.</p>
+        <a href="https://www.instagram.com/skymarketing.co/" target="_blank" rel="noopener" class="social-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+          @skymarketing.co
+        </a>
+      </div>
+      <div class="footer-links">
+        <h4>Páginas</h4>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="landing-ecommerce.html">Para ecommerce</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <a href="https://wa.me/573182258333?text=Hola%20Sky%20Marketing%2C%20quiero%20información" target="_blank" rel="noopener">WhatsApp: 318 225 8333</a>
+        <a href="mailto:sky.marketingads@gmail.com">sky.marketingads@gmail.com</a>
+        <a href="#formulario" class="btn-footer-cta">Diagnóstico gratis →</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Sky Marketing · skymarketing.co</span>
+      <span>Hecho con 🤍 en Colombia</span>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/573182258333?text=Hola%20Sky%20Marketing%2C%20quiero%20información%20sobre%20sus%20servicios"
+     class="wa-float" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script>
+    const form       = document.getElementById('calForm');
+    const invSelect  = document.getElementById('inversion');
+    const msgNo      = document.getElementById('msgNoCalifica');
+    const btnSubmit  = document.getElementById('btnSubmit');
+
+    invSelect.addEventListener('change', () => {
+      if (invSelect.value === 'menos3m') {
+        msgNo.style.display = 'block';
+        btnSubmit.textContent = 'Ver recursos gratuitos →';
+      } else {
+        msgNo.style.display = 'none';
+        btnSubmit.textContent = 'Ver si califico →';
+      }
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data    = new FormData(form);
+      const nombre  = data.get('nombre').trim();
+      const email   = data.get('email').trim();
+      const wa      = data.get('whatsapp').trim();
+      const inv     = data.get('inversion');
+      const obj     = data.get('objetivo');
+
+      if (!nombre || !email || !wa || !inv || !obj) {
+        alert('Por favor completa todos los campos.');
+        return;
+      }
+
+      if (inv === 'menos3m') {
+        window.location.href = 'no-califica.html';
+        return;
+      }
+
+      btnSubmit.disabled     = true;
+      btnSubmit.textContent  = 'Enviando...';
+
+      try {
+        const res = await fetch('https://formspree.io/f/mbdbapnp', {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          const params = new URLSearchParams({ name: nombre, wa: wa });
+          window.location.href = 'gracias.html?' + params.toString();
+        } else {
+          throw new Error('Formspree error');
+        }
+      } catch {
+        btnSubmit.disabled    = false;
+        btnSubmit.textContent = 'Ver si califico →';
+        alert('Hubo un error al enviar. Por favor intenta de nuevo o escríbenos por WhatsApp.');
+      }
+    });
+  </script>
+</body>
+</html>

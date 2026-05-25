@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios — Sky Marketing</title>
+  <meta name="description" content="Meta Ads para ecommerce, desarrollo web y contenido orgánico. Sky Marketing — agencia de performance en Colombia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── PAGE HERO ── */
+    .page-hero {
+      padding: 160px 5% 100px;
+      text-align: center;
+      position: relative;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 0%, rgba(126,220,255,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .page-hero-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(126,220,255,0.08);
+      border: 1px solid rgba(126,220,255,0.18);
+      border-radius: 100px; padding: 6px 16px;
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 1.5px;
+      color: var(--sky); text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .page-hero h1 {
+      font-size: clamp(2.4rem, 5.5vw, 4rem);
+      font-weight: 800; line-height: 1.12; margin-bottom: 20px;
+    }
+    .page-hero h1 span { color: var(--sky); }
+    .page-hero p {
+      font-size: 1.1rem; color: var(--muted); max-width: 540px; margin: 0 auto;
+    }
+
+    /* ── SERVICE BLOCKS ── */
+    .services-section { padding: 0 5% 120px; }
+    .services-section .inner { max-width: 1100px; margin: 0 auto; }
+
+    .service-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+      padding: 80px 0;
+      border-bottom: 1px solid rgba(126,220,255,0.07);
+    }
+    .service-block:last-child { border-bottom: none; }
+    .service-block.reverse { direction: rtl; }
+    .service-block.reverse > * { direction: ltr; }
+
+    .service-num {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--sky); opacity: 0.7;
+      margin-bottom: 14px;
+    }
+    .service-name {
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      font-weight: 800; line-height: 1.2;
+      margin-bottom: 18px;
+    }
+    .service-name span { color: var(--sky); }
+    .service-desc {
+      font-size: 0.98rem; color: var(--muted); line-height: 1.75;
+      margin-bottom: 32px;
+    }
+
+    .feature-list {
+      list-style: none; display: flex; flex-direction: column; gap: 10px;
+      margin-bottom: 36px;
+    }
+    .feature-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.91rem; color: var(--light);
+    }
+    .feature-list li::before {
+      content: '';
+      flex-shrink: 0; margin-top: 6px;
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--sky);
+    }
+
+    .badge-row {
+      display: flex; gap: 8px; flex-wrap: wrap;
+    }
+    .badge {
+      background: rgba(126,220,255,0.08);
+      border: 1px solid rgba(126,220,255,0.14);
+      border-radius: 100px;
+      padding: 5px 14px;
+      font-size: 0.76rem; font-weight: 600; color: var(--sky);
+    }
+
+    /* Visual card (right side) */
+    .service-visual {
+      border-radius: 20px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(126,220,255,0.08);
+      padding: 36px 32px;
+      position: relative;
+    }
+    .service-visual::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 3px;
+      border-radius: 20px 20px 0 0;
+    }
+    .service-visual.blue-top::before   { background: linear-gradient(90deg, var(--sky), var(--blue)); }
+    .service-visual.mint-top::before   { background: linear-gradient(90deg, var(--mint), var(--sky)); }
+    .service-visual.purple-top::before { background: linear-gradient(90deg, #a78bfa, var(--blue)); }
+
+    .visual-icon {
+      font-size: 2.8rem; margin-bottom: 20px; line-height: 1;
+    }
+    .visual-stat {
+      font-size: 2.4rem; font-weight: 800; color: var(--sky);
+      line-height: 1; margin-bottom: 6px;
+    }
+    .visual-stat-label {
+      font-size: 0.82rem; color: var(--muted); margin-bottom: 24px;
+    }
+    .visual-checklist {
+      list-style: none; display: flex; flex-direction: column; gap: 12px;
+    }
+    .visual-checklist li {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.88rem; color: var(--light);
+    }
+    .visual-checklist li svg {
+      flex-shrink: 0; width: 16px; height: 16px; color: var(--mint);
+    }
+
+    /* ── PROCESS STRIP ── */
+    .process-strip {
+      background: rgba(126,220,255,0.04);
+      border-top: 1px solid rgba(126,220,255,0.07);
+      border-bottom: 1px solid rgba(126,220,255,0.07);
+      padding: 80px 5%;
+      text-align: center;
+    }
+    .process-strip .inner { max-width: 900px; margin: 0 auto; }
+    .strip-eyebrow {
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--sky); margin-bottom: 12px;
+    }
+    .strip-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 800; margin-bottom: 48px;
+    }
+    .proc-steps {
+      display: flex; gap: 0; justify-content: center;
+      position: relative;
+    }
+    .proc-steps::before {
+      content: '';
+      position: absolute; top: 24px; left: 15%; right: 15%;
+      height: 1px; background: rgba(126,220,255,0.14);
+    }
+    .proc-step {
+      flex: 1; padding: 0 16px; text-align: center; position: relative;
+    }
+    .proc-dot {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--dark2); border: 2px solid rgba(126,220,255,0.25);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 14px; font-weight: 700; font-size: 0.85rem;
+      color: var(--sky); position: relative; z-index: 1;
+      transition: background var(--t), border-color var(--t);
+    }
+    .proc-step:hover .proc-dot {
+      background: rgba(126,220,255,0.12);
+      border-color: var(--sky);
+    }
+    .proc-step-title { font-size: 0.88rem; font-weight: 700; margin-bottom: 6px; }
+    .proc-step-desc  { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+    /* ── CTA BOTTOM ── */
+    .cta-section {
+      padding: 100px 5%;
+      text-align: center;
+    }
+    .cta-section .inner { max-width: 640px; margin: 0 auto; }
+    .cta-eyebrow {
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--sky); margin-bottom: 16px;
+    }
+    .cta-title {
+      font-size: clamp(1.8rem, 4vw, 2.9rem);
+      font-weight: 800; margin-bottom: 18px; line-height: 1.18;
+    }
+    .cta-sub {
+      font-size: 1rem; color: var(--muted); margin-bottom: 36px;
+    }
+    .btn-primary-lg {
+      display: inline-block;
+      background: var(--sky); color: var(--dark);
+      font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1rem;
+      padding: 16px 38px; border-radius: 100px;
+      transition: background var(--t), transform var(--t), box-shadow var(--t);
+    }
+    .btn-primary-lg:hover {
+      background: #a8eaff;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(126,220,255,0.25);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .service-block { grid-template-columns: 1fr; gap: 36px; }
+      .service-block.reverse { direction: ltr; }
+      .proc-steps { flex-direction: column; gap: 24px; }
+      .proc-steps::before { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo-light.png" alt="Sky Marketing"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+        <span class="logo-fallback" style="display:none">Sky</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="servicios.html" class="nav-link active">Servicios</a>
+        <a href="nosotros.html" class="nav-link">Nosotros</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+        <a href="index.html#formulario" class="btn-nav">Aplicar ahora</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero reveal">
+    <div class="page-hero-tag">Servicios</div>
+    <h1>Lo que hacemos —<br/><span>y por qué funciona</span></h1>
+    <p>No vendemos paquetes genéricos. Construimos sistemas de adquisición basados en datos para que tus anuncios escalen.</p>
+  </section>
+
+  <!-- Services -->
+  <section class="services-section">
+    <div class="inner">
+
+      <!-- 01 Meta Ads -->
+      <div class="service-block reveal">
+        <div>
+          <p class="service-num">01 — Principal</p>
+          <h2 class="service-name">Meta Ads para<br/><span>Ecommerce</span></h2>
+          <p class="service-desc">
+            Gestionamos tus campañas en Facebook e Instagram con el Método PAC: Product, Ángulos, Creación.
+            Desde la investigación del producto hasta las variaciones creativas a escala. Sin adivinar —
+            todo tiene un por qué respaldado en datos.
+          </p>
+          <ul class="feature-list">
+            <li>Brief estratégico del producto y auditoría de cuenta</li>
+            <li>Investigación de ángulos de venta con IA (20–50 ángulos)</li>
+            <li>Creación de 50–100 variaciones de copy y guiones de video</li>
+            <li>Estructura de campañas, adsets y presupuesto</li>
+            <li>Optimización semanal con reporte de métricas clave</li>
+            <li>Comunicación directa — sin intermediarios</li>
+          </ul>
+          <div class="badge-row">
+            <span class="badge">Facebook Ads</span>
+            <span class="badge">Instagram Ads</span>
+            <span class="badge">Retargeting</span>
+            <span class="badge">Lookalike</span>
+            <span class="badge">Advantage+</span>
+          </div>
+        </div>
+        <div class="service-visual blue-top">
+          <div class="visual-icon">🎯</div>
+          <div class="visual-stat">+200M</div>
+          <div class="visual-stat-label">COP gestionados en inversión publicitaria</div>
+          <ul class="visual-checklist">
+            <li>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="13 4 6 11 3 8"/>
+              </svg>
+              Método PAC propietario
+            </li>
+            <li>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="13 4 6 11 3 8"/>
+              </svg>
+              Reportes semanales transparentes
+            </li>
+            <li>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="13 4 6 11 3 8"/>
+              </svg>
+              Acceso directo a tu media buyer
+            </li>
+            <li>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="13 4 6 11 3 8"/>
+              </svg>
+              Sin contratos de largo plazo al inicio
+            </li>
+            <li>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="13 4 6 11 3 8"/>
+              </svg>
+              Escalamos cuando los números lo confirman
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 02 Páginas Web -->
+      <div class="service-block reverse reveal">
+        <div>
+          <p class="service-num">02 — Complementario</p>
+          <h2 class="service-name">Páginas Web que<br/><span>convierten</span></h2>
+          <p class="service-desc">
+            De nada sirven los mejores anuncios si tu landing no convierte. Desarrollamos en WordPress
+            y Shopify — rápido, limpio, optimizado para velocidad y para que el tráfico de tus ads
+            llegue a una página que cierre ventas.
+          </p>
+          <ul class="feature-list">
+            <li>Diseño orientado a conversión (CRO)</li>
+            <li>Integración con Meta Pixel y eventos de compra</li>
+            <li>Optimización de velocidad y Core Web Vitals</li>
+            <li>Tiendas Shopify desde cero o migración</li>
+            <li>Sitios WordPress para negocios de servicio</li>
+            <li>Mantenimiento y soporte post-lanzamiento</li>
+          </ul>
+          <div class="badge-row">
+            <span class="badge">Shopify</span>
+            <span class="badge">WordPress</span>
+            <span class="badge">HTML/CSS</span>
+            <span class="badge">Meta Pixel</span>
+            <span class="badge">CRO</span>
+          </div>
+        </div>
+        <div class="service-visual mint-top">
+          <div class="visual-icon">🖥️</div>
+          <div class="visual-stat">+5</div>
+          <div class="visual-stat-label">años construyendo páginas que venden</div>
+          <ul class="visual-checklist">
+            <li>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="13 4 6 11 3 8"/>
+              </svg>
+              Diseño mobile-first
+            </li>
+            <li>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="13 4 6 11 3 8"/>
+              </svg>
+              Entrega en 10–15 días hábiles
+            </li>
+            <li>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="13 4 6 11 3 8"/>
+              </svg>
+              Pixel + eventos configurados desde el día 1
+            </li>
+            <li>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="13 4 6 11 3 8"/>
+              </svg>
+              Capacitación incluida para manejarla sola
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 03 Contenido Orgánico -->
+      <div class="service-block reveal">
+        <div>
+          <p class="service-num">03 — Nuevo</p>
+          <h2 class="service-name">Contenido<br/><span>Orgánico</span></h2>
+          <p class="service-desc">
+            La publicidad paga escala lo que ya funciona orgánicamente. Estamos arrancando con un
+            servicio de creación de contenido para Instagram y TikTok: estrategia de temas, guiones,
+            y producción visual orientada a posicionar tu marca antes de que llegue el tráfico de ads.
+          </p>
+          <ul class="feature-list">
+            <li>Estrategia editorial mensual alineada a tu producto</li>
+            <li>Guiones para Reels y TikTok</li>
+            <li>Diseño de carruseles y estáticos de alta conversión</li>
+            <li>Copy de captions con CTA clara</li>
+            <li>Calendario de publicaciones</li>
+          </ul>
+          <div class="badge-row">
+            <span class="badge">Instagram</span>
+            <span class="badge">TikTok</span>
+            <span class="badge">Reels</span>
+            <span class="badge">Estrategia</span>
+          </div>
+        </div>
+        <div class="service-visual purple-top">
+          <div class="visual-icon">📱</div>
+          <div class="visual-stat">Nuevo</div>
+          <div class="visual-stat-label">Servicio en lanzamiento — cupos limitados</div>
+          <ul class="visual-checklist">
+            <li>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="13 4 6 11 3 8"/>
+              </svg>
+              Ideado para complementar tus Meta Ads
+            </li>
+            <li>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="13 4 6 11 3 8"/>
+              </svg>
+              Contenido que también sirve como creativo de ads
+            </li>
+            <li>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="13 4 6 11 3 8"/>
+              </svg>
+              Basado en datos de tu cuenta publicitaria
+            </li>
+            <li>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="13 4 6 11 3 8"/>
+              </svg>
+              Precio especial para clientes de Meta Ads
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Process strip -->
+  <section class="process-strip">
+    <div class="inner">
+      <p class="strip-eyebrow reveal">Cómo trabajamos</p>
+      <h2 class="strip-title reveal">Del primer contacto al primer resultado</h2>
+      <div class="proc-steps reveal">
+        <div class="proc-step">
+          <div class="proc-dot">01</div>
+          <p class="proc-step-title">Aplicación</p>
+          <p class="proc-step-desc">Llenas el formulario y revisamos si somos un buen fit.</p>
+        </div>
+        <div class="proc-step">
+          <div class="proc-dot">02</div>
+          <p class="proc-step-title">Diagnóstico</p>
+          <p class="proc-step-desc">Llamada de 20 minutos para revisar tu cuenta y definir el plan.</p>
+        </div>
+        <div class="proc-step">
+          <div class="proc-dot">03</div>
+          <p class="proc-step-title">Brief & estrategia</p>
+          <p class="proc-step-desc">Documentamos el producto, ángulos y estructura de campañas.</p>
+        </div>
+        <div class="proc-step">
+          <div class="proc-dot">04</div>
+          <p class="proc-step-title">Lanzamiento</p>
+          <p class="proc-step-desc">Campañas activas con creativos listos en los primeros 5 días.</p>
+        </div>
+        <div class="proc-step">
+          <div class="proc-dot">05</div>
+          <p class="proc-step-title">Optimización</p>
+          <p class="proc-step-desc">Revisamos métricas cada semana y escalamos lo que funciona.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Bottom -->
+  <section class="cta-section">
+    <div class="inner reveal">
+      <p class="cta-eyebrow">¿Listo para empezar?</p>
+      <h2 class="cta-title">Aplica ahora y habla directo con nosotros</h2>
+      <p class="cta-sub">Sin llamadas de venta. Sin propuesta genérica. Una conversación honesta sobre si podemos ayudarte.</p>
+      <a href="index.html#formulario" class="btn-primary-lg">Aplicar ahora →</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="margin-bottom:10px;">
+          <img src="assets/logo-light.png" alt="Sky Marketing"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+          <span class="logo-fallback" style="display:none">Sky</span>
+        </a>
+        <p class="footer-tagline">Meta Ads que escalan. Resultados reales.</p>
+      </div>
+      <div class="footer-links">
+        <a href="servicios.html">Servicios</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="index.html#formulario">Aplicar</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/skymarketing.co/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="mailto:sky.marketingads@gmail.com" aria-label="Email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-copy">© 2025 Sky Marketing · Todos los derechos reservados</div>
+  </footer>
+
+  <!-- WhatsApp float -->
+  <a href="https://wa.me/573182258333?text=Hola%20Sky%20Marketing%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.524 5.847L.057 23.882l6.197-1.624A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.001-1.374l-.36-.213-3.68.965.981-3.595-.234-.369A9.818 9.818 0 012.182 12C2.182 6.578 6.578 2.182 12 2.182S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/>
+    </svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
