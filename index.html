@@ -392,8 +392,7 @@
     }
     .pac-name em {
       font-style: normal;
-      -webkit-text-stroke: 1px var(--white);
-      color: transparent;
+      color: var(--sky);
     }
     .pac-desc { padding-top: 8px; }
     .pac-desc h4 {
@@ -794,8 +793,19 @@
     @media (max-width: 640px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      .hero { justify-content: flex-start; padding-top: 110px; padding-bottom: 60px; }
+      .hero { justify-content: flex-start; padding-top: 110px; padding-bottom: 60px; min-height: 0; }
       .hero-title { font-size: clamp(3rem, 14vw, 5.5rem); }
+      .intro-section { padding: 60px 5%; }
+      .results-section { padding: 56px 0; }
+      .creatives-section { padding: 56px 0; }
+      .method-section { padding: 60px 5%; }
+      .method-header { margin-bottom: 40px; }
+      .pac-item { padding: 32px 0; }
+      .stats-bar { padding: 48px 5%; }
+      .includes-section { padding: 60px 5%; }
+      .includes-header { margin-bottom: 40px; }
+      .testi-section { padding: 56px 0; }
+      .form-section { padding: 60px 5%; }
       .result-card { flex: 0 0 280px; height: 380px; }
       .includes-grid { grid-template-columns: 1fr; }
       .testi-card { flex: 0 0 300px; }
