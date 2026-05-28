@@ -718,6 +718,7 @@
     .creatives-section {
       padding: 100px 0;
       border-bottom: 1px solid var(--border);
+      overflow: hidden;
     }
     .creatives-header {
       padding: 0 5%; margin-bottom: 48px;
@@ -730,18 +731,14 @@
     }
     .creatives-title span { color: var(--sky); }
     .creatives-track {
-      display: flex; gap: 12px;
-      overflow-x: auto; scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      padding: 0 5% 32px;
-      cursor: grab;
-      scrollbar-width: none;
+      display: flex;
+      animation: carousel 22s linear infinite;
+      width: max-content;
     }
-    .creatives-track::-webkit-scrollbar { display: none; }
-    .creatives-track:active { cursor: grabbing; }
+    .creatives-track:hover { animation-play-state: paused; }
     .creative-card {
       flex: 0 0 210px; height: 373px;
-      scroll-snap-align: start;
+      margin-right: 12px;
       border-radius: 16px;
       position: relative; overflow: hidden;
       border: 1px solid var(--border);
@@ -749,17 +746,10 @@
       transition: transform 0.3s ease;
     }
     .creative-card:hover { transform: scale(1.03); }
-    .creative-card img {
+    .creative-card img,
+    .creative-card video {
       position: absolute; inset: 0;
       width: 100%; height: 100%; object-fit: cover;
-    }
-    .creative-badge {
-      position: absolute; top: 12px; left: 12px;
-      font-size: 0.58rem; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase;
-      background: rgba(8,8,8,0.65); backdrop-filter: blur(8px);
-      border: 1px solid rgba(240,237,232,0.12);
-      padding: 5px 10px; border-radius: 100px; color: var(--gray);
     }
     .creative-play {
       position: absolute; top: 50%; left: 50%;
@@ -772,10 +762,9 @@
     }
     .creative-card:hover .creative-play { background: rgba(126,220,255,0.25); }
     .creative-play svg { width: 18px; height: 18px; margin-left: 3px; }
-    .creative-client {
-      position: absolute; bottom: 16px; left: 14px; right: 14px;
-      font-size: 0.72rem; font-weight: 600;
-      color: rgba(240,237,232,0.55);
+    @keyframes carousel {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
     }
 
     /* ── RESPONSIVE ── */
@@ -1081,63 +1070,40 @@
         Desliza
       </div>
     </div>
-    <div class="creatives-track" id="creativesTrack">
+    <div class="creatives-track">
 
+      <!-- Set 1 -->
       <div class="creative-card" style="--c-from:#0d1a2e;--c-to:#050a10;">
-        <img src="assets/creatives/creativo-01.png" alt="Anuncio Valenzza Men" loading="lazy" />
-        <span class="creative-badge">Estático</span>
-        <span class="creative-client">Valenzza Men</span>
+        <img src="assets/creatives/creativo-01.png" alt="" loading="lazy" />
       </div>
-
       <div class="creative-card" style="--c-from:#0d2010;--c-to:#050a05;">
         <video src="assets/creatives/valenzza-reel-01.mp4" autoplay muted loop playsinline></video>
-        <span class="creative-badge">Reel</span>
-        <span class="creative-play">
-          <svg viewBox="0 0 24 24" fill="var(--white)"><polygon points="5,3 19,12 5,21"/></svg>
-        </span>
-        <span class="creative-client">Valenzza Men</span>
       </div>
-
       <div class="creative-card" style="--c-from:#1a0d20;--c-to:#0a0510;">
         <video src="assets/creatives/valenzza-reel-02.mp4" autoplay muted loop playsinline></video>
-        <span class="creative-badge">Reel</span>
-        <span class="creative-play">
-          <svg viewBox="0 0 24 24" fill="var(--white)"><polygon points="5,3 19,12 5,21"/></svg>
-        </span>
-        <span class="creative-client">Valenzza Men</span>
       </div>
-
       <div class="creative-card" style="--c-from:#1a1400;--c-to:#0a0800;">
-        <img src="assets/creatives/creativo-02.png" alt="Anuncio" loading="lazy" />
-        <span class="creative-badge">Estático</span>
-        <span class="creative-client">Sky Marketing</span>
+        <img src="assets/creatives/creativo-02.png" alt="" loading="lazy" />
       </div>
-
       <div class="creative-card" style="--c-from:#001a1a;--c-to:#000a0a;">
-        <img src="assets/creatives/creativo-03.png" alt="Anuncio" loading="lazy" />
-        <span class="creative-badge">Estático</span>
-        <span class="creative-client">Sky Marketing</span>
+        <img src="assets/creatives/creativo-03.png" alt="" loading="lazy" />
       </div>
 
-      <div class="creative-card" style="--c-from:#1a0a00;--c-to:#0a0500;">
-        <span class="creative-badge">Reel</span>
-        <span class="creative-play">
-          <svg viewBox="0 0 24 24" fill="var(--white)"><polygon points="5,3 19,12 5,21"/></svg>
-        </span>
-        <span class="creative-client">Próximamente</span>
+      <!-- Set 2 (duplicate for seamless loop) -->
+      <div class="creative-card" style="--c-from:#0d1a2e;--c-to:#050a10;">
+        <img src="assets/creatives/creativo-01.png" alt="" loading="lazy" />
       </div>
-
-      <div class="creative-card" style="--c-from:#001020;--c-to:#00080f;">
-        <span class="creative-badge">Estático</span>
-        <span class="creative-client">Próximamente</span>
+      <div class="creative-card" style="--c-from:#0d2010;--c-to:#050a05;">
+        <video src="assets/creatives/valenzza-reel-01.mp4" autoplay muted loop playsinline></video>
       </div>
-
-      <div class="creative-card" style="--c-from:#150020;--c-to:#0a000f;">
-        <span class="creative-badge">Reel</span>
-        <span class="creative-play">
-          <svg viewBox="0 0 24 24" fill="var(--white)"><polygon points="5,3 19,12 5,21"/></svg>
-        </span>
-        <span class="creative-client">Próximamente</span>
+      <div class="creative-card" style="--c-from:#1a0d20;--c-to:#0a0510;">
+        <video src="assets/creatives/valenzza-reel-02.mp4" autoplay muted loop playsinline></video>
+      </div>
+      <div class="creative-card" style="--c-from:#1a1400;--c-to:#0a0800;">
+        <img src="assets/creatives/creativo-02.png" alt="" loading="lazy" />
+      </div>
+      <div class="creative-card" style="--c-from:#001a1a;--c-to:#000a0a;">
+        <img src="assets/creatives/creativo-03.png" alt="" loading="lazy" />
       </div>
 
     </div>
@@ -1450,7 +1416,6 @@
       });
     }
     makeDraggable(document.getElementById('scrollTrack'));
-    makeDraggable(document.getElementById('creativesTrack'));
 
     // Form logic
     const form      = document.getElementById('applyForm');
