@@ -24,18 +24,18 @@
   <!-- End Meta Pixel Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="css/dark.css" />
   <style>
-    /* ── LANDING NAVBAR (minimal) ── */
+    /* ── LANDING NAVBAR (minimal — no full links intentional) ── */
     .lp-nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       padding: 0 5%;
-      background: rgba(22,33,48,0.92);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(126,220,255,0.07);
+      background: rgba(8,8,8,0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
     }
     .lp-nav-inner {
       max-width: 1060px; margin: 0 auto;
@@ -50,12 +50,9 @@
     .lp-hero::before {
       content: '';
       position: absolute; inset: 0;
-      background:
-        radial-gradient(ellipse 80% 60% at 50% -5%, rgba(126,220,255,0.10) 0%, transparent 65%),
-        linear-gradient(180deg, var(--dark3) 0%, var(--dark2) 100%);
+      background: radial-gradient(ellipse 80% 60% at 50% -5%, rgba(126,220,255,0.10) 0%, transparent 65%);
       pointer-events: none;
     }
-    /* Grid overlay */
     .lp-hero::after {
       content: '';
       position: absolute; inset: 0;
@@ -89,12 +86,12 @@
     .lp-h1 {
       font-size: clamp(2.6rem, 6vw, 4.4rem);
       font-weight: 800; line-height: 1.1; margin-bottom: 24px;
-      letter-spacing: -1px;
+      letter-spacing: -0.03em;
     }
     .lp-h1 span { color: var(--sky); }
     .lp-sub {
       font-size: clamp(1rem, 2vw, 1.18rem);
-      color: var(--muted); line-height: 1.7;
+      color: var(--gray); line-height: 1.7;
       max-width: 600px; margin: 0 auto 44px;
     }
     .lp-cta-row {
@@ -102,45 +99,42 @@
       gap: 14px; flex-wrap: wrap;
     }
     .btn-hero-primary {
-      background: var(--sky); color: var(--dark);
-      font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.02rem;
+      background: var(--white); color: var(--black);
+      font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1rem;
       padding: 17px 38px; border-radius: 100px;
       transition: background var(--t), transform var(--t), box-shadow var(--t);
       white-space: nowrap;
     }
     .btn-hero-primary:hover {
-      background: #a8eaff; transform: translateY(-2px);
+      background: var(--sky); transform: translateY(-2px);
       box-shadow: 0 12px 36px rgba(126,220,255,0.28);
     }
     .btn-hero-ghost {
-      border: 1px solid rgba(126,220,255,0.22);
-      color: var(--muted); background: transparent;
-      font-family: 'Sora', sans-serif; font-weight: 600; font-size: 0.9rem;
+      border: 1px solid var(--border);
+      color: var(--gray); background: transparent;
+      font-family: 'Inter', sans-serif; font-weight: 500; font-size: 0.9rem;
       padding: 17px 28px; border-radius: 100px;
       transition: border-color var(--t), color var(--t);
       white-space: nowrap;
     }
-    .btn-hero-ghost:hover { border-color: var(--sky); color: var(--sky); }
+    .btn-hero-ghost:hover { border-color: rgba(240,237,232,0.35); color: var(--white); }
 
-    /* Trust row */
     .trust-row {
       display: flex; align-items: center; justify-content: center;
       gap: 28px; flex-wrap: wrap;
       margin-top: 56px; padding-top: 48px;
-      border-top: 1px solid rgba(126,220,255,0.08);
+      border-top: 1px solid var(--border);
     }
-    .trust-item {
-      display: flex; flex-direction: column; align-items: center; gap: 4px;
-    }
-    .trust-num { font-size: 1.7rem; font-weight: 800; color: var(--sky); }
-    .trust-label { font-size: 0.75rem; color: var(--muted); font-weight: 500; }
-    .trust-sep { width: 1px; height: 40px; background: rgba(126,220,255,0.12); }
+    .trust-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    .trust-num   { font-size: 1.7rem; font-weight: 800; color: var(--sky); }
+    .trust-label { font-size: 0.75rem; color: var(--gray); font-weight: 500; }
+    .trust-sep   { width: 1px; height: 40px; background: var(--border); }
 
     /* ── PROBLEM ── */
     .lp-problem {
       padding: 100px 5%;
-      background: rgba(126,220,255,0.02);
-      border-top: 1px solid rgba(126,220,255,0.07);
+      background: rgba(240,237,232,0.01);
+      border-top: 1px solid var(--border);
     }
     .lp-section-inner { max-width: 1060px; margin: 0 auto; }
     .section-eyebrow {
@@ -150,27 +144,24 @@
     }
     .section-title {
       font-size: clamp(1.8rem, 3.8vw, 2.8rem);
-      font-weight: 800; text-align: center; line-height: 1.18;
-      margin-bottom: 56px;
+      font-weight: 800; text-align: center; line-height: 1.18; margin-bottom: 56px;
     }
     .section-title span { color: var(--sky); }
 
-    .pain-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
-    }
+    .pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .pain-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(126,220,255,0.08);
+      background: rgba(240,237,232,0.03);
+      border: 1px solid var(--border);
       border-radius: var(--radius); padding: 26px 24px;
       transition: border-color var(--t), background var(--t);
     }
     .pain-card:hover {
       border-color: rgba(126,220,255,0.18);
-      background: rgba(255,255,255,0.05);
+      background: rgba(240,237,232,0.05);
     }
-    .pain-icon { font-size: 1.7rem; margin-bottom: 12px; }
+    .pain-icon  { font-size: 1.7rem; margin-bottom: 12px; }
     .pain-title { font-size: 0.92rem; font-weight: 700; margin-bottom: 6px; }
-    .pain-desc  { font-size: 0.81rem; color: var(--muted); line-height: 1.6; }
+    .pain-desc  { font-size: 0.81rem; color: var(--gray); line-height: 1.6; }
 
     /* ── METHOD PAC ── */
     .lp-method { padding: 100px 5%; }
@@ -179,8 +170,8 @@
       margin-top: 56px;
     }
     .pac-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(126,220,255,0.10);
+      background: rgba(240,237,232,0.03);
+      border: 1px solid var(--border);
       border-radius: 18px; padding: 36px 28px;
       position: relative; overflow: hidden;
       transition: border-color var(--t), transform var(--t);
@@ -191,30 +182,23 @@
     }
     .pac-letter {
       font-size: 4rem; font-weight: 800; line-height: 1;
-      color: rgba(126,220,255,0.12); position: absolute;
+      color: rgba(126,220,255,0.08); position: absolute;
       top: 20px; right: 24px; pointer-events: none;
     }
     .pac-num {
       font-size: 0.72rem; font-weight: 700; letter-spacing: 2px;
       text-transform: uppercase; color: var(--sky); margin-bottom: 12px;
     }
-    .pac-name {
-      font-size: 1.35rem; font-weight: 800; margin-bottom: 10px;
-    }
-    .pac-sub {
-      font-size: 0.83rem; color: var(--sky); font-weight: 600;
-      margin-bottom: 14px;
-    }
-    .pac-desc {
-      font-size: 0.85rem; color: var(--muted); line-height: 1.65;
-    }
+    .pac-name { font-size: 1.35rem; font-weight: 800; margin-bottom: 10px; }
+    .pac-sub  { font-size: 0.83rem; color: var(--sky); font-weight: 600; margin-bottom: 14px; }
+    .pac-desc { font-size: 0.85rem; color: var(--gray); line-height: 1.65; }
 
     /* ── INCLUYE ── */
     .lp-includes {
       padding: 100px 5%;
-      background: rgba(126,220,255,0.02);
-      border-top: 1px solid rgba(126,220,255,0.07);
-      border-bottom: 1px solid rgba(126,220,255,0.07);
+      background: rgba(240,237,232,0.01);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
     .includes-grid {
       display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
@@ -222,18 +206,18 @@
     }
     .include-item {
       display: flex; align-items: flex-start; gap: 12px;
-      padding: 18px 18px; background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(126,220,255,0.08); border-radius: var(--radius);
+      padding: 18px; background: rgba(240,237,232,0.03);
+      border: 1px solid var(--border); border-radius: var(--radius);
     }
     .inc-check {
       flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
-      background: rgba(167,233,210,0.12);
+      background: rgba(167,233,210,0.10);
       border: 1px solid rgba(167,233,210,0.25);
       display: flex; align-items: center; justify-content: center;
-      margin-top: 1px;
+      margin-top: 1px; color: var(--mint);
     }
-    .inc-check svg { width: 11px; height: 11px; color: var(--mint); }
-    .include-text { font-size: 0.88rem; color: var(--light); line-height: 1.5; }
+    .inc-check svg { width: 11px; height: 11px; }
+    .include-text { font-size: 0.88rem; color: var(--white); line-height: 1.5; }
 
     /* ── TESTIMONIALS ── */
     .lp-testimonials { padding: 100px 5%; text-align: center; }
@@ -242,59 +226,54 @@
       margin-top: 48px;
     }
     .testi-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(126,220,255,0.09);
+      background: rgba(240,237,232,0.03);
+      border: 1px solid var(--border);
       border-radius: var(--radius); padding: 28px 24px; text-align: left;
     }
-    .testi-stars { color: #FBB040; font-size: 0.85rem; margin-bottom: 14px; letter-spacing: 2px; }
-    .testi-text {
-      font-size: 0.88rem; color: var(--muted); line-height: 1.7;
-      margin-bottom: 20px; font-style: italic;
-    }
+    .testi-stars  { color: #FBB040; font-size: 0.85rem; margin-bottom: 14px; letter-spacing: 2px; }
+    .testi-text   { font-size: 0.88rem; color: var(--gray); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
     .testi-author { display: flex; align-items: center; gap: 10px; }
     .testi-avatar {
       width: 36px; height: 36px; border-radius: 50%;
       background: linear-gradient(135deg, var(--sky), var(--blue));
       display: flex; align-items: center; justify-content: center;
-      font-size: 0.8rem; font-weight: 800; color: var(--dark); flex-shrink: 0;
+      font-size: 0.8rem; font-weight: 800; color: var(--black); flex-shrink: 0;
     }
     .testi-name  { font-size: 0.85rem; font-weight: 700; }
-    .testi-brand { font-size: 0.73rem; color: var(--muted); }
+    .testi-brand { font-size: 0.73rem; color: var(--gray); }
 
     /* ── FORM SECTION ── */
     .lp-form-section {
       padding: 100px 5%;
-      background: rgba(126,220,255,0.03);
-      border-top: 1px solid rgba(126,220,255,0.07);
+      background: rgba(240,237,232,0.01);
+      border-top: 1px solid var(--border);
     }
     .lp-form-inner {
       max-width: 1060px; margin: 0 auto;
       display: grid; grid-template-columns: 1fr 1fr;
       gap: 72px; align-items: start;
     }
-    .form-left { }
     .form-left h2 {
       font-size: clamp(1.8rem, 3.5vw, 2.7rem);
       font-weight: 800; line-height: 1.18; margin-bottom: 16px;
     }
     .form-left h2 span { color: var(--sky); }
     .form-left p {
-      font-size: 0.97rem; color: var(--muted); line-height: 1.7; margin-bottom: 28px;
+      font-size: 0.97rem; color: var(--gray); line-height: 1.7; margin-bottom: 28px;
     }
     .form-features { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .form-features li {
       display: flex; align-items: center; gap: 10px;
-      font-size: 0.88rem; color: var(--light);
+      font-size: 0.88rem; color: var(--white);
     }
     .form-features li::before {
       content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
       background: var(--sky);
     }
 
-    /* Form card */
     .lp-form-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(126,220,255,0.12);
+      background: rgba(240,237,232,0.04);
+      border: 1px solid var(--border);
       border-radius: 20px; padding: 38px 32px;
       position: relative; overflow: hidden;
     }
@@ -304,37 +283,22 @@
       background: linear-gradient(90deg, var(--sky), var(--blue));
     }
     .form-card-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
-    .form-card-sub   { font-size: 0.8rem; color: var(--muted); margin-bottom: 26px; }
+    .form-card-sub   { font-size: 0.8rem; color: var(--gray); margin-bottom: 26px; }
 
     .form-group {
       display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px;
     }
     .form-group label {
-      font-size: 0.77rem; font-weight: 600; color: var(--light); opacity: 0.85;
+      font-size: 0.77rem; font-weight: 600; color: var(--white); opacity: 0.85;
     }
     .form-group input,
-    .form-group select {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(126,220,255,0.14);
-      border-radius: 10px; padding: 12px 16px;
-      font-family: 'Sora', sans-serif; font-size: 0.88rem;
-      color: var(--light); outline: none;
-      transition: border-color var(--t), background var(--t);
-      width: 100%;
-    }
-    .form-group input::placeholder { color: var(--muted); opacity: 0.7; }
-    .form-group input:focus,
-    .form-group select:focus {
-      border-color: rgba(126,220,255,0.38);
-      background: rgba(126,220,255,0.04);
-    }
-    .form-group select option { background: var(--dark2); color: var(--light); }
+    .form-group select { font-family: 'Inter', sans-serif; }
     .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
     .btn-form-submit {
       width: 100%; padding: 15px;
-      background: var(--sky); color: var(--dark);
-      font-family: 'Sora', sans-serif; font-weight: 700; font-size: 0.95rem;
+      background: var(--sky); color: var(--black);
+      font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.95rem;
       border: none; border-radius: 100px; cursor: pointer;
       transition: background var(--t), transform var(--t), box-shadow var(--t);
       margin-top: 6px;
@@ -344,47 +308,51 @@
       box-shadow: 0 10px 28px rgba(126,220,255,0.25);
     }
     .btn-form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
-    .form-note {
-      font-size: 0.72rem; color: var(--muted); text-align: center; margin-top: 10px;
-    }
+    .form-note { font-size: 0.72rem; color: var(--gray); text-align: center; margin-top: 10px; }
 
     /* ── MINIMAL FOOTER ── */
     .lp-footer {
       text-align: center; padding: 32px 5%;
-      border-top: 1px solid rgba(126,220,255,0.07);
-      font-size: 0.78rem; color: var(--muted);
+      border-top: 1px solid var(--border);
+      font-size: 0.78rem; color: var(--gray);
     }
-    .lp-footer a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+    .lp-footer a { color: var(--gray); text-decoration: underline; text-underline-offset: 3px; }
     .lp-footer a:hover { color: var(--sky); }
 
     @media (max-width: 768px) {
-      .pain-grid        { grid-template-columns: 1fr; }
-      .pac-grid         { grid-template-columns: 1fr; }
-      .includes-grid    { grid-template-columns: 1fr; }
-      .testimonials-grid{ grid-template-columns: 1fr; }
-      .lp-form-inner    { grid-template-columns: 1fr; gap: 40px; }
-      .form-row-2       { grid-template-columns: 1fr; }
-      .trust-sep        { display: none; }
+      .pain-grid         { grid-template-columns: 1fr; }
+      .pac-grid          { grid-template-columns: 1fr; }
+      .includes-grid     { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .lp-form-inner     { grid-template-columns: 1fr; gap: 40px; }
+      .form-row-2        { grid-template-columns: 1fr; }
+      .trust-sep         { display: none; }
+    }
+    @media (max-width: 640px) {
+      .lp-hero    { padding: 100px 5% 60px; }
+      .lp-problem, .lp-method, .lp-includes,
+      .lp-testimonials, .lp-form-section { padding: 60px 5%; }
+      .section-title { margin-bottom: 36px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Minimal nav -->
+  <!-- Minimal nav — intentionally no full links for landing page focus -->
   <nav class="lp-nav">
     <div class="lp-nav-inner">
       <a href="index.html" class="nav-logo">
         <img src="assets/logo-light.png" alt="Sky Marketing"
              onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
-        <span class="logo-fallback" style="display:none">Sky</span>
+        <span class="logo-fallback">Sky</span>
       </a>
-      <a href="#lp-form" class="btn-nav">Aplicar ahora</a>
+      <a href="#lp-form" class="nav-cta">Aplicar ahora</a>
     </div>
   </nav>
 
   <!-- Hero -->
   <section class="lp-hero">
-    <div class="lp-hero-inner reveal">
+    <div class="lp-hero-inner">
       <div class="lp-badge">
         <span class="lp-badge-dot"></span>
         Meta Ads para Ecommerce
@@ -401,7 +369,6 @@
         <a href="#metodo" class="btn-hero-ghost">Ver el método</a>
       </div>
 
-      <!-- Trust row -->
       <div class="trust-row">
         <div class="trust-item">
           <span class="trust-num">+$200M</span>
@@ -429,35 +396,35 @@
   <!-- Problem -->
   <section class="lp-problem">
     <div class="lp-section-inner">
-      <p class="section-eyebrow reveal">El problema</p>
-      <h2 class="section-title reveal">¿Te suena alguno de estos?</h2>
+      <p class="section-eyebrow">El problema</p>
+      <h2 class="section-title">¿Te suena alguno de estos?</h2>
       <div class="pain-grid">
-        <div class="pain-card reveal">
+        <div class="pain-card">
           <div class="pain-icon">💸</div>
           <p class="pain-title">Gastas pero no vendes</p>
           <p class="pain-desc">La inversión sube, las ventas no. El ROAS no llega al número que necesitas para que el negocio sea rentable.</p>
         </div>
-        <div class="pain-card reveal">
+        <div class="pain-card">
           <div class="pain-icon">🔄</div>
           <p class="pain-title">La agencia anterior no dio resultados</p>
           <p class="pain-desc">Prometieron mucho, entregaron poco. Reportes bonitos, números feos. Y tú pagando el fee mensual igual.</p>
         </div>
-        <div class="pain-card reveal">
+        <div class="pain-card">
           <div class="pain-icon">🎨</div>
           <p class="pain-title">Los creativos se fatigan rápido</p>
           <p class="pain-desc">Cada semana necesitas contenido nuevo y no sabes qué angle probar. Terminas publicando lo mismo y el CPM sube.</p>
         </div>
-        <div class="pain-card reveal">
+        <div class="pain-card">
           <div class="pain-icon">📊</div>
           <p class="pain-title">No entiendes los reportes</p>
           <p class="pain-desc">Te mandan PDFs con métricas que no te dicen nada concreto. ¿Está funcionando o no? Nadie te lo aclara.</p>
         </div>
-        <div class="pain-card reveal">
+        <div class="pain-card">
           <div class="pain-icon">⏳</div>
           <p class="pain-title">Demoran semanas en lanzar</p>
           <p class="pain-desc">Llevas meses esperando la campaña "perfecta" mientras tu competencia está activa y acumulando datos.</p>
         </div>
-        <div class="pain-card reveal">
+        <div class="pain-card">
           <div class="pain-icon">📱</div>
           <p class="pain-title">Hablas con un account, no con quien trabaja</p>
           <p class="pain-desc">Le explicas tu problema a un intermediario que lo repite al media buyer. Algo siempre se pierde en la traducción.</p>
@@ -469,10 +436,10 @@
   <!-- Method PAC -->
   <section class="lp-method" id="metodo">
     <div class="lp-section-inner">
-      <p class="section-eyebrow reveal">El método</p>
-      <h2 class="section-title reveal">Método PAC —<br/><span>de cero al anuncio ganador</span></h2>
+      <p class="section-eyebrow">El método</p>
+      <h2 class="section-title">Método PAC —<br/><span>de cero al anuncio ganador</span></h2>
       <div class="pac-grid">
-        <div class="pac-card reveal">
+        <div class="pac-card">
           <span class="pac-letter">P</span>
           <p class="pac-num">01 — Producto</p>
           <h3 class="pac-name">Brief estratégico</h3>
@@ -482,7 +449,7 @@
             te diferencia. Sin este paso, todo lo demás es adivinanza.
           </p>
         </div>
-        <div class="pac-card reveal">
+        <div class="pac-card">
           <span class="pac-letter">A</span>
           <p class="pac-num">02 — Ángulos</p>
           <h3 class="pac-name">Ángulos de venta</h3>
@@ -492,7 +459,7 @@
             deseo o creencia de tu cliente. Probamos los más prometedores primero.
           </p>
         </div>
-        <div class="pac-card reveal">
+        <div class="pac-card">
           <span class="pac-letter">C</span>
           <p class="pac-num">03 — Creación</p>
           <h3 class="pac-name">Creativos a escala</h3>
@@ -509,9 +476,9 @@
   <!-- Includes -->
   <section class="lp-includes">
     <div class="lp-section-inner">
-      <p class="section-eyebrow reveal">Qué incluye</p>
-      <h2 class="section-title reveal">Todo lo que necesita tu cuenta para escalar</h2>
-      <div class="includes-grid reveal">
+      <p class="section-eyebrow">Qué incluye</p>
+      <h2 class="section-title">Todo lo que necesita tu cuenta para escalar</h2>
+      <div class="includes-grid">
         <div class="include-item">
           <div class="inc-check">
             <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -583,10 +550,10 @@
   <!-- Testimonials -->
   <section class="lp-testimonials">
     <div class="lp-section-inner">
-      <p class="section-eyebrow reveal">Resultados</p>
-      <h2 class="section-title reveal">Lo que dicen <span>los clientes</span></h2>
+      <p class="section-eyebrow">Resultados</p>
+      <h2 class="section-title">Lo que dicen <span>los clientes</span></h2>
       <div class="testimonials-grid">
-        <div class="testi-card reveal">
+        <div class="testi-card">
           <div class="testi-stars">★★★★★</div>
           <p class="testi-text">"En 3 meses duplicamos las ventas del mes. La diferencia fue el volumen de creativos y que siempre entendieron nuestro producto."</p>
           <div class="testi-author">
@@ -597,7 +564,7 @@
             </div>
           </div>
         </div>
-        <div class="testi-card reveal">
+        <div class="testi-card">
           <div class="testi-stars">★★★★★</div>
           <p class="testi-text">"Antes de Sky, probé con otras 2 agencias. Con Sky fue la primera vez que el ROAS se mantuvo estable y escalamos sin perderlo."</p>
           <div class="testi-author">
@@ -608,7 +575,7 @@
             </div>
           </div>
         </div>
-        <div class="testi-card reveal">
+        <div class="testi-card">
           <div class="testi-stars">★★★★★</div>
           <p class="testi-text">"Lo que más me gustó fue la comunicación. Siempre supe qué estaba pasando con mi dinero y por qué tomaban cada decisión."</p>
           <div class="testi-author">
@@ -626,7 +593,7 @@
   <!-- Form -->
   <section class="lp-form-section" id="lp-form">
     <div class="lp-form-inner">
-      <div class="form-left reveal">
+      <div class="form-left">
         <p class="section-eyebrow" style="text-align:left;">Aplicar ahora</p>
         <h2>¿Listo para ver<br/>resultados <span>reales</span>?</h2>
         <p>
@@ -641,7 +608,7 @@
         </ul>
       </div>
 
-      <div class="lp-form-card reveal">
+      <div class="lp-form-card">
         <h3 class="form-card-title">Formulario de aplicación</h3>
         <p class="form-card-sub">Tarda menos de 2 minutos</p>
 
@@ -649,22 +616,22 @@
           <div class="form-row-2">
             <div class="form-group">
               <label for="lp-name">Nombre</label>
-              <input type="text" id="lp-name" name="name" placeholder="Tu nombre" required />
+              <input type="text" id="lp-name" name="name" placeholder="Tu nombre" required class="field-input" />
             </div>
             <div class="form-group">
               <label for="lp-wa">WhatsApp</label>
-              <input type="tel" id="lp-wa" name="whatsapp" placeholder="3001234567" required />
+              <input type="tel" id="lp-wa" name="whatsapp" placeholder="3001234567" required class="field-input" />
             </div>
           </div>
 
           <div class="form-group">
             <label for="lp-product">¿Qué vendes?</label>
-            <input type="text" id="lp-product" name="product" placeholder="Ej: ropa femenina, suplementos, accesorios..." required />
+            <input type="text" id="lp-product" name="product" placeholder="Ej: ropa femenina, suplementos, accesorios..." required class="field-input" />
           </div>
 
           <div class="form-group">
             <label for="lp-budget">¿Cuánto inviertes mensual en Meta Ads?</label>
-            <select id="lp-budget" name="budget" required>
+            <select id="lp-budget" name="budget" required class="field-input">
               <option value="" disabled selected>Selecciona tu rango</option>
               <option value="menos3m">Menos de $3M COP</option>
               <option value="3a5m">$3M – $5M COP</option>
@@ -676,7 +643,7 @@
 
           <div class="form-group">
             <label for="lp-goal">¿Cuál es tu principal objetivo?</label>
-            <select id="lp-goal" name="goal">
+            <select id="lp-goal" name="goal" class="field-input">
               <option value="" disabled selected>Selecciona tu objetivo</option>
               <option value="Aumentar ROAS">Aumentar el ROAS</option>
               <option value="Bajar CPA">Bajar el costo por compra</option>
@@ -694,7 +661,7 @@
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7EDCFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
           <h3 style="font-size:1.05rem;font-weight:700;margin-bottom:8px;">¡Aplicación recibida!</h3>
-          <p style="font-size:0.85rem;color:var(--muted);">Te contactamos en menos de 24 horas por WhatsApp.</p>
+          <p style="font-size:0.85rem;color:var(--gray);">Te contactamos en menos de 24 horas por WhatsApp.</p>
         </div>
       </div>
     </div>
@@ -702,7 +669,7 @@
 
   <!-- Minimal footer -->
   <footer class="lp-footer">
-    © 2025 Sky Marketing ·
+    © 2026 Sky Marketing ·
     <a href="index.html">Inicio</a> ·
     <a href="servicios.html">Servicios</a> ·
     <a href="mailto:sky.marketingads@gmail.com">sky.marketingads@gmail.com</a>
@@ -716,7 +683,6 @@
     </svg>
   </a>
 
-  <script src="js/main.js" defer></script>
   <script>
     const lpForm      = document.getElementById('lpForm');
     const lpSubmitBtn = document.getElementById('lpSubmitBtn');
