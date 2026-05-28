@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sky Marketing — Meta Ads para Ecommerce en Colombia</title>
-  <meta name="description" content="Duplicamos las ventas de tu ecommerce en menos de 90 días con el método PAC. +200M COP en inversión gestionada." />
+  <meta name="description" content="Duplicamos las ventas de tu ecommerce con el Método PAC. +200M COP en inversión gestionada. Meta Ads para ecommerce en Colombia." />
 
   <!-- Meta Pixel Code -->
   <script>
@@ -26,484 +26,1225 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
 
   <style>
-    /* ── HERO ─────────────────────────────── */
+    /* ── RESET & BASE ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black:  #080808;
+      --white:  #f0ede8;
+      --sky:    #7EDCFF;
+      --blue:   #4B8FD8;
+      --gray:   rgba(240,237,232,0.45);
+      --border: rgba(240,237,232,0.09);
+      --t: 0.3s ease;
+    }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body {
+      font-family: 'Sora', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ── NOISE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0;
+      pointer-events: none;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    }
+
+    /* ── NAVBAR ── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 70px;
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--t), background var(--t);
+    }
+    .nav.scrolled {
+      background: rgba(8,8,8,0.92);
+      backdrop-filter: blur(20px);
+      border-color: var(--border);
+    }
+    .nav-logo {
+      font-size: 1.4rem; font-weight: 800;
+      letter-spacing: -0.5px; color: var(--white);
+      display: flex; align-items: center;
+    }
+    .nav-logo img { height: 36px; width: auto; }
+    .logo-fallback { display: none; }
+    .nav-links {
+      display: flex; align-items: center; gap: 32px;
+    }
+    .nav-link {
+      font-size: 0.8rem; font-weight: 500; letter-spacing: 0.5px;
+      color: var(--gray);
+      transition: color var(--t);
+    }
+    .nav-link:hover { color: var(--white); }
+    .nav-cta {
+      font-size: 0.8rem; font-weight: 700; letter-spacing: 0.5px;
+      color: var(--black); background: var(--white);
+      padding: 10px 22px; border-radius: 100px;
+      transition: background var(--t), transform var(--t);
+    }
+    .nav-cta:hover { background: var(--sky); transform: translateY(-1px); }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 6px;
+    }
+    .hamburger span {
+      display: block; width: 22px; height: 1.5px;
+      background: var(--white); border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    .mobile-menu {
+      display: none; position: fixed; inset: 0; z-index: 99;
+      background: var(--black);
+      flex-direction: column; align-items: center; justify-content: center;
+      gap: 40px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-size: 2rem; font-weight: 700; color: var(--white);
+    }
+
+    /* ── HERO ── */
     .hero {
-      min-height: 100vh;
-      display: flex; align-items: center; justify-content: center;
-      text-align: center; padding: 130px 5% 80px;
+      min-height: 100svh;
+      display: flex; flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 5% 80px;
       position: relative; overflow: hidden;
     }
-    .hero::before {
-      content: '';
-      position: absolute; inset: 0; pointer-events: none;
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0;
       background:
-        radial-gradient(ellipse 70% 55% at 50% -5%, rgba(75,143,216,0.2) 0%, transparent 65%),
-        radial-gradient(ellipse 35% 40% at 85% 85%, rgba(126,220,255,0.07) 0%, transparent 60%);
+        radial-gradient(ellipse 80% 60% at 20% 50%, rgba(75,143,216,0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 80% 20%, rgba(126,220,255,0.05) 0%, transparent 60%);
     }
-    /* grid overlay */
-    .hero::after {
+    /* Grid lines */
+    .hero-bg::after {
       content: '';
-      position: absolute; inset: 0; pointer-events: none;
+      position: absolute; inset: 0;
       background-image:
-        linear-gradient(rgba(126,220,255,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(126,220,255,0.04) 1px, transparent 1px);
-      background-size: 48px 48px;
-      mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 30%, transparent 100%);
+        linear-gradient(rgba(240,237,232,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(240,237,232,0.02) 1px, transparent 1px);
+      background-size: 80px 80px;
     }
-    .hero-inner { position: relative; z-index: 1; max-width: 780px; }
-    .hero-badge {
+    .hero-inner {
+      position: relative; z-index: 1; max-width: 1400px;
+    }
+    .hero-tag {
       display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(126,220,255,0.09);
-      border: 1px solid rgba(126,220,255,0.22);
-      border-radius: 100px; padding: 7px 18px;
-      font-size: 0.76rem; font-weight: 600;
-      color: var(--sky); letter-spacing: 0.04em; text-transform: uppercase;
-      margin-bottom: 28px;
-      opacity: 0; animation: fadeUp 0.7s 0.1s forwards;
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--gray);
+      margin-bottom: 32px;
     }
-    .dot {
-      width: 7px; height: 7px; background: var(--mint);
-      border-radius: 50%; flex-shrink: 0;
-      animation: pulse 2s infinite;
+    .hero-tag-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--sky);
+      animation: pulse 2s ease-in-out infinite;
     }
     @keyframes pulse {
-      0%,100% { opacity:1; transform:scale(1); }
-      50%      { opacity:0.45; transform:scale(1.5); }
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.4; transform: scale(0.7); }
     }
-    .hero h1 {
-      font-size: clamp(2.2rem, 5.5vw, 3.9rem);
-      font-weight: 800; line-height: 1.09; letter-spacing: -2px;
-      margin-bottom: 22px;
-      opacity: 0; animation: fadeUp 0.7s 0.22s forwards;
+    .hero-title {
+      font-size: clamp(3.5rem, 10.5vw, 13rem);
+      font-weight: 800; line-height: 0.92;
+      letter-spacing: -0.03em;
+      margin-bottom: 48px;
     }
-    .hero h1 em { font-style: normal; color: var(--sky); }
-    .hero-desc {
-      font-size: clamp(1rem, 2vw, 1.18rem);
-      color: var(--muted); max-width: 520px; margin: 0 auto 40px;
-      line-height: 1.65;
-      opacity: 0; animation: fadeUp 0.7s 0.36s forwards;
+    .hero-title .line { display: block; overflow: hidden; }
+    .hero-title .accent { color: var(--sky); }
+    .hero-title .outline {
+      -webkit-text-stroke: 1.5px var(--white);
+      color: transparent;
     }
-    .hero-cta {
-      display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;
-      opacity: 0; animation: fadeUp 0.7s 0.5s forwards;
+    .hero-bottom {
+      display: flex; align-items: flex-end;
+      justify-content: space-between; gap: 40px; flex-wrap: wrap;
     }
-    .hero-stats {
+    .hero-sub {
+      font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+      color: var(--gray); max-width: 360px; line-height: 1.7;
+    }
+    .hero-actions {
+      display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--white); color: var(--black);
+      font-family: 'Sora', sans-serif; font-weight: 700; font-size: 0.85rem;
+      padding: 14px 28px; border-radius: 100px;
+      transition: background var(--t), transform var(--t);
+    }
+    .btn-primary:hover { background: var(--sky); transform: translateY(-2px); }
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1px solid var(--border);
+      color: var(--gray); background: transparent;
+      font-family: 'Sora', sans-serif; font-weight: 500; font-size: 0.85rem;
+      padding: 14px 28px; border-radius: 100px;
+      transition: border-color var(--t), color var(--t);
+    }
+    .btn-ghost:hover { border-color: rgba(240,237,232,0.35); color: var(--white); }
+
+    /* ── TICKER ── */
+    .ticker {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0; overflow: hidden;
+      position: relative;
+    }
+    .ticker-track {
+      display: flex; gap: 0;
+      animation: ticker 25s linear infinite;
+      width: max-content;
+    }
+    .ticker-item {
+      display: flex; align-items: center; gap: 32px;
+      padding-right: 32px;
+      white-space: nowrap;
+    }
+    .ticker-text {
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--gray);
+    }
+    .ticker-sep {
+      width: 4px; height: 4px; border-radius: 50%;
+      background: var(--sky); flex-shrink: 0;
+    }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ── INTRO SECTION ── */
+    .intro-section {
+      padding: 120px 5%;
+      border-bottom: 1px solid var(--border);
+    }
+    .intro-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1.4fr;
+      gap: 80px; align-items: start;
+    }
+    .intro-label {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--gray);
+      margin-bottom: 24px;
+    }
+    .intro-number {
+      font-size: clamp(4rem, 8vw, 8rem);
+      font-weight: 800; line-height: 1;
+      letter-spacing: -0.04em; color: var(--white);
+    }
+    .intro-number span { color: var(--sky); }
+    .intro-number-label {
+      font-size: 0.8rem; color: var(--gray); margin-top: 8px;
+      font-weight: 500;
+    }
+    .intro-text {
+      font-size: clamp(1.3rem, 2.5vw, 2rem);
+      font-weight: 400; line-height: 1.5;
+      color: var(--white); letter-spacing: -0.01em;
+    }
+    .intro-text strong { color: var(--sky); font-weight: 700; }
+    .intro-text p + p { margin-top: 24px; }
+    .intro-sub {
+      font-size: 0.9rem; color: var(--gray); margin-top: 32px;
+      line-height: 1.7; max-width: 460px;
+    }
+
+    /* ── HORIZONTAL SCROLL — RESULTS ── */
+    .results-section {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .results-header {
+      padding: 0 5%; margin-bottom: 48px;
+      display: flex; align-items: flex-end; justify-content: space-between;
+      gap: 24px;
+    }
+    .results-header h2 {
+      font-size: clamp(2rem, 5vw, 4.5rem);
+      font-weight: 800; line-height: 1; letter-spacing: -0.03em;
+    }
+    .results-header h2 span { color: var(--sky); }
+    .scroll-hint {
+      font-size: 0.75rem; color: var(--gray); font-weight: 500;
+      letter-spacing: 1px; white-space: nowrap;
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 8px;
+    }
+    .scroll-hint svg { width: 20px; height: 20px; }
+
+    .scroll-track {
+      display: flex; gap: 16px;
+      overflow-x: auto; scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding: 0 5% 32px;
+      cursor: grab;
+      scrollbar-width: none;
+    }
+    .scroll-track::-webkit-scrollbar { display: none; }
+    .scroll-track:active { cursor: grabbing; }
+
+    .result-card {
+      flex: 0 0 340px; height: 460px;
+      scroll-snap-align: start;
+      border-radius: 16px;
+      position: relative; overflow: hidden;
+      background: #111;
+      border: 1px solid var(--border);
+      transition: transform 0.4s ease;
+    }
+    .result-card:hover { transform: scale(1.02); }
+    .result-card-bg {
+      position: absolute; inset: 0;
+      background: linear-gradient(160deg, var(--grad-from) 0%, var(--grad-to) 100%);
+      opacity: 0.7;
+    }
+    .result-card-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(8,8,8,0.95) 0%, rgba(8,8,8,0.3) 60%, transparent 100%);
+    }
+    .result-card-content {
+      position: absolute; inset: 0;
+      padding: 28px; display: flex; flex-direction: column;
+      justify-content: space-between;
+    }
+    .result-card-top {
+      display: flex; justify-content: space-between; align-items: flex-start;
+    }
+    .result-category {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: rgba(240,237,232,0.6);
+      background: rgba(240,237,232,0.08);
+      border: 1px solid rgba(240,237,232,0.12);
+      padding: 5px 12px; border-radius: 100px;
+    }
+    .result-card-bottom { }
+    .result-client {
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 1px;
+      text-transform: uppercase; color: rgba(240,237,232,0.5);
+      margin-bottom: 8px;
+    }
+    .result-metric {
+      font-size: 3.8rem; font-weight: 800; line-height: 1;
+      letter-spacing: -0.04em; color: var(--white);
+    }
+    .result-metric-label {
+      font-size: 0.8rem; color: rgba(240,237,232,0.5); margin-top: 6px;
+    }
+    .result-detail {
+      display: flex; gap: 16px; margin-top: 16px; flex-wrap: wrap;
+    }
+    .result-detail-item {
+      font-size: 0.75rem; color: rgba(240,237,232,0.45);
+    }
+    .result-detail-item strong { color: var(--sky); }
+
+    /* ── METHOD PAC ── */
+    .method-section {
+      padding: 120px 5%;
+      border-bottom: 1px solid var(--border);
+    }
+    .method-inner { max-width: 1200px; margin: 0 auto; }
+    .method-header { margin-bottom: 80px; }
+    .section-label {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--gray); margin-bottom: 20px;
+    }
+    .method-title {
+      font-size: clamp(2.5rem, 6vw, 6rem);
+      font-weight: 800; line-height: 1; letter-spacing: -0.03em;
+    }
+    .method-title span { color: var(--sky); }
+
+    .pac-list { display: flex; flex-direction: column; }
+    .pac-item {
+      display: grid; grid-template-columns: 80px 1fr 1fr;
+      gap: 40px; align-items: start;
+      padding: 48px 0;
+      border-top: 1px solid var(--border);
+      cursor: default;
+      transition: background var(--t);
+    }
+    .pac-item:hover { background: rgba(240,237,232,0.02); }
+    .pac-num {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--gray); padding-top: 6px;
+    }
+    .pac-name {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 800; letter-spacing: -0.03em; line-height: 1;
+    }
+    .pac-name em {
+      font-style: normal;
+      -webkit-text-stroke: 1px var(--white);
+      color: transparent;
+    }
+    .pac-desc { padding-top: 8px; }
+    .pac-desc h4 {
+      font-size: 0.88rem; font-weight: 700; color: var(--sky);
+      margin-bottom: 10px;
+    }
+    .pac-desc p {
+      font-size: 0.9rem; color: var(--gray); line-height: 1.75;
+    }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      padding: 80px 5%;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center; gap: 0;
+    }
+    .stat-item {
+      flex: 1; text-align: center; padding: 0 40px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num {
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      font-weight: 800; line-height: 1;
+      letter-spacing: -0.04em; color: var(--white);
+    }
+    .stat-num span { color: var(--sky); }
+    .stat-label {
+      font-size: 0.75rem; font-weight: 500; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--gray); margin-top: 8px;
+    }
+
+    /* ── INCLUDES ── */
+    .includes-section {
+      padding: 120px 5%;
+      border-bottom: 1px solid var(--border);
+    }
+    .includes-inner { max-width: 1200px; margin: 0 auto; }
+    .includes-header {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; margin-bottom: 80px; align-items: end;
+    }
+    .includes-title {
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      font-weight: 800; letter-spacing: -0.03em; line-height: 1;
+    }
+    .includes-sub {
+      font-size: 0.95rem; color: var(--gray); line-height: 1.75;
+    }
+    .includes-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 16px; overflow: hidden;
+    }
+    .include-item {
+      background: var(--black);
+      padding: 32px 28px;
+      transition: background var(--t);
+    }
+    .include-item:hover { background: rgba(240,237,232,0.03); }
+    .include-num {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--gray); margin-bottom: 16px;
+    }
+    .include-title {
+      font-size: 0.95rem; font-weight: 700; color: var(--white);
+      margin-bottom: 8px; line-height: 1.3;
+    }
+    .include-desc {
+      font-size: 0.78rem; color: var(--gray); line-height: 1.6;
+    }
+
+    /* ── TESTIMONIALS SCROLL ── */
+    .testi-section {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .testi-header {
+      padding: 0 5%; margin-bottom: 48px;
+    }
+    .testi-title {
+      font-size: clamp(2rem, 5vw, 4.5rem);
+      font-weight: 800; letter-spacing: -0.03em; line-height: 1;
+    }
+    .testi-track {
+      display: flex; gap: 16px;
+      overflow-x: auto; scroll-snap-type: x mandatory;
+      padding: 0 5% 32px;
+      scrollbar-width: none;
+      cursor: grab;
+    }
+    .testi-track::-webkit-scrollbar { display: none; }
+    .testi-card {
+      flex: 0 0 420px; scroll-snap-align: start;
+      border: 1px solid var(--border);
+      border-radius: 16px; padding: 40px 36px;
+      background: #0d0d0d;
+    }
+    .testi-stars { color: #FBB040; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 20px; }
+    .testi-quote {
+      font-size: 1.05rem; line-height: 1.7; color: var(--white);
+      margin-bottom: 32px; font-style: italic;
+    }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--sky); display: flex; align-items: center;
+      justify-content: center; font-weight: 800; font-size: 0.9rem;
+      color: var(--black); flex-shrink: 0;
+    }
+    .testi-name { font-size: 0.88rem; font-weight: 700; }
+    .testi-brand { font-size: 0.75rem; color: var(--gray); }
+
+    /* ── FORM SECTION ── */
+    .form-section {
+      padding: 120px 5%;
+    }
+    .form-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 100px; align-items: start;
+    }
+    .form-left { }
+    .form-eyebrow {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--gray); margin-bottom: 20px;
+    }
+    .form-title {
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      font-weight: 800; letter-spacing: -0.03em; line-height: 1;
+      margin-bottom: 24px;
+    }
+    .form-title span { color: var(--sky); }
+    .form-desc {
+      font-size: 0.95rem; color: var(--gray); line-height: 1.75;
+      margin-bottom: 40px;
+    }
+    .form-check-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .form-check-list li {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 0.88rem; color: var(--gray);
+    }
+    .form-check-list li::before {
+      content: ''; flex-shrink: 0;
+      width: 5px; height: 5px; border-radius: 50%;
+      background: var(--sky);
+    }
+
+    /* Form card */
+    .form-card {
+      border: 1px solid var(--border);
+      border-radius: 20px; padding: 44px 40px;
+      background: #0d0d0d; position: relative;
+    }
+    .form-card::before {
+      content: '';
+      position: absolute; top: 0; left: 40px; right: 40px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--sky), transparent);
+    }
+    .field-group {
+      display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px;
+    }
+    .field-group label {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--gray);
+    }
+    .field-group input,
+    .field-group select {
+      background: rgba(240,237,232,0.04);
+      border: 1px solid var(--border);
+      border-radius: 10px; padding: 14px 18px;
+      font-family: 'Sora', sans-serif; font-size: 0.9rem;
+      color: var(--white); outline: none; width: 100%;
+      transition: border-color var(--t), background var(--t);
+    }
+    .field-group input::placeholder { color: rgba(240,237,232,0.25); }
+    .field-group input:focus,
+    .field-group select:focus {
+      border-color: rgba(126,220,255,0.4);
+      background: rgba(126,220,255,0.04);
+    }
+    .field-group select option { background: #111; color: var(--white); }
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+    .no-califica-msg {
+      display: none; padding: 14px 18px; margin-bottom: 16px;
+      border-radius: 10px; border: 1px solid rgba(251,176,64,0.3);
+      background: rgba(251,176,64,0.06);
+      font-size: 0.83rem; color: rgba(251,176,64,0.9); line-height: 1.5;
+    }
+    .no-califica-msg a {
+      color: #FBB040; text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .btn-submit {
+      width: 100%; padding: 16px;
+      background: var(--white); color: var(--black);
+      font-family: 'Sora', sans-serif; font-weight: 700; font-size: 0.95rem;
+      border: none; border-radius: 100px; cursor: pointer; margin-top: 6px;
+      transition: background var(--t), transform var(--t);
+    }
+    .btn-submit:hover { background: var(--sky); transform: translateY(-2px); }
+    .btn-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+    .form-note {
+      font-size: 0.72rem; color: var(--gray); text-align: center; margin-top: 12px;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 48px 5%;
+    }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 24px; flex-wrap: wrap;
+    }
+    .footer-logo {
+      font-size: 1.2rem; font-weight: 800;
+      letter-spacing: -0.5px; color: var(--white);
+    }
+    .footer-links {
+      display: flex; gap: 32px; flex-wrap: wrap;
+    }
+    .footer-links a {
+      font-size: 0.78rem; color: var(--gray); font-weight: 500;
+      transition: color var(--t);
+    }
+    .footer-links a:hover { color: var(--white); }
+    .footer-social { display: flex; gap: 16px; }
+    .footer-social a {
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1px solid var(--border);
       display: flex; align-items: center; justify-content: center;
-      flex-wrap: wrap; gap: 0; margin-top: 60px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px; padding: 22px 32px;
-      opacity: 0; animation: fadeUp 0.7s 0.65s forwards;
+      color: var(--gray); transition: border-color var(--t), color var(--t);
     }
-    .stat { text-align: center; padding: 0 28px; }
-    .stat strong { display: block; font-size: 1.8rem; font-weight: 800; color: var(--sky); letter-spacing: -1px; }
-    .stat span { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
-    .stat-divider { width: 1px; height: 44px; background: rgba(255,255,255,0.1); }
-    @keyframes fadeUp {
-      from { opacity:0; transform:translateY(22px); }
-      to   { opacity:1; transform:translateY(0); }
+    .footer-social a:hover { border-color: var(--white); color: var(--white); }
+    .footer-copy {
+      text-align: center; padding: 20px 5% 32px;
+      font-size: 0.72rem; color: rgba(240,237,232,0.2);
+      letter-spacing: 0.5px;
+    }
+
+    /* ── WHATSAPP FLOAT ── */
+    .wa-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 90;
+      width: 52px; height: 52px; border-radius: 50%;
+      background: #25D366;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 28px rgba(37,211,102,0.35);
+      transition: transform var(--t), box-shadow var(--t);
+    }
+    .wa-float:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(37,211,102,0.45); }
+    .wa-float svg { width: 28px; height: 28px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .intro-inner { grid-template-columns: 1fr; gap: 40px; }
+      .includes-header { grid-template-columns: 1fr; gap: 24px; }
+      .includes-grid { grid-template-columns: repeat(2, 1fr); }
+      .pac-item { grid-template-columns: 50px 1fr; gap: 24px; }
+      .pac-desc { grid-column: 2; }
+      .form-inner { grid-template-columns: 1fr; gap: 60px; }
+      .stats-bar { flex-direction: column; gap: 40px; }
+      .stat-item { border-right: none; border-bottom: 1px solid var(--border); padding: 0 0 40px; }
+      .stat-item:last-child { border-bottom: none; }
+    }
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero-title { font-size: clamp(3rem, 14vw, 5.5rem); }
+      .result-card { flex: 0 0 280px; height: 380px; }
+      .includes-grid { grid-template-columns: 1fr; }
+      .testi-card { flex: 0 0 300px; }
+      .field-row { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .pac-item { grid-template-columns: 1fr; }
+      .pac-num { display: none; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <img src="assets/logo-light.png" alt="Sky Marketing"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
-        <span class="logo-fallback">Sky</span>
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html" class="nav-link active">Inicio</a>
-        <a href="servicios.html" class="nav-link">Servicios</a>
-        <a href="nosotros.html" class="nav-link">Nosotros</a>
-        <a href="contacto.html" class="nav-link">Contacto</a>
-        <a href="#formulario" class="btn-nav">Diagnóstico gratis →</a>
-      </nav>
+  <!-- Navbar -->
+  <nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo-light.png" alt="Sky Marketing"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+      <span class="logo-fallback">Sky</span>
+    </a>
+    <div class="nav-links">
+      <a href="servicios.html" class="nav-link">Servicios</a>
+      <a href="nosotros.html" class="nav-link">Nosotros</a>
+      <a href="contacto.html" class="nav-link">Contacto</a>
+      <a href="#aplicar" class="nav-cta">Aplicar →</a>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
-  <!-- HERO -->
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="servicios.html">Servicios</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="#aplicar" class="btn-primary" style="font-size:1rem;padding:16px 36px;">Aplicar →</a>
+  </div>
+
+  <!-- Hero -->
   <section class="hero">
+    <div class="hero-bg"></div>
     <div class="hero-inner">
-      <div class="hero-badge">
-        <span class="dot"></span>
-        Meta Ads para ecommerce · Colombia
+      <div class="hero-tag">
+        <span class="hero-tag-dot"></span>
+        Meta Ads · Ecommerce · Colombia
       </div>
-      <h1>Duplicamos tus ventas<br /><em>en menos de 90 días.</em></h1>
-      <p class="hero-desc">
-        Con el método PAC — validado con más de $200M COP en pauta —
-        hacemos que cada peso invertido en Meta trabaje para ti.
-      </p>
-      <div class="hero-cta">
-        <a href="#formulario" class="btn-primary">Ver si califico →</a>
-        <a href="servicios.html" class="btn-ghost">Conocer el método</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <strong>+$200M</strong>
-          <span>COP en pauta gestionada</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <strong>+5 años</strong>
-          <span>de experiencia</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <strong>6+</strong>
-          <span>marcas escaladas</span>
+      <h1 class="hero-title">
+        <span class="line">Duplicamos</span>
+        <span class="line">tus <span class="accent">ventas</span></span>
+        <span class="line outline">en Meta Ads.</span>
+      </h1>
+      <div class="hero-bottom">
+        <p class="hero-sub">
+          Método PAC — el sistema que transforma tu inversión publicitaria
+          en resultados predecibles. Sin improvisar.
+        </p>
+        <div class="hero-actions">
+          <a href="#aplicar" class="btn-primary">Aplicar ahora →</a>
+          <a href="#metodo" class="btn-ghost">Ver el método</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CLIENTES BAR -->
-  <div class="clientes-bar reveal">
-    <div class="container">
-      <p class="clientes-label">Marcas que han confiado en Sky Marketing</p>
-      <div class="logos-row">
-        <span class="logo-pill">Javier Jiménez</span>
-        <span class="logo-pill">Valenzza Men</span>
-        <span class="logo-pill">Comiendo Sano</span>
-        <span class="logo-pill">Lamaite</span>
-        <span class="logo-pill">Kendi Panama</span>
-        <span class="logo-pill">Laserati</span>
+  <!-- Ticker -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <!-- duplicated for seamless loop -->
+      <div class="ticker-item">
+        <span class="ticker-text">Meta Ads</span><span class="ticker-sep"></span>
+        <span class="ticker-text">Ecommerce</span><span class="ticker-sep"></span>
+        <span class="ticker-text">Método PAC</span><span class="ticker-sep"></span>
+        <span class="ticker-text">+$200M COP gestionados</span><span class="ticker-sep"></span>
+        <span class="ticker-text">Facebook Ads</span><span class="ticker-sep"></span>
+        <span class="ticker-text">Instagram Ads</span><span class="ticker-sep"></span>
+        <span class="ticker-text">Colombia</span><span class="ticker-sep"></span>
+        <span class="ticker-text">+5 años de experiencia</span><span class="ticker-sep"></span>
+        <span class="ticker-text">Advantage+</span><span class="ticker-sep"></span>
+        <span class="ticker-text">Creativos con IA</span><span class="ticker-sep"></span>
+      </div>
+      <div class="ticker-item" aria-hidden="true">
+        <span class="ticker-text">Meta Ads</span><span class="ticker-sep"></span>
+        <span class="ticker-text">Ecommerce</span><span class="ticker-sep"></span>
+        <span class="ticker-text">Método PAC</span><span class="ticker-sep"></span>
+        <span class="ticker-text">+$200M COP gestionados</span><span class="ticker-sep"></span>
+        <span class="ticker-text">Facebook Ads</span><span class="ticker-sep"></span>
+        <span class="ticker-text">Instagram Ads</span><span class="ticker-sep"></span>
+        <span class="ticker-text">Colombia</span><span class="ticker-sep"></span>
+        <span class="ticker-text">+5 años de experiencia</span><span class="ticker-sep"></span>
+        <span class="ticker-text">Advantage+</span><span class="ticker-sep"></span>
+        <span class="ticker-text">Creativos con IA</span><span class="ticker-sep"></span>
       </div>
     </div>
   </div>
 
-  <!-- PROBLEMA -->
-  <section class="section bg-dark2" id="problema">
-    <div class="container reveal">
-      <div class="section-label">El problema</div>
-      <h2 class="section-title">¿Te suena alguna de estas <em>situaciones</em>?</h2>
-      <p class="section-sub">La mayoría de ecommerce en Colombia invierten en Meta Ads sin un proceso claro — y eso les cuesta caro.</p>
-      <div class="pain-grid">
-        <div class="pain-card">
-          <div class="pain-icon">📉</div>
-          <h3>El ROAS cae cuando escalas</h3>
-          <p>Subes el presupuesto y tus anuncios dejan de ser rentables. No sabes cuándo ni cómo escalar sin arriesgar todo.</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon">🎲</div>
-          <h3>Crear anuncios es cuestión de suerte</h3>
-          <p>No tienes un proceso claro. Lanzas creativos a ver qué pasa y dependes de uno o dos anuncios que ya no duran.</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon">💸</div>
-          <h3>Inviertes pero no sabes si estás ganando</h3>
-          <p>No hay métricas claras, no hay reportes, no hay control. Solo la sensación de que la plata se va.</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon">💬</div>
-          <h3>Gastas en creadores sin estrategia</h3>
-          <p>Mandas el producto sin guion, recibes un video editado sin variedad para testear. UGC sin proceso no funciona.</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon">🪝</div>
-          <h3>Tienes tráfico pero no ventas</h3>
-          <p>Tu Shopify recibe visitas pero la conversión es baja. El problema puede estar en el anuncio, la audiencia o la oferta.</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon">🤝</div>
-          <h3>Otras agencias ya te fallaron</h3>
-          <p>Prometieron resultados, gestionaron campañas y no entendiste qué hicieron. Necesitas proceso documentado, no promesas.</p>
-        </div>
+  <!-- Intro -->
+  <section class="intro-section">
+    <div class="intro-inner">
+      <div>
+        <p class="intro-label">Quiénes somos</p>
+        <div class="intro-number">+$200<span>M</span></div>
+        <p class="intro-number-label">COP gestionados en Meta Ads</p>
       </div>
-    </div>
-  </section>
-
-  <!-- MÉTODO PAC -->
-  <section class="section bg-dark3" id="metodo">
-    <div class="container reveal">
-      <div class="section-label">Nuestro método</div>
-      <h2 class="section-title">El método <em>PAC</em>: Anuncios que venden</h2>
-      <p class="section-sub">No improvisamos. Cada anuncio sigue un proceso validado de principio a fin para maximizar la diversidad creativa y los resultados.</p>
-      <div class="pac-grid">
-        <div class="pac-card">
-          <div class="pac-letter">P</div>
-          <div class="pac-num">01 — Producto</div>
-          <h3>Brief del producto</h3>
-          <p>Analizamos a fondo tu producto, tu mercado y tu competencia. Entendemos qué diferencia lo tuyo y por qué tu cliente ideal debería comprarte — y no a otro.</p>
-          <span class="pac-tag">Investigación estratégica</span>
+      <div>
+        <div class="intro-text">
+          <p>
+            No somos una agencia genérica. Somos especialistas en <strong>Meta Ads para ecommerce</strong>
+            con un método propio que convierte inversión publicitaria en ventas predecibles.
+          </p>
+          <p>
+            Llevamos 5 años perfeccionando el <strong>Método PAC</strong> — el sistema que usamos
+            para escalar marcas colombianas sin quemar presupuesto en lo que no funciona.
+          </p>
         </div>
-        <div class="pac-card">
-          <div class="pac-letter">A</div>
-          <div class="pac-num">02 — Ángulos</div>
-          <h3>Ángulos de venta</h3>
-          <p>Con IA y metodología propia, generamos de 20 a 50 ángulos de venta en distintos niveles de consciencia para llegar a tu cliente en el momento exacto del proceso de compra.</p>
-          <span class="pac-tag">IA + estrategia creativa</span>
-        </div>
-        <div class="pac-card">
-          <div class="pac-letter">C</div>
-          <div class="pac-num">03 — Creación</div>
-          <h3>Creación con IA</h3>
-          <p>Convertimos cada ángulo en hooks, guiones y conceptos basados en anuncios validados por la industria. Resultado: de 50 a 100 variaciones por guion para darle volumen y calidad real a Meta.</p>
-          <span class="pac-tag">50–100 anuncios por guion</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LO QUE INCLUYE -->
-  <section class="section bg-dark2">
-    <div class="container reveal">
-      <div class="section-label">El servicio</div>
-      <h2 class="section-title">Todo lo que hacemos por <em>tu negocio</em></h2>
-      <p class="section-sub">Un sistema completo de gestión publicitaria. Nada por fuera, nada improvisado.</p>
-      <div class="incluye-grid">
-        <div class="incluye-item">
-          <div class="check">✓</div>
-          <div>
-            <strong>Configuración de activos digitales</strong>
-            <span>Fanpage, cuenta publicitaria, Pixel, API de conversiones, WhatsApp Business y más.</span>
-          </div>
-        </div>
-        <div class="incluye-item">
-          <div class="check">✓</div>
-          <div>
-            <strong>Estudio de mercado</strong>
-            <span>Análisis profundo del cliente ideal, la competencia y las oportunidades de tu nicho.</span>
-          </div>
-        </div>
-        <div class="incluye-item">
-          <div class="check">✓</div>
-          <div>
-            <strong>Estrategia personalizada</strong>
-            <span>Diseñada según tu presupuesto, objetivos de ventas y canal principal (Shopify o WhatsApp).</span>
-          </div>
-        </div>
-        <div class="incluye-item">
-          <div class="check">✓</div>
-          <div>
-            <strong>Guiones para anuncios</strong>
-            <span>Guiones persuasivos con ángulos de venta validados y niveles de consciencia definidos.</span>
-          </div>
-        </div>
-        <div class="incluye-item">
-          <div class="check">✓</div>
-          <div>
-            <strong>Creación de piezas gráficas</strong>
-            <span>Diseño y edición de todos los creativos necesarios para las campañas.</span>
-          </div>
-        </div>
-        <div class="incluye-item">
-          <div class="check">✓</div>
-          <div>
-            <strong>Seguimiento y optimización diaria</strong>
-            <span>Revisión permanente de campañas para maximizar el rendimiento de cada peso invertido.</span>
-          </div>
-        </div>
-        <div class="incluye-item">
-          <div class="check">✓</div>
-          <div>
-            <strong>Reporte quincenal</strong>
-            <span>Resultados claros cada dos semanas. Sabes exactamente qué está pasando con tu pauta.</span>
-          </div>
-        </div>
-        <div class="incluye-item">
-          <div class="check">✓</div>
-          <div>
-            <strong>Informe mensual con plan de acción</strong>
-            <span>Métricas clave, conclusiones y próximos pasos para seguir escalando rentablemente.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESO -->
-  <section class="section bg-dark3">
-    <div class="container reveal">
-      <div class="section-label">Cómo trabajamos</div>
-      <h2 class="section-title">El proceso de arranque, <em>paso a paso</em></h2>
-      <p class="section-sub">En 7 días hábiles tenemos todo listo. Sin improvisación, sin demoras.</p>
-      <div class="proceso-steps">
-        <div class="step"><div class="step-num">1</div><span>Conexión de activos digitales</span></div>
-        <div class="step"><div class="step-num">2</div><span>Optimización inicial de la cuenta</span></div>
-        <div class="step"><div class="step-num">3</div><span>Brief con el cliente</span></div>
-        <div class="step"><div class="step-num">4</div><span>Análisis y benchmarking de competencia</span></div>
-        <div class="step"><div class="step-num">5</div><span>Creación de guiones y piezas gráficas</span></div>
-        <div class="step"><div class="step-num">6</div><span>Grabación, edición y lanzamiento</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FORMULARIO -->
-  <section class="section bg-dark2" id="formulario">
-    <div class="container reveal">
-      <div style="text-align:center">
-        <div class="section-label">¿Calificás?</div>
-        <h2 class="section-title">Cuéntanos sobre <em>tu negocio</em></h2>
-        <p class="section-sub" style="margin:0 auto 48px">
-          Completa el formulario y en menos de 24 horas agendamos tu diagnóstico gratis.
+        <p class="intro-sub">
+          Trabajamos con pocas marcas a la vez para dar la atención que cada cuenta merece.
+          Si calificas, tienes acceso directo a quien maneja tus campañas — sin intermediarios.
         </p>
       </div>
+    </div>
+  </section>
+
+  <!-- Horizontal scroll — Results -->
+  <section class="results-section">
+    <div class="results-header">
+      <h2>Resultados<br/><span>reales</span></h2>
+      <div class="scroll-hint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+        Desliza para ver más
+      </div>
+    </div>
+    <div class="scroll-track" id="scrollTrack">
+
+      <div class="result-card" style="--grad-from:#0d2236;--grad-to:#0a0a0a;">
+        <div class="result-card-bg"></div>
+        <div class="result-card-overlay"></div>
+        <div class="result-card-content">
+          <div class="result-card-top">
+            <span class="result-category">Moda masculina</span>
+          </div>
+          <div class="result-card-bottom">
+            <p class="result-client">Valenzza Men</p>
+            <div class="result-metric">4.2x</div>
+            <p class="result-metric-label">ROAS sostenido</p>
+            <div class="result-detail">
+              <span class="result-detail-item">Inversión <strong>$5M/mes</strong></span>
+              <span class="result-detail-item">Escala <strong>+60%</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-card" style="--grad-from:#0d2010;--grad-to:#0a0a0a;">
+        <div class="result-card-bg"></div>
+        <div class="result-card-overlay"></div>
+        <div class="result-card-content">
+          <div class="result-card-top">
+            <span class="result-category">Alimentación</span>
+          </div>
+          <div class="result-card-bottom">
+            <p class="result-client">Comiendo Sano</p>
+            <div class="result-metric">2x</div>
+            <p class="result-metric-label">Ventas en 3 meses</p>
+            <div class="result-detail">
+              <span class="result-detail-item">CPA <strong>-38%</strong></span>
+              <span class="result-detail-item">CTR <strong>+2.1%</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-card" style="--grad-from:#1a0d20;--grad-to:#0a0a0a;">
+        <div class="result-card-bg"></div>
+        <div class="result-card-overlay"></div>
+        <div class="result-card-content">
+          <div class="result-card-top">
+            <span class="result-category">Accesorios</span>
+          </div>
+          <div class="result-card-bottom">
+            <p class="result-client">Lamaite</p>
+            <div class="result-metric">3.7x</div>
+            <p class="result-metric-label">ROAS promedio</p>
+            <div class="result-detail">
+              <span class="result-detail-item">Creativos <strong>80+</strong></span>
+              <span class="result-detail-item">Ángulos <strong>35</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-card" style="--grad-from:#1a1500;--grad-to:#0a0a0a;">
+        <div class="result-card-bg"></div>
+        <div class="result-card-overlay"></div>
+        <div class="result-card-content">
+          <div class="result-card-top">
+            <span class="result-category">Joyería</span>
+          </div>
+          <div class="result-card-bottom">
+            <p class="result-client">Kendi Panama</p>
+            <div class="result-metric">5.1x</div>
+            <p class="result-metric-label">Pico de ROAS</p>
+            <div class="result-detail">
+              <span class="result-detail-item">Black Friday <strong>récord</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-card" style="--grad-from:#001a1a;--grad-to:#0a0a0a;">
+        <div class="result-card-bg"></div>
+        <div class="result-card-overlay"></div>
+        <div class="result-card-content">
+          <div class="result-card-top">
+            <span class="result-category">Estética</span>
+          </div>
+          <div class="result-card-bottom">
+            <p class="result-client">Laserati</p>
+            <div class="result-metric">-42%</div>
+            <p class="result-metric-label">Reducción CPA</p>
+            <div class="result-detail">
+              <span class="result-detail-item">Leads <strong>+120%</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Method PAC -->
+  <section class="method-section" id="metodo">
+    <div class="method-inner">
+      <div class="method-header">
+        <p class="section-label">Nuestro sistema</p>
+        <h2 class="method-title">El Método <span>PAC</span></h2>
+      </div>
+      <div class="pac-list">
+        <div class="pac-item">
+          <span class="pac-num">01</span>
+          <div class="pac-name"><em>P</em>roducto</div>
+          <div class="pac-desc">
+            <h4>Brief estratégico + investigación</h4>
+            <p>Antes de tocar Meta, entendemos tu producto, cliente ideal y competidores. Sin este paso, todo lo demás es adivinanza. La investigación define todo lo que viene después.</p>
+          </div>
+        </div>
+        <div class="pac-item">
+          <span class="pac-num">02</span>
+          <div class="pac-name"><em>A</em>ngulos</div>
+          <div class="pac-desc">
+            <h4>20–50 ángulos de venta con IA</h4>
+            <p>Generamos entre 20 y 50 ángulos de comunicación distintos. Cada uno apunta a un dolor, deseo o creencia de tu cliente. Probamos los más prometedores primero.</p>
+          </div>
+        </div>
+        <div class="pac-item">
+          <span class="pac-num">03</span>
+          <div class="pac-name"><em>C</em>reación</div>
+          <div class="pac-desc">
+            <h4>50–100 variaciones por guion</h4>
+            <p>Usamos IA para crear decenas de variaciones de copy, guiones de video y estáticos. El volumen asegura que la fase de aprendizaje de Meta termine más rápido.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-num">+$200<span>M</span></div>
+      <p class="stat-label">COP gestionados</p>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">+5</div>
+      <p class="stat-label">Años de experiencia</p>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">6<span>+</span></div>
+      <p class="stat-label">Marcas activas</p>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">100<span>%</span></div>
+      <p class="stat-label">Enfoque en Meta Ads</p>
+    </div>
+  </div>
+
+  <!-- Includes -->
+  <section class="includes-section">
+    <div class="includes-inner">
+      <div class="includes-header">
+        <h2 class="includes-title">Todo lo que necesita tu cuenta</h2>
+        <p class="includes-sub">Un sistema completo — no paquetes sueltos. Desde la investigación hasta la optimización semanal, todo está incluido.</p>
+      </div>
+      <div class="includes-grid">
+        <div class="include-item">
+          <p class="include-num">01</p>
+          <p class="include-title">Auditoría de cuenta</p>
+          <p class="include-desc">Revisamos todo lo que tienes activo antes de tocar el presupuesto.</p>
+        </div>
+        <div class="include-item">
+          <p class="include-num">02</p>
+          <p class="include-title">Brief estratégico</p>
+          <p class="include-desc">Investigación profunda del producto, cliente y competencia.</p>
+        </div>
+        <div class="include-item">
+          <p class="include-num">03</p>
+          <p class="include-title">20–50 ángulos con IA</p>
+          <p class="include-desc">Mensajes que conectan con cada etapa del proceso de compra.</p>
+        </div>
+        <div class="include-item">
+          <p class="include-num">04</p>
+          <p class="include-title">50–100 creativos</p>
+          <p class="include-desc">Variaciones de copy, guiones y estáticos para saturar la fase de aprendizaje.</p>
+        </div>
+        <div class="include-item">
+          <p class="include-num">05</p>
+          <p class="include-title">Estructura de campañas</p>
+          <p class="include-desc">Arquitectura de adsets y presupuesto lista para escalar.</p>
+        </div>
+        <div class="include-item">
+          <p class="include-num">06</p>
+          <p class="include-title">Pixel + eventos</p>
+          <p class="include-desc">Configuración de seguimiento desde el día 1, sin datos perdidos.</p>
+        </div>
+        <div class="include-item">
+          <p class="include-num">07</p>
+          <p class="include-title">Reporte semanal</p>
+          <p class="include-desc">Métricas que importan — no PDFs con gráficas vacías.</p>
+        </div>
+        <div class="include-item">
+          <p class="include-num">08</p>
+          <p class="include-title">Acceso directo</p>
+          <p class="include-desc">Hablas con quien maneja tu cuenta. Sin account managers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials scroll -->
+  <section class="testi-section">
+    <div class="testi-header">
+      <p class="section-label">Lo que dicen</p>
+      <h2 class="testi-title">Clientes que<br/>lo vivieron</h2>
+    </div>
+    <div class="testi-track">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"En 3 meses duplicamos las ventas. La diferencia fue el volumen de creativos y que siempre entendieron nuestro producto desde el primer día."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">J</div>
+          <div>
+            <p class="testi-name">Javier J.</p>
+            <p class="testi-brand">Ecommerce de moda</p>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Antes probé con otras 2 agencias. Con Sky fue la primera vez que el ROAS se mantuvo estable mientras escalábamos el presupuesto."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">V</div>
+          <div>
+            <p class="testi-name">Valenzza Men</p>
+            <p class="testi-brand">Ropa masculina</p>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Lo que más me gustó fue la comunicación. Siempre supe qué pasaba con mi dinero y por qué tomaban cada decisión. Cero cajas negras."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">C</div>
+          <div>
+            <p class="testi-name">Comiendo Sano</p>
+            <p class="testi-brand">Alimentación saludable</p>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"El Black Friday fue nuestro mejor mes histórico. El sistema de ángulos que usaron fue clave — nunca habíamos tenido tanto contenido trabajando en paralelo."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">K</div>
+          <div>
+            <p class="testi-name">Kendi Panama</p>
+            <p class="testi-brand">Joyería</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form / Apply -->
+  <section class="form-section" id="aplicar">
+    <div class="form-inner">
+      <div class="form-left">
+        <p class="form-eyebrow">Cupos limitados</p>
+        <h2 class="form-title">¿Listo para<br/><span>escalar?</span></h2>
+        <p class="form-desc">
+          Trabajamos con pocas marcas a la vez. Si calificas, tienes acceso a un diagnóstico
+          gratuito de tu cuenta y un plan de acción real — sin costo, sin compromiso.
+        </p>
+        <ul class="form-check-list">
+          <li>Diagnóstico gratuito de tu cuenta actual</li>
+          <li>Respuesta en menos de 24 horas</li>
+          <li>Hablas directo con quien va a manejar tu cuenta</li>
+          <li>Sin contratos de largo plazo al inicio</li>
+          <li>Solo aceptamos si creemos que podemos generar resultados</li>
+        </ul>
+      </div>
+
       <div class="form-card">
-        <form id="calForm">
-          <div class="form-group">
-            <label for="nombre">Tu nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamas?" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Tu email</label>
-            <input type="email" id="email" name="email" placeholder="correo@empresa.com" required />
-          </div>
-          <div class="form-group">
-            <label for="whatsapp">Tu WhatsApp</label>
-            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+57 300 000 0000" required />
-          </div>
-          <div class="form-group">
-            <label for="inversion">¿Cuánto inviertes en Meta Ads al mes?</label>
-            <div class="select-wrap">
-              <select id="inversion" name="inversion" required>
-                <option value="">Selecciona tu rango</option>
-                <option value="menos3m">Menos de $3M COP</option>
-                <option value="3m-8m">$3M – $8M COP</option>
-                <option value="8m-50m">$8M – $50M COP</option>
-                <option value="mas50m">+$50M COP</option>
-              </select>
+        <form id="applyForm" novalidate>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+            </div>
+            <div class="field-group">
+              <label for="whatsapp">WhatsApp</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="3001234567" required />
             </div>
           </div>
-          <div class="form-group">
+          <div class="field-group">
+            <label for="producto">¿Qué vendes?</label>
+            <input type="text" id="producto" name="producto" placeholder="Ej: ropa femenina, suplementos..." required />
+          </div>
+          <div class="field-group">
+            <label for="inversion">Inversión mensual en Meta Ads</label>
+            <select id="inversion" name="inversion" required>
+              <option value="" disabled selected>Selecciona tu rango</option>
+              <option value="menos3m">Menos de $3M COP</option>
+              <option value="3a5m">$3M – $5M COP</option>
+              <option value="5a10m">$5M – $10M COP</option>
+              <option value="10a20m">$10M – $20M COP</option>
+              <option value="mas20m">Más de $20M COP</option>
+            </select>
+          </div>
+          <div class="no-califica-msg" id="noCalificaMsg">
+            Con ese presupuesto aún no podemos garantizar resultados reales.
+            <a href="no-califica.html">Te dejamos recursos gratuitos →</a>
+          </div>
+          <div class="field-group">
             <label for="objetivo">¿Cuál es tu objetivo principal?</label>
-            <div class="select-wrap">
-              <select id="objetivo" name="objetivo" required>
-                <option value="">Selecciona una opción</option>
-                <option value="ventas-shopify">Aumentar ventas en Shopify</option>
-                <option value="ventas-whatsapp">Aumentar ventas por WhatsApp</option>
-                <option value="mejorar-roas">Mejorar el ROAS de mis campañas actuales</option>
-                <option value="conseguir-leads">Conseguir más leads o clientes</option>
-              </select>
-            </div>
+            <select id="objetivo" name="objetivo">
+              <option value="" disabled selected>Selecciona</option>
+              <option value="Aumentar ROAS">Aumentar el ROAS</option>
+              <option value="Bajar CPA">Bajar el costo por compra</option>
+              <option value="Escalar presupuesto">Escalar sin perder rentabilidad</option>
+              <option value="Iniciar en Meta Ads">Iniciar en Meta Ads</option>
+            </select>
           </div>
-
-          <div id="msgNoCalifica" class="msg-no-cal" style="display:none">
-            <p>Por ahora trabajamos con marcas que invierten más de $3M COP al mes.
-            <a href="no-califica.html">Igual te dejamos recursos gratuitos que te van a servir →</a></p>
-          </div>
-
-          <button type="submit" class="btn-form" id="btnSubmit">Ver si califico →</button>
-          <p class="form-note">Sin costo · Sin compromiso · Respuesta en &lt; 24 horas</p>
+          <button type="submit" class="btn-submit" id="btnSubmit">Quiero aplicar →</button>
+          <p class="form-note">Sin spam. Respondemos en menos de 24 horas.</p>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer-inner">
-      <div class="footer-brand">
-        <a href="index.html" class="footer-logo">
-          <img src="assets/logo-light.png" alt="Sky Marketing"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
-          <span class="logo-fallback">Sky</span>
-        </a>
-        <p>Agencia de Meta Ads especializada en ecommerce. Más de $200M COP en inversión gestionada y +5 años escalando marcas en Colombia.</p>
-        <a href="https://www.instagram.com/skymarketing.co/" target="_blank" rel="noopener" class="social-link">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-          </svg>
-          @skymarketing.co
-        </a>
+      <div class="footer-logo">
+        <img src="assets/logo-light.png" alt="Sky Marketing" style="height:32px;width:auto;"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+        <span style="display:none;">Sky</span>
       </div>
       <div class="footer-links">
-        <h4>Páginas</h4>
-        <a href="index.html">Inicio</a>
         <a href="servicios.html">Servicios</a>
         <a href="nosotros.html">Nosotros</a>
         <a href="contacto.html">Contacto</a>
-        <a href="landing-ecommerce.html">Para ecommerce</a>
+        <a href="landing-ecommerce.html">Meta Ads</a>
       </div>
-      <div class="footer-contact">
-        <h4>Contacto</h4>
-        <a href="https://wa.me/573182258333?text=Hola%20Sky%20Marketing%2C%20quiero%20información" target="_blank" rel="noopener">WhatsApp: 318 225 8333</a>
-        <a href="mailto:sky.marketingads@gmail.com">sky.marketingads@gmail.com</a>
-        <a href="#formulario" class="btn-footer-cta">Diagnóstico gratis →</a>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/skymarketing.co/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="mailto:sky.marketingads@gmail.com" aria-label="Email">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </a>
+        <a href="https://wa.me/573182258333" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.524 5.847L.057 23.882l6.197-1.624A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.001-1.374l-.36-.213-3.68.965.981-3.595-.234-.369A9.818 9.818 0 012.182 12C2.182 6.578 6.578 2.182 12 2.182S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/>
+          </svg>
+        </a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2025 Sky Marketing · skymarketing.co</span>
-      <span>Hecho con 🤍 en Colombia</span>
-    </div>
+    <p class="footer-copy">© 2025 Sky Marketing · Todos los derechos reservados</p>
   </footer>
 
-  <!-- WhatsApp Float -->
-  <a href="https://wa.me/573182258333?text=Hola%20Sky%20Marketing%2C%20quiero%20información%20sobre%20sus%20servicios"
-     class="wa-float" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  <!-- WhatsApp float -->
+  <a href="https://wa.me/573182258333?text=Hola%20Sky%20Marketing%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.524 5.847L.057 23.882l6.197-1.624A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.001-1.374l-.36-.213-3.68.965.981-3.595-.234-.369A9.818 9.818 0 012.182 12C2.182 6.578 6.578 2.182 12 2.182S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/>
     </svg>
   </a>
 
   <script src="js/main.js" defer></script>
   <script>
-    const form       = document.getElementById('calForm');
-    const invSelect  = document.getElementById('inversion');
-    const msgNo      = document.getElementById('msgNoCalifica');
-    const btnSubmit  = document.getElementById('btnSubmit');
+    // Navbar scroll
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
 
-    invSelect.addEventListener('change', () => {
-      if (invSelect.value === 'menos3m') {
-        msgNo.style.display = 'block';
-        btnSubmit.textContent = 'Ver recursos gratuitos →';
-      } else {
-        msgNo.style.display = 'none';
-        btnSubmit.textContent = 'Ver si califico →';
-      }
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    });
+
+    // Drag scroll on cards
+    const track = document.getElementById('scrollTrack');
+    let isDown = false, startX, scrollLeft;
+    track.addEventListener('mousedown', e => { isDown = true; startX = e.pageX - track.offsetLeft; scrollLeft = track.scrollLeft; });
+    track.addEventListener('mouseleave', () => isDown = false);
+    track.addEventListener('mouseup', () => isDown = false);
+    track.addEventListener('mousemove', e => {
+      if (!isDown) return;
+      e.preventDefault();
+      track.scrollLeft = scrollLeft - (e.pageX - track.offsetLeft - startX);
+    });
+
+    // Form logic
+    const form      = document.getElementById('applyForm');
+    const inversion = document.getElementById('inversion');
+    const noCalMsg  = document.getElementById('noCalificaMsg');
+    const btnSubmit = document.getElementById('btnSubmit');
+
+    inversion.addEventListener('change', () => {
+      const noCalifica = inversion.value === 'menos3m';
+      noCalMsg.style.display   = noCalifica ? 'block' : 'none';
+      btnSubmit.style.display  = noCalifica ? 'none'  : 'block';
     });
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const data    = new FormData(form);
-      const nombre  = data.get('nombre').trim();
-      const email   = data.get('email').trim();
-      const wa      = data.get('whatsapp').trim();
-      const inv     = data.get('inversion');
-      const obj     = data.get('objetivo');
-
-      if (!nombre || !email || !wa || !inv || !obj) {
-        alert('Por favor completa todos los campos.');
-        return;
-      }
-
-      if (inv === 'menos3m') {
+      if (inversion.value === 'menos3m') {
         window.location.href = 'no-califica.html';
         return;
       }
-
-      btnSubmit.disabled     = true;
-      btnSubmit.textContent  = 'Enviando...';
-
+      btnSubmit.disabled = true;
+      btnSubmit.textContent = 'Enviando...';
+      const data   = new FormData(form);
+      const nombre = document.getElementById('nombre').value.trim();
+      const wa     = document.getElementById('whatsapp').value.trim();
       try {
         const res = await fetch('https://formspree.io/f/mbdbapnp', {
-          method: 'POST',
-          body: data,
+          method: 'POST', body: data,
           headers: { 'Accept': 'application/json' }
         });
         if (res.ok) {
-          const params = new URLSearchParams({ name: nombre, wa: wa });
+          const params = new URLSearchParams({ name: nombre, wa });
           window.location.href = 'gracias.html?' + params.toString();
         } else {
-          throw new Error('Formspree error');
+          btnSubmit.disabled = false;
+          btnSubmit.textContent = 'Quiero aplicar →';
+          alert('Hubo un error. Escríbenos por WhatsApp.');
         }
       } catch {
-        btnSubmit.disabled    = false;
-        btnSubmit.textContent = 'Ver si califico →';
-        alert('Hubo un error al enviar. Por favor intenta de nuevo o escríbenos por WhatsApp.');
+        btnSubmit.disabled = false;
+        btnSubmit.textContent = 'Quiero aplicar →';
+        alert('Sin conexión. Escríbenos por WhatsApp.');
       }
     });
   </script>
