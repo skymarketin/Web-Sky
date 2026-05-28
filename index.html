@@ -26,8 +26,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" /></noscript>
 
   <style>
     /* ── RESET & BASE ── */
@@ -43,7 +43,7 @@
     }
     html { scroll-behavior: smooth; overflow-x: hidden; }
     body {
-      font-family: 'Sora', sans-serif;
+      font-family: 'Inter', sans-serif;
       background: var(--black);
       color: var(--white);
       overflow-x: hidden;
@@ -185,7 +185,7 @@
     .btn-primary {
       display: inline-flex; align-items: center; gap: 8px;
       background: var(--white); color: var(--black);
-      font-family: 'Sora', sans-serif; font-weight: 700; font-size: 0.85rem;
+      font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.85rem;
       padding: 14px 28px; border-radius: 100px;
       transition: background var(--t), transform var(--t);
     }
@@ -194,7 +194,7 @@
       display: inline-flex; align-items: center; gap: 8px;
       border: 1px solid var(--border);
       color: var(--gray); background: transparent;
-      font-family: 'Sora', sans-serif; font-weight: 500; font-size: 0.85rem;
+      font-family: 'Inter', sans-serif; font-weight: 500; font-size: 0.85rem;
       padding: 14px 28px; border-radius: 100px;
       transition: border-color var(--t), color var(--t);
     }
@@ -567,7 +567,7 @@
       background: rgba(240,237,232,0.04);
       border: 1px solid var(--border);
       border-radius: 10px; padding: 14px 18px;
-      font-family: 'Sora', sans-serif; font-size: 0.9rem;
+      font-family: 'Inter', sans-serif; font-size: 0.9rem;
       color: var(--white); outline: none; width: 100%;
       transition: border-color var(--t), background var(--t);
     }
@@ -594,7 +594,7 @@
     .btn-submit {
       width: 100%; padding: 16px;
       background: var(--white); color: var(--black);
-      font-family: 'Sora', sans-serif; font-weight: 700; font-size: 0.95rem;
+      font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.95rem;
       border: none; border-radius: 100px; cursor: pointer; margin-top: 6px;
       transition: background var(--t), transform var(--t);
     }
@@ -652,6 +652,134 @@
     .wa-float:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(37,211,102,0.45); }
     .wa-float svg { width: 28px; height: 28px; }
 
+    /* ── NAV DROPDOWN ── */
+    .nav-drop-wrap { position: relative; }
+    .nav-has-drop {
+      display: flex; align-items: center; gap: 5px; cursor: pointer;
+    }
+    .nav-has-drop svg { transition: transform var(--t); }
+    .nav-drop-wrap:hover .nav-has-drop svg { transform: rotate(180deg); }
+    .nav-dropdown {
+      position: absolute; top: calc(100% + 20px); left: 50%;
+      transform: translateX(-50%) translateY(-6px);
+      background: #111; border: 1px solid var(--border);
+      border-radius: 16px; overflow: hidden;
+      display: flex; min-width: 540px;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      z-index: 200;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.6);
+    }
+    .nav-drop-wrap:hover .nav-dropdown {
+      opacity: 1; pointer-events: all;
+      transform: translateX(-50%) translateY(0);
+    }
+    .nav-drop-inner {
+      flex: 1; display: flex; flex-direction: column;
+      padding: 10px;
+    }
+    .nav-drop-item {
+      display: flex; flex-direction: column; gap: 3px;
+      padding: 14px 16px; border-radius: 10px;
+      transition: background var(--t);
+    }
+    .nav-drop-item:hover { background: rgba(240,237,232,0.05); }
+    .nav-drop-name {
+      font-size: 0.88rem; font-weight: 700; color: var(--white);
+    }
+    .nav-drop-desc {
+      font-size: 0.72rem; color: var(--gray); line-height: 1.4;
+    }
+    .nav-drop-side {
+      width: 170px; border-left: 1px solid var(--border);
+      padding: 24px 20px;
+      display: flex; flex-direction: column;
+      justify-content: space-between; gap: 20px;
+      background: rgba(240,237,232,0.02);
+    }
+    .nav-drop-stats { display: flex; flex-direction: column; gap: 16px; }
+    .nav-drop-stat-num {
+      font-size: 2rem; font-weight: 800; line-height: 1;
+      letter-spacing: -0.03em; color: var(--white);
+    }
+    .nav-drop-stat-num span { color: var(--sky); }
+    .nav-drop-stat-label {
+      font-size: 0.65rem; color: var(--gray); margin-top: 3px;
+      text-transform: uppercase; letter-spacing: 1px; font-weight: 500;
+    }
+    .nav-drop-cta-btn {
+      display: inline-flex; padding: 10px 16px;
+      background: var(--white); color: var(--black);
+      font-size: 0.75rem; font-weight: 700; border-radius: 100px;
+      transition: background var(--t);
+      text-align: center; justify-content: center;
+    }
+    .nav-drop-cta-btn:hover { background: var(--sky); }
+
+    /* ── CREATIVE GALLERY ── */
+    .creatives-section {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .creatives-header {
+      padding: 0 5%; margin-bottom: 48px;
+      display: flex; align-items: flex-end; justify-content: space-between;
+      gap: 24px;
+    }
+    .creatives-title {
+      font-size: clamp(2rem, 5vw, 4.5rem);
+      font-weight: 800; line-height: 1; letter-spacing: -0.03em;
+    }
+    .creatives-title span { color: var(--sky); }
+    .creatives-track {
+      display: flex; gap: 12px;
+      overflow-x: auto; scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding: 0 5% 32px;
+      cursor: grab;
+      scrollbar-width: none;
+    }
+    .creatives-track::-webkit-scrollbar { display: none; }
+    .creatives-track:active { cursor: grabbing; }
+    .creative-card {
+      flex: 0 0 210px; height: 373px;
+      scroll-snap-align: start;
+      border-radius: 16px;
+      position: relative; overflow: hidden;
+      border: 1px solid var(--border);
+      background: linear-gradient(160deg, var(--c-from) 0%, var(--c-to) 100%);
+      transition: transform 0.3s ease;
+    }
+    .creative-card:hover { transform: scale(1.03); }
+    .creative-card img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .creative-badge {
+      position: absolute; top: 12px; left: 12px;
+      font-size: 0.58rem; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase;
+      background: rgba(8,8,8,0.65); backdrop-filter: blur(8px);
+      border: 1px solid rgba(240,237,232,0.12);
+      padding: 5px 10px; border-radius: 100px; color: var(--gray);
+    }
+    .creative-play {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 48px; height: 48px; border-radius: 50%;
+      background: rgba(240,237,232,0.15);
+      border: 1px solid rgba(240,237,232,0.25);
+      display: flex; align-items: center; justify-content: center;
+      transition: background var(--t);
+    }
+    .creative-card:hover .creative-play { background: rgba(126,220,255,0.25); }
+    .creative-play svg { width: 18px; height: 18px; margin-left: 3px; }
+    .creative-client {
+      position: absolute; bottom: 16px; left: 14px; right: 14px;
+      font-size: 0.72rem; font-weight: 600;
+      color: rgba(240,237,232,0.55);
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       .intro-inner { grid-template-columns: 1fr; gap: 40px; }
@@ -688,7 +816,41 @@
       <span class="logo-fallback">Sky</span>
     </a>
     <div class="nav-links">
-      <a href="servicios.html" class="nav-link">Servicios</a>
+      <div class="nav-drop-wrap">
+        <a href="servicios.html" class="nav-link nav-has-drop">
+          Servicios
+          <svg width="10" height="7" viewBox="0 0 10 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l4 4 4-4"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <div class="nav-drop-inner">
+            <a href="servicios.html" class="nav-drop-item">
+              <span class="nav-drop-name">Meta Ads</span>
+              <span class="nav-drop-desc">Método PAC — Facebook & Instagram Ads para ecommerce</span>
+            </a>
+            <a href="servicios.html" class="nav-drop-item">
+              <span class="nav-drop-name">Páginas Web</span>
+              <span class="nav-drop-desc">WordPress y Shopify para marcas que venden online</span>
+            </a>
+            <a href="servicios.html" class="nav-drop-item">
+              <span class="nav-drop-name">Contenido Orgánico</span>
+              <span class="nav-drop-desc">Estrategia de contenido para Instagram</span>
+            </a>
+          </div>
+          <div class="nav-drop-side">
+            <div class="nav-drop-stats">
+              <div>
+                <div class="nav-drop-stat-num">+$200<span>M</span></div>
+                <div class="nav-drop-stat-label">COP gestionados</div>
+              </div>
+              <div>
+                <div class="nav-drop-stat-num">6<span>+</span></div>
+                <div class="nav-drop-stat-label">Marcas activas</div>
+              </div>
+            </div>
+            <a href="#aplicar" class="nav-drop-cta-btn">Aplicar ahora →</a>
+          </div>
+        </div>
+      </div>
       <a href="nosotros.html" class="nav-link">Nosotros</a>
       <a href="contacto.html" class="nav-link">Contacto</a>
       <a href="#aplicar" class="nav-cta">Aplicar →</a>
@@ -710,10 +872,6 @@
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-inner">
-      <div class="hero-tag">
-        <span class="hero-tag-dot"></span>
-        Meta Ads · Ecommerce · Colombia
-      </div>
       <h1 class="hero-title">
         <span class="line">Duplicamos</span>
         <span class="line">tus <span class="accent">ventas</span></span>
@@ -894,6 +1052,80 @@
             </div>
           </div>
         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Creative Gallery -->
+  <section class="creatives-section">
+    <div class="creatives-header">
+      <div>
+        <p class="section-label">Nuestros creativos</p>
+        <h2 class="creatives-title">Anuncios que <span>convierten</span></h2>
+      </div>
+      <div class="scroll-hint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+        Desliza
+      </div>
+    </div>
+    <div class="creatives-track" id="creativesTrack">
+
+      <div class="creative-card" style="--c-from:#0d1a2e;--c-to:#050a10;">
+        <span class="creative-badge">Estático</span>
+        <span class="creative-client">Valenzza Men</span>
+      </div>
+
+      <div class="creative-card" style="--c-from:#0d2010;--c-to:#050a05;">
+        <span class="creative-badge">Reel</span>
+        <span class="creative-play">
+          <svg viewBox="0 0 24 24" fill="var(--white)"><polygon points="5,3 19,12 5,21"/></svg>
+        </span>
+        <span class="creative-client">Comiendo Sano</span>
+      </div>
+
+      <div class="creative-card" style="--c-from:#1a0d20;--c-to:#0a0510;">
+        <span class="creative-badge">Video</span>
+        <span class="creative-play">
+          <svg viewBox="0 0 24 24" fill="var(--white)"><polygon points="5,3 19,12 5,21"/></svg>
+        </span>
+        <span class="creative-client">Lamaite</span>
+      </div>
+
+      <div class="creative-card" style="--c-from:#1a1400;--c-to:#0a0800;">
+        <span class="creative-badge">Estático</span>
+        <span class="creative-client">Kendi Panama</span>
+      </div>
+
+      <div class="creative-card" style="--c-from:#001a1a;--c-to:#000a0a;">
+        <span class="creative-badge">Reel</span>
+        <span class="creative-play">
+          <svg viewBox="0 0 24 24" fill="var(--white)"><polygon points="5,3 19,12 5,21"/></svg>
+        </span>
+        <span class="creative-client">Laserati</span>
+      </div>
+
+      <div class="creative-card" style="--c-from:#1a0a00;--c-to:#0a0500;">
+        <span class="creative-badge">Video</span>
+        <span class="creative-play">
+          <svg viewBox="0 0 24 24" fill="var(--white)"><polygon points="5,3 19,12 5,21"/></svg>
+        </span>
+        <span class="creative-client">Valenzza Men</span>
+      </div>
+
+      <div class="creative-card" style="--c-from:#001020;--c-to:#00080f;">
+        <span class="creative-badge">Estático</span>
+        <span class="creative-client">Comiendo Sano</span>
+      </div>
+
+      <div class="creative-card" style="--c-from:#150020;--c-to:#0a000f;">
+        <span class="creative-badge">Reel</span>
+        <span class="creative-play">
+          <svg viewBox="0 0 24 24" fill="var(--white)"><polygon points="5,3 19,12 5,21"/></svg>
+        </span>
+        <span class="creative-client">Lamaite</span>
       </div>
 
     </div>
@@ -1193,17 +1425,20 @@
       a.addEventListener('click', () => mobileMenu.classList.remove('open'));
     });
 
-    // Drag scroll on cards
-    const track = document.getElementById('scrollTrack');
-    let isDown = false, startX, scrollLeft;
-    track.addEventListener('mousedown', e => { isDown = true; startX = e.pageX - track.offsetLeft; scrollLeft = track.scrollLeft; });
-    track.addEventListener('mouseleave', () => isDown = false);
-    track.addEventListener('mouseup', () => isDown = false);
-    track.addEventListener('mousemove', e => {
-      if (!isDown) return;
-      e.preventDefault();
-      track.scrollLeft = scrollLeft - (e.pageX - track.offsetLeft - startX);
-    });
+    // Drag scroll helper
+    function makeDraggable(el) {
+      let isDown = false, startX, scrollLeft;
+      el.addEventListener('mousedown', e => { isDown = true; startX = e.pageX - el.offsetLeft; scrollLeft = el.scrollLeft; });
+      el.addEventListener('mouseleave', () => isDown = false);
+      el.addEventListener('mouseup', () => isDown = false);
+      el.addEventListener('mousemove', e => {
+        if (!isDown) return;
+        e.preventDefault();
+        el.scrollLeft = scrollLeft - (e.pageX - el.offsetLeft - startX);
+      });
+    }
+    makeDraggable(document.getElementById('scrollTrack'));
+    makeDraggable(document.getElementById('creativesTrack'));
 
     // Form logic
     const form      = document.getElementById('applyForm');
