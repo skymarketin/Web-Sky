@@ -1,21 +1,22 @@
 /* Sky Marketing — Dark Base */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --black:  #080808;
-  --white:  #f0ede8;
+  --black:  #060709;
+  --white:  #EDEAE4;
   --sky:    #7EDCFF;
+  --coral:  #FF5C1A;
   --blue:   #4B8FD8;
   --mint:   #A7E9D2;
-  --gray:   rgba(240,237,232,0.45);
-  --border: rgba(240,237,232,0.09);
+  --gray:   rgba(237,234,228,0.45);
+  --border: rgba(237,234,228,0.08);
   --radius: 14px;
   --t:      0.3s ease;
   /* compat aliases for legacy page CSS */
-  --dark:   #080808;
+  --dark:   #060709;
   --dark2:  #111111;
   --dark3:  #1a1a1a;
-  --light:  #f0ede8;
-  --muted:  rgba(240,237,232,0.45);
+  --light:  #EDEAE4;
+  --muted:  rgba(237,234,228,0.45);
 }
 html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
@@ -137,12 +138,12 @@ body::before {
 /* ── BUTTONS ── */
 .btn-primary {
   display: inline-flex; align-items: center; gap: 8px;
-  background: var(--white); color: var(--black);
+  background: var(--coral); color: #fff;
   font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.9rem;
   padding: 14px 28px; border-radius: 100px;
   transition: background var(--t), transform var(--t);
 }
-.btn-primary:hover { background: var(--sky); transform: translateY(-2px); }
+.btn-primary:hover { background: #ff7240; transform: translateY(-2px); }
 .btn-ghost {
   display: inline-flex; align-items: center; gap: 8px;
   border: 1px solid var(--border); color: var(--gray); background: transparent;
