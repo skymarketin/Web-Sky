@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="apple-touch-icon" href="../favicon.png" />
   <title>Sky Marketing — Método PAC para Meta Ads</title>
-  <meta name="description" content="Tu producto ya se vende. Lo que te falta es el proceso para venderlo a escala. Gestionamos tus Meta Ads con el Método PAC — sin quemar presupuesto." />
+  <meta name="description" content="Tu producto ya se vende. Lo que te falta es el proceso para venderlo a escala. Gestionamos tus Meta Ads con el Método PAC." />
 
   <!-- Meta Pixel -->
   <script>
@@ -25,553 +25,443 @@
   src="https://www.facebook.com/tr?id=1989953454951930&ev=PageView&noscript=1"
   /></noscript>
 
-  <!-- Fonts -->
+  <!-- Sora Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" /></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
 
   <style>
-    /* ── RESET ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --black:  #060709;
-      --white:  #EDEAE4;
+      --dark:   #080f17;
+      --card:   #2B3A4A;
+      --light:  #EEF4F7;
       --sky:    #7EDCFF;
-      --coral:  #FF5C1A;
-      --gray:   rgba(237,234,228,0.45);
-      --gray2:  rgba(237,234,228,0.12);
-      --border: rgba(237,234,228,0.08);
+      --blue:   #4B8FD8;
+      --aqua:   #A7E9D2;
+      --gray:   rgba(238,244,247,0.5);
+      --gray2:  rgba(238,244,247,0.08);
+      --border: rgba(238,244,247,0.1);
       --t: 0.3s ease;
     }
     html { scroll-behavior: smooth; overflow-x: hidden; }
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--black);
-      color: var(--white);
+      font-family: 'Sora', sans-serif;
+      background: var(--dark);
+      color: var(--light);
       overflow-x: hidden;
       line-height: 1.6;
     }
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; display: block; }
 
-    body::before {
-      content: '';
-      position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.022;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-    }
-
-    /* ── SHARED ── */
     .section { padding: 100px 5%; position: relative; z-index: 1; }
     .section-inner { max-width: 1200px; margin: 0 auto; }
     .section-label {
-      font-size: 0.7rem; font-weight: 600; letter-spacing: 2.5px;
-      text-transform: uppercase; color: var(--coral);
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--aqua);
       margin-bottom: 16px; display: block;
     }
     .section-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2rem, 4vw, 3rem);
+      font-size: clamp(1.9rem, 4vw, 3rem);
       font-weight: 700; line-height: 1.15;
-      letter-spacing: -0.5px; margin-bottom: 20px;
-    }
-    .section-sub {
-      font-size: 1.05rem; color: var(--gray);
-      max-width: 600px; line-height: 1.7;
+      letter-spacing: -0.3px; margin-bottom: 20px;
     }
 
     .btn-cta {
       display: inline-flex; align-items: center; gap: 10px;
-      background: var(--coral); color: var(--white);
-      font-family: 'Inter', sans-serif;
-      font-weight: 700; font-size: 0.95rem;
+      background: var(--blue); color: var(--light);
+      font-family: 'Sora', sans-serif; font-weight: 700; font-size: 0.95rem;
       padding: 15px 32px; border-radius: 100px;
       transition: transform var(--t), box-shadow var(--t);
-      letter-spacing: 0.2px; border: none; cursor: pointer;
+      border: none; cursor: pointer;
     }
-    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(255,92,26,0.35); }
-    .btn-cta svg { width: 16px; height: 16px; }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(75,143,216,0.4); }
+    .btn-cta svg { width: 16px; height: 16px; flex-shrink: 0; }
 
-    /* ── NAVBAR ── */
+    /* NAVBAR */
     .nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      padding: 0 5%;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 70px;
-      border-bottom: 1px solid transparent;
+      padding: 0 5%; display: flex; align-items: center; justify-content: space-between;
+      height: 68px; border-bottom: 1px solid transparent;
       transition: border-color var(--t), background var(--t);
     }
     .nav.scrolled {
-      background: rgba(6,7,9,0.94);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
+      background: rgba(8,15,23,0.96);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
       border-color: var(--border);
     }
-    .nav-logo img { height: 34px; width: auto; }
+    .nav-logo img { height: 32px; width: auto; }
     .nav-cta {
-      font-size: 0.82rem; font-weight: 700;
-      color: var(--white); background: var(--coral);
+      font-family: 'Sora', sans-serif; font-size: 0.82rem; font-weight: 700;
+      color: var(--light); background: var(--blue);
       padding: 10px 22px; border-radius: 100px;
       transition: transform var(--t), box-shadow var(--t);
     }
-    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(255,92,26,0.3); }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(75,143,216,0.35); }
 
-    /* ── HERO ── */
+    /* HERO */
     .hero {
-      min-height: 100svh;
-      display: flex; align-items: center;
-      padding: 120px 5% 80px;
-      position: relative; overflow: hidden;
+      min-height: 100svh; display: flex; align-items: center;
+      padding: 120px 5% 80px; position: relative; overflow: hidden;
     }
     .hero-bg {
       position: absolute; inset: 0; z-index: 0;
       background:
-        radial-gradient(ellipse 60% 80% at 95% 10%, rgba(255,92,26,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 70% at 90% 10%, rgba(75,143,216,0.12) 0%, transparent 60%),
         radial-gradient(ellipse 50% 60% at 5% 90%, rgba(126,220,255,0.07) 0%, transparent 55%);
     }
     .hero-bg::after {
-      content: '';
-      position: absolute; inset: 0;
+      content: ''; position: absolute; inset: 0;
       background-image:
-        linear-gradient(rgba(237,234,228,0.015) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(237,234,228,0.015) 1px, transparent 1px);
+        linear-gradient(rgba(238,244,247,0.012) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(238,244,247,0.012) 1px, transparent 1px);
       background-size: 60px 60px;
     }
-    .hero-inner {
-      position: relative; z-index: 1;
-      max-width: 860px;
-    }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 0.7rem; font-weight: 600; letter-spacing: 2.5px;
-      text-transform: uppercase; color: var(--gray);
-      margin-bottom: 32px;
-    }
-    .hero-badge-dot {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: var(--coral); animation: pulse 2s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(0.7); }
-    }
+    .hero-inner { position: relative; z-index: 1; max-width: 860px; }
     .hero-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2.6rem, 6vw, 5rem);
-      font-weight: 700; line-height: 1.1;
-      letter-spacing: -1.5px; margin-bottom: 28px;
+      font-size: clamp(2.5rem, 6vw, 4.8rem); font-weight: 800;
+      line-height: 1.1; letter-spacing: -1px; margin-bottom: 28px;
     }
-    .hero-title span { color: var(--coral); }
+    .hero-title span { color: var(--sky); }
     .hero-sub {
-      font-size: clamp(1rem, 1.8vw, 1.2rem);
-      color: var(--gray); line-height: 1.7;
-      max-width: 640px; margin-bottom: 44px;
+      font-size: clamp(1rem, 1.8vw, 1.15rem); color: var(--gray);
+      line-height: 1.75; max-width: 620px; margin-bottom: 44px; font-weight: 400;
     }
-    .hero-proof {
-      display: flex; align-items: center; gap: 32px;
-      margin-top: 56px; flex-wrap: wrap;
-    }
-    .hero-stat { text-align: left; }
+    .hero-proof { display: flex; align-items: center; gap: 28px; margin-top: 52px; flex-wrap: wrap; }
     .hero-stat-num {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.8rem; font-weight: 700; color: var(--white);
-      letter-spacing: -1px;
+      font-size: 1.75rem; font-weight: 800; color: var(--light);
+      letter-spacing: -1px; line-height: 1;
     }
-    .hero-stat-num span { color: var(--coral); }
-    .hero-stat-label { font-size: 0.75rem; color: var(--gray); margin-top: 2px; }
-    .hero-divider { width: 1px; height: 40px; background: var(--border); }
+    .hero-stat-num span { color: var(--sky); }
+    .hero-stat-label { font-size: 0.72rem; color: var(--gray); margin-top: 4px; font-weight: 400; }
+    .hero-divider { width: 1px; height: 38px; background: var(--border); }
 
-    /* ── INTRO TEXT ── */
-    .intro { padding: 80px 5%; border-top: 1px solid var(--border); }
-    .intro-inner {
-      max-width: 800px; margin: 0 auto; text-align: center;
-    }
-    .intro-text {
-      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
-      line-height: 1.8; color: var(--gray);
-    }
-    .intro-text strong { color: var(--white); font-weight: 600; }
+    /* INTRO */
+    .intro { padding: 72px 5%; border-top: 1px solid var(--border); }
+    .intro-inner { max-width: 780px; margin: 0 auto; text-align: center; }
+    .intro-text { font-size: clamp(1rem, 1.8vw, 1.2rem); line-height: 1.85; color: var(--gray); font-weight: 400; }
+    .intro-text strong { color: var(--light); font-weight: 600; }
 
-    /* ── RESULTADOS ── */
-    .results { background: rgba(237,234,228,0.02); }
+    /* RESULTADOS */
+    .results { background: rgba(43,58,74,0.25); }
     .results-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
-      margin-top: 56px;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border); border-radius: 16px;
+      overflow: hidden; margin-top: 52px;
     }
-    .result-card {
-      background: var(--black);
-      padding: 36px 28px;
-      transition: background var(--t);
-    }
-    .result-card:hover { background: rgba(255,92,26,0.04); }
+    .result-card { background: var(--dark); padding: 32px 26px; transition: background var(--t); }
+    .result-card:hover { background: rgba(75,143,216,0.05); }
     .result-client {
-      font-size: 0.72rem; font-weight: 600; letter-spacing: 1.5px;
-      text-transform: uppercase; color: var(--gray);
-      margin-bottom: 16px;
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--gray); margin-bottom: 14px;
     }
     .result-metric {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      font-weight: 700; color: var(--white);
-      letter-spacing: -1px; line-height: 1;
-      margin-bottom: 10px;
+      font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800;
+      color: var(--light); letter-spacing: -1px; line-height: 1; margin-bottom: 10px;
     }
-    .result-metric span { color: var(--coral); }
-    .result-desc {
-      font-size: 0.82rem; color: var(--gray); line-height: 1.5;
-    }
+    .result-metric span { color: var(--sky); }
+    .result-desc { font-size: 0.8rem; color: var(--gray); line-height: 1.55; font-weight: 400; }
 
-    /* ── BENEFICIOS ── */
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 56px;
-    }
+    /* BENEFICIOS */
+    .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 52px; }
     .benefit-card {
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 36px 32px;
-      position: relative; overflow: hidden;
+      border: 1px solid var(--border); border-radius: 14px;
+      padding: 32px 28px; position: relative; overflow: hidden;
       transition: border-color var(--t), transform var(--t);
     }
     .benefit-card::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: var(--coral); opacity: 0;
-      transition: opacity var(--t);
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: var(--blue); opacity: 0; transition: opacity var(--t);
     }
-    .benefit-card:hover { border-color: rgba(237,234,228,0.18); transform: translateY(-4px); }
+    .benefit-card:hover { border-color: rgba(238,244,247,0.2); transform: translateY(-3px); }
     .benefit-card:hover::before { opacity: 1; }
     .benefit-tag {
-      font-size: 0.68rem; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase; color: var(--coral);
-      margin-bottom: 20px; display: block;
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 18px; display: block;
     }
-    .benefit-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.2rem; font-weight: 700;
-      line-height: 1.3; margin-bottom: 14px;
-    }
-    .benefit-text { font-size: 0.9rem; color: var(--gray); line-height: 1.7; }
+    .benefit-title { font-size: 1.1rem; font-weight: 700; line-height: 1.3; margin-bottom: 12px; }
+    .benefit-text { font-size: 0.87rem; color: var(--gray); line-height: 1.7; font-weight: 400; }
 
-    /* ── COMO ENTREGAMOS ── */
+    /* COMO ENTREGAMOS */
     .deliver { background: rgba(126,220,255,0.02); }
-    .deliver-header { margin-bottom: 56px; }
-    .deliver-header .section-title { max-width: 560px; }
-    .deliver-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
+    .deliver-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 52px; }
     .deliver-card {
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 36px 32px;
-      position: relative; overflow: hidden;
+      border: 1px solid var(--border); border-radius: 14px;
+      padding: 32px 28px; position: relative; overflow: hidden;
       transition: border-color var(--t), transform var(--t);
     }
     .deliver-card::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: var(--sky); opacity: 0;
-      transition: opacity var(--t);
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: var(--aqua); opacity: 0; transition: opacity var(--t);
     }
-    .deliver-card:hover { border-color: rgba(237,234,228,0.18); transform: translateY(-4px); }
+    .deliver-card:hover { border-color: rgba(238,244,247,0.2); transform: translateY(-3px); }
     .deliver-card:hover::before { opacity: 1; }
     .deliver-tag {
-      font-size: 0.68rem; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase; color: var(--sky);
-      margin-bottom: 20px; display: block;
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--aqua); margin-bottom: 18px; display: block;
     }
-    .deliver-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.2rem; font-weight: 700;
-      line-height: 1.3; margin-bottom: 14px;
-    }
-    .deliver-text { font-size: 0.9rem; color: var(--gray); line-height: 1.7; }
+    .deliver-title { font-size: 1.1rem; font-weight: 700; line-height: 1.3; margin-bottom: 12px; }
+    .deliver-text { font-size: 0.87rem; color: var(--gray); line-height: 1.7; font-weight: 400; }
 
-    /* ── MÉTODO PAC ── */
+    /* MÉTODO PAC */
     .pac { border-top: 1px solid var(--border); }
-    .pac-header { margin-bottom: 64px; }
-    .pac-steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 48px;
-      margin-bottom: 80px;
-    }
-    .pac-step { position: relative; }
+    .pac-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin: 56px 0 80px; }
     .pac-step-num {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 4rem; font-weight: 700;
-      color: rgba(237,234,228,0.06);
-      line-height: 1; margin-bottom: -12px;
-      letter-spacing: -2px;
+      font-size: 5rem; font-weight: 800; color: rgba(126,220,255,0.2);
+      line-height: 1; margin-bottom: -10px; letter-spacing: -3px;
     }
-    .pac-step-letter {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.6rem; font-weight: 700;
-      color: var(--coral); margin-bottom: 12px;
-    }
-    .pac-step-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.3rem; font-weight: 700;
-      margin-bottom: 12px;
-    }
-    .pac-step-text { font-size: 0.9rem; color: var(--gray); line-height: 1.7; }
+    .pac-step-letter { font-size: 1.6rem; font-weight: 800; color: var(--sky); margin-bottom: 10px; }
+    .pac-step-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 10px; }
+    .pac-step-text { font-size: 0.87rem; color: var(--gray); line-height: 1.7; font-weight: 400; }
 
-    /* Gallery placeholder */
-    .gallery-label {
-      font-size: 0.82rem; color: var(--gray);
-      margin-bottom: 28px; padding: 14px 20px;
-      border: 1px dashed var(--border); border-radius: 8px;
-      display: inline-block;
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 12px;
-    }
+    /* Gallery 9:16 */
+    .gallery-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
     .gallery-item {
-      aspect-ratio: 4/5;
-      background: var(--gray2);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
+      aspect-ratio: 9/16; background: var(--gray2);
+      border: 1px solid var(--border); border-radius: 10px;
+      display: flex; align-items: center; justify-content: center; overflow: hidden;
     }
-    .gallery-item svg { opacity: 0.25; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+    .gallery-item svg { opacity: 0.2; }
 
-    /* ── PROCESO ── */
-    .process { background: rgba(237,234,228,0.02); }
-    .process-steps { margin-top: 56px; max-width: 720px; }
+    /* PROCESO */
+    .process { background: rgba(43,58,74,0.2); }
+    .process-steps { margin-top: 52px; max-width: 700px; }
     .process-step {
-      display: flex; gap: 28px; align-items: flex-start;
-      padding-bottom: 40px; position: relative;
+      display: flex; gap: 24px; align-items: flex-start;
+      padding-bottom: 36px; position: relative;
     }
     .process-step:not(:last-child)::after {
-      content: '';
-      position: absolute; left: 18px; top: 44px; bottom: 0;
+      content: ''; position: absolute; left: 17px; top: 42px; bottom: 0;
       width: 1px; background: var(--border);
     }
     .process-num {
-      flex-shrink: 0;
-      width: 36px; height: 36px; border-radius: 50%;
-      background: rgba(255,92,26,0.12);
-      border: 1px solid rgba(255,92,26,0.3);
+      flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%;
+      background: rgba(75,143,216,0.12); border: 1px solid rgba(75,143,216,0.3);
       display: flex; align-items: center; justify-content: center;
-      font-size: 0.75rem; font-weight: 700; color: var(--coral);
+      font-size: 0.72rem; font-weight: 700; color: var(--blue);
     }
-    .process-content {}
-    .process-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.05rem; font-weight: 700;
-      margin-bottom: 6px;
-    }
-    .process-text { font-size: 0.88rem; color: var(--gray); line-height: 1.6; }
+    .process-title { font-size: 1rem; font-weight: 700; margin-bottom: 5px; }
+    .process-text { font-size: 0.85rem; color: var(--gray); line-height: 1.6; font-weight: 400; }
 
-    /* ── TESTIMONIOS ── */
+    /* TESTIMONIOS */
     .testimonials { border-top: 1px solid var(--border); }
-    .test-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      margin-top: 56px;
-    }
-    .test-card {
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 36px 32px;
-    }
-    .test-stars {
-      color: #FFD700; font-size: 1rem; margin-bottom: 20px;
-      letter-spacing: 2px;
-    }
-    .test-quote {
-      font-size: 1rem; line-height: 1.7; color: var(--white);
-      margin-bottom: 28px; font-style: italic;
-    }
-    .test-author { display: flex; align-items: center; gap: 14px; }
+    .test-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 52px; }
+    .test-card { border: 1px solid var(--border); border-radius: 14px; padding: 32px 28px; }
+    .test-stars { color: #FFD700; font-size: 0.95rem; margin-bottom: 18px; letter-spacing: 2px; }
+    .test-quote { font-size: 0.95rem; line-height: 1.7; color: var(--light); margin-bottom: 24px; font-style: italic; font-weight: 400; }
+    .test-author { display: flex; align-items: center; gap: 12px; }
     .test-avatar {
-      width: 40px; height: 40px; border-radius: 50%;
+      width: 38px; height: 38px; border-radius: 50%;
       background: var(--gray2); border: 1px solid var(--border);
       display: flex; align-items: center; justify-content: center;
-      font-weight: 700; font-size: 0.9rem; color: var(--white);
-      flex-shrink: 0;
+      font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
     }
-    .test-name { font-weight: 600; font-size: 0.9rem; }
-    .test-role { font-size: 0.78rem; color: var(--gray); margin-top: 2px; }
-    .test-placeholder { font-style: italic; color: var(--gray); font-size: 0.82rem; }
+    .test-name { font-weight: 600; font-size: 0.88rem; }
+    .test-role { font-size: 0.74rem; color: var(--gray); margin-top: 2px; }
+    .test-placeholder { color: rgba(238,244,247,0.3); }
 
-    /* ── FAQS ── */
-    .faqs { background: rgba(237,234,228,0.02); }
-    .faq-list { margin-top: 56px; max-width: 760px; }
-    .faq-item {
-      border-bottom: 1px solid var(--border);
-    }
+    /* FAQS */
+    .faqs { background: rgba(43,58,74,0.2); }
+    .faq-list { margin-top: 52px; max-width: 740px; }
+    .faq-item { border-bottom: 1px solid var(--border); }
     .faq-q {
       width: 100%; background: none; border: none; cursor: pointer;
-      padding: 22px 0;
-      display: flex; align-items: center; justify-content: space-between; gap: 20px;
-      text-align: left;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.95rem; font-weight: 600; color: var(--white);
-      transition: color var(--t);
+      padding: 20px 0; display: flex; align-items: center;
+      justify-content: space-between; gap: 20px; text-align: left;
+      font-family: 'Sora', sans-serif; font-size: 0.92rem; font-weight: 600;
+      color: var(--light); transition: color var(--t);
     }
     .faq-q:hover { color: var(--sky); }
     .faq-icon {
-      flex-shrink: 0; width: 20px; height: 20px;
+      flex-shrink: 0; width: 22px; height: 22px;
       border: 1px solid var(--border); border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       transition: transform var(--t), border-color var(--t);
-      color: var(--gray);
+      color: var(--gray); font-size: 1rem;
     }
-    .faq-item.open .faq-icon { transform: rotate(45deg); border-color: var(--coral); color: var(--coral); }
-    .faq-a {
-      max-height: 0; overflow: hidden;
-      transition: max-height 0.4s ease, padding 0.3s ease;
-    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); border-color: var(--blue); color: var(--blue); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
     .faq-item.open .faq-a { max-height: 300px; }
-    .faq-a-inner {
-      padding-bottom: 22px;
-      font-size: 0.9rem; color: var(--gray); line-height: 1.7;
-    }
+    .faq-a-inner { padding-bottom: 20px; font-size: 0.88rem; color: var(--gray); line-height: 1.75; font-weight: 400; }
 
-    /* ── FINAL CTA ── */
-    .final-cta {
-      text-align: center; padding: 120px 5%;
-      border-top: 1px solid var(--border);
-      background:
-        radial-gradient(ellipse 70% 80% at 50% 50%, rgba(255,92,26,0.07) 0%, transparent 70%);
+    /* FORM */
+    .form-section { padding: 100px 5%; border-top: 1px solid var(--border); }
+    .form-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
     }
-    .final-cta .section-title { margin: 0 auto 16px; max-width: 680px; }
-    .final-cta .section-sub { margin: 0 auto 44px; text-align: center; }
-    .final-cta-btns { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
-    .btn-ghost {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: transparent; color: var(--white);
-      font-family: 'Inter', sans-serif;
-      font-weight: 600; font-size: 0.9rem;
-      padding: 14px 28px; border-radius: 100px;
-      border: 1px solid var(--border);
-      transition: border-color var(--t), color var(--t);
+    .form-eyebrow {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--aqua); margin-bottom: 18px;
     }
-    .btn-ghost:hover { border-color: rgba(237,234,228,0.3); color: var(--sky); }
+    .form-title {
+      font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 800;
+      letter-spacing: -0.5px; line-height: 1.05; margin-bottom: 20px;
+    }
+    .form-title span { color: var(--sky); }
+    .form-desc { font-size: 0.9rem; color: var(--gray); line-height: 1.75; margin-bottom: 36px; font-weight: 400; }
+    .form-check-list { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .form-check-list li { font-size: 0.87rem; color: var(--gray); display: flex; align-items: flex-start; gap: 10px; font-weight: 400; }
+    .form-check-list li::before { content: ''; flex-shrink: 0; margin-top: 7px; width: 5px; height: 5px; border-radius: 50%; background: var(--blue); }
+    .form-card {
+      border: 1px solid var(--border); border-radius: 18px;
+      padding: 36px 32px; background: var(--card); position: relative;
+    }
+    .form-card::before {
+      content: ''; position: absolute; top: 0; left: 32px; right: 32px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--blue), transparent);
+    }
+    .field-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+    .field-group label {
+      font-size: 0.64rem; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: rgba(238,244,247,0.45);
+    }
+    .field-group input,
+    .field-group select {
+      background: rgba(238,244,247,0.04); border: 1px solid var(--border);
+      border-radius: 10px; padding: 12px 14px; color: var(--light);
+      font-family: 'Sora', sans-serif; font-size: 0.88rem;
+      transition: border-color var(--t);
+    }
+    .field-group input::placeholder { color: rgba(238,244,247,0.25); }
+    .field-group input:focus,
+    .field-group select:focus { outline: none; border-color: rgba(75,143,216,0.5); }
+    .field-group select option { background: var(--card); color: var(--light); }
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .no-califica-msg {
+      display: none; padding: 12px 14px; margin-bottom: 12px;
+      border-radius: 8px; border: 1px solid rgba(251,176,64,0.3);
+      background: rgba(251,176,64,0.06);
+      font-size: 0.78rem; color: rgba(251,176,64,0.9); line-height: 1.5;
+    }
+    .no-califica-msg a { color: #FBB040; text-decoration: underline; }
+    .btn-submit {
+      width: 100%; padding: 15px; background: var(--blue); color: var(--light);
+      font-family: 'Sora', sans-serif; font-size: 0.95rem; font-weight: 700;
+      border: none; border-radius: 100px; cursor: pointer;
+      transition: background var(--t), transform var(--t); margin-top: 4px;
+    }
+    .btn-submit:hover { background: #5a9fe8; transform: translateY(-2px); }
+    .btn-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+    .form-note { font-size: 0.66rem; color: var(--gray); text-align: center; margin-top: 12px; }
 
-    /* ── FOOTER ── */
+    /* FOOTER */
     .footer {
-      padding: 32px 5%;
-      border-top: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: 16px;
+      padding: 28px 5%; border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;
     }
-    .footer-logo img { height: 26px; width: auto; opacity: 0.7; }
-    .footer-text { font-size: 0.78rem; color: var(--gray); }
+    .footer img { height: 24px; width: auto; opacity: 0.65; }
+    .footer-text { font-size: 0.75rem; color: var(--gray); font-weight: 400; }
 
-    /* ── FLOATING CTA (mobile) ── */
-    .float-cta {
-      display: none;
-      position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
-      z-index: 90;
-      background: var(--coral); color: var(--white);
-      font-weight: 700; font-size: 0.9rem;
-      padding: 14px 32px; border-radius: 100px;
-      box-shadow: 0 8px 32px rgba(255,92,26,0.4);
-      white-space: nowrap;
-      transition: opacity var(--t), transform var(--t);
+    /* MOBILE BOTTOM BAR */
+    .mobile-bar {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 90;
+      padding: 10px 16px 14px;
+      background: rgba(8,15,23,0.97); border-top: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      transition: opacity var(--t);
     }
-    .float-cta.hidden { opacity: 0; pointer-events: none; }
+    .mobile-bar a {
+      display: block; width: 100%; background: var(--blue); color: var(--light);
+      font-family: 'Sora', sans-serif; font-size: 1rem; font-weight: 700;
+      padding: 16px; text-align: center; border-radius: 8px;
+      transition: background var(--t);
+    }
+    .mobile-bar a:active { background: #5a9fe8; }
+    .mobile-bar.hidden { opacity: 0; pointer-events: none; }
 
-    /* ── RESPONSIVE ── */
+    /* RESPONSIVE */
     @media (max-width: 1024px) {
       .results-grid { grid-template-columns: repeat(2, 1fr); }
       .gallery-grid { grid-template-columns: repeat(3, 1fr); }
     }
     @media (max-width: 768px) {
-      .section { padding: 72px 5%; }
-      .benefits-grid,
-      .deliver-grid,
-      .pac-steps { grid-template-columns: 1fr; gap: 20px; }
+      .section { padding: 64px 5%; }
+      .benefits-grid, .deliver-grid, .pac-steps { grid-template-columns: 1fr; gap: 18px; }
       .test-grid { grid-template-columns: 1fr; }
       .results-grid { grid-template-columns: repeat(2, 1fr); }
-      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
-      .hero-proof { gap: 20px; }
-      .float-cta { display: flex; align-items: center; justify-content: center; }
+      .form-inner { grid-template-columns: 1fr; gap: 48px; }
+      .form-section { padding: 64px 5%; }
+      .hero-proof { gap: 18px; }
+      .nav-cta { display: none; }
+      .mobile-bar { display: block; }
+      body { padding-bottom: 80px; }
+      .gallery-grid {
+        display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
+        gap: 10px; grid-template-columns: unset;
+        -webkit-overflow-scrolling: touch; scrollbar-width: none;
+        padding-bottom: 4px;
+      }
+      .gallery-grid::-webkit-scrollbar { display: none; }
+      .gallery-item { flex: 0 0 52vw; scroll-snap-align: start; }
       .footer { flex-direction: column; align-items: flex-start; }
     }
     @media (max-width: 480px) {
       .results-grid { grid-template-columns: 1fr; }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      .hero-title { letter-spacing: -1px; }
+      .field-row { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ── NAVBAR ── -->
+  <!-- NAVBAR -->
   <nav class="nav" id="nav">
     <a href="#top" class="nav-logo">
-      <img src="logo.png" alt="Sky Marketing" />
+      <img src="../logo.png" alt="Sky Marketing"
+           onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span style=\'font-weight:800;font-size:1.1rem;color:#EEF4F7\'>Sky</span>')" />
     </a>
-    <a href="https://wa.me/573182258333?text=Hola%2C%20quiero%20agendar%20una%20llamada%20de%20diagn%C3%B3stico" target="_blank" rel="noopener" class="nav-cta">
-      Agendar ahora
-    </a>
+    <a href="#aplicar" class="nav-cta">Agendar ahora</a>
   </nav>
 
-  <!-- ── HERO ── -->
+  <!-- HERO -->
   <section class="hero" id="top">
     <div class="hero-bg"></div>
     <div class="hero-inner">
-      <div class="hero-badge">
-        <span class="hero-badge-dot"></span>
-        Agencia de performance · Meta Ads
-      </div>
       <h1 class="hero-title">
         Tu producto ya se vende.<br>
         Lo que te falta es el <span>proceso</span><br>
         para venderlo a escala.
       </h1>
       <p class="hero-sub">
-        Gestionamos tus Meta Ads con el Método PAC — un sistema estructurado para marcas con producto validado que quieren crecer sin quemar presupuesto.
+        Gestionamos tus Meta Ads con el Método PAC, un sistema estructurado para marcas con producto validado que quieren crecer sin quemar presupuesto.
       </p>
-      <a href="https://wa.me/573182258333?text=Hola%2C%20quiero%20agendar%20una%20llamada%20de%20diagn%C3%B3stico" target="_blank" rel="noopener" class="btn-cta">
+      <a href="#aplicar" class="btn-cta" id="heroCta">
         Agendar ahora
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
       </a>
       <div class="hero-proof">
         <div class="hero-stat">
           <div class="hero-stat-num">13.3<span>x</span></div>
-          <div class="hero-stat-label">ROAS — Valenzza Men</div>
+          <div class="hero-stat-label">ROAS Valenzza Men</div>
         </div>
         <div class="hero-divider"></div>
         <div class="hero-stat">
           <div class="hero-stat-num">11.7<span>x</span></div>
-          <div class="hero-stat-label">ROAS — Javier Jiménez</div>
+          <div class="hero-stat-label">ROAS Javier Jiménez</div>
         </div>
         <div class="hero-divider"></div>
         <div class="hero-stat">
-          <div class="hero-stat-num">−68<span>%</span></div>
+          <div class="hero-stat-num">-68<span>%</span></div>
           <div class="hero-stat-label">Costo por mensaje</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── INTRO TEXT ── -->
+  <!-- INTRO -->
   <section class="intro">
     <div class="intro-inner">
       <p class="intro-text">
-        La mayoría de marcas estancadas en Meta Ads no tienen un problema de producto — tienen un problema de proceso. El <strong>Método PAC</strong> lo resuelve en tres pasos: un brief profundo de tu producto y tu comprador, <strong>20 a 50 ángulos de venta generados con IA</strong> para dar con el mensaje que convierte, y creación de creativos que testean rápido para <strong>escalar solo lo que funciona</strong>, sin improvisar en ningún paso.
+        La mayoría de marcas estancadas en Meta Ads no tienen un problema de producto, tienen un problema de proceso. El <strong>Método PAC</strong> lo resuelve en tres pasos: un brief profundo de tu producto y tu comprador, <strong>20 a 50 ángulos de venta generados con IA</strong> para dar con el mensaje que convierte, y creación de creativos que testean rápido para <strong>escalar solo lo que funciona</strong>, sin improvisar en ningún paso.
       </p>
     </div>
   </section>
 
-  <!-- ── RESULTADOS ── -->
+  <!-- RESULTADOS -->
   <section class="section results" id="resultados">
     <div class="section-inner">
       <span class="section-label">Resultados reales</span>
@@ -589,19 +479,19 @@
         </div>
         <div class="result-card">
           <div class="result-client">Comiendo Sano</div>
-          <div class="result-metric">−52<span>%</span></div>
-          <div class="result-desc">De $1,083 COP a $520 COP por conversación. En el primer mes de trabajo.</div>
+          <div class="result-metric">-52<span>%</span></div>
+          <div class="result-desc">De $1,083 COP a $520 COP por conversación en el primer mes.</div>
         </div>
         <div class="result-card">
           <div class="result-client">Centro estético</div>
-          <div class="result-metric">−68<span>%</span></div>
+          <div class="result-metric">-68<span>%</span></div>
           <div class="result-desc">De $4.41 USD a $1.40 USD por mensaje en WhatsApp.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── BENEFICIOS ── -->
+  <!-- BENEFICIOS -->
   <section class="section" id="beneficios">
     <div class="section-inner">
       <span class="section-label">Por qué funciona</span>
@@ -615,34 +505,32 @@
         <div class="benefit-card">
           <span class="benefit-tag">Escalabilidad</span>
           <h3 class="benefit-title">Cuando algo funciona, lo escalamos sin destruir el ROAS</h3>
-          <p class="benefit-text">No todo lo que vende se puede escalar. Sabemos cuándo empujar el presupuesto y cuándo frenar — eso es lo que separa crecer de quemar plata.</p>
+          <p class="benefit-text">No todo lo que vende se puede escalar. Sabemos cuándo empujar el presupuesto y cuándo frenar. Eso es lo que separa crecer de quemar plata.</p>
         </div>
         <div class="benefit-card">
           <span class="benefit-tag">Claridad</span>
           <h3 class="benefit-title">Siempre sabes exactamente qué pasa con tu inversión</h3>
-          <p class="benefit-text">Reportes semanales con las métricas que importan. Sin jerga, sin excusas — qué funcionó, qué se ajustó y cuál es el siguiente paso.</p>
+          <p class="benefit-text">Reportes semanales con las métricas que importan. Sin jerga, sin excusas. Qué funcionó, qué se ajustó y cuál es el siguiente paso.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── CÓMO ENTREGAMOS ── -->
+  <!-- COMO ENTREGAMOS -->
   <section class="section deliver" id="como-entregamos">
     <div class="section-inner">
-      <div class="deliver-header">
-        <span class="section-label">Nuestro diferencial</span>
-        <h2 class="section-title">¿Cómo podemos entregar buenos resultados?</h2>
-      </div>
+      <span class="section-label">Nuestro diferencial</span>
+      <h2 class="section-title">¿Cómo podemos entregar buenos resultados?</h2>
       <div class="deliver-grid">
         <div class="deliver-card">
           <span class="deliver-tag">Volumen</span>
           <h3 class="deliver-title">Más ángulos de venta que cualquier agencia convencional</h3>
-          <p class="deliver-text">Generamos 20 a 50 ángulos por producto con IA. No apostamos a un solo mensaje — probamos muchos para encontrar el que convierte y escalamos solo ese.</p>
+          <p class="deliver-text">Generamos 20 a 50 ángulos por producto con IA. No apostamos a un solo mensaje. Probamos muchos para encontrar el que convierte y escalamos solo ese.</p>
         </div>
         <div class="deliver-card">
           <span class="deliver-tag">Calidad</span>
           <h3 class="deliver-title">Creativos al nivel de las marcas que más invierten en el mundo</h3>
-          <p class="deliver-text">Estudiamos los anuncios que están funcionando en otros países — los de las marcas con los presupuestos más grandes — y aplicamos esas referencias a tu producto. El resultado: piezas que compiten en calidad con lo mejor del mercado global.</p>
+          <p class="deliver-text">Estudiamos los anuncios que están funcionando en otros países, los de las marcas con los presupuestos más grandes, y aplicamos esas referencias a tu producto. El resultado: piezas que compiten en calidad con lo mejor del mercado global.</p>
         </div>
         <div class="deliver-card">
           <span class="deliver-tag">Diversidad</span>
@@ -653,19 +541,17 @@
     </div>
   </section>
 
-  <!-- ── EL MÉTODO PAC ── -->
+  <!-- MÉTODO PAC -->
   <section class="section pac" id="metodo">
     <div class="section-inner">
-      <div class="pac-header">
-        <span class="section-label">El sistema</span>
-        <h2 class="section-title">El Método PAC — 3 pasos</h2>
-      </div>
+      <span class="section-label">El sistema</span>
+      <h2 class="section-title">El Método PAC</h2>
       <div class="pac-steps">
         <div class="pac-step">
           <div class="pac-step-num">01</div>
           <div class="pac-step-letter">P</div>
           <h3 class="pac-step-title">Producto</h3>
-          <p class="pac-step-text">Brief profundo de tu producto y tu comprador ideal. Entendemos qué vende, a quién y por qué — antes de crear un solo anuncio.</p>
+          <p class="pac-step-text">Brief profundo de tu producto y tu comprador ideal. Entendemos qué vende, a quién y por qué, antes de crear un solo anuncio.</p>
         </div>
         <div class="pac-step">
           <div class="pac-step-num">02</div>
@@ -680,33 +566,18 @@
           <p class="pac-step-text">Producimos los creativos: imágenes primero para testear rápido, guiones de video para escalar lo que funciona.</p>
         </div>
       </div>
-
-      <!-- Galería de creativos -->
-      <div class="gallery-label">📁 Reemplazar con creativos e imágenes de anuncios reales</div>
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-        </div>
-        <div class="gallery-item">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-        </div>
-        <div class="gallery-item">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-        </div>
-        <div class="gallery-item">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-        </div>
-        <div class="gallery-item">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-        </div>
-        <div class="gallery-item">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-        </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-item"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+        <div class="gallery-item"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+        <div class="gallery-item"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+        <div class="gallery-item"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+        <div class="gallery-item"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+        <div class="gallery-item"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
       </div>
     </div>
   </section>
 
-  <!-- ── CÓMO TRABAJAMOS ── -->
+  <!-- PROCESO -->
   <section class="section process" id="proceso">
     <div class="section-inner">
       <span class="section-label">El proceso</span>
@@ -714,48 +585,29 @@
       <div class="process-steps">
         <div class="process-step">
           <div class="process-num">01</div>
-          <div class="process-content">
-            <h3 class="process-title">Llamada de diagnóstico</h3>
-            <p class="process-text">Revisamos tu cuenta, tus resultados actuales y confirmamos que podemos generar resultados para tu marca.</p>
-          </div>
+          <div><h3 class="process-title">Llamada de diagnóstico</h3><p class="process-text">Revisamos tu cuenta, tus resultados actuales y confirmamos que podemos generar resultados para tu marca.</p></div>
         </div>
         <div class="process-step">
           <div class="process-num">02</div>
-          <div class="process-content">
-            <h3 class="process-title">Brief de producto</h3>
-            <p class="process-text">Mapeamos tu producto, tu audiencia y tu competencia. La base de todo.</p>
-          </div>
+          <div><h3 class="process-title">Brief de producto</h3><p class="process-text">Mapeamos tu producto, tu audiencia y tu competencia. La base de todo.</p></div>
         </div>
         <div class="process-step">
           <div class="process-num">03</div>
-          <div class="process-content">
-            <h3 class="process-title">Creación de piezas</h3>
-            <p class="process-text">En 7 días hábiles tienes guiones y creativos de imagen listos para lanzar.</p>
-          </div>
+          <div><h3 class="process-title">Creación de piezas</h3><p class="process-text">En 7 días hábiles tienes guiones y creativos de imagen listos para lanzar.</p></div>
         </div>
         <div class="process-step">
           <div class="process-num">04</div>
-          <div class="process-content">
-            <h3 class="process-title">Lanzamiento</h3>
-            <p class="process-text">Campañas configuradas, anuncios corriendo y medición desde el primer día.</p>
-          </div>
+          <div><h3 class="process-title">Lanzamiento</h3><p class="process-text">Campañas configuradas, anuncios corriendo y medición desde el primer día.</p></div>
         </div>
         <div class="process-step">
           <div class="process-num">05</div>
-          <div class="process-content">
-            <h3 class="process-title">Optimización semanal</h3>
-            <p class="process-text">Cada semana revisamos métricas, pausamos lo que no convierte y escalamos lo que sí.</p>
-          </div>
+          <div><h3 class="process-title">Optimización semanal</h3><p class="process-text">Cada semana revisamos métricas, pausamos lo que no convierte y escalamos lo que sí.</p></div>
         </div>
       </div>
-      <a href="https://wa.me/573182258333?text=Hola%2C%20quiero%20agendar%20una%20llamada%20de%20diagn%C3%B3stico" target="_blank" rel="noopener" class="btn-cta">
-        Agendar ahora
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-      </a>
     </div>
   </section>
 
-  <!-- ── TESTIMONIOS ── -->
+  <!-- TESTIMONIOS -->
   <section class="section testimonials" id="testimonios">
     <div class="section-inner">
       <span class="section-label">Testimonios</span>
@@ -763,167 +615,147 @@
       <div class="test-grid">
         <div class="test-card">
           <div class="test-stars">★★★★★</div>
-          <p class="test-quote test-placeholder">Testimonio pendiente — Lamaite</p>
-          <div class="test-author">
-            <div class="test-avatar">L</div>
-            <div>
-              <div class="test-name">Lamaite</div>
-              <div class="test-role">Cliente · Sky Marketing</div>
-            </div>
-          </div>
+          <p class="test-quote test-placeholder">Testimonio pendiente</p>
+          <div class="test-author"><div class="test-avatar">L</div><div><div class="test-name">Lamaite</div><div class="test-role">Cliente · Sky Marketing</div></div></div>
         </div>
         <div class="test-card">
           <div class="test-stars">★★★★★</div>
-          <p class="test-quote test-placeholder">Testimonio pendiente — Javier Jiménez</p>
-          <div class="test-author">
-            <div class="test-avatar">J</div>
-            <div>
-              <div class="test-name">Javier Jiménez</div>
-              <div class="test-role">Cliente · Sky Marketing</div>
-            </div>
-          </div>
+          <p class="test-quote test-placeholder">Testimonio pendiente</p>
+          <div class="test-author"><div class="test-avatar">J</div><div><div class="test-name">Javier Jiménez</div><div class="test-role">Cliente · Sky Marketing</div></div></div>
         </div>
         <div class="test-card">
           <div class="test-stars">★★★★★</div>
-          <p class="test-quote test-placeholder">Testimonio pendiente — Valenzza Men</p>
-          <div class="test-author">
-            <div class="test-avatar">V</div>
-            <div>
-              <div class="test-name">Valenzza Men</div>
-              <div class="test-role">Cliente · Sky Marketing</div>
-            </div>
-          </div>
+          <p class="test-quote test-placeholder">Testimonio pendiente</p>
+          <div class="test-author"><div class="test-avatar">V</div><div><div class="test-name">Valenzza Men</div><div class="test-role">Cliente · Sky Marketing</div></div></div>
         </div>
         <div class="test-card">
           <div class="test-stars">★★★★★</div>
-          <p class="test-quote test-placeholder">Testimonio pendiente — Comiendo Sano</p>
-          <div class="test-author">
-            <div class="test-avatar">C</div>
-            <div>
-              <div class="test-name">Comiendo Sano</div>
-              <div class="test-role">Cliente · Sky Marketing</div>
-            </div>
-          </div>
+          <p class="test-quote test-placeholder">Testimonio pendiente</p>
+          <div class="test-author"><div class="test-avatar">C</div><div><div class="test-name">Comiendo Sano</div><div class="test-role">Cliente · Sky Marketing</div></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── FAQS ── -->
+  <!-- FAQS -->
   <section class="section faqs" id="faqs">
     <div class="section-inner">
       <span class="section-label">Preguntas frecuentes</span>
       <h2 class="section-title">Todo lo que necesitas saber</h2>
       <div class="faq-list">
-
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            ¿Cuánto presupuesto mínimo necesito para invertir en pauta?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a">
-            <div class="faq-a-inner">Trabajamos con marcas que ya tienen presupuesto activo en Meta Ads. El mínimo recomendado para ver resultados reales es de $3.000.000 COP o $1.000 USD mensuales en pauta — aparte de los honorarios de la agencia.</div>
-          </div>
+          <button class="faq-q" aria-expanded="false">¿Cuánto presupuesto mínimo necesito para invertir en pauta?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Trabajamos con marcas que ya tienen presupuesto activo en Meta Ads. El mínimo recomendado para ver resultados reales es de $3.000.000 COP o $1.000 USD mensuales en pauta, aparte de los honorarios de la agencia.</div></div>
         </div>
-
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            ¿En cuánto tiempo empiezo a ver resultados?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a">
-            <div class="faq-a-inner">Los primeros datos llegan en el primer mes de campaña. A partir de ahí tenemos información suficiente para saber qué ángulos y creativos están funcionando y empezar a optimizar.</div>
-          </div>
+          <button class="faq-q" aria-expanded="false">¿En cuánto tiempo empiezo a ver resultados?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Los primeros datos llegan en el primer mes de campaña. A partir de ahí tenemos información suficiente para saber qué ángulos y creativos están funcionando y empezar a optimizar.</div></div>
         </div>
-
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            ¿Para qué tipo de negocios trabajan?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a">
-            <div class="faq-a-inner">Trabajamos con marcas que venden por Shopify o WhatsApp y que ya tienen un producto validado. No trabajamos con negocios que apenas están arrancando o que no han hecho ninguna venta todavía.</div>
-          </div>
+          <button class="faq-q" aria-expanded="false">¿Para qué tipo de negocios trabajan?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Trabajamos con marcas que venden por Shopify o WhatsApp y que ya tienen un producto validado. No trabajamos con negocios que apenas están arrancando o que no han hecho ninguna venta todavía.</div></div>
         </div>
-
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            ¿Qué incluye el servicio?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a">
-            <div class="faq-a-inner">Brief de producto, investigación de mercado, creación de ángulos con IA, producción de creativos (imágenes y guiones de video), gestión de campañas, acompañamiento por WhatsApp e informe mensual de resultados.</div>
-          </div>
+          <button class="faq-q" aria-expanded="false">¿Qué incluye el servicio?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Brief de producto, investigación de mercado, creación de ángulos con IA, producción de creativos (imágenes y guiones de video), gestión de campañas, acompañamiento por WhatsApp e informe mensual de resultados.</div></div>
         </div>
-
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            ¿Trabajan solo con Meta Ads?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a">
-            <div class="faq-a-inner">Sí, somos especialistas en Meta Ads — Facebook e Instagram. No hacemos Google Ads, TikTok ni otras plataformas.</div>
-          </div>
+          <button class="faq-q" aria-expanded="false">¿Trabajan solo con Meta Ads?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Sí, somos especialistas en Meta Ads, Facebook e Instagram. No hacemos Google Ads, TikTok ni otras plataformas.</div></div>
         </div>
-
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            ¿Tienen contrato mínimo?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a">
-            <div class="faq-a-inner">Trabajamos con contratos mensuales. Recomendamos mínimo 3 meses para ver el ciclo completo de testing, optimización y escala.</div>
-          </div>
+          <button class="faq-q" aria-expanded="false">¿Tienen contrato mínimo?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Trabajamos con contratos mensuales. Recomendamos mínimo 3 meses para ver el ciclo completo de testing, optimización y escala.</div></div>
         </div>
-
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            ¿Qué necesito tener listo para empezar?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a">
-            <div class="faq-a-inner">Página de Facebook e Instagram activas, acceso al Business Manager, cuenta publicitaria y — si vendes por Shopify — acceso a la tienda. Nosotros te guiamos en la conexión de todo.</div>
-          </div>
+          <button class="faq-q" aria-expanded="false">¿Qué necesito tener listo para empezar?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Página de Facebook e Instagram activas, acceso al Business Manager, cuenta publicitaria y, si vendes por Shopify, acceso a la tienda. Nosotros te guiamos en la conexión de todo.</div></div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ── FINAL CTA ── -->
-  <section class="final-cta" id="contacto">
-    <div class="section-inner">
-      <span class="section-label" style="display:block;text-align:center;margin-bottom:16px;">Siguiente paso</span>
-      <h2 class="section-title">¿Listo para dejar de estancarte y empezar a escalar?</h2>
-      <p class="section-sub">Agenda una llamada de diagnóstico. Revisamos tu cuenta, tus resultados actuales y te decimos con honestidad si podemos ayudarte.</p>
-      <div class="final-cta-btns">
-        <a href="https://wa.me/573182258333?text=Hola%2C%20quiero%20agendar%20una%20llamada%20de%20diagn%C3%B3stico" target="_blank" rel="noopener" class="btn-cta" style="font-size:1rem;padding:17px 36px;">
-          Agendar ahora
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-        </a>
+  <!-- FORMULARIO -->
+  <section class="form-section" id="aplicar">
+    <div class="form-inner">
+      <div class="form-left">
+        <p class="form-eyebrow">Cupos limitados</p>
+        <h2 class="form-title">¿Listo para<br><span>escalar?</span></h2>
+        <p class="form-desc">Trabajamos con pocas marcas a la vez. Si calificas, tienes acceso a un diagnóstico gratuito de tu cuenta y un plan de acción real, sin costo, sin compromiso.</p>
+        <ul class="form-check-list">
+          <li>Diagnóstico gratuito de tu cuenta actual</li>
+          <li>Respuesta en menos de 24 horas</li>
+          <li>Hablas directo con quien va a manejar tu cuenta</li>
+          <li>Sin contratos de largo plazo al inicio</li>
+          <li>Solo aceptamos si creemos que podemos generar resultados</li>
+        </ul>
+      </div>
+      <div class="form-card">
+        <form id="applyForm" novalidate>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+            </div>
+            <div class="field-group">
+              <label for="whatsapp">WhatsApp</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="3001234567" required />
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="producto">Perfil de Instagram</label>
+            <input type="text" id="producto" name="producto" placeholder="@instagram" required />
+          </div>
+          <div class="field-group">
+            <label for="inversion">Inversión mensual en Meta Ads</label>
+            <select id="inversion" name="inversion" required>
+              <option value="" disabled selected>Selecciona tu rango</option>
+              <option value="menos3m">Menos de $3M COP</option>
+              <option value="3a5m">$3M – $5M COP</option>
+              <option value="5a10m">$5M – $10M COP</option>
+              <option value="10a20m">$10M – $20M COP</option>
+              <option value="mas20m">Más de $20M COP</option>
+            </select>
+          </div>
+          <div class="no-califica-msg" id="noCalificaMsg">
+            Con ese presupuesto aún no podemos garantizar resultados reales.
+            <a href="../no-califica.html">Te dejamos recursos gratuitos →</a>
+          </div>
+          <div class="field-group">
+            <label for="objetivo">¿Cuál es tu objetivo principal?</label>
+            <select id="objetivo" name="objetivo">
+              <option value="" disabled selected>Selecciona</option>
+              <option value="Aumentar ROAS">Aumentar el ROAS</option>
+              <option value="Bajar CPA">Bajar el costo por compra</option>
+              <option value="Escalar presupuesto">Escalar sin perder rentabilidad</option>
+              <option value="Iniciar en Meta Ads">Iniciar en Meta Ads</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-submit" id="btnSubmit">Agendar ahora</button>
+          <p class="form-note">Sin spam. Respondemos en menos de 24 horas.</p>
+        </form>
       </div>
     </div>
   </section>
 
-  <!-- ── FOOTER ── -->
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-logo">
-      <img src="logo.png" alt="Sky Marketing" />
-    </div>
+    <img src="../logo.png" alt="Sky Marketing"
+         onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span style=\'font-weight:800;color:#EEF4F7\'>Sky</span>')" />
     <p class="footer-text">© 2025 Sky Marketing · Meta Ads para marcas que quieren escalar</p>
   </footer>
 
-  <!-- ── FLOATING CTA (mobile) ── -->
-  <a href="https://wa.me/573182258333?text=Hola%2C%20quiero%20agendar%20una%20llamada%20de%20diagn%C3%B3stico" target="_blank" rel="noopener" class="float-cta" id="floatCta">
-    Agendar ahora
-  </a>
+  <!-- MOBILE BOTTOM BAR -->
+  <div class="mobile-bar" id="mobileBar">
+    <a href="#aplicar">Agendar ahora</a>
+  </div>
 
   <script>
     // Navbar scroll
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 20);
-    });
+    }, { passive: true });
 
     // FAQ accordion
     document.querySelectorAll('.faq-q').forEach(btn => {
@@ -932,17 +764,57 @@
         const isOpen = item.classList.contains('open');
         document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
         if (!isOpen) item.classList.add('open');
-        btn.setAttribute('aria-expanded', !isOpen);
+        btn.setAttribute('aria-expanded', String(!isOpen));
       });
     });
 
-    // Floating CTA — hide when hero CTA is visible
-    const floatCta = document.getElementById('floatCta');
-    const heroBtn = document.querySelector('.hero .btn-cta');
-    const observer = new IntersectionObserver(([entry]) => {
-      floatCta.classList.toggle('hidden', entry.isIntersecting);
-    }, { threshold: 0.5 });
-    if (heroBtn) observer.observe(heroBtn);
+    // Hide mobile bar when form is visible
+    const mobileBar = document.getElementById('mobileBar');
+    const formSection = document.getElementById('aplicar');
+    new IntersectionObserver(([e]) => {
+      mobileBar.classList.toggle('hidden', e.isIntersecting);
+    }, { threshold: 0.05 }).observe(formSection);
+
+    // Form logic
+    const form      = document.getElementById('applyForm');
+    const inversion = document.getElementById('inversion');
+    const noCalMsg  = document.getElementById('noCalificaMsg');
+    const btnSubmit = document.getElementById('btnSubmit');
+
+    inversion.addEventListener('change', () => {
+      noCalMsg.style.display = inversion.value === 'menos3m' ? 'block' : 'none';
+    });
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      if (inversion.value === 'menos3m') { window.location.href = '../no-califica.html'; return; }
+      const nombre    = document.getElementById('nombre').value.trim();
+      const whatsapp  = document.getElementById('whatsapp').value.trim();
+      const instagram = document.getElementById('producto').value.trim();
+      const objetivo  = document.getElementById('objetivo').value;
+      const inv       = inversion.options[inversion.selectedIndex].text;
+      if (!nombre || !whatsapp || !instagram || !inversion.value) return;
+      btnSubmit.disabled = true;
+      btnSubmit.textContent = 'Enviando...';
+      try {
+        const res = await fetch('https://formspree.io/f/mbdbapnp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ nombre, whatsapp, instagram, inversion: inv, objetivo })
+        });
+        if (res.ok) {
+          window.location.href = `../gracias.html?name=${encodeURIComponent(nombre)}&wa=${encodeURIComponent(whatsapp)}`;
+        } else {
+          btnSubmit.disabled = false;
+          btnSubmit.textContent = 'Agendar ahora';
+          alert('Hubo un error. Intenta de nuevo.');
+        }
+      } catch {
+        btnSubmit.disabled = false;
+        btnSubmit.textContent = 'Agendar ahora';
+        alert('Hubo un error de conexión. Intenta de nuevo.');
+      }
+    });
   </script>
 
 </body>
