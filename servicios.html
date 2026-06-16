@@ -133,12 +133,15 @@
     .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
     /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .proc-steps { flex-wrap: wrap; justify-content: flex-start; gap: 24px; }
+      .proc-steps::before { display: none; }
+      .proc-step { flex: 0 0 calc(50% - 12px); text-align: left; display: flex; align-items: flex-start; gap: 12px; padding: 0; }
+      .proc-dot { margin: 0; flex-shrink: 0; }
+    }
     @media (max-width: 768px) {
       .service-block { grid-template-columns: 1fr; gap: 40px; padding: 60px 0; }
-      .proc-steps { flex-direction: column; align-items: flex-start; gap: 20px; }
-      .proc-steps::before { display: none; }
-      .proc-step { display: flex; align-items: flex-start; gap: 16px; text-align: left; padding: 0; }
-      .proc-dot { margin: 0; flex-shrink: 0; }
+      .proc-step { flex: 0 0 100%; }
     }
   </style>
 </head>
@@ -165,7 +168,7 @@
             </a>
             <a href="servicios.html" class="nav-drop-item">
               <span class="nav-drop-name">Páginas Web</span>
-              <span class="nav-drop-desc">Shopify para marcas que venden online</span>
+              <span class="nav-drop-desc">Shopify y WhatsApp Business para marcas que venden online</span>
             </a>
             <a href="servicios.html" class="nav-drop-item">
               <span class="nav-drop-name">Contenido Orgánico</span>
@@ -261,7 +264,8 @@
           <ul class="visual-checklist">
             <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 4 6 11 3 8"/></svg>Diseño mobile-first</li>
             <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 4 6 11 3 8"/></svg>Entrega en 10–15 días hábiles</li>
-            <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 4 6 11 3 8"/></svg>Pixel + eventos configurados desde el día 1</li>
+            <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 4 6 11 3 8"/></svg>Pixel + Conversions API configurados desde el día 1</li>
+            <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 4 6 11 3 8"/></svg>Shopify o WhatsApp — según tu modelo</li>
             <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 4 6 11 3 8"/></svg>Capacitación incluida</li>
           </ul>
         </div>
@@ -269,18 +273,19 @@
           <p class="service-num">02 — Complementario</p>
           <h2 class="service-name">Páginas Web que<br/><span>convierten</span></h2>
           <p class="service-desc">
-            De nada sirven los mejores anuncios si tu landing no convierte. Desarrollamos en Shopify — rápido, limpio, optimizado para que el tráfico de tus ads cierre ventas.
+            De nada sirven los mejores anuncios si tu canal de venta no convierte. Desarrollamos en Shopify para ecommerce directo, o configuramos el flujo de WhatsApp Business para ventas por chat — según cómo venda tu negocio.
           </p>
           <ul class="feature-list">
             <li>Diseño orientado a conversión (CRO)</li>
-            <li>Integración con Meta Pixel y eventos de compra</li>
-            <li>Optimización de velocidad y Core Web Vitals</li>
+            <li>Integración con Meta Pixel y Conversions API</li>
             <li>Tiendas Shopify desde cero o migración</li>
-            <li>Mantenimiento y soporte post-lanzamiento</li>
+            <li>Configuración de WhatsApp Business para ventas por chat</li>
+            <li>Optimización de velocidad y Core Web Vitals</li>
+            <li>Soporte post-lanzamiento incluido</li>
           </ul>
           <div class="badge-row">
             <span class="badge">Shopify</span>
-            <span class="badge">HTML/CSS</span>
+            <span class="badge">WhatsApp Business</span>
             <span class="badge">Meta Pixel</span>
             <span class="badge">CRO</span>
           </div>
@@ -335,23 +340,31 @@
       <div class="proc-steps">
         <div class="proc-step">
           <div class="proc-dot">01</div>
-          <div><p class="proc-step-title">Aplicación</p><p class="proc-step-desc">Llenas el formulario y revisamos si somos un buen fit.</p></div>
+          <div><p class="proc-step-title">Pago y bienvenida</p><p class="proc-step-desc">Confirmas el pago y accedes al Drive compartido con todos los documentos del proceso.</p></div>
         </div>
         <div class="proc-step">
           <div class="proc-dot">02</div>
-          <div><p class="proc-step-title">Diagnóstico</p><p class="proc-step-desc">Llamada de 20 min para revisar tu cuenta y definir el plan.</p></div>
+          <div><p class="proc-step-title">Conexión de activos</p><p class="proc-step-desc">Conectamos Fanpage, Instagram, WhatsApp Business, cuenta publicitaria, Pixel y Conversions API.</p></div>
         </div>
         <div class="proc-step">
           <div class="proc-dot">03</div>
-          <div><p class="proc-step-title">Brief</p><p class="proc-step-desc">Documentamos el producto, ángulos y estructura de campañas.</p></div>
+          <div><p class="proc-step-title">Brief de producto</p><p class="proc-step-desc">Documentamos el problema que resuelve, beneficios, diferenciadores, precio y público objetivo.</p></div>
         </div>
         <div class="proc-step">
           <div class="proc-dot">04</div>
-          <div><p class="proc-step-title">Lanzamiento</p><p class="proc-step-desc">Campañas activas con creativos listos en los primeros 5 días.</p></div>
+          <div><p class="proc-step-title">Research de mercado</p><p class="proc-step-desc">Analizamos la competencia y buscamos referencias de anuncios que funcionan en tu nicho.</p></div>
         </div>
         <div class="proc-step">
           <div class="proc-dot">05</div>
-          <div><p class="proc-step-title">Optimización</p><p class="proc-step-desc">Revisamos métricas cada semana y escalamos lo que funciona.</p></div>
+          <div><p class="proc-step-title">Creación de piezas</p><p class="proc-step-desc">Desarrollamos imágenes con IA y guiones para video, mientras el cliente produce el contenido UGC.</p></div>
+        </div>
+        <div class="proc-step">
+          <div class="proc-dot">06</div>
+          <div><p class="proc-step-title">Lanzamiento</p><p class="proc-step-desc">Campañas activas en los primeros 7 días hábiles. Empezamos con ABO para testear rápido.</p></div>
+        </div>
+        <div class="proc-step">
+          <div class="proc-dot">07</div>
+          <div><p class="proc-step-title">Primer reporte</p><p class="proc-step-desc">Primera semana con datos reales: resultados, conclusiones y siguientes pasos directo por WhatsApp.</p></div>
         </div>
       </div>
     </div>
