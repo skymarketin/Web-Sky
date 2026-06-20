@@ -33,26 +33,27 @@
     /* ── HERO ── */
     .lp-hero {
       padding: 140px 5% 100px;
-      position: relative; overflow: hidden; text-align: center;
+      position: relative; overflow: hidden;
     }
     .lp-hero::before {
       content: '';
       position: absolute; inset: 0;
-      background: radial-gradient(ellipse 80% 60% at 50% -5%, rgba(126,220,255,0.10) 0%, transparent 65%);
+      background: radial-gradient(ellipse 65% 55% at 25% -5%, rgba(126,220,255,0.09) 0%, transparent 65%);
       pointer-events: none;
     }
     .lp-hero::after {
       content: '';
       position: absolute; inset: 0;
       background-image:
-        linear-gradient(rgba(126,220,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(126,220,255,0.03) 1px, transparent 1px);
+        linear-gradient(rgba(126,220,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(126,220,255,0.025) 1px, transparent 1px);
       background-size: 48px 48px;
       pointer-events: none;
     }
     .lp-hero-inner {
       position: relative; z-index: 1;
-      max-width: 820px; margin: 0 auto;
+      max-width: 1060px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;
     }
     .lp-badge {
       display: inline-flex; align-items: center; gap: 8px;
@@ -72,18 +73,18 @@
       50%       { opacity: 0.4; transform: scale(0.7); }
     }
     .lp-h1 {
-      font-size: clamp(2.6rem, 6vw, 4.4rem);
-      font-weight: 800; line-height: 1.1; margin-bottom: 24px;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800; line-height: 1.08; margin-bottom: 22px;
       letter-spacing: -0.03em;
     }
     .lp-h1 span { color: var(--sky); }
     .lp-sub {
-      font-size: clamp(1rem, 2vw, 1.18rem);
-      color: var(--gray); line-height: 1.7;
-      max-width: 600px; margin: 0 auto 44px;
+      font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+      color: var(--gray); line-height: 1.75;
+      margin-bottom: 36px;
     }
     .lp-cta-row {
-      display: flex; align-items: center; justify-content: center;
+      display: flex; align-items: center;
       gap: 14px; flex-wrap: wrap;
     }
     .btn-hero-primary {
@@ -108,15 +109,66 @@
     .btn-hero-ghost:hover { border-color: rgba(240,237,232,0.35); color: var(--white); }
 
     .trust-row {
-      display: flex; align-items: center; justify-content: center;
-      gap: 28px; flex-wrap: wrap;
-      margin-top: 56px; padding-top: 48px;
+      display: flex; align-items: center;
+      gap: 24px; flex-wrap: wrap;
+      margin-top: 40px; padding-top: 36px;
       border-top: 1px solid var(--border);
     }
-    .trust-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
-    .trust-num   { font-size: 1.7rem; font-weight: 800; color: var(--sky); }
-    .trust-label { font-size: 0.75rem; color: var(--gray); font-weight: 500; }
-    .trust-sep   { width: 1px; height: 40px; background: var(--border); }
+    .trust-item { display: flex; flex-direction: column; gap: 3px; }
+    .trust-num   { font-size: 1.45rem; font-weight: 800; color: var(--sky); }
+    .trust-label { font-size: 0.7rem; color: var(--gray); font-weight: 500; }
+    .trust-sep   { width: 1px; height: 34px; background: var(--border); }
+
+    /* ── HERO CARD ── */
+    .hero-card {
+      background: rgba(14,14,16,0.85);
+      border: 1px solid rgba(237,234,228,0.1);
+      border-radius: 20px; overflow: hidden;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.55), 0 0 0 1px rgba(126,220,255,0.04);
+      backdrop-filter: blur(12px);
+    }
+    .hc-header {
+      display: flex; align-items: center; gap: 8px;
+      padding: 14px 18px;
+      border-bottom: 1px solid rgba(237,234,228,0.07);
+      background: rgba(237,234,228,0.02);
+    }
+    .hc-dot-live { width: 7px; height: 7px; border-radius: 50%; background: #22c55e; flex-shrink: 0; animation: pulse 2s ease-in-out infinite; }
+    .hc-title { font-size: 0.7rem; font-weight: 600; color: rgba(237,234,228,0.5); flex: 1; letter-spacing: 0.5px; }
+    .hc-badge {
+      font-size: 0.6rem; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--sky);
+      background: rgba(126,220,255,0.10); border: 1px solid rgba(126,220,255,0.2);
+      border-radius: 6px; padding: 3px 8px;
+    }
+    .hc-row {
+      padding: 16px 18px;
+      border-bottom: 1px solid rgba(237,234,228,0.06);
+    }
+    .hc-row:last-of-type { border-bottom: none; }
+    .hc-client {
+      font-size: 0.68rem; color: rgba(237,234,228,0.38); font-weight: 500;
+      margin-bottom: 10px; letter-spacing: 0.2px;
+    }
+    .hc-metrics { display: flex; gap: 24px; }
+    .hc-metric { display: flex; flex-direction: column; gap: 2px; min-width: 60px; }
+    .hc-val { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; }
+    .hc-val.green { color: #4ade80; }
+    .hc-val.sky   { color: var(--sky); }
+    .hc-val.white { color: var(--white); }
+    .hc-key { font-size: 0.6rem; color: rgba(237,234,228,0.35); font-weight: 500; text-transform: uppercase; letter-spacing: 0.8px; }
+    .hc-footer {
+      padding: 10px 18px;
+      border-top: 1px solid rgba(237,234,228,0.06);
+      font-size: 0.62rem; color: rgba(237,234,228,0.2);
+      display: flex; align-items: center; gap: 6px;
+    }
+    .hcf-dot { width: 5px; height: 5px; border-radius: 50%; background: #22c55e; animation: pulse 2.5s ease-in-out infinite; }
+
+    @media (max-width: 820px) {
+      .lp-hero-inner { grid-template-columns: 1fr; gap: 48px; }
+      .hero-card { display: none; }
+    }
 
     /* ── PROBLEM ── */
     .lp-problem {
@@ -353,38 +405,109 @@
   <!-- Hero -->
   <section class="lp-hero">
     <div class="lp-hero-inner">
-      <div class="lp-badge">
-        <span class="lp-badge-dot"></span>
-        Meta Ads para Ecommerce
-      </div>
-      <h1 class="lp-h1">
-        Duplica las ventas<br/>de tu tienda con<br/><span>anuncios que escalan</span>
-      </h1>
-      <p class="lp-sub">
-        Gestionamos tus campañas en Meta con el Método PAC: investigación, ángulos de venta con IA
-        y 50–100 variaciones creativas. Sin adivinar. Todo basado en datos.
-      </p>
-      <div class="lp-cta-row">
-        <a href="#lp-form" class="btn-hero-primary">Quiero más ventas →</a>
-        <a href="#metodo" class="btn-hero-ghost">Ver el método</a>
+
+      <!-- Left: Text -->
+      <div class="lp-hero-text">
+        <div class="lp-badge">
+          <span class="lp-badge-dot"></span>
+          Meta Ads para Ecommerce
+        </div>
+        <h1 class="lp-h1">
+          Duplicamos<br/>tus <span>ventas</span><br/>en Meta Ads
+        </h1>
+        <p class="lp-sub">
+          Método PAC: investigación profunda, hasta 160 ángulos de venta con IA y 50–100 variaciones creativas por ciclo. Sin adivinar. Todo basado en datos.
+        </p>
+        <div class="lp-cta-row">
+          <a href="#lp-form" class="btn-hero-primary">Quiero más ventas →</a>
+          <a href="#metodo" class="btn-hero-ghost">Ver el método</a>
+        </div>
+        <div class="trust-row">
+          <div class="trust-item">
+            <span class="trust-num">+$1000M</span>
+            <span class="trust-label">COP gestionados</span>
+          </div>
+          <div class="trust-sep"></div>
+          <div class="trust-item">
+            <span class="trust-num">+5</span>
+            <span class="trust-label">años de experiencia</span>
+          </div>
+          <div class="trust-sep"></div>
+          <div class="trust-item">
+            <span class="trust-num">100%</span>
+            <span class="trust-label">dedicación al canal</span>
+          </div>
+        </div>
       </div>
 
-      <div class="trust-row">
-        <div class="trust-item">
-          <span class="trust-num">+$1000M</span>
-          <span class="trust-label">COP gestionados</span>
+      <!-- Right: Results card -->
+      <div class="hero-card">
+        <div class="hc-header">
+          <span class="hc-dot-live"></span>
+          <span class="hc-title">Campañas activas</span>
+          <span class="hc-badge">Meta Ads</span>
         </div>
-        <div class="trust-sep"></div>
-        <div class="trust-item">
-          <span class="trust-num">+5</span>
-          <span class="trust-label">años de experiencia</span>
+
+        <div class="hc-row">
+          <div class="hc-client">Valenzza Men · Moda masculina</div>
+          <div class="hc-metrics">
+            <div class="hc-metric">
+              <span class="hc-val white">4.2×</span>
+              <span class="hc-key">ROAS</span>
+            </div>
+            <div class="hc-metric">
+              <span class="hc-val sky">−38%</span>
+              <span class="hc-key">Costo / compra</span>
+            </div>
+            <div class="hc-metric">
+              <span class="hc-val green">+72%</span>
+              <span class="hc-key">Escala</span>
+            </div>
+          </div>
         </div>
-        <div class="trust-sep"></div>
-        <div class="trust-item">
-          <span class="trust-num">100%</span>
-          <span class="trust-label">dedicación al canal</span>
+
+        <div class="hc-row">
+          <div class="hc-client">Comiendo Sano · Alimentación saludable</div>
+          <div class="hc-metrics">
+            <div class="hc-metric">
+              <span class="hc-val white">3.8×</span>
+              <span class="hc-key">ROAS</span>
+            </div>
+            <div class="hc-metric">
+              <span class="hc-val sky">−41%</span>
+              <span class="hc-key">Costo / compra</span>
+            </div>
+            <div class="hc-metric">
+              <span class="hc-val green">+60%</span>
+              <span class="hc-key">Escala</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hc-row">
+          <div class="hc-client">Lamaite · Ropa infantil</div>
+          <div class="hc-metrics">
+            <div class="hc-metric">
+              <span class="hc-val white">5.1×</span>
+              <span class="hc-key">ROAS</span>
+            </div>
+            <div class="hc-metric">
+              <span class="hc-val sky">−29%</span>
+              <span class="hc-key">Costo / compra</span>
+            </div>
+            <div class="hc-metric">
+              <span class="hc-val green">+90%</span>
+              <span class="hc-key">Escala</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hc-footer">
+          <span class="hcf-dot"></span>
+          Actualizando · Últimos 30 días
         </div>
       </div>
+
     </div>
   </section>
 
@@ -448,9 +571,9 @@
           <span class="pac-letter">A</span>
           <p class="pac-num">02 — Ángulos</p>
           <h3 class="pac-name">Ángulos de venta</h3>
-          <p class="pac-sub">20–50 ángulos con IA + estrategia</p>
+          <p class="pac-sub">Hasta 160 ángulos con IA + estrategia</p>
           <p class="pac-desc">
-            Generamos entre 20 y 50 ángulos de comunicación distintos. Cada uno apunta a un dolor,
+            Generamos hasta 160 ángulos de comunicación distintos. Cada uno apunta a un dolor,
             deseo o creencia de tu cliente. Probamos los más prometedores primero.
           </p>
         </div>
@@ -496,7 +619,7 @@
               <polyline points="10 3 5 9 2 6"/>
             </svg>
           </div>
-          <span class="include-text">20–50 ángulos de venta con IA</span>
+          <span class="include-text">Hasta 160 ángulos de venta con IA</span>
         </div>
         <div class="include-item">
           <div class="inc-check">
