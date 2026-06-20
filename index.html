@@ -73,9 +73,9 @@
       50%       { opacity: 0.4; transform: scale(0.7); }
     }
     .lp-h1 {
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
-      font-weight: 800; line-height: 1.08; margin-bottom: 22px;
-      letter-spacing: -0.03em;
+      font-size: clamp(3rem, 6.5vw, 5rem);
+      font-weight: 800; line-height: 1.05; margin-bottom: 22px;
+      letter-spacing: -0.04em;
     }
     .lp-h1 span { color: var(--sky); }
     .lp-sub {
@@ -142,7 +142,7 @@
       border-radius: 6px; padding: 3px 8px;
     }
     .hc-row {
-      padding: 16px 18px;
+      padding: 12px 18px;
       border-bottom: 1px solid rgba(237,234,228,0.06);
     }
     .hc-row:last-of-type { border-bottom: none; }
@@ -408,10 +408,6 @@
 
       <!-- Left: Text -->
       <div class="lp-hero-text">
-        <div class="lp-badge">
-          <span class="lp-badge-dot"></span>
-          Meta Ads para Ecommerce
-        </div>
         <h1 class="lp-h1">
           Duplicamos<br/>tus <span>ventas</span><br/>en Meta Ads
         </h1>
@@ -419,7 +415,7 @@
           Método PAC: investigación profunda, hasta 160 ángulos de venta con IA y 50–100 variaciones creativas por ciclo. Sin adivinar. Todo basado en datos.
         </p>
         <div class="lp-cta-row">
-          <a href="#lp-form" class="btn-hero-primary">Quiero más ventas →</a>
+          <a href="#lp-form" class="btn-hero-primary">Agendar ahora →</a>
           <a href="#metodo" class="btn-hero-ghost">Ver el método</a>
         </div>
         <div class="trust-row">
@@ -452,16 +448,30 @@
           <div class="hc-client">Valenzza Men · Moda masculina</div>
           <div class="hc-metrics">
             <div class="hc-metric">
-              <span class="hc-val white">4.2×</span>
+              <span class="hc-val white">13.3×</span>
+              <span class="hc-key">ROAS dic</span>
+            </div>
+            <div class="hc-metric">
+              <span class="hc-val sky">9.79×</span>
+              <span class="hc-key">ROAS nov</span>
+            </div>
+            <div class="hc-metric">
+              <span class="hc-val green">↑36%</span>
+              <span class="hc-key">Crecimiento</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hc-row">
+          <div class="hc-client">Javier Jiménez · Ecommerce</div>
+          <div class="hc-metrics">
+            <div class="hc-metric">
+              <span class="hc-val white">11.75×</span>
               <span class="hc-key">ROAS</span>
             </div>
             <div class="hc-metric">
-              <span class="hc-val sky">−38%</span>
-              <span class="hc-key">Costo / compra</span>
-            </div>
-            <div class="hc-metric">
-              <span class="hc-val green">+72%</span>
-              <span class="hc-key">Escala</span>
+              <span class="hc-val sky">$18,627</span>
+              <span class="hc-key">COP / compra</span>
             </div>
           </div>
         </div>
@@ -470,34 +480,26 @@
           <div class="hc-client">Comiendo Sano · Alimentación saludable</div>
           <div class="hc-metrics">
             <div class="hc-metric">
-              <span class="hc-val white">3.8×</span>
-              <span class="hc-key">ROAS</span>
+              <span class="hc-val green">−52%</span>
+              <span class="hc-key">Costo / conv.</span>
             </div>
             <div class="hc-metric">
-              <span class="hc-val sky">−41%</span>
-              <span class="hc-key">Costo / compra</span>
-            </div>
-            <div class="hc-metric">
-              <span class="hc-val green">+60%</span>
-              <span class="hc-key">Escala</span>
+              <span class="hc-val sky">$520</span>
+              <span class="hc-key">COP (antes $1,083)</span>
             </div>
           </div>
         </div>
 
         <div class="hc-row">
-          <div class="hc-client">Lamaite · Ropa infantil</div>
+          <div class="hc-client">Centro estético · WhatsApp Ads</div>
           <div class="hc-metrics">
             <div class="hc-metric">
-              <span class="hc-val white">5.1×</span>
-              <span class="hc-key">ROAS</span>
+              <span class="hc-val green">−68%</span>
+              <span class="hc-key">Costo / mensaje</span>
             </div>
             <div class="hc-metric">
-              <span class="hc-val sky">−29%</span>
-              <span class="hc-key">Costo / compra</span>
-            </div>
-            <div class="hc-metric">
-              <span class="hc-val green">+90%</span>
-              <span class="hc-key">Escala</span>
+              <span class="hc-val sky">$1.40</span>
+              <span class="hc-key">USD (antes $4.41)</span>
             </div>
           </div>
         </div>
@@ -660,49 +662,6 @@
             </svg>
           </div>
           <span class="include-text">Comunicación directa — sin intermediarios</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="lp-testimonials">
-    <div class="lp-section-inner">
-      <p class="section-eyebrow">Resultados</p>
-      <h2 class="section-title">Lo que dicen <span>los clientes</span></h2>
-      <div class="testimonials-grid">
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-text">"En 3 meses duplicamos las ventas del mes. La diferencia fue el volumen de creativos y que siempre entendieron nuestro producto."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">J</div>
-            <div>
-              <p class="testi-name">Javier J.</p>
-              <p class="testi-brand">Ecommerce de moda</p>
-            </div>
-          </div>
-        </div>
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-text">"Antes de Sky, probé con otras 2 agencias. Con Sky fue la primera vez que el ROAS se mantuvo estable y escalamos sin perderlo."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">V</div>
-            <div>
-              <p class="testi-name">Valenzza Men</p>
-              <p class="testi-brand">Ropa masculina</p>
-            </div>
-          </div>
-        </div>
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-text">"Lo que más me gustó fue la comunicación. Siempre supe qué estaba pasando con mi dinero y por qué tomaban cada decisión."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">C</div>
-            <div>
-              <p class="testi-name">Comiendo Sano</p>
-              <p class="testi-brand">Alimentación saludable</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
