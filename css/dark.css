@@ -173,6 +173,7 @@ body::before {
 .field-input::placeholder { color: rgba(240,237,232,0.25); }
 .field-input:focus { border-color: rgba(126,220,255,0.4); background: rgba(126,220,255,0.04); }
 select.field-input option { background: #111; color: var(--white); }
+textarea.field-input { resize: vertical; }
 
 /* ── SECTION LABEL ── */
 .section-label {

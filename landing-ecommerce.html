@@ -30,20 +30,6 @@
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
   <link rel="stylesheet" href="css/dark.css" />
   <style>
-    /* ── LANDING NAVBAR (minimal — no full links intentional) ── */
-    .lp-nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      padding: 0 5%;
-      background: rgba(8,8,8,0.92);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-    }
-    .lp-nav-inner {
-      max-width: 1060px; margin: 0 auto;
-      height: 64px; display: flex; align-items: center; justify-content: space-between;
-    }
-
     /* ── HERO ── */
     .lp-hero {
       padding: 140px 5% 100px;
@@ -312,14 +298,6 @@
     .btn-form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
     .form-note { font-size: 0.72rem; color: var(--gray); text-align: center; margin-top: 10px; }
 
-    /* ── MINIMAL FOOTER ── */
-    .lp-footer {
-      text-align: center; padding: 32px 5%;
-      border-top: 1px solid var(--border);
-      font-size: 0.78rem; color: var(--gray);
-    }
-    .lp-footer a { color: var(--gray); text-decoration: underline; text-underline-offset: 3px; }
-    .lp-footer a:hover { color: var(--sky); }
 
     @media (max-width: 768px) {
       .pain-grid         { grid-template-columns: 1fr; }
@@ -340,17 +318,37 @@
 </head>
 <body>
 
-  <!-- Minimal nav — intentionally no full links for landing page focus -->
-  <nav class="lp-nav">
-    <div class="lp-nav-inner">
-      <a href="index.html" class="nav-logo">
-        <img src="assets/logo-light.png" alt="Sky Marketing"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
-        <span class="logo-fallback">Sky</span>
-      </a>
-      <a href="#lp-form" class="nav-cta">Aplicar ahora</a>
+  <nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo-light.png" alt="Sky Marketing"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+      <span class="logo-fallback">Sky</span>
+    </a>
+    <div class="nav-links">
+      <div class="nav-drop-wrap">
+        <a href="servicios.html" class="nav-link nav-has-drop">
+          Servicios
+          <svg width="10" height="7" viewBox="0 0 10 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l4 4 4-4"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <div class="nav-drop-inner">
+            <a href="servicios.html" class="nav-drop-item"><span class="nav-drop-name">Meta Ads</span><span class="nav-drop-desc">Método PAC — Facebook & Instagram Ads para ecommerce</span></a>
+            <a href="servicios.html" class="nav-drop-item"><span class="nav-drop-name">Páginas Web</span><span class="nav-drop-desc">Shopify y WhatsApp Business para marcas que venden online</span></a>
+            <a href="servicios.html" class="nav-drop-item"><span class="nav-drop-name">Contenido Orgánico</span><span class="nav-drop-desc">Estrategia de contenido para Instagram</span></a>
+          </div>
+        </div>
+      </div>
+      <a href="nosotros.html" class="nav-link">Nosotros</a>
+      <a href="#lp-form" class="nav-cta">Agendar ahora</a>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
   </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="servicios.html">Servicios</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="#lp-form" class="btn-primary" style="font-size:1rem;padding:16px 36px;">Agendar ahora</a>
+  </div>
 
   <!-- Hero -->
   <section class="lp-hero">
@@ -631,22 +629,20 @@
             <select id="lp-budget" name="budget" required class="field-input">
               <option value="" disabled selected>Selecciona tu rango</option>
               <option value="menos3m">Menos de $3M COP</option>
-              <option value="3a5m">$3M – $5M COP</option>
-              <option value="5a10m">$5M – $10M COP</option>
-              <option value="10a20m">$10M – $20M COP</option>
-              <option value="mas20m">Más de $20M COP</option>
+              <option value="3a12m">$3M – $12M COP</option>
+              <option value="12a50m">$12M – $50M COP</option>
+              <option value="mas50m">Más de $50M COP</option>
             </select>
           </div>
 
-          <div class="form-group">
-            <label for="lp-goal">¿Cuál es tu principal objetivo?</label>
-            <select id="lp-goal" name="goal" class="field-input">
-              <option value="" disabled selected>Selecciona tu objetivo</option>
-              <option value="Aumentar ROAS">Aumentar el ROAS</option>
-              <option value="Bajar CPA">Bajar el costo por compra</option>
-              <option value="Escalar presupuesto">Escalar sin perder rentabilidad</option>
-              <option value="Iniciar en Meta Ads">Iniciar en Meta Ads</option>
-            </select>
+          <div class="no-califica-msg" id="noCalificaMsg" style="display:none; font-size:0.82rem; color:rgba(251,176,64,0.9); background:rgba(251,176,64,0.07); border:1px solid rgba(251,176,64,0.2); border-radius:8px; padding:10px 14px; margin-bottom:12px;">
+            Con ese presupuesto aún no podemos garantizar resultados reales.
+            <a href="no-califica.html" style="color:#FBB040; text-decoration:underline;">Te dejamos recursos gratuitos →</a>
+          </div>
+
+          <div class="form-group" style="margin-top:4px;">
+            <label for="lp-goal">¿Cuál es tu principal problema con tus anuncios?</label>
+            <textarea id="lp-goal" name="goal" class="field-input" placeholder="Cuéntanos brevemente qué está pasando con tus campañas..." rows="3"></textarea>
           </div>
 
           <button type="submit" class="btn-form-submit" id="lpSubmitBtn">Quiero más ventas →</button>
@@ -664,12 +660,19 @@
     </div>
   </section>
 
-  <!-- Minimal footer -->
-  <footer class="lp-footer">
-    © 2026 Sky Marketing ·
-    <a href="index.html">Inicio</a> ·
-    <a href="servicios.html">Servicios</a> ·
-    <a href="mailto:sky.marketingads@gmail.com">sky.marketingads@gmail.com</a>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-social">
+      <a href="https://www.instagram.com/skymarketing.co/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+      </a>
+      <a href="mailto:sky.marketingads@gmail.com" aria-label="Email">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+      <a href="https://wa.me/573172945026" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.524 5.847L.057 23.882l6.197-1.624A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.001-1.374l-.36-.213-3.68.965.981-3.595-.234-.369A9.818 9.818 0 012.182 12C2.182 6.578 6.578 2.182 12 2.182S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/></svg>
+      </a>
+    </div>
   </footer>
 
   <!-- WhatsApp float -->
@@ -681,36 +684,44 @@
   </a>
 
   <script>
+    const nav       = document.getElementById('mainNav');
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
+    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
     const lpForm      = document.getElementById('lpForm');
     const lpSubmitBtn = document.getElementById('lpSubmitBtn');
-    const lpSuccess   = document.getElementById('lpSuccess');
+    const lpBudget    = document.getElementById('lp-budget');
+    const noCalMsg    = document.getElementById('noCalificaMsg');
+
+    lpBudget.addEventListener('change', () => {
+      noCalMsg.style.display = lpBudget.value === 'menos3m' ? 'block' : 'none';
+    });
 
     lpForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const budget = document.getElementById('lp-budget').value;
-
-      if (budget === 'menos3m') {
-        window.location.href = 'no-califica.html';
-        return;
-      }
+      if (lpBudget.value === 'menos3m') { window.location.href = 'no-califica.html'; return; }
 
       lpSubmitBtn.disabled = true;
       lpSubmitBtn.textContent = 'Enviando...';
 
-      const data = new FormData(lpForm);
       const name = document.getElementById('lp-name').value.trim();
       const wa   = document.getElementById('lp-wa').value.trim();
+      const product = document.getElementById('lp-product').value.trim();
+      const goal    = document.getElementById('lp-goal').value.trim();
+      const budget  = lpBudget.options[lpBudget.selectedIndex].text;
 
       try {
         const res = await fetch('https://formspree.io/f/mbdbapnp', {
           method: 'POST',
-          body: data,
-          headers: { 'Accept': 'application/json' }
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ name, whatsapp: wa, product, budget, goal })
         });
 
         if (res.ok) {
-          const params = new URLSearchParams({ name, wa });
-          window.location.href = 'gracias.html?' + params.toString();
+          window.location.href = `gracias.html?name=${encodeURIComponent(name)}&wa=${encodeURIComponent(wa)}`;
         } else {
           lpSubmitBtn.disabled = false;
           lpSubmitBtn.textContent = 'Quiero más ventas →';
