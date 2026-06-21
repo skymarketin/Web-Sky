@@ -32,7 +32,7 @@
   <style>
     /* ── HERO ── */
     .lp-hero {
-      padding: 140px 5% 100px;
+      padding: 100px 5% 50px;
       position: relative; overflow: hidden;
     }
     .lp-hero::before {
@@ -73,15 +73,15 @@
       50%       { opacity: 0.4; transform: scale(0.7); }
     }
     .lp-h1 {
-      font-size: clamp(3rem, 6.5vw, 5rem);
-      font-weight: 800; line-height: 1.05; margin-bottom: 22px;
+      font-size: clamp(2.7rem, 5.8vw, 4.4rem);
+      font-weight: 800; line-height: 1.05; margin-bottom: 16px;
       letter-spacing: -0.04em;
     }
     .lp-h1 span { color: var(--sky); }
     .lp-sub {
       font-size: clamp(0.95rem, 1.5vw, 1.05rem);
       color: var(--gray); line-height: 1.75;
-      margin-bottom: 36px;
+      margin-bottom: 24px;
     }
     .lp-cta-row {
       display: flex; align-items: center;
@@ -111,7 +111,7 @@
     .trust-row {
       display: flex; align-items: center;
       gap: 24px; flex-wrap: wrap;
-      margin-top: 40px; padding-top: 36px;
+      margin-top: 24px; padding-top: 20px;
       border-top: 1px solid var(--border);
     }
     .trust-item { display: flex; flex-direction: column; gap: 3px; }
@@ -415,7 +415,7 @@
           Método PAC: investigación profunda, hasta 160 ángulos de venta con IA y 50–100 variaciones creativas por ciclo. Sin adivinar. Todo basado en datos.
         </p>
         <div class="lp-cta-row">
-          <a href="#lp-form" class="btn-hero-primary">Agendar ahora →</a>
+          <a href="#lp-form" class="btn-hero-primary">Agendar ahora</a>
           <a href="#metodo" class="btn-hero-ghost">Ver el método</a>
         </div>
         <div class="trust-row">
@@ -613,7 +613,7 @@
               <polyline points="10 3 5 9 2 6"/>
             </svg>
           </div>
-          <span class="include-text">Brief estratégico del producto</span>
+          <span class="include-text">Informes mensuales enfocados en ventas</span>
         </div>
         <div class="include-item">
           <div class="inc-check">
@@ -661,7 +661,7 @@
               <polyline points="10 3 5 9 2 6"/>
             </svg>
           </div>
-          <span class="include-text">Comunicación directa — sin intermediarios</span>
+          <span class="include-text">Comunicación directa a través de WhatsApp</span>
         </div>
       </div>
     </div>
@@ -675,13 +675,13 @@
         <h2>¿Listo para ver<br/>resultados <span>reales</span>?</h2>
         <p>
           Llena el formulario y en menos de 24 horas te contactamos para una llamada
-          de diagnóstico gratuita. Sin compromiso, sin presión.
+          de diagnóstico gratuita.
         </p>
         <ul class="form-features">
           <li>Diagnóstico gratuito de tu cuenta actual</li>
           <li>Respuesta en menos de 24 horas</li>
           <li>Hablamos directo con quien va a manejar tu cuenta</li>
-          <li>Cupos limitados — trabajamos con pocas marcas a la vez</li>
+          <li>Cupos mensuales limitados</li>
         </ul>
       </div>
 
@@ -727,8 +727,8 @@
             <textarea id="lp-goal" name="goal" class="field-input" placeholder="Cuéntanos brevemente qué está pasando con tus campañas..." rows="3"></textarea>
           </div>
 
-          <button type="submit" class="btn-form-submit" id="lpSubmitBtn">Quiero más ventas →</button>
-          <p class="form-note">Sin spam. Sin compromiso. Solo resultados.</p>
+          <button type="submit" class="btn-form-submit" id="lpSubmitBtn">Agendar ahora</button>
+          <p class="form-note">Cupos mensuales limitados · Sin spam.</p>
         </form>
 
         <div id="lpSuccess" style="display:none; text-align:center; padding:32px 0 12px;">
@@ -806,12 +806,12 @@
           window.location.href = `gracias.html?name=${encodeURIComponent(name)}&wa=${encodeURIComponent(wa)}`;
         } else {
           lpSubmitBtn.disabled = false;
-          lpSubmitBtn.textContent = 'Quiero más ventas →';
+          lpSubmitBtn.textContent = 'Agendar ahora';
           alert('Hubo un error. Por favor escríbenos por WhatsApp.');
         }
       } catch {
         lpSubmitBtn.disabled = false;
-        lpSubmitBtn.textContent = 'Quiero más ventas →';
+        lpSubmitBtn.textContent = 'Agendar ahora';
         alert('Sin conexión. Escríbenos por WhatsApp.');
       }
     });
