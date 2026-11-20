@@ -117,9 +117,9 @@
   var v = T.variante(m, params.get("color"));
   var qty = 1;
   var wr = T.WR[m.wr];
-  document.title = "Casio " + m.ref + " " + m.nombre + " | Sky Relojes";
+  document.title = "Casio " + m.ref + " | Sky Relojes";
   var md = document.querySelector('meta[name="description"]');
-  md.setAttribute("content", "Casio " + m.ref + " " + m.nombre + ". " + m.desc);
+  md.setAttribute("content", "Casio " + m.ref + ". " + m.desc);
 
   /* Cómo funciona cada tipo de movimiento, en una línea (tipoMov en data.js; si falta, es cuarzo) */
   var MOV = {
@@ -136,8 +136,8 @@
       '<div class="galeria"><div class="principal"><span class="sello-original">Original Casio</span><img id="imgPrincipal" src="" alt=""></div><div class="miniaturas" id="miniaturas"></div></div>' +
       '<div class="info">' +
         '<span class="linea">' + esc(m.linea) + " · " + esc(m.genero) + "</span>" +
-        "<h1>" + esc(m.nombre) + "</h1>" +
-        '<div class="ref">Casio <span id="refVar"></span></div>' +
+        "<h1>Casio " + esc(m.ref) + "</h1>" +
+        '<div class="ref">Ref. <span id="refVar"></span></div>' +
         (m.rating ? '<div class="estrellas" style="margin-top:10px"><span class="e">★★★★★</span>' + String(m.rating.valor).replace(".", ",") + ' de 5 · ' + m.rating.total.toLocaleString("es-CO") + ' calificaciones en <a href="' + esc(m.rating.url) + '" target="_blank" rel="noopener">' + esc(m.rating.fuente) + "</a></div>" : "") +
         '<div class="precio-grande" id="precioVar"></div><div class="iva">IVA incluido</div>' +
         '<p class="desc">' + esc(m.desc) + "</p>" +

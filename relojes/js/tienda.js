@@ -200,7 +200,7 @@
     }
     caja.innerHTML = ls.map(function (l, i) {
       return '<div class="item"><a class="item-img" href="' + urlProducto(l.m, l.v.code) + '"><img src="' + BASE + "/" + l.v.img + '" alt="Casio ' + esc(l.m.ref) + " " + esc(l.v.color) + '"></a>' +
-        '<div><div class="item-nombre">' + esc(l.m.nombre) + '</div><div class="item-det">Casio ' + esc(l.m.ref) + "<br>Color: " + esc(l.v.color) + "<br>" + precio(l.v.precio) + "</div>" +
+        '<div><div class="item-nombre">Casio ' + esc(l.m.ref) + '</div><div class="item-det">Ref. ' + esc(l.v.code) + "<br>Color: " + esc(l.v.color) + "<br>" + precio(l.v.precio) + "</div>" +
         '<div class="cantidad"><button data-menos="' + i + '" aria-label="Quitar uno">−</button><span>' + l.qty + '</span><button data-mas="' + i + '" aria-label="Agregar uno">+</button></div>' +
         '<button class="quitar" data-quitar="' + i + '" aria-label="Eliminar del carrito">' + ICO.basura + "</button></div>" +
         '<div class="item-precio">' + precio(l.v.precio * l.qty) + "</div></div>";
@@ -236,7 +236,7 @@
     var total = ls.reduce(function (a, l) { return a + l.v.precio * l.qty; }, 0);
     var txt = "Hola Sky Relojes, quiero hacer este pedido:\n\n";
     ls.forEach(function (l, i) {
-      txt += (i + 1) + ". Casio " + l.m.ref + " " + l.m.nombre + "\n   Color: " + l.v.color + " (ref. " + l.v.code + ")\n   Cantidad: " + l.qty + " x " + precio(l.v.precio) + " = " + precio(l.v.precio * l.qty) + "\n\n";
+      txt += (i + 1) + ". Casio " + l.m.ref + "\n   Color: " + l.v.color + " (ref. " + l.v.code + ")\n   Cantidad: " + l.qty + " x " + precio(l.v.precio) + " = " + precio(l.v.precio * l.qty) + "\n\n";
     });
     txt += "Total: " + precio(total) + " COP\n\n¿Me confirman disponibilidad, envío y forma de pago?";
     return txt;
@@ -255,11 +255,10 @@
     var estrellas = m.rating ? '<span class="estrellas"><span class="e">★★★★★</span>' + String(m.rating.valor).replace(".", ",") + "</span>" : "";
     return '<a class="tarjeta" href="' + urlProducto(m) + '">' +
       (opts.tag ? '<span class="tarjeta-tag">' + esc(opts.tag) + "</span>" : "") +
-      '<div class="tarjeta-img"><img loading="lazy" src="' + BASE + "/" + v.img + '" alt="Reloj Casio ' + esc(m.ref) + " " + esc(m.nombre) + '">' +
+      '<div class="tarjeta-img"><img loading="lazy" src="' + BASE + "/" + v.img + '" alt="Reloj Casio ' + esc(m.ref) + '">' +
       (vida(m) ? '<img class="alt" loading="lazy" src="' + BASE + "/" + vida(m) + '" alt="">' : "") + "</div>" +
       '<div class="tarjeta-cuerpo"><span class="tarjeta-linea">' + esc(m.linea) + " · " + esc(m.genero) + "</span>" +
-      '<span class="tarjeta-nombre">' + esc(m.nombre) + "</span>" +
-      '<span class="tarjeta-ref">Casio ' + esc(m.ref) + "</span>" + estrellas +
+      '<span class="tarjeta-nombre">Casio ' + esc(m.ref) + "</span>" + estrellas +
       '<span class="tarjeta-specs">' + fmtMm(m.ancho) + " mm · " + esc(m.correa) + " · " + WR[m.wr].corto + "</span>" +
       '<div class="tarjeta-pie"><span class="precio">' + (min !== max ? "<small>Desde</small>" : "") + precio(min) + "</span>" +
       '<span class="puntos" aria-label="' + cols.length + ' colores">' + cols.slice(0, 5).map(function (c) { return '<i class="punto" style="background:' + (COLORES[c] || "#ccc") + '" title="' + esc(c) + '"></i>'; }).join("") + "</span></div>" +
