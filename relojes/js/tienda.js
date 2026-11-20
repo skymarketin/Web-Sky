@@ -99,7 +99,7 @@
     var cab = document.getElementById("cabecera");
     if (cab) {
       cab.innerHTML =
-        '<div class="anuncio">Relojes Casio <strong>100% originales</strong> · Pide fácil por WhatsApp</div>' +
+        '<div class="anuncio">Relojes Casio <strong>originales</strong> · Pide fácil por WhatsApp</div>' +
         '<header class="header"><div class="contenedor header-in">' +
         '<button class="icono-btn menu-btn" id="abrirMenu" aria-label="Abrir menú">' + ICO.menu + "</button>" +
         LOGO +

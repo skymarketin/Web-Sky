@@ -17,10 +17,11 @@
   @media (min-width: 960px) { .ficha { grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: start; } }
 
   .galeria { display: grid; gap: 12px; }
-  @media (min-width: 960px) { .galeria { position: sticky; top: 92px; grid-template-columns: 84px 1fr; } }
-  .principal { background: var(--blanco); border-radius: var(--radio); aspect-ratio: 1; display: grid; place-items: center; overflow: hidden; position: relative; }
+  @media (min-width: 960px) { .galeria { position: sticky; top: 104px; grid-template-columns: 84px 1fr; } }
+  .principal { background: var(--blanco); border-radius: var(--radio); aspect-ratio: 4 / 5; display: grid; place-items: center; overflow: hidden; position: relative; transition: background .2s; }
+  .principal.con-foto { background: #0e0f0c; }
   .principal img { width: 86%; height: 86%; object-fit: contain; transition: opacity .2s; }
-  .principal img.foto { width: 100%; height: 100%; object-fit: cover; }
+  .principal img.foto { width: 100%; height: 100%; object-fit: contain; }
   .miniaturas img.foto { width: 100%; height: 100%; object-fit: cover; border-radius: 3px; }
   .miniaturas button { overflow: hidden; }
   .miniaturas { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
@@ -183,6 +184,7 @@
     img.src = T.BASE + "/" + src;
     img.alt = "Reloj Casio " + m.ref + " color " + v.color + (esFoto ? " puesto" : "");
     img.classList.toggle("foto", !!esFoto);
+    img.parentElement.classList.toggle("con-foto", !!esFoto);
     document.querySelectorAll("[data-img]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.img === src)); });
   }
   function pintarGaleria() {
