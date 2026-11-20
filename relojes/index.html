@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sky Relojes | Relojes Casio originales en Colombia</title>
+<meta name="description" content="Relojes Casio originales para hombre y mujer. Acero y cuero, movimiento japonés y garantía. Escoge tu reloj y pide por WhatsApp.">
+<meta property="og:title" content="Sky Relojes | Relojes Casio originales">
+<meta property="og:description" content="Casio originales para hombre y mujer. Pide fácil por WhatsApp.">
+<meta property="og:image" content="/relojes/img/mtp-vt01l-3budf.jpg">
+<link rel="icon" href="/relojes/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/relojes/css/tienda.css">
+<style>
+  /* Hero */
+  .hero { background: #050505; color: var(--arena-50); overflow: hidden; position: relative; }
+  .hero-fondo { display: block; width: 100%; }
+  .hero-fondo img { width: 100%; display: block; }
+  .hero-in { position: relative; }
+  .hero-texto { padding: 40px 16px 48px; display: flex; flex-direction: column; justify-content: center; gap: 22px; max-width: 640px; }
+  @media (min-width: 768px) { .hero-texto { padding: 48px 32px 64px; } }
+  @media (min-width: 1200px) {
+    .hero { min-height: 56.25vw; max-height: 900px; }
+    .hero-fondo { position: absolute; inset: 0; }
+    .hero-fondo img { height: 100%; object-fit: cover; object-position: right center; }
+    .hero-in { min-height: min(56.25vw, 900px); display: flex; align-items: center; }
+    .hero-texto { padding: 56px 32px; max-width: 41%; gap: 18px; }
+    .hero h1 { font-size: clamp(54px, 5vw, 90px); }
+  }
+  @media (min-width: 1240px) { .hero-texto { padding-left: max(32px, calc((100vw - var(--ancho)) / 2 + 32px)); } }
+  .hero h1 { font-size: clamp(52px, 8.4vw, 104px); line-height: .92; }
+  .hero h1 em { font-style: normal; color: var(--laton-claro); }
+  .hero p { margin: 0; font-size: 18px; color: var(--arena-200); max-width: 470px; }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+  .hero-ctas .btn-borde { color: var(--arena-50); }
+  .hero-ctas .btn-borde:hover { background: var(--arena-50); color: var(--verde-900); border-color: var(--arena-50); }
+  .hero-datos { display: flex; gap: 28px; flex-wrap: wrap; padding-top: 8px; }
+  .hero-datos div { font-size: 13px; color: var(--verde-300); letter-spacing: .08em; text-transform: uppercase; }
+  .hero-datos strong { display: block; font: 700 30px/1 var(--t-titulo); color: var(--arena-50); letter-spacing: .02em; }
+
+  /* Manifiesto */
+  .manifiesto { text-align: center; }
+  .manifiesto h2 { font-size: clamp(36px, 5.6vw, 64px); max-width: 900px; margin: 14px auto 18px; }
+  .manifiesto p { color: var(--gris); max-width: 640px; margin: 0 auto; font-size: 17px; }
+
+  /* Categorías */
+  .cats { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  @media (min-width: 700px) { .cats { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .cat { position: relative; background: var(--arena-200); border-radius: var(--radio); overflow: hidden; min-height: 340px; display: flex; flex-direction: column; justify-content: flex-end; padding: 22px; }
+  .cat img { position: absolute; inset: 8% 10% 26%; width: 80%; height: 66%; object-fit: contain; mix-blend-mode: multiply; transition: transform .5s; }
+  .cat:hover img { transform: scale(1.05) rotate(-2deg); }
+  .cat.oscura { background: var(--verde-700); color: var(--arena-50); }
+  .cat.oscura img { mix-blend-mode: normal; background: transparent; }
+  .cat h3 { font-size: 34px; position: relative; }
+  .cat span { position: relative; font: 600 13px/1 var(--t-texto); letter-spacing: .14em; text-transform: uppercase; margin-top: 8px; display: inline-flex; gap: 8px; }
+  .cat-redonda { position: absolute; inset: 7% 14% 25%; border-radius: 50%; background: var(--arena-100); }
+  .cat.oscura .cat-redonda { background: var(--arena-100); }
+
+  /* Pestañas */
+  .tabs { display: inline-flex; border: 1.5px solid var(--tinta); border-radius: var(--radio); overflow: hidden; }
+  .tabs button { padding: 12px 22px; font: 600 13px/1 var(--t-texto); letter-spacing: .14em; text-transform: uppercase; }
+  .tabs button[aria-selected="true"] { background: var(--tinta); color: var(--arena-50); }
+
+  /* Buscador guiado (estilo watch finder) */
+  .finder { background: var(--verde-800); color: var(--arena-50); border-radius: var(--radio); padding: 32px 20px; display: grid; gap: 24px; }
+  @media (min-width: 900px) { .finder { grid-template-columns: 1fr 2fr; padding: 48px; align-items: center; } }
+  .finder h2 { font-size: clamp(36px, 5vw, 56px); }
+  .finder p { color: var(--arena-200); margin: 12px 0 0; }
+  .finder form { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 640px) { .finder form { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .finder label { display: grid; gap: 8px; font: 600 12px/1 var(--t-texto); letter-spacing: .14em; text-transform: uppercase; color: var(--verde-300); }
+  .finder select { min-height: 52px; border-radius: var(--radio); border: 1px solid var(--verde-500); background: var(--verde-900); color: var(--arena-50); padding: 0 14px; font-size: 16px; letter-spacing: 0; text-transform: none; }
+  .finder .btn { align-self: end; }
+
+  /* Guía de tamaño */
+  .guia { display: grid; gap: 32px; }
+  @media (min-width: 900px) { .guia { grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; } }
+  .guia h2 { font-size: clamp(36px, 5vw, 56px); margin: 12px 0 16px; }
+  .guia p { color: var(--gris); margin: 0 0 14px; }
+  .pasos { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 12px; counter-reset: p; }
+  .pasos li { display: flex; gap: 14px; align-items: flex-start; }
+  .pasos li::before { counter-increment: p; content: counter(p); flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--verde-700); color: var(--arena-50); display: grid; place-items: center; font: 700 16px/1 var(--t-titulo); }
+  table.tabla { width: 100%; border-collapse: collapse; background: var(--blanco); border-radius: var(--radio); overflow: hidden; font-size: 15px; }
+  .tabla caption { text-align: left; font: 700 20px/1 var(--t-titulo); text-transform: uppercase; padding: 0 0 12px; }
+  .tabla th, .tabla td { padding: 13px 16px; text-align: left; border-bottom: 1px solid var(--arena-200); }
+  .tabla th { background: var(--verde-700); color: var(--arena-50); font: 600 12px/1 var(--t-texto); letter-spacing: .12em; text-transform: uppercase; }
+  .tabla td:last-child { font-weight: 600; }
+  .tablas { display: grid; gap: 24px; }
+  .mini { font-size: 13px; color: var(--gris); margin-top: 10px; }
+
+  /* Agua */
+  .agua { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 800px) { .agua { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .agua-card { background: var(--blanco); border-radius: var(--radio); padding: 24px; border-top: 4px solid var(--verde-500); }
+  .agua-card:nth-child(2) { border-color: var(--verde-700); }
+  .agua-card:nth-child(3) { border-color: var(--laton); }
+  .agua-card h3 { font-size: 30px; }
+  .agua-card p { margin: 10px 0 0; font-size: 15px; color: var(--gris); }
+  .agua-card .si::before { content: "Sí: "; font-weight: 600; color: var(--verde-700); }
+  .agua-card .no::before { content: "No: "; font-weight: 600; color: var(--rojo); }
+
+  /* Reseñas */
+  .resenas { background: var(--arena-200); border-radius: var(--radio); padding: 40px 20px; text-align: center; }
+  @media (min-width: 768px) { .resenas { padding: 56px; } }
+  .resenas h2 { font-size: clamp(34px, 4.6vw, 50px); margin: 12px 0 14px; }
+  .resenas p { color: var(--gris); max-width: 560px; margin: 0 auto 24px; }
+
+  /* Preguntas */
+  .faq { max-width: 860px; margin: 0 auto; }
+  .faq details { border-bottom: 1px solid var(--linea); }
+  .faq summary { list-style: none; cursor: pointer; padding: 22px 40px 22px 0; position: relative; font: 700 22px/1.15 var(--t-titulo); text-transform: uppercase; letter-spacing: .02em; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; position: absolute; right: 4px; top: 18px; font: 400 28px/1 var(--t-texto); color: var(--laton); transition: transform .2s; }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq details p { margin: 0 0 22px; color: var(--gris); }
+</style>
+</head>
+<body>
+<div id="cabecera"></div>
+
+<main>
+  <section class="hero">
+    <picture class="hero-fondo">
+      <source media="(max-width: 699px)" srcset="/relojes/img/hero-relojes-movil.jpg">
+      <img src="/relojes/img/hero-relojes.jpg" alt="Relojes Casio Duro verde, Timeless dorado y Timeless de esfera verde" fetchpriority="high">
+    </picture>
+    <div class="hero-in">
+      <div class="hero-texto">
+        <span class="eyebrow">Casio originales · Hombre y mujer</span>
+        <h1>El reloj que usas <em>todos los días</em></h1>
+        <p>Acero, cuero y movimiento japonés. Escogimos modelos Casio probados, con la ficha completa, para que aciertes a la primera.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-laton" href="/relojes/catalogo?g=Hombre">Relojes hombre</a>
+          <a class="btn btn-borde" href="/relojes/catalogo?g=Mujer">Relojes mujer</a>
+        </div>
+        <div class="hero-datos">
+          <div><strong id="nModelos">23</strong>modelos</div>
+          <div><strong id="nColores">70+</strong>colores</div>
+          <div><strong>12</strong>meses de garantía</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="confianza" aria-label="Por qué comprar aquí">
+    <div class="contenedor">
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><span><strong>100% originales</strong>Del distribuidor oficial de Casio en Colombia</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg><span><strong>12 meses</strong>De garantía en el reloj</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg><span><strong>Movimiento japonés</strong>Cuarzo de ±20 segundos al mes</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20Z"/></svg><span><strong>Pide por WhatsApp</strong>Te confirmamos pago y envío</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion manifiesto">
+    <div class="contenedor">
+      <span class="eyebrow">Sky Relojes</span>
+      <h2>Menos opciones. Mejores relojes.</h2>
+      <p>No tenemos mil referencias. Tenemos las que de verdad funcionan: modelos probados, en acero y cuero, con la ficha técnica completa para que sepas exactamente qué te llega.</p>
+    </div>
+  </section>
+
+  <section class="seccion" style="padding-top:0">
+    <div class="contenedor">
+      <div class="cats">
+        <a class="cat" href="/relojes/catalogo?g=Hombre"><i class="cat-redonda"></i><img src="/relojes/img/mtp-1374d-1a3vdf.jpg" alt=""><h3>Hombre</h3><span>Ver todos →</span></a>
+        <a class="cat" href="/relojes/catalogo?g=Mujer"><i class="cat-redonda"></i><img src="/relojes/img/ltp-1241d-3adf.webp" alt=""><h3>Mujer</h3><span>Ver todos →</span></a>
+        <a class="cat oscura" href="/relojes/catalogo?linea=Casio+Edifice"><i class="cat-redonda"></i><img src="/relojes/img/ef-539d-1a5vudf.jpg" alt="" style="mix-blend-mode:multiply"><h3>Edifice</h3><span>Cronógrafo 100 m →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" style="padding-top:0">
+    <div class="contenedor">
+      <div class="seccion-cabeza">
+        <div><span class="eyebrow">Para empezar</span><h2>Los favoritos</h2></div>
+        <div class="tabs" role="tablist" aria-label="Favoritos por género">
+          <button role="tab" aria-selected="true" data-genero="Hombre">Hombre</button>
+          <button role="tab" aria-selected="false" data-genero="Mujer">Mujer</button>
+        </div>
+      </div>
+      <div class="grilla g4" id="favoritos"></div>
+      <div style="text-align:center;margin-top:32px"><a class="btn btn-borde" id="verTodos" href="/relojes/catalogo?g=Hombre">Ver todos los de hombre</a></div>
+    </div>
+  </section>
+
+  <section class="seccion" style="padding-top:0">
+    <div class="contenedor">
+      <div class="finder">
+        <div>
+          <span class="eyebrow">Buscador de relojes</span>
+          <h2>Encuentra el tuyo en 10 segundos</h2>
+          <p>Dinos para quién es, qué estilo te gusta y cuánto quieres invertir. Te mostramos solo los que encajan.</p>
+        </div>
+        <form action="/relojes/catalogo" id="finder">
+          <label>Para quién<select name="g"><option value="">Cualquiera</option><option>Hombre</option><option>Mujer</option></select></label>
+          <label>Correa<select name="correa"><option value="">Cualquiera</option><option>Acero</option><option>Cuero</option></select></label>
+          <label>Lo que necesita<select name="func"><option value="">Cualquiera</option><option>Solo hora</option><option>Fecha</option><option>Día y fecha</option><option>Multifunción</option><option>Cronógrafo</option></select></label>
+          <label>Presupuesto<select name="precio"><option value="">Cualquiera</option><option value="0-160000">Hasta $160.000</option><option value="160000-250000">$160.000 a $250.000</option><option value="250000-450000">$250.000 a $450.000</option><option value="450000-9999999">Más de $450.000</option></select></label>
+          <button class="btn btn-laton btn-bloque" type="submit" style="grid-column:1/-1">Ver mis relojes</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="guia" style="padding-top:0">
+    <div class="contenedor guia">
+      <div>
+        <span class="eyebrow">Guía de tamaño</span>
+        <h2>¿Qué tamaño de reloj me queda?</h2>
+        <p>Lo que define si un reloj se ve bien es el ancho de la caja frente al grosor de tu muñeca. Una caja muy grande en una muñeca fina se ve desproporcionada, y una muy pequeña en una muñeca gruesa se pierde.</p>
+        <ol class="pasos">
+          <li>Rodea tu muñeca, justo debajo del hueso, con una cinta métrica o un hilo.</li>
+          <li>Marca dónde se cruza y mide el hilo con una regla. Ese es tu contorno en cm.</li>
+          <li>Busca tu medida en la tabla. En cada reloj te decimos si encaja con tu muñeca.</li>
+        </ol>
+      </div>
+      <div class="tablas">
+        <table class="tabla">
+          <caption>Hombre</caption>
+          <thead><tr><th>Tu muñeca</th><th>Ancho de caja ideal</th></tr></thead>
+          <tbody><tr><td>Menos de 16 cm</td><td>34 a 38 mm</td></tr><tr><td>16 a 17,5 cm</td><td>38 a 41 mm</td></tr><tr><td>17,5 a 19 cm</td><td>40 a 44 mm</td></tr><tr><td>Más de 19 cm</td><td>43 mm o más</td></tr></tbody>
+        </table>
+        <table class="tabla">
+          <caption>Mujer</caption>
+          <thead><tr><th>Tu muñeca</th><th>Ancho de caja ideal</th></tr></thead>
+          <tbody><tr><td>Menos de 14 cm</td><td>24 a 28 mm</td></tr><tr><td>14 a 15,5 cm</td><td>26 a 32 mm</td></tr><tr><td>15,5 a 17 cm</td><td>30 a 36 mm</td></tr><tr><td>Más de 17 cm</td><td>34 mm o más</td></tr></tbody>
+        </table>
+        <p class="mini">Es una guía general. Si te gusta el reloj grande o pequeño, también se vale.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="agua" style="padding-top:0">
+    <div class="contenedor">
+      <div class="seccion-cabeza"><div><span class="eyebrow">Resistencia al agua</span><h2>¿Me puedo bañar con él?</h2><p>Depende del reloj. Así se leen las tres resistencias que vas a ver en la tienda.</p></div></div>
+      <div class="agua">
+        <div class="agua-card"><h3>Uso diario</h3><p class="si">Lluvia, salpicaduras y lavarte las manos.</p><p class="no">Nadar, ducharte o sumergirlo.</p></div>
+        <div class="agua-card"><h3>50 metros</h3><p class="si">Lluvia, lavarte las manos y nadar en piscina de vez en cuando.</p><p class="no">Bucear, ducha caliente o sauna.</p></div>
+        <div class="agua-card"><h3>100 metros</h3><p class="si">Nadar en piscina o mar y hacer snorkel.</p><p class="no">Buceo con tanque, ducha caliente o sauna.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="preguntas" style="padding-top:0">
+    <div class="contenedor">
+      <div class="seccion-cabeza" style="justify-content:center;text-align:center"><div><span class="eyebrow">Preguntas frecuentes</span><h2>Antes de comprar</h2></div></div>
+      <div class="faq">
+        <details><summary>¿Los relojes son originales?</summary><p>Sí. Todos son Casio originales del distribuidor oficial de la marca en Colombia. Llegan con su empaque y su referencia, que puedes verificar en casio.com.</p></details>
+        <details><summary>¿Cómo compro?</summary><p>Agrega los relojes al carrito y toca "Terminar compra en WhatsApp". Nos llega el resumen del pedido con referencias, colores y total, y por ahí te confirmamos disponibilidad, envío y forma de pago.</p></details>
+        <details><summary>¿Qué cubre la garantía?</summary><p>12 meses por defectos de fábrica del mecanismo. No cubre golpes, humedad por encima de la resistencia del reloj, ni el desgaste normal de la correa o la pila.</p></details>
+        <details><summary>¿Qué significa movimiento de cuarzo japonés?</summary><p>Es el mecanismo que mueve las agujas: funciona con pila, es muy preciso (±20 segundos al mes) y casi no necesita mantenimiento. Por eso en la esfera dice "Japan Mov't".</p></details>
+        <details><summary>¿Qué es la caja del reloj?</summary><p>Es el cuerpo del reloj: la pieza de metal que guarda el mecanismo y sostiene el cristal. El aro que rodea el cristal se llama bisel. El ancho de la caja es la medida que define cómo se ve en tu muñeca.</p></details>
+        <details><summary>¿El cristal se raya?</summary><p>Todos tienen cristal mineral, que es vidrio endurecido: resiste bien los roces del día a día. No es irrompible, así que evita golpes fuertes contra superficies duras.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="pie"></div>
+
+<script src="/relojes/js/data.js"></script>
+<script src="/relojes/js/tienda.js"></script>
+<script>
+(function () {
+  var T = window.Tienda;
+  var total = T.RELOJES.reduce(function (a, m) { return a + m.variantes.length; }, 0);
+  document.getElementById("nColores").textContent = total;
+  document.getElementById("nModelos").textContent = T.RELOJES.length;
+  function pintar(g) {
+    var lista = T.RELOJES.filter(function (m) { return m.genero === g; })
+      .sort(function (a, b) { return a.destacado - b.destacado; }).slice(0, 4);
+    document.getElementById("favoritos").innerHTML = lista.map(function (m, i) { return T.tarjeta(m, { tag: i === 0 ? "Favorito" : "" }); }).join("");
+    var v = document.getElementById("verTodos");
+    v.href = "/relojes/catalogo?g=" + g; v.textContent = "Ver todos los de " + g.toLowerCase();
+  }
+  document.querySelectorAll(".tabs button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      document.querySelectorAll(".tabs button").forEach(function (x) { x.setAttribute("aria-selected", String(x === b)); });
+      pintar(b.dataset.genero);
+    });
+  });
+  pintar("Hombre");
+  document.getElementById("finder").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var p = new URLSearchParams();
+    new FormData(this).forEach(function (v, k) { if (v) p.set(k, v); });
+    location.href = "/relojes/catalogo" + (p.toString() ? "?" + p.toString() : "");
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relojes Casio | Sky Relojes</title>
+<meta name="description" content="Busca tu reloj Casio original por género, correa, color, tamaño, resistencia al agua, funciones y precio.">
+<link rel="icon" href="/relojes/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/relojes/css/tienda.css">
+<style>
+  .cat-cabeza { background: var(--verde-900); color: var(--arena-50); padding: 44px 0 36px; }
+  .cat-cabeza h1 { font-size: clamp(44px, 7vw, 80px); }
+  .cat-cabeza p { color: var(--arena-200); margin: 10px 0 0; max-width: 560px; }
+  .barra-busqueda { display: flex; gap: 8px; margin-top: 22px; max-width: 720px; }
+  .barra-busqueda .campo { border-color: transparent; }
+
+  .ancho-total { max-width: none; }
+  .catalogo { display: grid; gap: 28px; padding-top: 28px; padding-bottom: 80px; }
+  @media (min-width: 1000px) { .catalogo { grid-template-columns: 290px minmax(0, 1fr); gap: 40px; } }
+  @media (min-width: 1400px) { .catalogo #resultados { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  @media (min-width: 1800px) { .catalogo #resultados { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+
+  .filtros { display: none; }
+  @media (min-width: 1000px) { .filtros { display: block; align-self: start; } }
+  .opcion-texto { display: flex; flex-direction: column; gap: 2px; }
+  .opcion-texto small { color: var(--gris); font-size: 12.5px; line-height: 1.3; }
+  .opcion.con-ayuda { align-items: flex-start; }
+  .opcion.con-ayuda input { margin-top: 2px; }
+  .filtros.abierto { display: block; position: fixed; inset: 0; z-index: 70; background: var(--arena-50); overflow-y: auto; padding: 20px 16px 110px; max-height: none; }
+  .filtros-cabeza { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+  .filtros .limpiar { margin-bottom: 4px; }
+  .filtros-cabeza h2 { font-size: 28px; }
+  .cerrar-filtros { display: grid; }
+  @media (min-width: 1000px) { .cerrar-filtros, .aplicar-movil { display: none !important; } }
+  .grupo { border-bottom: 1px solid var(--linea); padding: 16px 0; }
+  .grupo legend, .grupo .leyenda { font: 700 17px/1 var(--t-titulo); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 12px; padding: 0; }
+  fieldset.grupo { border-left: 0; border-right: 0; border-top: 0; margin: 0; padding: 16px 0; min-width: 0; }
+  .opcion { display: flex; align-items: center; gap: 10px; padding: 6px 0; font-size: 15px; cursor: pointer; }
+  .opcion input { width: 18px; height: 18px; accent-color: var(--verde-700); margin: 0; }
+  .opcion .cuenta { margin-left: auto; color: var(--gris); font-size: 13px; }
+  .colores { display: flex; flex-wrap: wrap; gap: 10px; }
+  .chip-color { display: flex; flex-direction: column; align-items: center; gap: 5px; font-size: 12px; cursor: pointer; width: 56px; text-align: center; }
+  .chip-color input { position: absolute; opacity: 0; pointer-events: none; }
+  .chip-color i { width: 30px; height: 30px; border-radius: 50%; border: 1px solid rgba(0, 0, 0, .2); box-shadow: 0 0 0 3px var(--arena-50), 0 0 0 4px transparent; transition: box-shadow .15s; }
+  .chip-color input:checked + i { box-shadow: 0 0 0 3px var(--arena-50), 0 0 0 5px var(--verde-700); }
+  .chip-color input:focus-visible + i { outline: 2px solid var(--laton); outline-offset: 4px; }
+  .muneca { display: grid; gap: 10px; }
+  .muneca-fila { display: flex; align-items: center; gap: 10px; }
+  .muneca input[type="number"] { width: 92px; min-height: 44px; padding: 0 10px; border: 1.5px solid var(--arena-300); border-radius: var(--radio); background: var(--blanco); }
+  .muneca small { color: var(--gris); font-size: 13px; }
+  .limpiar { font: 600 13px/1 var(--t-texto); letter-spacing: .1em; text-transform: uppercase; text-decoration: underline; color: var(--verde-700); }
+  .aplicar-movil { position: fixed; left: 0; right: 0; bottom: 0; padding: 14px 16px; background: var(--arena-50); border-top: 1px solid var(--linea); display: none; gap: 10px; }
+  .filtros.abierto .aplicar-movil { display: flex; }
+
+  .resultados-cabeza { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; justify-content: space-between; margin-bottom: 14px; }
+  .resultados-cabeza strong { font: 700 22px/1 var(--t-titulo); text-transform: uppercase; }
+  .controles { display: flex; gap: 10px; align-items: center; }
+  .btn-filtros { min-height: 44px; padding: 0 16px; border: 1.5px solid var(--tinta); border-radius: var(--radio); font: 600 13px/1 var(--t-texto); letter-spacing: .12em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 8px; }
+  @media (min-width: 1000px) { .btn-filtros { display: none; } }
+  .orden { min-height: 44px; border: 1.5px solid var(--arena-300); border-radius: var(--radio); background: var(--blanco); padding: 0 12px; max-width: 200px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; background: var(--verde-700); color: var(--arena-50); border-radius: 30px; padding: 7px 12px; font-size: 13px; }
+  .chip button { color: var(--arena-200); font-size: 16px; line-height: 1; }
+  .sin-resultados { background: var(--blanco); border-radius: var(--radio); padding: 48px 20px; text-align: center; }
+  .sin-resultados h2 { font-size: 30px; margin-bottom: 10px; }
+  .sin-resultados p { color: var(--gris); margin: 0 0 20px; }
+  .encaja { position: absolute; top: 10px; right: 10px; z-index: 2; background: var(--laton); color: var(--verde-950); font: 600 11px/1 var(--t-texto); letter-spacing: .1em; text-transform: uppercase; padding: 6px 8px; border-radius: 2px; }
+</style>
+</head>
+<body>
+<div id="cabecera"></div>
+
+<main>
+  <section class="cat-cabeza">
+    <div class="contenedor ancho-total">
+      <span class="eyebrow" id="eyebrow">Catálogo</span>
+      <h1 id="tituloCat">Todos los relojes</h1>
+      <p>Filtra por lo que te importa: tamaño, correa, agua, funciones o precio.</p>
+      <form class="barra-busqueda" id="formBusqueda" role="search">
+        <label class="oculto-visual" for="q">Buscar</label>
+        <input class="campo" id="q" type="search" placeholder="Referencia, color o estilo: MTP-1374D, verde, dorado..." autocomplete="off">
+        <button class="btn btn-laton" type="submit">Buscar</button>
+      </form>
+    </div>
+  </section>
+
+  <div class="contenedor ancho-total catalogo">
+    <aside class="filtros" id="filtros" aria-label="Filtros">
+      <div class="filtros-cabeza">
+        <h2>Filtros</h2>
+        <button class="icono-btn cerrar-filtros" id="cerrarFiltros" aria-label="Cerrar filtros"></button>
+      </div>
+      <button class="limpiar" id="limpiar" type="button">Limpiar filtros</button>
+      <div id="gruposFiltros"></div>
+      <div class="aplicar-movil">
+        <button class="btn btn-borde" type="button" id="limpiarMovil" style="flex:1">Limpiar</button>
+        <button class="btn btn-verde" type="button" id="aplicar" style="flex:2">Ver resultados</button>
+      </div>
+    </aside>
+
+    <section aria-live="polite">
+      <div class="resultados-cabeza">
+        <strong id="conteo">20 relojes</strong>
+        <div class="controles">
+          <button class="btn-filtros" id="abrirFiltros" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M7 12h10M10 18h4"/></svg>Filtros
+          </button>
+          <label class="oculto-visual" for="orden">Ordenar</label>
+          <select class="orden" id="orden">
+            <option value="destacados">Destacados</option>
+            <option value="precio-asc">Precio: menor a mayor</option>
+            <option value="precio-desc">Precio: mayor a menor</option>
+            <option value="tam-asc">Caja: más pequeña</option>
+            <option value="tam-desc">Caja: más grande</option>
+          </select>
+        </div>
+      </div>
+      <div class="chips" id="chips"></div>
+      <div class="grilla" id="resultados"></div>
+    </section>
+  </div>
+</main>
+
+<div id="pie"></div>
+
+<script src="/relojes/js/data.js"></script>
+<script src="/relojes/js/tienda.js"></script>
+<script>
+(function () {
+  var T = window.Tienda;
+  var R = T.RELOJES;
+
+  function rangoTam(m) {
+    var a = m.ancho;
+    if (a <= 28) return "Hasta 28 mm";
+    if (a < 35) return "29 a 34 mm";
+    if (a < 40) return "35 a 39 mm";
+    return "40 mm o más";
+  }
+  function rangoPrecio(p) {
+    if (p <= 160000) return "0-160000";
+    if (p <= 250000) return "160000-250000";
+    if (p <= 450000) return "250000-450000";
+    return "450000-9999999";
+  }
+  var ETQ_PRECIO = { "0-160000": "Hasta $160.000", "160000-250000": "$160.000 a $250.000", "250000-450000": "$250.000 a $450.000", "450000-9999999": "Más de $450.000" };
+
+  /* Definición de filtros: clave en la URL, título y cómo se lee cada modelo */
+  var FILTROS = [
+    { k: "g", t: "Para", tipo: "check", val: function (m) { return [m.genero]; }, orden: ["Hombre", "Mujer"] },
+    { k: "correa", t: "Correa", tipo: "check", val: function (m) { return [m.correa]; }, orden: ["Acero", "Cuero"] },
+    { k: "color", t: "Color", tipo: "color", val: function (m) { return T.colores(m); } },
+    { k: "tam", t: "Ancho de caja", tipo: "check", val: function (m) { return [rangoTam(m)]; }, orden: ["Hasta 28 mm", "29 a 34 mm", "35 a 39 mm", "40 mm o más"],
+      ayuda: {
+        "Hasta 28 mm": "Ideal para muñeca de mujer de menos de 15 cm",
+        "29 a 34 mm": "Ideal para muñeca de mujer de 14 a 17 cm",
+        "35 a 39 mm": "Ideal para muñeca de hombre de menos de 17,5 cm",
+        "40 mm o más": "Ideal para muñeca de hombre de 17 cm o más"
+      } },
+    { k: "agua", t: "Resistencia al agua", tipo: "check", val: function (m) { return [T.WR[m.wr].corto]; }, orden: ["Uso diario", "50 m", "100 m", "200 m"] },
+    { k: "func", t: "Funciones", tipo: "check", val: function (m) { return [m.filtroFunc]; }, orden: ["Solo hora", "Fecha", "Día y fecha", "Multifunción", "Cronógrafo"] },
+    { k: "precio", t: "Precio", tipo: "check", val: function (m) { return m.variantes.map(function (v) { return rangoPrecio(v.precio); }); }, orden: Object.keys(ETQ_PRECIO), etq: ETQ_PRECIO },
+    { k: "linea", t: "Línea", tipo: "check", val: function (m) { return [m.linea]; }, orden: ["Casio Timeless", "Casio Edifice", "Casio Duro"] },
+    { k: "caja", t: "Tono de la caja", tipo: "check", val: function (m) { return [/dorado/i.test(m.caja) ? "Dorado" : "Plateado"]; }, orden: ["Plateado", "Dorado"] }
+  ];
+
+  var estado = {};
+  var params = new URLSearchParams(location.search);
+  FILTROS.forEach(function (f) { estado[f.k] = params.getAll(f.k).join(",").split(",").filter(Boolean); });
+  estado.q = params.get("q") || "";
+  estado.muneca = params.get("muneca") || "";
+  estado.orden = params.get("orden") || "destacados";
+
+  function normal(s) { return String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
+  function coincideTexto(m, q) {
+    if (!q) return true;
+    var bolsa = normal([m.ref, m.nombre, m.genero, m.linea, m.correa, m.correaTxt, m.caja, m.desc, m.filtroFunc, m.funciones.join(" "),
+      T.WR[m.wr].corto, m.variantes.map(function (v) { return v.code + " " + v.color; }).join(" ")].join(" ")).replace(/-/g, "");
+    return normal(q).replace(/-/g, "").split(/\s+/).filter(Boolean).every(function (p) { return bolsa.indexOf(p) >= 0; });
+  }
+  function encajaMuneca(m, cm) {
+    if (!cm) return true;
+    var r = T.rangoRecomendado(cm, m.genero);
+    return m.ancho >= r.min - 1 && m.ancho <= r.max + 1;
+  }
+  function pasa(m, excepto) {
+    if (!coincideTexto(m, estado.q)) return false;
+    if (estado.muneca && !encajaMuneca(m, parseFloat(estado.muneca))) return false;
+    return FILTROS.every(function (f) {
+      if (f.k === excepto || !estado[f.k].length) return true;
+      var vals = f.val(m);
+      return estado[f.k].some(function (s) { return vals.indexOf(s) >= 0; });
+    });
+  }
+
+  function pintarFiltros() {
+    var html = FILTROS.map(function (f) {
+      var todos = {};
+      R.forEach(function (m) { f.val(m).forEach(function (v) { todos[v] = 0; }); });
+      R.forEach(function (m) { if (pasa(m, f.k)) f.val(m).filter(function (v, i, a) { return a.indexOf(v) === i; }).forEach(function (v) { todos[v]++; }); });
+      var claves = f.orden ? f.orden.filter(function (o) { return o in todos; }) : Object.keys(todos).sort();
+      if (f.tipo === "color") {
+        return '<fieldset class="grupo"><legend>' + f.t + '</legend><div class="colores">' + claves.map(function (c) {
+          return '<label class="chip-color"><input type="checkbox" data-k="' + f.k + '" value="' + T.esc(c) + '"' + (estado[f.k].indexOf(c) >= 0 ? " checked" : "") + '><i style="background:' + (T.COLORES[c] || "#ccc") + '"></i>' + T.esc(c) + "</label>";
+        }).join("") + "</div></fieldset>";
+      }
+      return '<fieldset class="grupo"><legend>' + f.t + "</legend>" + claves.map(function (c) {
+        var texto = T.esc(f.etq ? f.etq[c] : c);
+        if (f.ayuda) texto = '<span class="opcion-texto">' + texto + "<small>" + T.esc(f.ayuda[c]) + "</small></span>";
+        return '<label class="opcion' + (f.ayuda ? " con-ayuda" : "") + '"><input type="checkbox" data-k="' + f.k + '" value="' + T.esc(c) + '"' + (estado[f.k].indexOf(c) >= 0 ? " checked" : "") + ">" +
+          texto + '<span class="cuenta">' + todos[c] + "</span></label>";
+      }).join("") + "</fieldset>";
+    }).join("");
+    html += '<div class="grupo muneca"><div class="leyenda">Para mi muñeca</div><div class="muneca-fila"><input type="number" id="muneca" min="11" max="24" step="0.5" placeholder="cm" value="' + T.esc(estado.muneca) + '"><small>Contorno en cm. Te mostramos los que te quedan bien.</small></div><a class="mini" href="/relojes#guia" style="font-size:13px;text-decoration:underline;color:var(--verde-700)">¿Cómo medir mi muñeca?</a></div>';
+    document.getElementById("gruposFiltros").innerHTML = html;
+  }
+
+  function pintarChips() {
+    var chips = [];
+    if (estado.q) chips.push(["q", estado.q, "Búsqueda: " + estado.q]);
+    if (estado.muneca) chips.push(["muneca", estado.muneca, "Muñeca de " + estado.muneca + " cm"]);
+    FILTROS.forEach(function (f) { estado[f.k].forEach(function (v) { chips.push([f.k, v, f.etq ? f.etq[v] : v]); }); });
+    document.getElementById("chips").innerHTML = chips.map(function (c) {
+      return '<span class="chip">' + T.esc(c[2]) + '<button type="button" aria-label="Quitar ' + T.esc(c[2]) + '" data-quitar-k="' + c[0] + '" data-quitar-v="' + T.esc(c[1]) + '">×</button></span>';
+    }).join("");
+  }
+
+  function ordenar(lista) {
+    var o = estado.orden;
+    return lista.slice().sort(function (a, b) {
+      if (o === "precio-asc") return T.precioMin(a) - T.precioMin(b);
+      if (o === "precio-desc") return T.precioMin(b) - T.precioMin(a);
+      if (o === "tam-asc") return a.ancho - b.ancho;
+      if (o === "tam-desc") return b.ancho - a.ancho;
+      return (a.genero === b.genero ? 0 : a.genero === "Hombre" ? -1 : 1) || a.destacado - b.destacado;
+    });
+  }
+
+  function pintarResultados() {
+    var lista = ordenar(R.filter(function (m) { return pasa(m); }));
+    document.getElementById("conteo").textContent = lista.length + (lista.length === 1 ? " reloj" : " relojes");
+    var g = estado.g.length === 1 ? estado.g[0] : "";
+    document.getElementById("tituloCat").textContent = g ? "Relojes " + g.toLowerCase() : (estado.linea.length === 1 ? estado.linea[0] : "Todos los relojes");
+    document.title = (g ? "Relojes Casio " + g.toLowerCase() : "Relojes Casio") + " | Sky Relojes";
+    var cm = parseFloat(estado.muneca);
+    document.getElementById("resultados").innerHTML = lista.length ? lista.map(function (m) {
+      var t = T.tarjeta(m);
+      return cm ? t.replace('<a class="tarjeta"', '<a class="tarjeta"').replace('<div class="tarjeta-img">', '<span class="encaja">Te queda</span><div class="tarjeta-img">') : t;
+    }).join("") :
+      '<div class="sin-resultados" style="grid-column:1/-1"><h2>Nada con esos filtros</h2><p>Quita alguno o escríbenos y te ayudamos a escoger.</p><button class="btn btn-verde" id="limpiarVacio" type="button">Limpiar filtros</button></div>';
+    var lv = document.getElementById("limpiarVacio"); if (lv) lv.addEventListener("click", limpiar);
+  }
+
+  function sincronizarURL() {
+    var p = new URLSearchParams();
+    if (estado.q) p.set("q", estado.q);
+    FILTROS.forEach(function (f) { if (estado[f.k].length) p.set(f.k, estado[f.k].join(",")); });
+    if (estado.muneca) p.set("muneca", estado.muneca);
+    if (estado.orden !== "destacados") p.set("orden", estado.orden);
+    history.replaceState(null, "", location.pathname + (p.toString() ? "?" + p.toString() : ""));
+  }
+
+  function todo() { pintarFiltros(); pintarChips(); pintarResultados(); sincronizarURL(); }
+  function limpiar() { FILTROS.forEach(function (f) { estado[f.k] = []; }); estado.q = ""; estado.muneca = ""; document.getElementById("q").value = ""; todo(); }
+
+  document.getElementById("gruposFiltros").addEventListener("change", function (e) {
+    var el = e.target;
+    if (el.id === "muneca") { var v = parseFloat(el.value); estado.muneca = v >= 11 && v <= 24 ? String(v) : ""; todo(); return; }
+    var k = el.dataset.k; if (!k) return;
+    var arr = estado[k], i = arr.indexOf(el.value);
+    if (el.checked && i < 0) arr.push(el.value); if (!el.checked && i >= 0) arr.splice(i, 1);
+    todo();
+  });
+  document.getElementById("chips").addEventListener("click", function (e) {
+    var b = e.target.closest("button"); if (!b) return;
+    var k = b.dataset.quitarK, v = b.dataset.quitarV;
+    if (k === "q") { estado.q = ""; document.getElementById("q").value = ""; }
+    else if (k === "muneca") estado.muneca = "";
+    else estado[k] = estado[k].filter(function (x) { return x !== v; });
+    todo();
+  });
+  var q = document.getElementById("q"); q.value = estado.q;
+  var tq; q.addEventListener("input", function () { clearTimeout(tq); tq = setTimeout(function () { estado.q = q.value.trim(); todo(); }, 180); });
+  document.getElementById("formBusqueda").addEventListener("submit", function (e) { e.preventDefault(); estado.q = q.value.trim(); todo(); });
+  var orden = document.getElementById("orden"); orden.value = estado.orden;
+  orden.addEventListener("change", function () { estado.orden = orden.value; pintarResultados(); sincronizarURL(); });
+  document.getElementById("limpiar").addEventListener("click", limpiar);
+  document.getElementById("limpiarMovil").addEventListener("click", limpiar);
+
+  var panel = document.getElementById("filtros");
+  document.getElementById("cerrarFiltros").innerHTML = T.ICO.cerrar;
+  function cerrarPanel() { panel.classList.remove("abierto"); document.body.style.overflow = ""; }
+  document.getElementById("abrirFiltros").addEventListener("click", function () { panel.classList.add("abierto"); document.body.style.overflow = "hidden"; });
+  document.getElementById("cerrarFiltros").addEventListener("click", cerrarPanel);
+  document.getElementById("aplicar").addEventListener("click", function () { cerrarPanel(); window.scrollTo({ top: document.querySelector(".catalogo").offsetTop - 80 }); });
+
+  if (estado.g.length === 1) document.getElementById("eyebrow").textContent = "Casio para " + estado.g[0].toLowerCase();
+  todo();
+})();
+</script>
+</body>
+</html>
