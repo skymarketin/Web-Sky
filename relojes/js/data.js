@@ -270,8 +270,7 @@ window.RELOJES = [
     "img": "img/mtp-v001gl-9budf.jpg",
     "fotos": [
      "img/vida/mtp-v001gl-9budf-1.jpg",
-     "img/vida/mtp-v001gl-9budf-2.jpg",
-     "img/vida/mtp-v001gl-9budf-3.jpg"
+     "img/vida/mtp-v001gl-9budf-2.jpg"
     ]
    }
   ]
@@ -716,7 +715,6 @@ window.RELOJES = [
     "img": "img/mtp-1170n-9ardf.webp",
     "fotos": [
      "img/vida/mtp-1170n-9ardf-1.jpg",
-     "img/vida/mtp-1170n-9ardf-2.jpg",
      "img/vida/mtp-1170n-9ardf-3.jpg"
     ]
    },
