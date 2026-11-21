@@ -5,7 +5,7 @@ window.RELOJES = [
   "id": "mtp-v002d",
   "ref": "MTP-V002D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Clásico Acero",
   "desc": "El reloj de todos los días, bien hecho. Acero, fecha a las 3 y una esfera limpia que se lee de un vistazo. Va con camisa y va con camiseta.",
   "largo": 44,
@@ -58,7 +58,7 @@ window.RELOJES = [
   "id": "mtp-v004d",
   "ref": "MTP-V004D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Ejecutivo Acero",
   "desc": "Caja de 41 mm, delgada (8,3 mm) y con presencia. El que se ve más caro de lo que cuesta, perfecto para oficina.",
   "largo": 47,
@@ -118,7 +118,7 @@ window.RELOJES = [
   "id": "mtp-v006d",
   "ref": "MTP-V006D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Día y Fecha",
   "desc": "Te dice el día y la fecha sin sacar el celular. Acero, 38 mm y un diseño que no pasa de moda.",
   "largo": 45.1,
@@ -172,7 +172,7 @@ window.RELOJES = [
   "id": "mtp-v005l",
   "ref": "MTP-V005L",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Clásico Cuero",
   "desc": "Esfera grande de 40 mm con correa de cuero. Liviano (46 g), elegante y fácil de combinar.",
   "largo": 47,
@@ -224,7 +224,7 @@ window.RELOJES = [
   "id": "mtp-v001gl",
   "ref": "MTP-V001GL",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Dorado Cuero",
   "desc": "Caja tono dorado con correa de cuero. El toque vintage que pide un regalo, al precio de entrada de Casio.",
   "largo": 45,
@@ -279,7 +279,7 @@ window.RELOJES = [
   "id": "mtp-vt01l",
   "ref": "MTP-VT01L",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Minimal Cuero",
   "desc": "Minimalista de verdad: sin fecha, agujas delgadas y caja de solo 8,2 mm. Pesa 41 g, ni lo sientes.",
   "largo": 46,
@@ -354,7 +354,7 @@ window.RELOJES = [
   "id": "mtp-v300d",
   "ref": "MTP-V300D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Multifunción",
   "desc": "Tres subesferas con fecha, día y formato 24 horas. Look de cronógrafo, caja de 41,5 mm y acero.",
   "largo": 47,
@@ -413,7 +413,7 @@ window.RELOJES = [
   "id": "mtp-1381d",
   "ref": "MTP-1381D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Día Completo 50 m",
   "desc": "El día de la semana escrito completo en la esfera, fecha y 50 metros de resistencia al agua. Robusto y elegante.",
   "largo": 46.6,
@@ -467,7 +467,7 @@ window.RELOJES = [
   "id": "mtp-1374d",
   "ref": "MTP-1374D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Multifunción 50 m",
   "desc": "Para lucir: 43,5 mm, tres subesferas y 50 metros de resistencia. Presencia total en la muñeca.",
   "largo": 47,
@@ -515,7 +515,7 @@ window.RELOJES = [
   "id": "ef-539d",
   "ref": "EF-539D",
   "genero": "Hombre",
-  "linea": "Casio Edifice",
+  "linea": "Casio",
   "nombre": "Edifice Cronógrafo",
   "desc": "La línea deportiva premium de Casio. Cronógrafo real, taquímetro en el bisel, acero inoxidable sólido y 100 metros de resistencia.",
   "largo": 53.5,
@@ -568,7 +568,7 @@ window.RELOJES = [
   "id": "mdv-107d",
   "ref": "MDV-107D",
   "genero": "Hombre",
-  "linea": "Casio Duro",
+  "linea": "Casio",
   "nombre": "Duro Diver 200 m",
   "desc": "El buceador de Casio: bisel giratorio, tapa de rosca y 200 metros de resistencia. Acero, agujas luminosas y presencia de reloj de lujo.",
   "largo": 49.5,
@@ -636,7 +636,7 @@ window.RELOJES = [
   "id": "mtp-1302da",
   "ref": "MTP-1302DA",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Esfera Texturizada",
   "desc": "Esfera con textura que brilla distinto según la luz, bisel estriado y 50 metros de resistencia. Elegante sin esfuerzo.",
   "largo": 44.2,
@@ -689,7 +689,7 @@ window.RELOJES = [
   "id": "mtp-1170n",
   "ref": "MTP-1170N",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Dorado Clásico",
   "desc": "Todo dorado, caja de 36 mm y solo 8,5 mm de grosor. El clásico de vestir que nunca pasa de moda.",
   "largo": 40.5,
@@ -742,7 +742,7 @@ window.RELOJES = [
   "id": "ltp-v002d",
   "ref": "LTP-V002D",
   "genero": "Mujer",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Clásico Acero",
   "desc": "Pequeño, fino y en acero. El reloj que combina con todo lo que ya tienes, con fecha a las 3.",
   "largo": 31,
@@ -809,7 +809,7 @@ window.RELOJES = [
   "id": "ltp-vt01d",
   "ref": "LTP-VT01D",
   "genero": "Mujer",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Minimal Acero",
   "desc": "Esfera de 34 mm, sin fecha y con agujas delgadas. Minimalista, moderno y de solo 7,9 mm de grosor.",
   "largo": 40,
@@ -872,7 +872,7 @@ window.RELOJES = [
   "id": "ltp-vt01g",
   "ref": "LTP-VT01G",
   "genero": "Mujer",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Minimal Dorado",
   "desc": "El mismo diseño minimalista, todo en dorado. Caja y correa con baño iónico dorado que no se ve barato.",
   "largo": 40,
@@ -928,7 +928,7 @@ window.RELOJES = [
   "id": "ltp-v006d",
   "ref": "LTP-V006D",
   "genero": "Mujer",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Día y Fecha",
   "desc": "Pequeño y práctico: te muestra el día y la fecha. Acero y esfera de 25 mm para muñecas finas.",
   "largo": 30.4,
@@ -993,7 +993,7 @@ window.RELOJES = [
   "id": "ltp-v004d",
   "ref": "LTP-V004D",
   "genero": "Mujer",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Esfera Media",
   "desc": "Un poco más grande (30 mm) y muy delgado (7,8 mm). Para la que quiere un reloj que se note sin ser grande.",
   "largo": 35.2,
@@ -1043,7 +1043,7 @@ window.RELOJES = [
   "id": "ltp-v300d",
   "ref": "LTP-V300D",
   "genero": "Mujer",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Multifunción",
   "desc": "Tres subesferas con fecha, día y 24 horas en 33 mm. Look de cronógrafo, tamaño femenino.",
   "largo": 38,
@@ -1109,7 +1109,7 @@ window.RELOJES = [
   "id": "ltp-1241d",
   "ref": "LTP-1241D",
   "genero": "Mujer",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Color Acero",
   "desc": "Esferas de color (verde, azul, rosado) en caja de acero. El clásico con un toque distinto.",
   "largo": 33,
@@ -1176,7 +1176,7 @@ window.RELOJES = [
   "id": "ltp-1183a",
   "ref": "LTP-1183A",
   "genero": "Mujer",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Ultradelgado",
   "desc": "Solo 6,6 mm de grosor. Se desliza bajo la manga y se ve impecable en cualquier ocasión.",
   "largo": 31.5,
@@ -1233,7 +1233,7 @@ window.RELOJES = [
   "id": "ltp-1215a",
   "ref": "LTP-1215A",
   "genero": "Mujer",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Clásico Brillante",
   "desc": "Esfera de 28 mm con acabado brillante y fecha. Clásico, femenino y fácil de leer.",
   "largo": 32,
@@ -1298,7 +1298,7 @@ window.RELOJES = [
   "id": "ltp-v001gl",
   "ref": "LTP-V001GL",
   "genero": "Mujer",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Dorado Cuero",
   "desc": "Caja dorada pequeña con correa de cuero. Pesa 21 g: lo usas todo el día y ni lo notas.",
   "largo": 31,
@@ -1347,7 +1347,7 @@ window.RELOJES = [
   "id": "mtp-1183g",
   "ref": "MTP-1183G",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-1183G",
   "desc": "Acero con detalles dorados y fecha a las 3. Clásico de oficina, 38,5 mm y 87 g.",
   "largo": 42,
@@ -1387,7 +1387,7 @@ window.RELOJES = [
   "id": "mtp-1183a",
   "ref": "MTP-1183A",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-1183A",
   "desc": "Esfera blanca, acero y fecha. Sobrio, liviano y fácil de combinar.",
   "largo": 42,
@@ -1427,7 +1427,7 @@ window.RELOJES = [
   "id": "mtp-1302d",
   "ref": "MTP-1302D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-1302D",
   "desc": "Bisel estriado, números romanos dorados y 50 metros de resistencia. Elegante sin esfuerzo.",
   "largo": 44.2,
@@ -1459,7 +1459,10 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 274500,
     "img": "img/mtp-1302d-1a2vdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-1302d-1a2vdf-1.jpg",
+     "img/vida/mtp-1302d-1a2vdf-2.jpg"
+    ]
    }
   ]
  },
@@ -1467,7 +1470,7 @@ window.RELOJES = [
   "id": "mtp-1302ds",
   "ref": "MTP-1302DS",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-1302DS",
   "desc": "Esfera de nácar que cambia con la luz, bisel estriado y 50 metros de resistencia.",
   "largo": 44.2,
@@ -1499,7 +1502,12 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 382700,
     "img": "img/mtp-1302ds-1avdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-1302ds-1avdf-1.jpg",
+     "img/vida/mtp-1302ds-1avdf-2.jpg",
+     "img/vida/mtp-1302ds-1avdf-3.jpg",
+     "img/vida/mtp-1302ds-1avdf-4.jpg"
+    ]
    }
   ]
  },
@@ -1507,7 +1515,7 @@ window.RELOJES = [
   "id": "mtp-1308d",
   "ref": "MTP-1308D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-1308D",
   "desc": "Caja grande de 43,5 mm, esfera negra y 50 metros. Presencia en la muñeca.",
   "largo": 48.9,
@@ -1547,7 +1555,7 @@ window.RELOJES = [
   "id": "mtp-1303d",
   "ref": "MTP-1303D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-1303D",
   "desc": "Minimalista de 40 mm, solo 8,1 mm de grosor y 50 metros de resistencia.",
   "largo": 47,
@@ -1586,7 +1594,7 @@ window.RELOJES = [
   "id": "mtp-1303sg",
   "ref": "MTP-1303SG",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-1303SG",
   "desc": "El minimalista de 40 mm en acero con detalles dorados. Delgado y con 50 metros.",
   "largo": 47,
@@ -1625,7 +1633,7 @@ window.RELOJES = [
   "id": "mtp-v002g",
   "ref": "MTP-V002G",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-V002G",
   "desc": "Todo dorado con esfera negra y fecha. 37 mm, el clásico que se ve más caro.",
   "largo": 44,
@@ -1657,7 +1665,12 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 262200,
     "img": "img/mtp-v002g-1budf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-v002g-1budf-1.jpg",
+     "img/vida/mtp-v002g-1budf-2.jpg",
+     "img/vida/mtp-v002g-1budf-3.jpg",
+     "img/vida/mtp-v002g-1budf-4.jpg"
+    ]
    }
   ]
  },
@@ -1665,7 +1678,7 @@ window.RELOJES = [
   "id": "mtp-1303dd",
   "ref": "MTP-1303DD",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-1303DD",
   "desc": "Esfera plateada, 40 mm y solo 8,1 mm de grosor. Limpio y con 50 metros.",
   "largo": 47,
@@ -1704,7 +1717,7 @@ window.RELOJES = [
   "id": "mtp-v001g",
   "ref": "MTP-V001G",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-V001G",
   "desc": "Dorado completo con números arábigos. Vintage, 38 mm y 91 g.",
   "largo": 45,
@@ -1743,7 +1756,7 @@ window.RELOJES = [
   "id": "mtp-v004g",
   "ref": "MTP-V004G",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-V004G",
   "desc": "Caja de 41,5 mm en dorado, delgada (8,3 mm) y con fecha. Para lucir en la oficina.",
   "largo": 47,
@@ -1775,14 +1788,24 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 269600,
     "img": "img/mtp-v004g-1budf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-v004g-1budf-1.jpg",
+     "img/vida/mtp-v004g-1budf-2.jpg",
+     "img/vida/mtp-v004g-1budf-3.jpg",
+     "img/vida/mtp-v004g-1budf-4.jpg"
+    ]
    },
    {
     "code": "MTP-V004G-9BUDF",
     "color": "Dorado",
     "precio": 269600,
     "img": "img/mtp-v004g-9budf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-v004g-9budf-1.jpg",
+     "img/vida/mtp-v004g-9budf-2.jpg",
+     "img/vida/mtp-v004g-9budf-3.jpg",
+     "img/vida/mtp-v004g-9budf-4.jpg"
+    ]
    }
   ]
  },
@@ -1790,7 +1813,7 @@ window.RELOJES = [
   "id": "mtp-v002gl",
   "ref": "MTP-V002GL",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-V002GL",
   "desc": "Caja dorada, correa de cuero negro y fecha. Pesa 44 g, ni lo sientes.",
   "largo": 44,
@@ -1830,7 +1853,7 @@ window.RELOJES = [
   "id": "mtp-v005d",
   "ref": "MTP-V005D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-V005D",
   "desc": "Esfera de 40 mm en acero, sin fecha y delgado. El básico bien hecho.",
   "largo": 47,
@@ -1883,7 +1906,7 @@ window.RELOJES = [
   "id": "mtp-1370d",
   "ref": "MTP-1370D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-1370D",
   "desc": "El día de la semana escrito completo, fecha y 50 metros. Acero de 39,8 mm.",
   "largo": 45,
@@ -1916,7 +1939,12 @@ window.RELOJES = [
     "color": "Blanco",
     "precio": 328600,
     "img": "img/mtp-1370d-7a2vdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-1370d-7a2vdf-1.jpg",
+     "img/vida/mtp-1370d-7a2vdf-2.jpg",
+     "img/vida/mtp-1370d-7a2vdf-3.jpg",
+     "img/vida/mtp-1370d-7a2vdf-4.jpg"
+    ]
    },
    {
     "code": "MTP-1370D-2A2VDF",
@@ -1931,7 +1959,7 @@ window.RELOJES = [
   "id": "mtp-v006g",
   "ref": "MTP-V006G",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-V006G",
   "desc": "Dorado con esfera negra, día y fecha. 38 mm y diseño que no pasa de moda.",
   "largo": 45.1,
@@ -1972,7 +2000,7 @@ window.RELOJES = [
   "id": "mtp-1375d",
   "ref": "MTP-1375D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-1375D",
   "desc": "Esfera verde con tres subesferas, 42 mm y 50 metros. Look de cronógrafo.",
   "largo": 48.5,
@@ -2014,7 +2042,7 @@ window.RELOJES = [
   "id": "mtp-1370g",
   "ref": "MTP-1370G",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-1370G",
   "desc": "Dorado con esfera negra, día completo y fecha, 50 metros. Presencia total.",
   "largo": 44.3,
@@ -2055,7 +2083,7 @@ window.RELOJES = [
   "id": "mtp-1381gd",
   "ref": "MTP-1381GD",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-1381GD",
   "desc": "Dorado, esfera blanca, día completo y fecha. 50 metros de resistencia.",
   "largo": 46.6,
@@ -2096,7 +2124,7 @@ window.RELOJES = [
   "id": "mtp-b315l",
   "ref": "MTP-B315L",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-B315L",
   "desc": "Esfera verde con subesfera de 24 horas, cuero genuino y tapa de rosca. 50 metros.",
   "largo": 46.5,
@@ -2128,7 +2156,12 @@ window.RELOJES = [
     "color": "Verde",
     "precio": 652300,
     "img": "img/mtp-b315l-3avdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-b315l-3avdf-1.jpg",
+     "img/vida/mtp-b315l-3avdf-2.jpg",
+     "img/vida/mtp-b315l-3avdf-3.jpg",
+     "img/vida/mtp-b315l-3avdf-4.jpg"
+    ]
    }
   ]
  },
@@ -2136,7 +2169,7 @@ window.RELOJES = [
   "id": "mtp-v001l",
   "ref": "MTP-V001L",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-V001L",
   "desc": "Esfera blanca con correa de cuero. Liviano (42 g) y clásico.",
   "largo": 45,
@@ -2175,7 +2208,7 @@ window.RELOJES = [
   "id": "mtp-b100m",
   "ref": "MTP-B100M",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-B100M",
   "desc": "Esfera azul de 43 mm, malla de acero y solo 7,7 mm de grosor. 50 metros.",
   "largo": 50.6,
@@ -2212,7 +2245,7 @@ window.RELOJES = [
   "id": "mtp-e600m",
   "ref": "MTP-E600M",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-E600M",
   "desc": "Esfera verde claro, cristal curvo y malla de acero. Minimalista y liviano (70 g).",
   "largo": 49,
@@ -2248,7 +2281,7 @@ window.RELOJES = [
   "id": "mtp-m300d",
   "ref": "MTP-M300D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-M300D",
   "desc": "Fase lunar, día y fecha en subesferas. Acero, 40 mm y 50 metros.",
   "largo": 46.6,
@@ -2290,7 +2323,7 @@ window.RELOJES = [
   "id": "mtp-e710mb",
   "ref": "MTP-E710MB",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-E710MB",
   "desc": "Todo negro con esfera azul, malla de acero y fecha. Delgado (8,1 mm) y 50 metros.",
   "largo": 46.7,
@@ -2330,7 +2363,7 @@ window.RELOJES = [
   "id": "mtp-m305d",
   "ref": "MTP-M305D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-M305D",
   "desc": "Caja cuadrada con fase lunar, día y fecha. Acero y 50 metros.",
   "largo": 44.5,
@@ -2372,7 +2405,7 @@ window.RELOJES = [
   "id": "mtp-e710m",
   "ref": "MTP-E710M",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-E710M",
   "desc": "Esfera negra, malla de acero y fecha. Delgado (8,1 mm) y con 50 metros.",
   "largo": 46.7,
@@ -2404,7 +2437,9 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 497400,
     "img": "img/mtp-e710m-1avdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-e710m-1avdf-1.jpg"
+    ]
    }
   ]
  },
@@ -2412,7 +2447,7 @@ window.RELOJES = [
   "id": "mtp-m110d",
   "ref": "MTP-M110D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-M110D",
   "desc": "Esfera verde con fase lunar, tapa de rosca y 50 metros. Acero de 42,5 mm.",
   "largo": 48.4,
@@ -2444,7 +2479,12 @@ window.RELOJES = [
     "color": "Verde",
     "precio": 738400,
     "img": "img/mtp-m110d-3avdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-m110d-3avdf-1.jpg",
+     "img/vida/mtp-m110d-3avdf-2.jpg",
+     "img/vida/mtp-m110d-3avdf-3.jpg",
+     "img/vida/mtp-m110d-3avdf-4.jpg"
+    ]
    }
   ]
  },
@@ -2452,7 +2492,7 @@ window.RELOJES = [
   "id": "mtp-e735gl",
   "ref": "MTP-E735GL",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-E735GL",
   "desc": "Caja dorada, cuero genuino, día y fecha (en español). 50 metros.",
   "largo": 44.5,
@@ -2485,7 +2525,12 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 500000,
     "img": "img/mtp-e735gl-1avdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-e735gl-1avdf-1.jpg",
+     "img/vida/mtp-e735gl-1avdf-2.jpg",
+     "img/vida/mtp-e735gl-1avdf-3.jpg",
+     "img/vida/mtp-e735gl-1avdf-4.jpg"
+    ]
    }
   ]
  },
@@ -2493,7 +2538,7 @@ window.RELOJES = [
   "id": "mtp-b205d",
   "ref": "MTP-B205D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-B205D",
   "desc": "Rectangular con agujas y pantalla digital: hora mundial, cronómetro y alarma.",
   "largo": 42,
@@ -2534,7 +2579,7 @@ window.RELOJES = [
   "id": "mtp-b120b",
   "ref": "MTP-B120B",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-B120B",
   "desc": "Todo negro, día y fecha, 41 mm y solo 8,3 mm. 50 metros de resistencia.",
   "largo": 48,
@@ -2572,7 +2617,7 @@ window.RELOJES = [
   "id": "mtp-b135mg",
   "ref": "MTP-B135MG",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-B135MG",
   "desc": "Malla dorada, esfera negra, día y fecha. 41 mm y 50 metros.",
   "largo": 48,
@@ -2613,7 +2658,7 @@ window.RELOJES = [
   "id": "mtp-b220bl",
   "ref": "MTP-B220BL",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-B220BL",
   "desc": "Caja gris, cuero genuino y 50 metros. Liviano (46 g) y con estilo.",
   "largo": 43.7,
@@ -2644,7 +2689,12 @@ window.RELOJES = [
     "color": "Gris",
     "precio": 635100,
     "img": "img/mtp-b220bl-1avdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-b220bl-1avdf-1.jpg",
+     "img/vida/mtp-b220bl-1avdf-2.jpg",
+     "img/vida/mtp-b220bl-1avdf-3.jpg",
+     "img/vida/mtp-b220bl-1avdf-4.jpg"
+    ]
    }
   ]
  },
@@ -2652,7 +2702,7 @@ window.RELOJES = [
   "id": "mtp-b190g",
   "ref": "MTP-B190G",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-B190G",
   "desc": "Rectangular dorado de estilo retro, cristal curvo y 50 metros.",
   "largo": 41,
@@ -2683,7 +2733,12 @@ window.RELOJES = [
     "color": "Dorado",
     "precio": 704000,
     "img": "img/mtp-b190g-9bvdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-b190g-9bvdf-1.jpg",
+     "img/vida/mtp-b190g-9bvdf-2.jpg",
+     "img/vida/mtp-b190g-9bvdf-3.jpg",
+     "img/vida/mtp-b190g-9bvdf-4.jpg"
+    ]
    }
   ]
  },
@@ -2691,7 +2746,7 @@ window.RELOJES = [
   "id": "mtp-b195d",
   "ref": "MTP-B195D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-B195D",
   "desc": "Caja octagonal en acero, fecha y 50 metros. Diseño que se nota.",
   "largo": 46.5,
@@ -2723,14 +2778,24 @@ window.RELOJES = [
     "color": "Verde",
     "precio": 600700,
     "img": "img/mtp-b195d-3avdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-b195d-3avdf-1.jpg",
+     "img/vida/mtp-b195d-3avdf-2.jpg",
+     "img/vida/mtp-b195d-3avdf-3.jpg",
+     "img/vida/mtp-b195d-3avdf-4.jpg"
+    ]
    },
    {
     "code": "MTP-B195D-1AVDF",
     "color": "Negro",
     "precio": 600700,
     "img": "img/mtp-b195d-1avdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-b195d-1avdf-1.jpg",
+     "img/vida/mtp-b195d-1avdf-2.jpg",
+     "img/vida/mtp-b195d-1avdf-3.jpg",
+     "img/vida/mtp-b195d-1avdf-4.jpg"
+    ]
    }
   ]
  },
@@ -2738,7 +2803,7 @@ window.RELOJES = [
   "id": "mtp-b215d",
   "ref": "MTP-B215D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-B215D",
   "desc": "Rectangular delgado (7,9 mm), cristal curvo y 50 metros. Elegante de vestir.",
   "largo": 39.7,
@@ -2769,7 +2834,12 @@ window.RELOJES = [
     "color": "Plateado",
     "precio": 531900,
     "img": "img/mtp-b215d-7avdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-b215d-7avdf-1.jpg",
+     "img/vida/mtp-b215d-7avdf-2.jpg",
+     "img/vida/mtp-b215d-7avdf-3.jpg",
+     "img/vida/mtp-b215d-7avdf-4.jpg"
+    ]
    }
   ]
  },
@@ -2777,7 +2847,7 @@ window.RELOJES = [
   "id": "mtp-b200d",
   "ref": "MTP-B200D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-B200D",
   "desc": "Agujas y pantalla digital en 41 mm: hora mundial, cronómetro y alarma.",
   "largo": 47,
@@ -2818,7 +2888,7 @@ window.RELOJES = [
   "id": "mtp-b145sg",
   "ref": "MTP-B145SG",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-B145SG",
   "desc": "Acero con bisel dorado, 35 mm y solo 7,4 mm. Fecha y 50 metros.",
   "largo": 40,
@@ -2850,14 +2920,22 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 566300,
     "img": "img/mtp-b145sg-1avdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-b145sg-1avdf-1.jpg",
+     "img/vida/mtp-b145sg-1avdf-2.jpg",
+     "img/vida/mtp-b145sg-1avdf-3.jpg",
+     "img/vida/mtp-b145sg-1avdf-4.jpg"
+    ]
    },
    {
     "code": "MTP-B145SG-7AVDF",
     "color": "Blanco",
     "precio": 566300,
     "img": "img/mtp-b145sg-7avdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-b145sg-7avdf-1.jpg",
+     "img/vida/mtp-b145sg-7avdf-2.jpg"
+    ]
    }
   ]
  },
@@ -2865,7 +2943,7 @@ window.RELOJES = [
   "id": "mtp-b185d",
   "ref": "MTP-B185D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-B185D",
   "desc": "Caja cuadrada retro de 32,5 mm, muy delgada (7,3 mm). Fecha y 50 metros.",
   "largo": 40,
@@ -2905,7 +2983,7 @@ window.RELOJES = [
   "id": "mtp-b146g",
   "ref": "MTP-B146G",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-B146G",
   "desc": "Dorado de 35 mm con día y fecha. Retro, delgado y con 50 metros.",
   "largo": 40.8,
@@ -2953,7 +3031,7 @@ window.RELOJES = [
   "id": "mtp-b185g",
   "ref": "MTP-B185G",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-B185G",
   "desc": "Cuadrado retro todo dorado, 7,3 mm de grosor. Fecha y 50 metros.",
   "largo": 40,
@@ -2993,7 +3071,7 @@ window.RELOJES = [
   "id": "mtp-b170",
   "ref": "MTP-B170",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-B170",
   "desc": "Caja de aluminio y correa de resina verde. Pesa 27 g y aguanta 50 metros.",
   "largo": 39.9,
@@ -3032,7 +3110,7 @@ window.RELOJES = [
   "id": "mtp-b145d",
   "ref": "MTP-B145D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-B145D",
   "desc": "Acero de 35 mm, solo 7,4 mm de grosor, fecha y 50 metros. Retro y liviano.",
   "largo": 40,
@@ -3078,7 +3156,10 @@ window.RELOJES = [
     "color": "Naranja",
     "precio": 417900,
     "img": "img/mtp-b145d-9avdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-b145d-9avdf-1.jpg",
+     "img/vida/mtp-b145d-9avdf-2.jpg"
+    ]
    }
   ]
  },
@@ -3086,7 +3167,7 @@ window.RELOJES = [
   "id": "mtp-b145g",
   "ref": "MTP-B145G",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-B145G",
   "desc": "Todo dorado de 35 mm, delgado (7,4 mm), con fecha y 50 metros.",
   "largo": 40,
@@ -3126,7 +3207,7 @@ window.RELOJES = [
   "id": "mtp-b125b",
   "ref": "MTP-B125B",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-B125B",
   "desc": "Todo negro con esfera gris, día y fecha. 41 mm, delgado y con 50 metros.",
   "largo": 48,
@@ -3164,7 +3245,7 @@ window.RELOJES = [
   "id": "mtp-vd03b",
   "ref": "MTP-VD03B",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-VD03B",
   "desc": "Caja negra de 41 mm con fecha. Deportivo y fácil de llevar todos los días.",
   "largo": 48,
@@ -3210,7 +3291,12 @@ window.RELOJES = [
     "color": "Verde",
     "precio": 330300,
     "img": "img/mtp-vd03b-3audf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-vd03b-3audf-1.jpg",
+     "img/vida/mtp-vd03b-3audf-2.jpg",
+     "img/vida/mtp-vd03b-3audf-3.jpg",
+     "img/vida/mtp-vd03b-3audf-4.jpg"
+    ]
    }
   ]
  },
@@ -3218,7 +3304,7 @@ window.RELOJES = [
   "id": "mtp-vd01",
   "ref": "MTP-VD01",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-VD01",
   "desc": "Caja grande de 45 mm, correa de resina y 50 metros. Pesa 79 g.",
   "largo": 49,
@@ -3258,7 +3344,7 @@ window.RELOJES = [
   "id": "mtp-vd03d",
   "ref": "MTP-VD03D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-VD03D",
   "desc": "Acero de 41 mm con fecha y look deportivo. Para todos los días.",
   "largo": 48,
@@ -3312,7 +3398,7 @@ window.RELOJES = [
   "id": "mtp-vd01d",
   "ref": "MTP-VD01D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-VD01D",
   "desc": "Caja grande de 45 mm en acero, fecha y 50 metros de resistencia.",
   "largo": 49,
@@ -3352,7 +3438,7 @@ window.RELOJES = [
   "id": "mtp-vd01g",
   "ref": "MTP-VD01G",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-VD01G",
   "desc": "Dorado de 45 mm con esfera negra, fecha y 50 metros. Se hace notar.",
   "largo": 49,
@@ -3384,7 +3470,12 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 310600,
     "img": "img/mtp-vd01g-1cvudf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-vd01g-1cvudf-1.jpg",
+     "img/vida/mtp-vd01g-1cvudf-2.jpg",
+     "img/vida/mtp-vd01g-1cvudf-3.jpg",
+     "img/vida/mtp-vd01g-1cvudf-4.jpg"
+    ]
    }
   ]
  },
@@ -3392,7 +3483,7 @@ window.RELOJES = [
   "id": "mtp-vc01d",
   "ref": "MTP-VC01D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-VC01D",
   "desc": "Esfera verde con agujas y pantalla digital: hora mundial, cronómetro y alarma.",
   "largo": 46.5,
@@ -3433,7 +3524,7 @@ window.RELOJES = [
   "id": "mtp-vd03g",
   "ref": "MTP-VD03G",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-VD03G",
   "desc": "Dorado con esfera verde y fecha, 41 mm. Llamativo sin pasarse.",
   "largo": 48,
@@ -3473,7 +3564,7 @@ window.RELOJES = [
   "id": "mtp-vd03l",
   "ref": "MTP-VD03L",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-VD03L",
   "desc": "Caja de 41 mm con correa de cuero y fecha. Pesa 55 g.",
   "largo": 48,
@@ -3513,7 +3604,7 @@ window.RELOJES = [
   "id": "mtp-vt01b",
   "ref": "MTP-VT01B",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-VT01B",
   "desc": "Caja negra de 40 mm, esfera blanca y solo 8,2 mm de grosor. Minimalista.",
   "largo": 46,
@@ -3541,7 +3632,12 @@ window.RELOJES = [
     "color": "Blanco",
     "precio": 330300,
     "img": "img/mtp-vt01b-7budf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-vt01b-7budf-1.jpg",
+     "img/vida/mtp-vt01b-7budf-2.jpg",
+     "img/vida/mtp-vt01b-7budf-3.jpg",
+     "img/vida/mtp-vt01b-7budf-4.jpg"
+    ]
    }
   ]
  },
@@ -3549,7 +3645,7 @@ window.RELOJES = [
   "id": "mtp-vt01g",
   "ref": "MTP-VT01G",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-VT01G",
   "desc": "Dorado con esfera negra, 40 mm y delgado. Sin fecha, puro estilo.",
   "largo": 46,
@@ -3577,7 +3673,11 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 312200,
     "img": "img/mtp-vt01g-1budf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-vt01g-1budf-1.jpg",
+     "img/vida/mtp-vt01g-1budf-2.jpg",
+     "img/vida/mtp-vt01g-1budf-3.jpg"
+    ]
    }
   ]
  },
@@ -3585,7 +3685,7 @@ window.RELOJES = [
   "id": "mtp-vt01gl",
   "ref": "MTP-VT01GL",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-VT01GL",
   "desc": "Caja dorada, esfera verde y correa de cuero. Pesa solo 41 g.",
   "largo": 46,
@@ -3621,7 +3721,7 @@ window.RELOJES = [
   "id": "mtp-vt05g",
   "ref": "MTP-VT05G",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-VT05G",
   "desc": "Dorado de 37 mm con esfera blanca y fecha. Clásico y liviano (80 g).",
   "largo": 43,
@@ -3653,7 +3753,12 @@ window.RELOJES = [
     "color": "Blanco",
     "precio": 377000,
     "img": "img/mtp-vt05g-7edf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-vt05g-7edf-1.jpg",
+     "img/vida/mtp-vt05g-7edf-2.jpg",
+     "img/vida/mtp-vt05g-7edf-3.jpg",
+     "img/vida/mtp-vt05g-7edf-4.jpg"
+    ]
    }
   ]
  },
@@ -3661,7 +3766,7 @@ window.RELOJES = [
   "id": "mtp-vt05l",
   "ref": "MTP-VT05L",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTP-VT05L",
   "desc": "Esfera negra de 37 mm, correa de cuero y fecha. Pesa 39 g.",
   "largo": 43,
@@ -3693,7 +3798,12 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 273700,
     "img": "img/mtp-vt05l-1edf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-vt05l-1edf-1.jpg",
+     "img/vida/mtp-vt05l-1edf-2.jpg",
+     "img/vida/mtp-vt05l-1edf-3.jpg",
+     "img/vida/mtp-vt05l-1edf-4.jpg"
+    ]
    }
   ]
  },
@@ -3701,7 +3811,7 @@ window.RELOJES = [
   "id": "mts-115d",
   "ref": "MTS-115D",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MTS-115D",
   "desc": "Cristal de zafiro que casi no se raya, acero de 41 mm, fecha y 50 metros.",
   "largo": 47,
@@ -3741,7 +3851,7 @@ window.RELOJES = [
   "id": "mw-240",
   "ref": "MW-240",
   "genero": "Hombre",
-  "linea": "Casio Timeless",
+  "linea": "Casio",
   "nombre": "Casio MW-240",
   "desc": "Análogo de resina de 43,6 mm que pesa solo 35 g. 50 metros, para el día a día y el deporte.",
   "largo": 48,
@@ -3784,7 +3894,7 @@ window.RELOJES = [
   "id": "w-218hd",
   "ref": "W-218HD",
   "genero": "Hombre",
-  "linea": "Casio Digital",
+  "linea": "Casio",
   "nombre": "Casio W-218HD",
   "desc": "Digital clásico con correa de acero, luz LED, cronómetro y alarma. Pila de 7 años.",
   "largo": 44.4,
@@ -3828,7 +3938,12 @@ window.RELOJES = [
     "color": "Verde",
     "precio": 248300,
     "img": "img/w-218hd-3avdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/w-218hd-3avdf-1.jpg",
+     "img/vida/w-218hd-3avdf-2.jpg",
+     "img/vida/w-218hd-3avdf-3.jpg",
+     "img/vida/w-218hd-3avdf-4.jpg"
+    ]
    }
   ]
  }

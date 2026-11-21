@@ -163,7 +163,6 @@
     { k: "agua", t: "Resistencia al agua", tipo: "check", val: function (m) { return [T.WR[m.wr].corto]; }, orden: ["Uso diario", "50 m", "100 m", "200 m"] },
     { k: "func", t: "Funciones", tipo: "check", val: function (m) { return [m.filtroFunc]; }, orden: ["Solo hora", "Fecha", "Día y fecha", "Multifunción", "Cronógrafo", "Fase lunar", "Análogo digital", "Digital"] },
     { k: "precio", t: "Precio", tipo: "check", val: function (m) { return m.variantes.map(function (v) { return rangoPrecio(v.precio); }); }, orden: Object.keys(ETQ_PRECIO), etq: ETQ_PRECIO },
-    { k: "linea", t: "Línea", tipo: "check", val: function (m) { return [m.linea]; }, orden: ["Casio Timeless", "Casio Edifice", "Casio Duro", "Casio Digital"] },
     { k: "caja", t: "Tono de la caja", tipo: "check", val: function (m) { return [/dorado/i.test(m.caja) ? "Dorado" : "Plateado"]; }, orden: ["Plateado", "Dorado"] }
   ];
 
@@ -243,7 +242,7 @@
     var lista = ordenar(R.filter(function (m) { return pasa(m); }));
     document.getElementById("conteo").textContent = lista.length + (lista.length === 1 ? " reloj" : " relojes");
     var g = estado.g.length === 1 ? estado.g[0] : "";
-    document.getElementById("tituloCat").textContent = g ? "Relojes " + g.toLowerCase() : (estado.linea.length === 1 ? estado.linea[0] : "Todos los relojes");
+    document.getElementById("tituloCat").textContent = g ? "Relojes " + g.toLowerCase() : "Todos los relojes";
     document.title = (g ? "Relojes Casio " + g.toLowerCase() : "Relojes Casio") + " | Sky Relojes";
     var cm = parseFloat(estado.muneca);
     document.getElementById("resultados").innerHTML = lista.length ? lista.map(function (m) {
