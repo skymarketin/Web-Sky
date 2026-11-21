@@ -3027,5 +3027,809 @@ window.RELOJES = [
     "fotos": []
    }
   ]
+ },
+ {
+  "id": "mtp-b145d",
+  "ref": "MTP-B145D",
+  "genero": "Hombre",
+  "linea": "Casio Timeless",
+  "nombre": "Casio MTP-B145D",
+  "desc": "Acero de 35 mm, solo 7,4 mm de grosor, fecha y 50 metros. Retro y liviano.",
+  "largo": 40,
+  "ancho": 35,
+  "grosor": 7.4,
+  "peso": 82,
+  "caja": "Acero inoxidable",
+  "correa": "Acero",
+  "correaTxt": "Acero inoxidable, cierre de triple pliegue de un toque",
+  "cristal": "Mineral",
+  "movimiento": "Cuarzo japonés",
+  "tipoMov": "cuarzo",
+  "wr": "50",
+  "pila": "SR621SW, dura aprox. 3 años",
+  "funciones": [
+   "Hora análoga de 3 agujas",
+   "Fecha"
+  ],
+  "filtroFunc": "Fecha",
+  "muneca": [
+   150,
+   205
+  ],
+  "destacado": 99,
+  "rating": null,
+  "variantes": [
+   {
+    "code": "MTP-B145D-2A2VDF",
+    "color": "Azul",
+    "precio": 417900,
+    "img": "img/mtp-b145d-2a2vdf.jpg",
+    "fotos": []
+   },
+   {
+    "code": "MTP-B145D-3AVDF",
+    "color": "Verde",
+    "precio": 417900,
+    "img": "img/mtp-b145d-3avdf.jpg",
+    "fotos": []
+   },
+   {
+    "code": "MTP-B145D-9AVDF",
+    "color": "Naranja",
+    "precio": 417900,
+    "img": "img/mtp-b145d-9avdf.jpg",
+    "fotos": []
+   }
+  ]
+ },
+ {
+  "id": "mtp-b145g",
+  "ref": "MTP-B145G",
+  "genero": "Hombre",
+  "linea": "Casio Timeless",
+  "nombre": "Casio MTP-B145G",
+  "desc": "Todo dorado de 35 mm, delgado (7,4 mm), con fecha y 50 metros.",
+  "largo": 40,
+  "ancho": 35,
+  "grosor": 7.4,
+  "peso": 82,
+  "caja": "Acero inoxidable con baño iónico dorado",
+  "correa": "Acero",
+  "correaTxt": "Acero inoxidable con baño iónico dorado, triple pliegue de un toque",
+  "cristal": "Mineral",
+  "movimiento": "Cuarzo japonés",
+  "tipoMov": "cuarzo",
+  "wr": "50",
+  "pila": "SR621SW, dura aprox. 3 años",
+  "funciones": [
+   "Hora análoga de 3 agujas",
+   "Fecha"
+  ],
+  "filtroFunc": "Fecha",
+  "muneca": [
+   150,
+   205
+  ],
+  "destacado": 99,
+  "rating": null,
+  "variantes": [
+   {
+    "code": "MTP-B145G-9AVDF",
+    "color": "Dorado",
+    "precio": 522000,
+    "img": "img/mtp-b145g-9avdf.jpg",
+    "fotos": []
+   }
+  ]
+ },
+ {
+  "id": "mtp-b125b",
+  "ref": "MTP-B125B",
+  "genero": "Hombre",
+  "linea": "Casio Timeless",
+  "nombre": "Casio MTP-B125B",
+  "desc": "Todo negro con esfera gris, día y fecha. 41 mm, delgado y con 50 metros.",
+  "largo": 48,
+  "ancho": 41,
+  "grosor": 8.3,
+  "peso": 101,
+  "caja": "Acero inoxidable con baño iónico negro",
+  "correa": "Acero",
+  "correaTxt": "Acero inoxidable con baño iónico negro, triple pliegue de un toque",
+  "cristal": "Mineral",
+  "movimiento": "Cuarzo japonés",
+  "tipoMov": "cuarzo",
+  "wr": "50",
+  "pila": "SR920SW, dura aprox. 3 años",
+  "funciones": [
+   "Hora análoga de 3 agujas",
+   "Día de la semana",
+   "Fecha"
+  ],
+  "filtroFunc": "Día y fecha",
+  "muneca": null,
+  "destacado": 99,
+  "rating": null,
+  "variantes": [
+   {
+    "code": "MTP-B125B-8AVDF",
+    "color": "Gris",
+    "precio": 645800,
+    "img": "img/mtp-b125b-8avdf.jpg",
+    "fotos": []
+   }
+  ]
+ },
+ {
+  "id": "mtp-vd03b",
+  "ref": "MTP-VD03B",
+  "genero": "Hombre",
+  "linea": "Casio Timeless",
+  "nombre": "Casio MTP-VD03B",
+  "desc": "Caja negra de 41 mm con fecha. Deportivo y fácil de llevar todos los días.",
+  "largo": 48,
+  "ancho": 41,
+  "grosor": 9.6,
+  "peso": 106,
+  "caja": "Metal con baño iónico negro",
+  "correa": "Acero",
+  "correaTxt": "Acero inoxidable con baño iónico negro, triple pliegue",
+  "cristal": "Mineral",
+  "movimiento": "Cuarzo japonés",
+  "tipoMov": "cuarzo",
+  "wr": "diario",
+  "pila": "SR626SW, dura aprox. 3 años",
+  "funciones": [
+   "Hora análoga de 3 agujas",
+   "Fecha"
+  ],
+  "filtroFunc": "Fecha",
+  "muneca": [
+   150,
+   205
+  ],
+  "destacado": 99,
+  "rating": null,
+  "variantes": [
+   {
+    "code": "MTP-VD03B-1AUDF",
+    "color": "Negro",
+    "precio": 331100,
+    "img": "img/mtp-vd03b-1audf.jpg",
+    "fotos": []
+   },
+   {
+    "code": "MTP-VD03B-2AUDF",
+    "color": "Azul",
+    "precio": 330300,
+    "img": "img/mtp-vd03b-2audf.jpg",
+    "fotos": []
+   },
+   {
+    "code": "MTP-VD03B-3AUDF",
+    "color": "Verde",
+    "precio": 330300,
+    "img": "img/mtp-vd03b-3audf.jpg",
+    "fotos": []
+   }
+  ]
+ },
+ {
+  "id": "mtp-vd01",
+  "ref": "MTP-VD01",
+  "genero": "Hombre",
+  "linea": "Casio Timeless",
+  "nombre": "Casio MTP-VD01",
+  "desc": "Caja grande de 45 mm, correa de resina y 50 metros. Pesa 79 g.",
+  "largo": 49,
+  "ancho": 45,
+  "grosor": 10.3,
+  "peso": 79,
+  "caja": "Metal con baño iónico (IP)",
+  "correa": "Resina",
+  "correaTxt": "Resina, hebilla clásica",
+  "cristal": "Mineral",
+  "movimiento": "Cuarzo japonés",
+  "tipoMov": "cuarzo",
+  "wr": "50",
+  "pila": "SR626SW, dura aprox. 3 años",
+  "funciones": [
+   "Hora análoga de 3 agujas",
+   "Fecha"
+  ],
+  "filtroFunc": "Fecha",
+  "muneca": [
+   145,
+   215
+  ],
+  "destacado": 99,
+  "rating": null,
+  "variantes": [
+   {
+    "code": "MTP-VD01-3EVUDF",
+    "color": "Negro",
+    "precio": 238500,
+    "img": "img/mtp-vd01-3evudf.jpg",
+    "fotos": []
+   }
+  ]
+ },
+ {
+  "id": "mtp-vd03d",
+  "ref": "MTP-VD03D",
+  "genero": "Hombre",
+  "linea": "Casio Timeless",
+  "nombre": "Casio MTP-VD03D",
+  "desc": "Acero de 41 mm con fecha y look deportivo. Para todos los días.",
+  "largo": 48,
+  "ancho": 41,
+  "grosor": 9.6,
+  "peso": 106,
+  "caja": "Metal con baño iónico (IP)",
+  "correa": "Acero",
+  "correaTxt": "Acero inoxidable, cierre de triple pliegue",
+  "cristal": "Mineral",
+  "movimiento": "Cuarzo japonés",
+  "tipoMov": "cuarzo",
+  "wr": "diario",
+  "pila": "SR626SW, dura aprox. 3 años",
+  "funciones": [
+   "Hora análoga de 3 agujas",
+   "Fecha"
+  ],
+  "filtroFunc": "Fecha",
+  "muneca": [
+   150,
+   205
+  ],
+  "destacado": 99,
+  "rating": null,
+  "variantes": [
+   {
+    "code": "MTP-VD03D-1AUDF",
+    "color": "Negro",
+    "precio": 261400,
+    "img": "img/mtp-vd03d-1audf.jpg",
+    "fotos": []
+   },
+   {
+    "code": "MTP-VD03D-2A2UDF",
+    "color": "Azul",
+    "precio": 260600,
+    "img": "img/mtp-vd03d-2a2udf.jpg",
+    "fotos": []
+   },
+   {
+    "code": "MTP-VD03D-3A1UDF",
+    "color": "Verde",
+    "precio": 260600,
+    "img": "img/mtp-vd03d-3a1udf.jpg",
+    "fotos": []
+   }
+  ]
+ },
+ {
+  "id": "mtp-vd01d",
+  "ref": "MTP-VD01D",
+  "genero": "Hombre",
+  "linea": "Casio Timeless",
+  "nombre": "Casio MTP-VD01D",
+  "desc": "Caja grande de 45 mm en acero, fecha y 50 metros de resistencia.",
+  "largo": 49,
+  "ancho": 45,
+  "grosor": 10.3,
+  "peso": 118,
+  "caja": "Metal con baño iónico (IP)",
+  "correa": "Acero",
+  "correaTxt": "Acero inoxidable, cierre de triple pliegue",
+  "cristal": "Mineral",
+  "movimiento": "Cuarzo japonés",
+  "tipoMov": "cuarzo",
+  "wr": "50",
+  "pila": "SR626SW, dura aprox. 3 años",
+  "funciones": [
+   "Hora análoga de 3 agujas",
+   "Fecha"
+  ],
+  "filtroFunc": "Fecha",
+  "muneca": [
+   150,
+   205
+  ],
+  "destacado": 99,
+  "rating": null,
+  "variantes": [
+   {
+    "code": "MTP-VD01D-3BVUDF",
+    "color": "Verde",
+    "precio": 257000,
+    "img": "img/mtp-vd01d-3bvudf.jpg",
+    "fotos": []
+   }
+  ]
+ },
+ {
+  "id": "mtp-vd01g",
+  "ref": "MTP-VD01G",
+  "genero": "Hombre",
+  "linea": "Casio Timeless",
+  "nombre": "Casio MTP-VD01G",
+  "desc": "Dorado de 45 mm con esfera negra, fecha y 50 metros. Se hace notar.",
+  "largo": 49,
+  "ancho": 45,
+  "grosor": 10.3,
+  "peso": 118,
+  "caja": "Metal con baño iónico dorado",
+  "correa": "Acero",
+  "correaTxt": "Acero inoxidable con baño iónico dorado, triple pliegue",
+  "cristal": "Mineral",
+  "movimiento": "Cuarzo japonés",
+  "tipoMov": "cuarzo",
+  "wr": "50",
+  "pila": "SR626SW, dura aprox. 3 años",
+  "funciones": [
+   "Hora análoga de 3 agujas",
+   "Fecha"
+  ],
+  "filtroFunc": "Fecha",
+  "muneca": [
+   150,
+   205
+  ],
+  "destacado": 99,
+  "rating": null,
+  "variantes": [
+   {
+    "code": "MTP-VD01G-1CVUDF",
+    "color": "Negro",
+    "precio": 310600,
+    "img": "img/mtp-vd01g-1cvudf.jpg",
+    "fotos": []
+   }
+  ]
+ },
+ {
+  "id": "mtp-vc01d",
+  "ref": "MTP-VC01D",
+  "genero": "Hombre",
+  "linea": "Casio Timeless",
+  "nombre": "Casio MTP-VC01D",
+  "desc": "Esfera verde con agujas y pantalla digital: hora mundial, cronómetro y alarma.",
+  "largo": 46.5,
+  "ancho": 41.6,
+  "grosor": 8.9,
+  "peso": 95,
+  "caja": "Metal con baño iónico (IP)",
+  "correa": "Acero",
+  "correaTxt": "Acero inoxidable, cierre de triple pliegue",
+  "cristal": "Mineral",
+  "movimiento": "Cuarzo japonés",
+  "tipoMov": "anadigi",
+  "wr": "diario",
+  "pila": "SR920W, dura aprox. 3 años",
+  "funciones": [
+   "Hora análoga de 2 agujas",
+   "Hora digital",
+   "Hora mundial",
+   "Cronómetro 1/100 s",
+   "Alarma diaria",
+   "Calendario automático"
+  ],
+  "filtroFunc": "Análogo digital",
+  "muneca": null,
+  "destacado": 99,
+  "rating": null,
+  "variantes": [
+   {
+    "code": "MTP-VC01D-3EUDF",
+    "color": "Verde",
+    "precio": 348300,
+    "img": "img/mtp-vc01d-3eudf.jpg",
+    "fotos": []
+   }
+  ]
+ },
+ {
+  "id": "mtp-vd03g",
+  "ref": "MTP-VD03G",
+  "genero": "Hombre",
+  "linea": "Casio Timeless",
+  "nombre": "Casio MTP-VD03G",
+  "desc": "Dorado con esfera verde y fecha, 41 mm. Llamativo sin pasarse.",
+  "largo": 48,
+  "ancho": 41,
+  "grosor": 9.6,
+  "peso": 106,
+  "caja": "Metal con baño iónico dorado",
+  "correa": "Acero",
+  "correaTxt": "Acero inoxidable con baño iónico dorado, triple pliegue",
+  "cristal": "Mineral",
+  "movimiento": "Cuarzo japonés",
+  "tipoMov": "cuarzo",
+  "wr": "diario",
+  "pila": "SR626SW, dura aprox. 3 años",
+  "funciones": [
+   "Hora análoga de 3 agujas",
+   "Fecha"
+  ],
+  "filtroFunc": "Fecha",
+  "muneca": [
+   150,
+   205
+  ],
+  "destacado": 99,
+  "rating": null,
+  "variantes": [
+   {
+    "code": "MTP-VD03G-3AUDF",
+    "color": "Verde",
+    "precio": 330300,
+    "img": "img/mtp-vd03g-3audf.jpg",
+    "fotos": []
+   }
+  ]
+ },
+ {
+  "id": "mtp-vd03l",
+  "ref": "MTP-VD03L",
+  "genero": "Hombre",
+  "linea": "Casio Timeless",
+  "nombre": "Casio MTP-VD03L",
+  "desc": "Caja de 41 mm con correa de cuero y fecha. Pesa 55 g.",
+  "largo": 48,
+  "ancho": 41,
+  "grosor": 9.6,
+  "peso": 55,
+  "caja": "Metal con baño iónico (IP)",
+  "correa": "Cuero",
+  "correaTxt": "Cuero, hebilla clásica",
+  "cristal": "Mineral",
+  "movimiento": "Cuarzo japonés",
+  "tipoMov": "cuarzo",
+  "wr": "diario",
+  "pila": "SR626SW, dura aprox. 3 años",
+  "funciones": [
+   "Hora análoga de 3 agujas",
+   "Fecha"
+  ],
+  "filtroFunc": "Fecha",
+  "muneca": [
+   175,
+   215
+  ],
+  "destacado": 99,
+  "rating": null,
+  "variantes": [
+   {
+    "code": "MTP-VD03L-1AUDF",
+    "color": "Negro",
+    "precio": 244200,
+    "img": "img/mtp-vd03l-1audf.jpg",
+    "fotos": []
+   }
+  ]
+ },
+ {
+  "id": "mtp-vt01b",
+  "ref": "MTP-VT01B",
+  "genero": "Hombre",
+  "linea": "Casio Timeless",
+  "nombre": "Casio MTP-VT01B",
+  "desc": "Caja negra de 40 mm, esfera blanca y solo 8,2 mm de grosor. Minimalista.",
+  "largo": 46,
+  "ancho": 40,
+  "grosor": 8.2,
+  "peso": 92,
+  "caja": "Metal con baño iónico negro",
+  "correa": "Acero",
+  "correaTxt": "Acero inoxidable con baño iónico negro, triple pliegue",
+  "cristal": "Mineral",
+  "movimiento": "Cuarzo japonés",
+  "tipoMov": "cuarzo",
+  "wr": "diario",
+  "pila": "SR626SW, dura aprox. 3 años",
+  "funciones": [
+   "Hora análoga de 3 agujas"
+  ],
+  "filtroFunc": "Solo hora",
+  "muneca": null,
+  "destacado": 99,
+  "rating": null,
+  "variantes": [
+   {
+    "code": "MTP-VT01B-7BUDF",
+    "color": "Blanco",
+    "precio": 330300,
+    "img": "img/mtp-vt01b-7budf.jpg",
+    "fotos": []
+   }
+  ]
+ },
+ {
+  "id": "mtp-vt01g",
+  "ref": "MTP-VT01G",
+  "genero": "Hombre",
+  "linea": "Casio Timeless",
+  "nombre": "Casio MTP-VT01G",
+  "desc": "Dorado con esfera negra, 40 mm y delgado. Sin fecha, puro estilo.",
+  "largo": 46,
+  "ancho": 40,
+  "grosor": 8.2,
+  "peso": 88,
+  "caja": "Metal con baño iónico dorado",
+  "correa": "Acero",
+  "correaTxt": "Acero inoxidable con baño iónico dorado, triple pliegue",
+  "cristal": "Mineral",
+  "movimiento": "Cuarzo japonés",
+  "tipoMov": "cuarzo",
+  "wr": "diario",
+  "pila": "SR626SW, dura aprox. 3 años",
+  "funciones": [
+   "Hora análoga de 3 agujas"
+  ],
+  "filtroFunc": "Solo hora",
+  "muneca": null,
+  "destacado": 99,
+  "rating": null,
+  "variantes": [
+   {
+    "code": "MTP-VT01G-1BUDF",
+    "color": "Negro",
+    "precio": 312200,
+    "img": "img/mtp-vt01g-1budf.jpg",
+    "fotos": []
+   }
+  ]
+ },
+ {
+  "id": "mtp-vt01gl",
+  "ref": "MTP-VT01GL",
+  "genero": "Hombre",
+  "linea": "Casio Timeless",
+  "nombre": "Casio MTP-VT01GL",
+  "desc": "Caja dorada, esfera verde y correa de cuero. Pesa solo 41 g.",
+  "largo": 46,
+  "ancho": 40,
+  "grosor": 8.2,
+  "peso": 41,
+  "caja": "Metal con baño iónico dorado",
+  "correa": "Cuero",
+  "correaTxt": "Cuero, hebilla clásica",
+  "cristal": "Mineral",
+  "movimiento": "Cuarzo japonés",
+  "tipoMov": "cuarzo",
+  "wr": "diario",
+  "pila": "SR626SW, dura aprox. 3 años",
+  "funciones": [
+   "Hora análoga de 3 agujas"
+  ],
+  "filtroFunc": "Solo hora",
+  "muneca": null,
+  "destacado": 99,
+  "rating": null,
+  "variantes": [
+   {
+    "code": "MTP-VT01GL-3BUDF",
+    "color": "Verde",
+    "precio": 237700,
+    "img": "img/mtp-vt01gl-3budf.jpg",
+    "fotos": []
+   }
+  ]
+ },
+ {
+  "id": "mtp-vt05g",
+  "ref": "MTP-VT05G",
+  "genero": "Hombre",
+  "linea": "Casio Timeless",
+  "nombre": "Casio MTP-VT05G",
+  "desc": "Dorado de 37 mm con esfera blanca y fecha. Clásico y liviano (80 g).",
+  "largo": 43,
+  "ancho": 37,
+  "grosor": 8.6,
+  "peso": 80,
+  "caja": "Metal con baño iónico dorado",
+  "correa": "Acero",
+  "correaTxt": "Acero inoxidable con baño iónico dorado, triple pliegue",
+  "cristal": "Mineral",
+  "movimiento": "Cuarzo japonés",
+  "tipoMov": "cuarzo",
+  "wr": "diario",
+  "pila": "SR626SW, dura aprox. 3 años",
+  "funciones": [
+   "Hora análoga de 3 agujas",
+   "Fecha"
+  ],
+  "filtroFunc": "Fecha",
+  "muneca": [
+   150,
+   205
+  ],
+  "destacado": 99,
+  "rating": null,
+  "variantes": [
+   {
+    "code": "MTP-VT05G-7EDF",
+    "color": "Blanco",
+    "precio": 377000,
+    "img": "img/mtp-vt05g-7edf.jpg",
+    "fotos": []
+   }
+  ]
+ },
+ {
+  "id": "mtp-vt05l",
+  "ref": "MTP-VT05L",
+  "genero": "Hombre",
+  "linea": "Casio Timeless",
+  "nombre": "Casio MTP-VT05L",
+  "desc": "Esfera negra de 37 mm, correa de cuero y fecha. Pesa 39 g.",
+  "largo": 43,
+  "ancho": 37,
+  "grosor": 8.6,
+  "peso": 39,
+  "caja": "Metal con baño iónico (IP)",
+  "correa": "Cuero",
+  "correaTxt": "Cuero, hebilla clásica",
+  "cristal": "Mineral",
+  "movimiento": "Cuarzo japonés",
+  "tipoMov": "cuarzo",
+  "wr": "diario",
+  "pila": "SR626SW, dura aprox. 3 años",
+  "funciones": [
+   "Hora análoga de 3 agujas",
+   "Fecha"
+  ],
+  "filtroFunc": "Fecha",
+  "muneca": [
+   145,
+   215
+  ],
+  "destacado": 99,
+  "rating": null,
+  "variantes": [
+   {
+    "code": "MTP-VT05L-1EDF",
+    "color": "Negro",
+    "precio": 273700,
+    "img": "img/mtp-vt05l-1edf.jpg",
+    "fotos": []
+   }
+  ]
+ },
+ {
+  "id": "mts-115d",
+  "ref": "MTS-115D",
+  "genero": "Hombre",
+  "linea": "Casio Timeless",
+  "nombre": "Casio MTS-115D",
+  "desc": "Cristal de zafiro que casi no se raya, acero de 41 mm, fecha y 50 metros.",
+  "largo": 47,
+  "ancho": 41.3,
+  "grosor": 8.8,
+  "peso": 112,
+  "caja": "Acero inoxidable",
+  "correa": "Acero",
+  "correaTxt": "Acero inoxidable, cierre de triple pliegue de un toque",
+  "cristal": "Zafiro",
+  "movimiento": "Cuarzo japonés",
+  "tipoMov": "cuarzo",
+  "wr": "50",
+  "pila": "SR621SW, dura aprox. 3 años",
+  "funciones": [
+   "Hora análoga de 3 agujas",
+   "Fecha"
+  ],
+  "filtroFunc": "Fecha",
+  "muneca": [
+   150,
+   205
+  ],
+  "destacado": 99,
+  "rating": null,
+  "variantes": [
+   {
+    "code": "MTS-115D-2A1VDF",
+    "color": "Azul",
+    "precio": 489000,
+    "img": "img/mts-115d-2a1vdf.jpg",
+    "fotos": []
+   }
+  ]
+ },
+ {
+  "id": "mw-240",
+  "ref": "MW-240",
+  "genero": "Hombre",
+  "linea": "Casio Timeless",
+  "nombre": "Casio MW-240",
+  "desc": "Análogo de resina de 43,6 mm que pesa solo 35 g. 50 metros, para el día a día y el deporte.",
+  "largo": 48,
+  "ancho": 43.6,
+  "grosor": 10.3,
+  "peso": 35,
+  "caja": "Resina",
+  "correa": "Resina",
+  "correaTxt": "Resina, hebilla clásica",
+  "cristal": "Resina",
+  "movimiento": "Cuarzo japonés",
+  "tipoMov": "cuarzo",
+  "wr": "50",
+  "pila": "SR626SW, dura aprox. 3 años",
+  "funciones": [
+   "Hora análoga de 3 agujas"
+  ],
+  "filtroFunc": "Solo hora",
+  "muneca": null,
+  "destacado": 99,
+  "rating": null,
+  "variantes": [
+   {
+    "code": "MW-240-1B2VDF",
+    "color": "Negro",
+    "precio": 116400,
+    "img": "img/mw-240-1b2vdf.jpg",
+    "fotos": []
+   },
+   {
+    "code": "MW-240-4BVDF",
+    "color": "Negro y naranja",
+    "precio": 116400,
+    "img": "img/mw-240-4bvdf.jpg",
+    "fotos": []
+   }
+  ]
+ },
+ {
+  "id": "w-218hd",
+  "ref": "W-218HD",
+  "genero": "Hombre",
+  "linea": "Casio Digital",
+  "nombre": "Casio W-218HD",
+  "desc": "Digital clásico con correa de acero, luz LED, cronómetro y alarma. Pila de 7 años.",
+  "largo": 44.4,
+  "ancho": 43.2,
+  "grosor": 11.4,
+  "peso": 85,
+  "caja": "Resina",
+  "correa": "Acero",
+  "correaTxt": "Acero inoxidable, cierre de triple pliegue",
+  "cristal": "Resina",
+  "movimiento": "Cuarzo japonés",
+  "tipoMov": "digital",
+  "wr": "50",
+  "pila": "CR2016, dura aprox. 7 años",
+  "funciones": [
+   "Hora digital",
+   "Cronómetro 1/100 s",
+   "Alarma diaria",
+   "Señal horaria",
+   "Luz LED",
+   "Calendario automático",
+   "Formato 12/24 h"
+  ],
+  "filtroFunc": "Digital",
+  "muneca": [
+   150,
+   205
+  ],
+  "destacado": 99,
+  "rating": null,
+  "variantes": [
+   {
+    "code": "W-218HD-1AVDF",
+    "color": "Negro",
+    "precio": 249100,
+    "img": "img/w-218hd-1avdf.jpg",
+    "fotos": []
+   },
+   {
+    "code": "W-218HD-3AVDF",
+    "color": "Verde",
+    "precio": 248300,
+    "img": "img/w-218hd-3avdf.jpg",
+    "fotos": []
+   }
+  ]
  }
 ];

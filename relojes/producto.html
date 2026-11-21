@@ -128,6 +128,13 @@
     digital: { nombre: "Digital", como: "Una pila alimenta un chip que muestra la hora en números en una pantalla, sin agujas." },
     anadigi: { nombre: "Cuarzo japonés (análogo y digital)", como: "Agujas movidas por un cristal de cuarzo y, además, una pantalla digital con funciones extra, todo con la misma pila." }
   };
+  /* Tipo de cristal (cristal en data.js; si falta, es Mineral) */
+  var CRISTAL = {
+    Mineral: { nombre: "Mineral", como: "Vidrio endurecido que aguanta bien los roces del día a día." },
+    Zafiro: { nombre: "Zafiro", como: "El cristal más duro que se usa en relojes: casi imposible de rayar en el uso diario." },
+    Resina: { nombre: "Resina", como: "Cristal liviano que no se rompe en pedazos si recibe un golpe. Ideal para uso deportivo." }
+  };
+  var cri = CRISTAL[m.cristal] || CRISTAL.Mineral;
   var check = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4.5 4.5L19 7"/></svg>';
   var munecaTxt = m.muneca ? "Ajusta muñecas de " + (m.muneca[0] / 10).toString().replace(".", ",") + " a " + (m.muneca[1] / 10).toString().replace(".", ",") + " cm" : "";
 
@@ -174,7 +181,7 @@
           "<tr><th>Tamaño de la cara</th><td>" + T.fmtMm(m.ancho) + " mm de ancho, " + T.fmtMm(m.grosor) + " mm de grosor<small>Medidas de la caja: " + T.fmtMm(m.largo) + " × " + T.fmtMm(m.ancho) + " × " + T.fmtMm(m.grosor) + " mm (largo × ancho × alto)</small></td></tr>" +
           "<tr><th>Peso</th><td>" + m.peso + " g</td></tr>" +
           "<tr><th>Movimiento</th><td>" + esc(MOV[m.tipoMov || "cuarzo"].nombre) + "<small>" + esc(MOV[m.tipoMov || "cuarzo"].como) + "</small></td></tr>" +
-          "<tr><th>Cristal</th><td>Mineral<small>Vidrio endurecido que aguanta bien los roces del día a día.</small></td></tr>" +
+          "<tr><th>Cristal</th><td>" + esc(cri.nombre) + "<small>" + esc(cri.como) + "</small></td></tr>" +
           "<tr><th>Resistencia al agua</th><td>" + esc(wr.largo) + "<small><b>Sí:</b> " + esc(wr.si) + ".<br><b>No:</b> " + esc(wr.no) + ".</small></td></tr>" +
           "<tr><th>Correa</th><td>" + esc(m.correaTxt) + (munecaTxt ? "<small>" + munecaTxt + ".</small>" : "") + "</td></tr>" +
           "<tr><th>Caja</th><td>" + esc(m.caja) + "<small>La caja es el cuerpo del reloj: la pieza que guarda el mecanismo y sostiene el cristal.</small></td></tr>" +
