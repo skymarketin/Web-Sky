@@ -10,7 +10,8 @@
   var COLORES = {
     "Negro": "#1d1d1b", "Negro Total": "#000000", "Blanco": "#f4f3ef", "Azul": "#22426b",
     "Plateado": "#c7c9cc", "Rosado": "#e3b7b2", "Dorado": "#c9a24c", "Verde": "#4b5a33",
-    "Café": "#6b4a2f", "Gris": "#8a8c8f",
+    "Café": "#6b4a2f", "Gris": "#8a8c8f", "Naranja": "#d9822b",
+    "Negro y naranja": "linear-gradient(135deg, #1d1d1b 50%, #d9822b 50%)",
     "Negro y azul": "linear-gradient(135deg, #1d1d1b 50%, #22426b 50%)",
     "Azul y rojo": "linear-gradient(135deg, #22426b 50%, #a8283a 50%)"
   };

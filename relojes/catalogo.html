@@ -151,7 +151,7 @@
   /* Definición de filtros: clave en la URL, título y cómo se lee cada modelo */
   var FILTROS = [
     { k: "g", t: "Para", tipo: "check", val: function (m) { return [m.genero]; }, orden: ["Hombre", "Mujer"] },
-    { k: "correa", t: "Correa", tipo: "check", val: function (m) { return [m.correa]; }, orden: ["Acero", "Cuero"] },
+    { k: "correa", t: "Correa", tipo: "check", val: function (m) { return [m.correa]; }, orden: ["Acero", "Cuero", "Resina"] },
     { k: "color", t: "Color", tipo: "color", val: function (m) { return T.colores(m); } },
     { k: "tam", t: "Ancho de caja", tipo: "check", val: function (m) { return [rangoTam(m)]; }, orden: ["Hasta 28 mm", "29 a 34 mm", "35 a 39 mm", "40 mm o más"],
       ayuda: {
@@ -161,9 +161,9 @@
         "40 mm o más": "Ideal para muñeca de hombre de 17 cm o más"
       } },
     { k: "agua", t: "Resistencia al agua", tipo: "check", val: function (m) { return [T.WR[m.wr].corto]; }, orden: ["Uso diario", "50 m", "100 m", "200 m"] },
-    { k: "func", t: "Funciones", tipo: "check", val: function (m) { return [m.filtroFunc]; }, orden: ["Solo hora", "Fecha", "Día y fecha", "Multifunción", "Cronógrafo"] },
+    { k: "func", t: "Funciones", tipo: "check", val: function (m) { return [m.filtroFunc]; }, orden: ["Solo hora", "Fecha", "Día y fecha", "Multifunción", "Cronógrafo", "Fase lunar", "Análogo digital", "Digital"] },
     { k: "precio", t: "Precio", tipo: "check", val: function (m) { return m.variantes.map(function (v) { return rangoPrecio(v.precio); }); }, orden: Object.keys(ETQ_PRECIO), etq: ETQ_PRECIO },
-    { k: "linea", t: "Línea", tipo: "check", val: function (m) { return [m.linea]; }, orden: ["Casio Timeless", "Casio Edifice", "Casio Duro"] },
+    { k: "linea", t: "Línea", tipo: "check", val: function (m) { return [m.linea]; }, orden: ["Casio Timeless", "Casio Edifice", "Casio Duro", "Casio Digital"] },
     { k: "caja", t: "Tono de la caja", tipo: "check", val: function (m) { return [/dorado/i.test(m.caja) ? "Dorado" : "Plateado"]; }, orden: ["Plateado", "Dorado"] }
   ];
 
