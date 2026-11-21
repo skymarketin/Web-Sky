@@ -127,7 +127,7 @@
         '<footer class="footer"><div class="contenedor"><div class="footer-grid">' +
         "<div>" + LOGO +
         '<p style="max-width:340px;margin:18px 0 0;font-size:14.5px;color:var(--verde-300)">Relojes Casio originales, escogidos uno por uno. Tú eliges, nos escribes y te lo enviamos.</p></div>' +
-        '<div><h3>Tienda</h3><ul><li><a href="' + BASE + '/catalogo?g=Hombre">Hombre</a></li><li><a href="' + BASE + '/catalogo?g=Mujer">Mujer</a></li><li><a href="' + BASE + '/producto?id=ef-539d">Edifice</a></li><li><a href="' + BASE + '/catalogo">Todos</a></li></ul></div>' +
+        '<div><h3>Tienda</h3><ul><li><a href="' + BASE + '/catalogo?g=Hombre">Hombre</a></li><li><a href="' + BASE + '/catalogo?g=Mujer">Mujer</a></li><li><a href="' + BASE + '/catalogo">Todos</a></li></ul></div>' +
         '<div><h3>Ayuda</h3><ul><li><a href="' + BASE + '#guia">Guía de tamaño</a></li><li><a href="' + BASE + '#preguntas">Preguntas frecuentes</a></li><li><a href="' + BASE + '#agua">Resistencia al agua</a></li></ul></div>' +
         '<div><h3>Contacto</h3><ul><li><a href="https://wa.me/' + WHATSAPP + '" target="_blank" rel="noopener">WhatsApp 318 225 8333</a></li></ul></div>' +
         '</div><div class="footer-legal"><span>© Sky Relojes</span><span>Casio, Edifice y sus logos son marcas de Casio Computer Co., Ltd.</span></div></div></footer>' +

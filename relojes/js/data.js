@@ -3946,5 +3946,99 @@ window.RELOJES = [
     ]
    }
   ]
+ },
+ {
+  "id": "mtp-b105mb",
+  "ref": "MTP-B105MB",
+  "genero": "Hombre",
+  "linea": "Casio",
+  "nombre": "Casio MTP-B105MB",
+  "desc": "Todo negro con malla de acero, día y fecha. 43 mm, delgado (8,2 mm) y 50 metros.",
+  "largo": 50,
+  "ancho": 43,
+  "grosor": 8.2,
+  "peso": 79,
+  "caja": "Acero inoxidable con baño iónico negro",
+  "correa": "Acero",
+  "correaTxt": "Malla de acero con baño iónico negro, cierre ajustable",
+  "cristal": "Mineral",
+  "movimiento": "Cuarzo japonés",
+  "tipoMov": "cuarzo",
+  "wr": "50",
+  "pila": "SR920SW, dura aprox. 3 años",
+  "funciones": [
+   "Hora análoga de 3 agujas",
+   "Día de la semana",
+   "Fecha"
+  ],
+  "filtroFunc": "Día y fecha",
+  "muneca": null,
+  "destacado": 99,
+  "rating": null,
+  "variantes": [
+   {
+    "code": "MTP-B105MB-1AVDF",
+    "color": "Negro",
+    "precio": 577400,
+    "img": "img/mtp-b105mb-1avdf.jpg",
+    "fotos": []
+   }
+  ]
+ },
+ {
+  "id": "mtp-v300g",
+  "ref": "MTP-V300G",
+  "genero": "Hombre",
+  "linea": "Casio",
+  "nombre": "Casio MTP-V300G",
+  "desc": "Dorado de 41,5 mm con tres subesferas: fecha, día y 24 horas. Para lucir.",
+  "largo": 47,
+  "ancho": 41.5,
+  "grosor": 8.6,
+  "peso": 96,
+  "caja": "Metal con baño iónico dorado",
+  "correa": "Acero",
+  "correaTxt": "Acero inoxidable con baño iónico dorado, triple pliegue",
+  "cristal": "Mineral",
+  "movimiento": "Cuarzo japonés",
+  "tipoMov": "cuarzo",
+  "wr": "diario",
+  "pila": "SR920SW, dura aprox. 3 años",
+  "funciones": [
+   "Hora análoga de 3 agujas",
+   "Subesfera de fecha",
+   "Subesfera de día",
+   "Subesfera de 24 horas"
+  ],
+  "filtroFunc": "Multifunción",
+  "muneca": [
+   150,
+   205
+  ],
+  "destacado": 99,
+  "rating": null,
+  "variantes": [
+   {
+    "code": "MTP-V300G-1AUDF",
+    "color": "Negro",
+    "precio": 442500,
+    "img": "img/mtp-v300g-1audf.jpg",
+    "fotos": []
+   },
+   {
+    "code": "MTP-V300G-9AUDF",
+    "color": "Dorado",
+    "precio": 442500,
+    "img": "img/mtp-v300g-9audf.jpg",
+    "fotos": []
+   },
+   {
+    "code": "MTP-V300G-7AUDF",
+    "color": "Blanco",
+    "precio": 442500,
+    "img": "img/mtp-v300g-7audf.jpg",
+    "fotos": []
+   }
+  ]
  }
 ];
