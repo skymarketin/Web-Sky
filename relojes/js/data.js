@@ -89,7 +89,9 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 192600,
     "img": "img/mtp-v004d-1b2udf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-v004d-1b2udf-1.jpg"
+    ]
    },
    {
     "code": "MTP-V004D-2BUDF",
@@ -103,14 +105,21 @@ window.RELOJES = [
     "color": "Plateado",
     "precio": 192600,
     "img": "img/mtp-v004d-7b2udf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-v004d-7b2udf-1.jpg",
+     "img/vida/mtp-v004d-7b2udf-2.jpg",
+     "img/vida/mtp-v004d-7b2udf-3.jpg"
+    ]
    },
    {
     "code": "MTP-V004D-7BUDF",
     "color": "Blanco",
     "precio": 192600,
     "img": "img/mtp-v004d-7budf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-v004d-7budf-1.jpg",
+     "img/vida/mtp-v004d-7budf-2.jpg"
+    ]
    }
   ]
  },
@@ -157,14 +166,22 @@ window.RELOJES = [
     "color": "Azul",
     "precio": 192600,
     "img": "img/mtp-v006d-2budf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-v006d-2budf-1.jpg"
+    ]
    },
    {
     "code": "MTP-V006D-7B2UDF",
     "color": "Blanco",
     "precio": 192600,
     "img": "img/mtp-v006d-7b2udf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-v006d-7b2udf-1.jpg",
+     "img/vida/mtp-v006d-7b2udf-2.jpg",
+     "img/vida/mtp-v006d-7b2udf-3.jpg",
+     "img/vida/mtp-v006d-7b2udf-4.jpg",
+     "img/vida/mtp-v006d-7b2udf-5.jpg"
+    ]
    }
   ]
  },
@@ -202,7 +219,9 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 146700,
     "img": "img/mtp-v005l-1b4udf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-v005l-1b4udf-1.jpg"
+    ]
    },
    {
     "code": "MTP-V005L-2B4UDF",
@@ -216,7 +235,9 @@ window.RELOJES = [
     "color": "Blanco",
     "precio": 146700,
     "img": "img/mtp-v005l-7b4udf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-v005l-7b4udf-1.jpg"
+    ]
    }
   ]
  },
@@ -261,7 +282,10 @@ window.RELOJES = [
     "color": "Blanco",
     "precio": 147000,
     "img": "img/mtp-v001gl-7budf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-v001gl-7budf-1.jpg",
+     "img/vida/mtp-v001gl-7budf-2.jpg"
+    ]
    },
    {
     "code": "MTP-V001GL-9BUDF",
@@ -445,21 +469,30 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 348000,
     "img": "img/mtp-1381d-1avdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-1381d-1avdf-1.jpg",
+     "img/vida/mtp-1381d-1avdf-2.jpg",
+     "img/vida/mtp-1381d-1avdf-3.jpg"
+    ]
    },
    {
     "code": "MTP-1381D-7AVDF",
     "color": "Blanco",
     "precio": 347500,
     "img": "img/mtp-1381d-7avdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-1381d-7avdf-1.jpg",
+     "img/vida/mtp-1381d-7avdf-2.jpg"
+    ]
    },
    {
     "code": "MTP-1381D-2AVDF",
     "color": "Azul",
     "precio": 346700,
     "img": "img/mtp-1381d-2avdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-1381d-2avdf-1.jpg"
+    ]
    }
   ]
  },
@@ -500,7 +533,9 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 442500,
     "img": "img/mtp-1374d-1a3vdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-1374d-1a3vdf-1.jpg"
+    ]
    },
    {
     "code": "MTP-1374D-7A2VDF",
@@ -607,14 +642,18 @@ window.RELOJES = [
     "color": "Negro y azul",
     "precio": 609700,
     "img": "img/mdv-107d-1a2vdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mdv-107d-1a2vdf-1.jpg"
+    ]
    },
    {
     "code": "MDV-107D-1A3VDF",
     "color": "Azul y rojo",
     "precio": 609700,
     "img": "img/mdv-107d-1a3vdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mdv-107d-1a3vdf-1.jpg"
+    ]
    },
    {
     "code": "MDV-107D-7AVDF",
@@ -773,7 +812,11 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 184400,
     "img": "img/ltp-v002d-1audf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/ltp-v002d-1audf-1.jpg",
+     "img/vida/ltp-v002d-1audf-2.jpg",
+     "img/vida/ltp-v002d-1audf-3.jpg"
+    ]
    },
    {
     "code": "LTP-V002D-1B3UDF",
@@ -787,7 +830,10 @@ window.RELOJES = [
     "color": "Azul",
     "precio": 184400,
     "img": "img/ltp-v002d-2b3udf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/ltp-v002d-2b3udf-1.jpg",
+     "img/vida/ltp-v002d-2b3udf-2.jpg"
+    ]
    },
    {
     "code": "LTP-V002D-4BUDF",
@@ -801,7 +847,9 @@ window.RELOJES = [
     "color": "Blanco",
     "precio": 184400,
     "img": "img/ltp-v002d-7audf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/ltp-v002d-7audf-1.jpg"
+    ]
    }
   ]
  },
@@ -836,7 +884,9 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 237700,
     "img": "img/ltp-vt01d-1budf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/ltp-vt01d-1budf-1.jpg"
+    ]
    },
    {
     "code": "LTP-VT01D-2B2UDF",
@@ -850,7 +900,9 @@ window.RELOJES = [
     "color": "Plateado",
     "precio": 237700,
     "img": "img/ltp-vt01d-2budf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/ltp-vt01d-2budf-1.jpg"
+    ]
    },
    {
     "code": "LTP-VT01D-4B2UDF",
@@ -864,7 +916,9 @@ window.RELOJES = [
     "color": "Blanco",
     "precio": 237700,
     "img": "img/ltp-vt01d-7budf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/ltp-vt01d-7budf-1.jpg"
+    ]
    }
   ]
  },
@@ -899,7 +953,11 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 313000,
     "img": "img/ltp-vt01g-1budf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/ltp-vt01g-1budf-1.jpg",
+     "img/vida/ltp-vt01g-1budf-2.jpg",
+     "img/vida/ltp-vt01g-1budf-3.jpg"
+    ]
    },
    {
     "code": "LTP-VT01G-2BUDF",
@@ -920,7 +978,10 @@ window.RELOJES = [
     "color": "Dorado",
     "precio": 312200,
     "img": "img/ltp-vt01g-9budf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/ltp-vt01g-9budf-1.jpg",
+     "img/vida/ltp-vt01g-9budf-2.jpg"
+    ]
    }
   ]
  },
@@ -957,7 +1018,10 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 192600,
     "img": "img/ltp-v006d-1b2udf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/ltp-v006d-1b2udf-1.jpg",
+     "img/vida/ltp-v006d-1b2udf-2.jpg"
+    ]
    },
    {
     "code": "LTP-V006D-1BUDF",
@@ -971,14 +1035,20 @@ window.RELOJES = [
     "color": "Azul",
     "precio": 192600,
     "img": "img/ltp-v006d-2budf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/ltp-v006d-2budf-1.jpg"
+    ]
    },
    {
     "code": "LTP-V006D-4BUDF",
     "color": "Rosado",
     "precio": 192600,
     "img": "img/ltp-v006d-4budf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/ltp-v006d-4budf-1.jpg",
+     "img/vida/ltp-v006d-4budf-2.jpg",
+     "img/vida/ltp-v006d-4budf-3.jpg"
+    ]
    },
    {
     "code": "LTP-V006D-7B2UDF",
@@ -1028,7 +1098,9 @@ window.RELOJES = [
     "color": "Azul",
     "precio": 192600,
     "img": "img/ltp-v004d-2budf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/ltp-v004d-2budf-1.jpg"
+    ]
    },
    {
     "code": "LTP-V004D-7BUDF",
@@ -1080,14 +1152,21 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 347500,
     "img": "img/ltp-v300d-1audf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/ltp-v300d-1audf-1.jpg",
+     "img/vida/ltp-v300d-1audf-2.jpg",
+     "img/vida/ltp-v300d-1audf-3.jpg",
+     "img/vida/ltp-v300d-1audf-4.jpg"
+    ]
    },
    {
     "code": "LTP-V300D-2A2UDF",
     "color": "Azul",
     "precio": 347500,
     "img": "img/ltp-v300d-2a2udf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/ltp-v300d-2a2udf-1.jpg"
+    ]
    },
    {
     "code": "LTP-V300D-4AUDF",
@@ -1137,7 +1216,9 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 219600,
     "img": "img/ltp-1241d-1adf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/ltp-1241d-1adf-1.jpg"
+    ]
    },
    {
     "code": "LTP-1241D-2A2DF",
@@ -1161,14 +1242,18 @@ window.RELOJES = [
     "color": "Rosado",
     "precio": 219600,
     "img": "img/ltp-1241d-4a3df.webp",
-    "fotos": []
+    "fotos": [
+     "img/vida/ltp-1241d-4a3df-1.jpg"
+    ]
    },
    {
     "code": "LTP-1241D-7A2DF",
     "color": "Blanco",
     "precio": 219600,
     "img": "img/ltp-1241d-7a2df.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/ltp-1241d-7a2df-1.jpg"
+    ]
    }
   ]
  },
@@ -1225,7 +1310,9 @@ window.RELOJES = [
     "color": "Blanco",
     "precio": 232700,
     "img": "img/ltp-1183a-7adf.webp",
-    "fotos": []
+    "fotos": [
+     "img/vida/ltp-1183a-7adf-1.jpg"
+    ]
    }
   ]
  },
@@ -1272,7 +1359,10 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 196700,
     "img": "img/ltp-1215a-1adf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/ltp-1215a-1adf-1.jpg",
+     "img/vida/ltp-1215a-1adf-2.jpg"
+    ]
    },
    {
     "code": "LTP-1215A-2A2DF",
@@ -1325,14 +1415,19 @@ window.RELOJES = [
     "color": "Café",
     "precio": 146700,
     "img": "img/ltp-v001gl-1budf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/ltp-v001gl-1budf-1.jpg",
+     "img/vida/ltp-v001gl-1budf-2.jpg"
+    ]
    },
    {
     "code": "LTP-V001GL-7BUDF",
     "color": "Blanco",
     "precio": 146700,
     "img": "img/ltp-v001gl-7budf.webp",
-    "fotos": []
+    "fotos": [
+     "img/vida/ltp-v001gl-7budf-1.jpg"
+    ]
    },
    {
     "code": "LTP-V001GL-9BUDF",
@@ -1379,7 +1474,10 @@ window.RELOJES = [
     "color": "Blanco",
     "precio": 318800,
     "img": "img/mtp-1183g-7adf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-1183g-7adf-1.jpg",
+     "img/vida/mtp-1183g-7adf-2.jpg"
+    ]
    }
   ]
  },
@@ -1845,7 +1943,9 @@ window.RELOJES = [
     "color": "Blanco",
     "precio": 165500,
     "img": "img/mtp-v002gl-7b2udf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-v002gl-7b2udf-1.jpg"
+    ]
    }
   ]
  },
@@ -1898,7 +1998,9 @@ window.RELOJES = [
     "color": "Azul",
     "precio": 165500,
     "img": "img/mtp-v005d-2b5udf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-v005d-2b5udf-1.jpg"
+    ]
    }
   ]
  },
@@ -1992,7 +2094,10 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 268800,
     "img": "img/mtp-v006g-1cudf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-v006g-1cudf-1.jpg",
+     "img/vida/mtp-v006g-1cudf-2.jpg"
+    ]
    }
   ]
  },
@@ -2034,7 +2139,9 @@ window.RELOJES = [
     "color": "Verde",
     "precio": 442500,
     "img": "img/mtp-1375d-3avdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-1375d-3avdf-1.jpg"
+    ]
    }
   ]
  },
@@ -2075,7 +2182,9 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 549100,
     "img": "img/mtp-1370g-1avdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-1370g-1avdf-1.jpg"
+    ]
    }
   ]
  },
@@ -2200,7 +2309,10 @@ window.RELOJES = [
     "color": "Blanco",
     "precio": 135200,
     "img": "img/mtp-v001l-7budf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-v001l-7budf-1.jpg",
+     "img/vida/mtp-v001l-7budf-2.jpg"
+    ]
    }
   ]
  },
@@ -2397,7 +2509,11 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 697400,
     "img": "img/mtp-m305d-1avdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-m305d-1avdf-1.jpg",
+     "img/vida/mtp-m305d-1avdf-2.jpg",
+     "img/vida/mtp-m305d-1avdf-3.jpg"
+    ]
    }
   ]
  },
@@ -3016,7 +3132,9 @@ window.RELOJES = [
     "color": "Verde",
     "precio": 540100,
     "img": "img/mtp-b146g-3avdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-b146g-3avdf-1.jpg"
+    ]
    },
    {
     "code": "MTP-B146G-9AVDF",
@@ -3102,7 +3220,12 @@ window.RELOJES = [
     "color": "Verde",
     "precio": 435200,
     "img": "img/mtp-b170-3evdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-b170-3evdf-1.jpg",
+     "img/vida/mtp-b170-3evdf-2.jpg",
+     "img/vida/mtp-b170-3evdf-3.jpg",
+     "img/vida/mtp-b170-3evdf-4.jpg"
+    ]
    }
   ]
  },
@@ -3142,7 +3265,11 @@ window.RELOJES = [
     "color": "Azul",
     "precio": 417900,
     "img": "img/mtp-b145d-2a2vdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-b145d-2a2vdf-1.jpg",
+     "img/vida/mtp-b145d-2a2vdf-2.jpg",
+     "img/vida/mtp-b145d-2a2vdf-3.jpg"
+    ]
    },
    {
     "code": "MTP-B145D-3AVDF",
@@ -3199,7 +3326,12 @@ window.RELOJES = [
     "color": "Dorado",
     "precio": 522000,
     "img": "img/mtp-b145g-9avdf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-b145g-9avdf-1.jpg",
+     "img/vida/mtp-b145g-9avdf-2.jpg",
+     "img/vida/mtp-b145g-9avdf-3.jpg",
+     "img/vida/mtp-b145g-9avdf-4.jpg"
+    ]
    }
   ]
  },
@@ -3336,7 +3468,9 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 238500,
     "img": "img/mtp-vd01-3evudf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-vd01-3evudf-1.jpg"
+    ]
    }
   ]
  },
@@ -3430,7 +3564,9 @@ window.RELOJES = [
     "color": "Verde",
     "precio": 257000,
     "img": "img/mtp-vd01d-3bvudf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-vd01d-3bvudf-1.jpg"
+    ]
    }
   ]
  },
@@ -3556,7 +3692,9 @@ window.RELOJES = [
     "color": "Verde",
     "precio": 330300,
     "img": "img/mtp-vd03g-3audf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-vd03g-3audf-1.jpg"
+    ]
    }
   ]
  },
@@ -3596,7 +3734,9 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 244200,
     "img": "img/mtp-vd03l-1audf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-vd03l-1audf-1.jpg"
+    ]
    }
   ]
  },
@@ -4023,7 +4163,9 @@ window.RELOJES = [
     "color": "Negro",
     "precio": 442500,
     "img": "img/mtp-v300g-1audf.jpg",
-    "fotos": []
+    "fotos": [
+     "img/vida/mtp-v300g-1audf-1.jpg"
+    ]
    },
    {
     "code": "MTP-V300G-9AUDF",
