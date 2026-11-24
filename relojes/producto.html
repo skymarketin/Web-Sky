@@ -151,7 +151,7 @@
         '<p class="desc">' + esc(m.desc) + "</p>" +
         '<div class="datos-rapidos">' +
           '<div class="dato"><strong>' + T.fmtMm(m.ancho) + ' mm</strong><span>Ancho caja</span></div>' +
-          '<div class="dato"><strong>' + m.peso + ' g</strong><span>Peso</span></div>' +
+          (m.peso ? '<div class="dato"><strong>' + m.peso + ' g</strong><span>Peso</span></div>' : '<div class="dato"><strong>' + T.fmtMm(m.grosor) + ' mm</strong><span>Grosor</span></div>') +
           '<div class="dato"><strong>' + esc(wr.corto) + '</strong><span>Agua</span></div>' +
         "</div>" +
         '<div class="selector"><div class="selector-t">Color: <b id="colorVar"></b></div><div class="variantes" id="variantes"></div></div>' +
@@ -179,7 +179,7 @@
         '<details class="bloque" open><summary>Ficha técnica</summary><div class="bloque-cuerpo"><table class="specs"><tbody>' +
           "<tr><th>Para</th><td>" + esc(m.genero) + "</td></tr>" +
           "<tr><th>Tamaño de la cara</th><td>" + T.fmtMm(m.ancho) + " mm de ancho, " + T.fmtMm(m.grosor) + " mm de grosor<small>Medidas de la caja: " + T.fmtMm(m.largo) + " × " + T.fmtMm(m.ancho) + " × " + T.fmtMm(m.grosor) + " mm (largo × ancho × alto)</small></td></tr>" +
-          "<tr><th>Peso</th><td>" + m.peso + " g</td></tr>" +
+          (m.peso ? "<tr><th>Peso</th><td>" + m.peso + " g</td></tr>" : "") +
           "<tr><th>Movimiento</th><td>" + esc(MOV[m.tipoMov || "cuarzo"].nombre) + "<small>" + esc(MOV[m.tipoMov || "cuarzo"].como) + "</small></td></tr>" +
           "<tr><th>Cristal</th><td>" + esc(cri.nombre) + "<small>" + esc(cri.como) + "</small></td></tr>" +
           "<tr><th>Resistencia al agua</th><td>" + esc(wr.largo) + "<small><b>Sí:</b> " + esc(wr.si) + ".<br><b>No:</b> " + esc(wr.no) + ".</small></td></tr>" +
