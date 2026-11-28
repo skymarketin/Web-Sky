@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Elige tu reloj | Sky Relojes</title>
+<link rel="icon" href="/relojes/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/relojes/css/tienda.css">
+<style>
+  .cat-cabeza { background: var(--verde-900); color: var(--arena-50); padding: 44px 0 36px; }
+  .cat-cabeza h1 { font-size: clamp(44px, 7vw, 80px); }
+  .cat-cabeza p { color: var(--arena-200); margin: 10px 0 0; max-width: 560px; }
+  .header-in { justify-content: center; }
+  @media (min-width: 1400px) { #resultados { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .lista { padding-top: 28px; padding-bottom: 80px; }
+  .lista strong.conteo { display: block; font: 700 22px/1 var(--t-titulo); text-transform: uppercase; margin-bottom: 14px; }
+  .tarjeta-link { display: flex; flex-direction: column; flex: 1; }
+  .tarjeta-colores { padding: 0 14px 16px; }
+  .elige { display: block; font: 500 12px/1 var(--t-texto); letter-spacing: .1em; text-transform: uppercase; color: var(--gris); margin-bottom: 10px; }
+  .cajas { display: flex; flex-wrap: wrap; border-top: 1px solid var(--arena-300); border-left: 1px solid var(--arena-300); }
+  .caja { flex: 1 1 0; max-width: 33.333%; min-width: 0; min-height: 44px; padding: 0 4px; border-right: 1px solid var(--arena-300); border-bottom: 1px solid var(--arena-300); background: var(--blanco); font: 600 13px/1 var(--t-texto); color: var(--tinta); cursor: pointer; }
+  @media (min-width: 700px) { .caja { flex: 0 0 76px; max-width: none; font-size: 14px; } }
+  .caja[aria-pressed="true"] { box-shadow: inset 0 0 0 2px var(--verde-700); }
+
+  .migas { font-size: 13px; color: var(--gris); padding: 18px 0; display: flex; gap: 8px; flex-wrap: wrap; }
+  .migas a { text-decoration: underline; }
+  .ficha { display: grid; gap: 28px; padding-bottom: 56px; }
+  @media (min-width: 960px) { .ficha { grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: start; } }
+  .galeria { display: grid; gap: 12px; }
+  @media (min-width: 960px) { .galeria { position: sticky; top: 24px; grid-template-columns: 84px 1fr; } }
+  .principal { background: var(--blanco); border-radius: var(--radio); aspect-ratio: 4 / 5; display: grid; place-items: center; overflow: hidden; position: relative; transition: background .2s; }
+  .principal.con-foto { background: #0e0f0c; }
+  .principal img { width: 86%; height: 86%; object-fit: contain; transition: opacity .2s; }
+  .principal img.foto { width: 100%; height: 100%; object-fit: cover; }
+  .miniaturas img.foto { width: 100%; height: 100%; object-fit: cover; border-radius: 3px; }
+  .miniaturas { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+  @media (min-width: 960px) { .miniaturas { flex-direction: column; order: -1; overflow: visible; } }
+  .miniaturas button { flex: none; width: 76px; height: 76px; background: var(--blanco); border-radius: var(--radio); border: 1.5px solid transparent; display: grid; place-items: center; overflow: hidden; }
+  .miniaturas button[aria-pressed="true"] { border-color: var(--verde-700); }
+  .miniaturas img { width: 84%; height: 84%; object-fit: contain; }
+  .sello-original { position: absolute; left: 14px; top: 14px; background: var(--verde-700); color: var(--arena-50); font: 600 11px/1 var(--t-texto); letter-spacing: .12em; text-transform: uppercase; padding: 7px 9px; border-radius: 2px; }
+
+  .info .linea { font: 600 12px/1 var(--t-texto); letter-spacing: .16em; text-transform: uppercase; color: var(--verde-500); }
+  .info h1 { font-size: clamp(40px, 5.4vw, 60px); margin: 10px 0 6px; }
+  .info .ref { color: var(--gris); font-size: 15px; }
+  .info .desc { font-size: 17px; margin: 18px 0 0; }
+  .datos-rapidos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 22px 0; }
+  .dato { background: var(--blanco); border-radius: var(--radio); padding: 12px; text-align: center; }
+  .dato strong { display: block; font: 700 22px/1 var(--t-titulo); }
+  .dato span { font-size: 12px; color: var(--gris); text-transform: uppercase; letter-spacing: .08em; }
+  .selector { margin: 8px 0 22px; }
+  .selector-t { font: 600 13px/1 var(--t-texto); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+  .selector-t b { font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--gris); font-size: 15px; }
+  .variantes { display: flex; flex-wrap: wrap; gap: 10px; }
+  .var-btn { width: 68px; background: var(--blanco); border: 1.5px solid var(--arena-300); border-radius: var(--radio); padding: 6px; display: grid; gap: 4px; justify-items: center; }
+  .var-btn img { width: 52px; height: 52px; object-fit: contain; }
+  .var-btn span { font-size: 11px; line-height: 1.1; color: var(--gris); }
+  .var-btn[aria-pressed="true"] { border-color: var(--verde-700); box-shadow: inset 0 0 0 1px var(--verde-700); }
+  .var-btn[aria-pressed="true"] span { color: var(--tinta); font-weight: 600; }
+  .elegido { background: var(--verde-800); color: var(--arena-50); border-radius: var(--radio); padding: 14px 16px; font-size: 15px; }
+  .elegido strong { color: var(--laton-claro); }
+  .beneficios { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 10px; font-size: 14.5px; }
+  .beneficios li { display: flex; gap: 10px; align-items: center; }
+  .beneficios svg { width: 20px; height: 20px; color: var(--verde-700); flex: none; }
+  .bloque { background: var(--blanco); border-radius: var(--radio); margin-top: 18px; }
+  .bloque > summary { list-style: none; cursor: pointer; padding: 18px 20px; font: 700 20px/1 var(--t-titulo); text-transform: uppercase; letter-spacing: .04em; position: relative; }
+  .bloque > summary::-webkit-details-marker { display: none; }
+  .bloque > summary::after { content: "+"; position: absolute; right: 20px; top: 14px; font: 400 26px/1 var(--t-texto); color: var(--laton); }
+  .bloque[open] > summary::after { content: "−"; }
+  .bloque-cuerpo { padding: 0 20px 20px; }
+  .specs { width: 100%; border-collapse: collapse; font-size: 15px; }
+  .specs th, .specs td { text-align: left; vertical-align: top; padding: 12px 0; border-top: 1px solid var(--arena-200); }
+  .specs th { width: 38%; font-weight: 600; padding-right: 14px; }
+  .specs td small { display: block; color: var(--gris); font-size: 13px; margin-top: 3px; }
+  .specs ul { margin: 0; padding-left: 18px; }
+  .tallas { background: var(--verde-800); color: var(--arena-50); border-radius: var(--radio); padding: 20px; margin-top: 18px; }
+  .tallas h2 { font-size: 26px; }
+  .medir { margin: 12px 0 0; padding-left: 20px; display: grid; gap: 6px; color: var(--arena-200); font-size: 14.5px; }
+  .medir li::marker { color: var(--laton-claro); font-weight: 700; }
+  .nota-correa { font-size: 13px !important; color: var(--verde-300) !important; margin: 10px 0 0; }
+  .tallas-fila { display: flex; align-items: center; gap: 12px; margin-top: 14px; flex-wrap: wrap; }
+  .tallas input[type="range"] { flex: 1; min-width: 160px; accent-color: var(--laton); }
+  .tallas output { font: 700 26px/1 var(--t-titulo); min-width: 76px; }
+  .veredicto { margin-top: 12px; padding: 12px 14px; border-radius: var(--radio); background: var(--verde-900); font-size: 15px; }
+  .veredicto strong { color: var(--laton-claro); }
+  .otros { padding-top: 24px; padding-bottom: 72px; }
+</style>
+</head>
+<body>
+<div class="anuncio">Relojes Casio <strong>originales</strong></div>
+<header class="header"><div class="contenedor header-in">
+  <span class="logo" aria-label="Sky Relojes"><span class="logo-sky" aria-hidden="true"></span><span class="logo-sub">Relojes</span></span>
+</div></header>
+
+<main id="app"></main>
+
+<footer class="footer" style="padding-top:36px"><div class="contenedor">
+  <span class="logo" aria-label="Sky Relojes"><span class="logo-sky" aria-hidden="true"></span><span class="logo-sub">Relojes</span></span>
+  <div class="footer-legal"><span>© Sky Relojes</span><span>Casio y su logo son marcas de Casio Computer Co., Ltd.</span></div>
+</div></footer>
+
+<script>
+window.SELECCION = [{"id":"mtp-v002d","ref":"MTP-V002D","genero":"Hombre","linea":"Casio","nombre":"Clásico Acero","desc":"El reloj de todos los días, bien hecho. Acero, fecha a las 3 y una esfera limpia que se lee de un vistazo. Va con camisa y va con camiseta.","largo":44,"ancho":37,"grosor":9.6,"peso":93,"caja":"Metal con acabado plateado","correa":"Acero","correaTxt":"Acero inoxidable, cierre de triple pliegue","cristal":"Mineral","movimiento":"Cuarzo japonés","wr":"diario","pila":"SR626SW, dura aprox. 3 años","funciones":["Hora análoga de 3 agujas","Fecha"],"filtroFunc":"Fecha","muneca":[150,205],"variantes":[{"code":"MTP-V002D-1B3UDF","color":"Negro","img":"img/mtp-v002d-1b3udf.jpg","fotos":[]},{"code":"MTP-V002D-2B3UDF","color":"Azul","img":"img/mtp-v002d-2b3udf.jpg","fotos":[]},{"code":"MTP-V002D-7B3UDF","color":"Blanco","img":"img/mtp-v002d-7b3udf.jpg","fotos":[]}]},{"id":"mtp-1374d","ref":"MTP-1374D","genero":"Hombre","linea":"Casio","nombre":"Multifunción 50 m","desc":"Para lucir: 43,5 mm, tres subesferas y 50 metros de resistencia. Presencia total en la muñeca.","largo":47,"ancho":43.5,"grosor":11.1,"peso":124,"caja":"Metal con baño iónico (IP)","correa":"Acero","correaTxt":"Acero inoxidable, cierre de triple pliegue de un toque","cristal":"Mineral","movimiento":"Cuarzo japonés","wr":"50","pila":"SR927SW, dura aprox. 3 años","funciones":["Hora análoga de 3 agujas","Subesfera de fecha","Subesfera de día","Subesfera de 24 horas"],"filtroFunc":"Multifunción","muneca":[150,205],"variantes":[{"code":"MTP-1374D-7A2VDF","color":"Blanco","img":"img/mtp-1374d-7a2vdf.jpg","fotos":[]}]},{"id":"mtp-v300d","ref":"MTP-V300D","genero":"Hombre","linea":"Casio","nombre":"Multifunción","desc":"Tres subesferas con fecha, día y formato 24 horas. Look de cronógrafo, caja de 41,5 mm y acero.","largo":47,"ancho":41.5,"grosor":8.6,"peso":96,"caja":"Metal con acabado plateado (Negro Total: baño iónico negro)","correa":"Acero","correaTxt":"Acero inoxidable, cierre de triple pliegue","cristal":"Mineral","movimiento":"Cuarzo japonés","wr":"diario","pila":"SR920SW, dura aprox. 3 años","funciones":["Hora análoga de 3 agujas","Subesfera de fecha","Subesfera de día","Subesfera de 24 horas"],"filtroFunc":"Multifunción","muneca":null,"variantes":[{"code":"MTP-V300D-1AUDF","color":"Negro","img":"img/mtp-v300d-1audf.jpg","fotos":[]},{"code":"MTP-V300D-7AUDF","color":"Blanco","img":"img/mtp-v300d-7audf.jpg","fotos":[]}]},{"id":"mtp-1370d","ref":"MTP-1370D","genero":"Hombre","linea":"Casio","nombre":"Casio MTP-1370D","desc":"El día de la semana escrito completo, fecha y 50 metros. Acero de 39,8 mm.","largo":45,"ancho":39.8,"grosor":8.8,"peso":95,"caja":"Metal con baño iónico (IP)","correa":"Acero","correaTxt":"Acero inoxidable, cierre de triple pliegue","cristal":"Mineral","movimiento":"Cuarzo japonés","tipoMov":"cuarzo","wr":"50","pila":"SR920SW, dura aprox. 3 años","funciones":["Hora análoga de 3 agujas","Día de la semana completo","Fecha"],"filtroFunc":"Día y fecha","muneca":[150,205],"variantes":[{"code":"MTP-1370D-2A2VDF","color":"Azul","img":"img/mtp-1370d-2a2vdf.jpg","fotos":[]}]},{"id":"mtp-vd03d","ref":"MTP-VD03D","genero":"Hombre","linea":"Casio","nombre":"Casio MTP-VD03D","desc":"Acero de 41 mm con fecha y look deportivo. Para todos los días.","largo":48,"ancho":41,"grosor":9.6,"peso":106,"caja":"Metal con baño iónico (IP)","correa":"Acero","correaTxt":"Acero inoxidable, cierre de triple pliegue","cristal":"Mineral","movimiento":"Cuarzo japonés","tipoMov":"cuarzo","wr":"diario","pila":"SR626SW, dura aprox. 3 años","funciones":["Hora análoga de 3 agujas","Fecha"],"filtroFunc":"Fecha","muneca":[150,205],"variantes":[{"code":"MTP-VD03D-1AUDF","color":"Negro","img":"img/mtp-vd03d-1audf.jpg","fotos":[]},{"code":"MTP-VD03D-2A2UDF","color":"Azul","img":"img/mtp-vd03d-2a2udf.jpg","fotos":[]},{"code":"MTP-VD03D-3A1UDF","color":"Verde","img":"img/mtp-vd03d-3a1udf.jpg","fotos":[]}]},{"id":"mtp-v006d","ref":"MTP-V006D","genero":"Hombre","linea":"Casio","nombre":"Día y Fecha","desc":"Te dice el día y la fecha sin sacar el celular. Acero, 38 mm y un diseño que no pasa de moda.","largo":45.1,"ancho":38,"grosor":9.4,"peso":93,"caja":"Metal con acabado plateado","correa":"Acero","correaTxt":"Acero inoxidable, cierre de triple pliegue","cristal":"Mineral","movimiento":"Cuarzo japonés","wr":"diario","pila":"SR626SW, dura aprox. 2 años","funciones":["Hora análoga de 3 agujas","Día de la semana","Fecha"],"filtroFunc":"Día y fecha","muneca":[150,205],"variantes":[{"code":"MTP-V006D-1B2UDF","color":"Negro","img":"img/mtp-v006d-1b2udf.jpg","fotos":[]},{"code":"MTP-V006D-2BUDF","color":"Azul","img":"img/mtp-v006d-2budf.jpg","fotos":["img/vida/mtp-v006d-2budf-1.jpg"]},{"code":"MTP-V006D-7B2UDF","color":"Blanco","img":"img/mtp-v006d-7b2udf.jpg","fotos":["img/vida/mtp-v006d-7b2udf-1.jpg","img/vida/mtp-v006d-7b2udf-2.jpg","img/vida/mtp-v006d-7b2udf-3.jpg","img/vida/mtp-v006d-7b2udf-4.jpg","img/vida/mtp-v006d-7b2udf-5.jpg"]}]}];
+(function () {
+  "use strict";
+  var R = window.SELECCION, BASE = "/relojes";
+  var app = document.getElementById("app");
+
+  var COLORES = { "Negro": "#1d1d1b", "Blanco": "#f4f3ef", "Azul": "#22426b", "Verde": "#4b5a33", "Plateado": "#c7c9cc", "Dorado": "#c9a24c", "Gris": "#8a8c8f", "Café": "#6b4a2f" };
+  var WR = {
+    diario: { corto: "Uso diario", largo: "Resistente al agua de uso diario", si: "Lluvia, salpicaduras y lavarte las manos", no: "Nadar, ducharte o sumergirlo" },
+    "50": { corto: "50 m", largo: "Resistente al agua 50 metros (5 bar)", si: "Lluvia, lavarte las manos y nadar en piscina de forma ocasional", no: "Bucear, ducha caliente o sauna" },
+    "100": { corto: "100 m", largo: "Resistente al agua 100 metros (10 bar)", si: "Nadar en piscina o mar y hacer snorkel", no: "Buceo con tanque, ducha caliente o sauna" },
+    "200": { corto: "200 m", largo: "Resistente al agua 200 metros (20 bar)", si: "Nadar, snorkel y deportes acuáticos", no: "Buceo con tanque, ducha caliente o sauna" }
+  };
+  var MOV = {
+    cuarzo: { nombre: "Cuarzo japonés (análogo)", como: "Una pila hace vibrar un pequeño cristal de cuarzo y esa vibración mueve las agujas con precisión, sin darle cuerda." },
+    mecanico: { nombre: "Mecánico", como: "Funciona sin pila: un resorte al que se le da cuerda, a mano o con el movimiento de la muñeca, mueve las agujas." },
+    digital: { nombre: "Digital", como: "Una pila alimenta un chip que muestra la hora en números en una pantalla, sin agujas." },
+    anadigi: { nombre: "Cuarzo japonés (análogo y digital)", como: "Agujas movidas por un cristal de cuarzo y, además, una pantalla digital con funciones extra, todo con la misma pila." }
+  };
+  var CRISTAL = {
+    Mineral: { nombre: "Mineral", como: "Vidrio endurecido que aguanta bien los roces del día a día." },
+    Zafiro: { nombre: "Zafiro", como: "El cristal más duro que se usa en relojes: casi imposible de rayar en el uso diario." },
+    Resina: { nombre: "Resina", como: "Cristal liviano que no se rompe en pedazos si recibe un golpe. Ideal para uso deportivo." }
+  };
+  var check = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4.5 4.5L19 7"/></svg>';
+
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function fmtMm(n) { return String(n).replace(".", ","); }
+  function porId(id) { for (var i = 0; i < R.length; i++) if (R[i].id === id) return R[i]; return null; }
+  function variante(m, code) { for (var i = 0; i < m.variantes.length; i++) if (m.variantes[i].code === code) return m.variantes[i]; return m.variantes[0]; }
+  function colores(m) { var vistos = {}; return m.variantes.map(function (v) { return v.color; }).filter(function (c) { return vistos[c] ? false : (vistos[c] = true); }); }
+  function vida(m) { for (var i = 0; i < m.variantes.length; i++) if (m.variantes[i].fotos && m.variantes[i].fotos.length) return m.variantes[i].fotos[0]; return ""; }
+  function rangoRecomendado(cm, genero) {
+    var tabla = genero === "Mujer" ? [[14, 24, 28], [15.5, 26, 32], [17, 30, 36], [99, 34, 38]] : [[16, 34, 38], [17.5, 38, 41], [19, 40, 44], [99, 43, 48]];
+    for (var i = 0; i < tabla.length; i++) if (cm < tabla[i][0]) return { min: tabla[i][1], max: tabla[i][2] };
+    return { min: tabla[3][1], max: tabla[3][2] };
+  }
+
+  /* Tarjeta con cajas de color debajo (como el selector de tallas de una tienda de zapatos) */
+  function tarjeta(m) {
+    var v = m.variantes[0], alt = (v.fotos && v.fotos[0]) || "";
+    return '<div class="tarjeta" data-id="' + m.id + '">' +
+      '<a class="tarjeta-link" href="#' + m.id + "/" + encodeURIComponent(v.code) + '">' +
+      '<div class="tarjeta-img"><img class="pri" loading="lazy" src="' + BASE + "/" + v.img + '" alt="Reloj Casio ' + esc(m.ref) + " " + esc(v.color) + '">' +
+      '<img class="alt" loading="lazy" src="' + (alt ? BASE + "/" + alt : "") + '" alt=""' + (alt ? "" : " hidden") + "></div>" +
+      '<div class="tarjeta-cuerpo"><span class="tarjeta-linea">' + esc(m.linea) + " · " + esc(m.genero) + "</span>" +
+      '<span class="tarjeta-nombre">Casio ' + esc(m.ref) + "</span>" +
+      '<span class="tarjeta-specs">' + fmtMm(m.ancho) + " mm · " + esc(m.correa) + " · " + WR[m.wr].corto + "</span></div></a>" +
+      '<div class="tarjeta-colores"><span class="elige">Elige tu color</span><div class="cajas">' +
+      m.variantes.map(function (x, i) {
+        return '<button class="caja" type="button" data-cc="' + esc(x.code) + '" aria-pressed="' + (i === 0) + '">' + esc(x.color) + "</button>";
+      }).join("") + "</div></div></div>";
+  }
+  /* Tocar un color en la tarjeta cambia la foto y el link a ese color */
+  app.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-cc]"); if (!b) return;
+    var card = b.closest(".tarjeta"), m = porId(card.dataset.id), v = variante(m, b.dataset.cc);
+    var pri = card.querySelector("img.pri"), alt = card.querySelector("img.alt"), foto = (v.fotos && v.fotos[0]) || "";
+    pri.src = BASE + "/" + v.img; pri.alt = "Reloj Casio " + m.ref + " " + v.color;
+    alt.hidden = !foto; if (foto) alt.src = BASE + "/" + foto;
+    card.querySelector(".tarjeta-link").href = "#" + m.id + "/" + encodeURIComponent(v.code);
+    card.querySelectorAll("[data-cc]").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+  });
+
+  function pintarLista() {
+    document.title = "Elige tu reloj | Sky Relojes";
+    app.innerHTML =
+      '<section class="cat-cabeza"><div class="contenedor"><span class="eyebrow">Selección</span><h1>Elige tu reloj</h1>' +
+      "<p>Toca cada reloj para ver sus fotos, colores y ficha técnica. Cuando tengas el tuyo, dinos la referencia y el color.</p></div></section>" +
+      '<div class="contenedor lista"><strong class="conteo">' + R.length + ' relojes</strong><div class="grilla" id="resultados">' + R.map(tarjeta).join("") + "</div></div>";
+  }
+
+  function pintarFicha(m, code) {
+    var v = variante(m, code), wr = WR[m.wr], cri = CRISTAL[m.cristal] || CRISTAL.Mineral;
+    var munecaTxt = m.muneca ? "Ajusta muñecas de " + fmtMm(m.muneca[0] / 10) + " a " + fmtMm(m.muneca[1] / 10) + " cm" : "";
+    document.title = "Casio " + m.ref + " | Sky Relojes";
+    app.innerHTML =
+      '<div class="contenedor"><nav class="migas" aria-label="Ruta"><a href="#">Todos los relojes</a><span>/</span><span>' + esc(m.ref) + "</span></nav>" +
+      '<div class="ficha">' +
+        '<div class="galeria"><div class="principal"><span class="sello-original">Original Casio</span><img id="imgPrincipal" src="" alt=""></div><div class="miniaturas" id="miniaturas"></div></div>' +
+        '<div class="info">' +
+          '<span class="linea">' + esc(m.linea) + " · " + esc(m.genero) + "</span>" +
+          "<h1>Casio " + esc(m.ref) + "</h1>" +
+          '<div class="ref">Ref. <span id="refVar"></span></div>' +
+          '<p class="desc">' + esc(m.desc) + "</p>" +
+          '<div class="datos-rapidos">' +
+            '<div class="dato"><strong>' + fmtMm(m.ancho) + ' mm</strong><span>Ancho caja</span></div>' +
+            (m.peso ? '<div class="dato"><strong>' + m.peso + ' g</strong><span>Peso</span></div>' : '<div class="dato"><strong>' + fmtMm(m.grosor) + ' mm</strong><span>Grosor</span></div>') +
+            '<div class="dato"><strong>' + esc(wr.corto) + '</strong><span>Agua</span></div>' +
+          "</div>" +
+          '<div class="selector"><div class="selector-t">Color: <b id="colorVar"></b></div><div class="variantes" id="variantes"></div></div>' +
+          '<div class="elegido" id="elegido"></div>' +
+          '<ul class="beneficios">' +
+            "<li>" + check + "Casio original del distribuidor oficial en Colombia</li>" +
+            "<li>" + check + "Garantía de 12 meses</li>" +
+            "<li>" + check + "Movimiento de cuarzo japonés</li>" +
+          "</ul>" +
+          '<div class="tallas"><h2>¿Me queda bien?</h2>' +
+          '<ol class="medir">' +
+            "<li>Rodea tu muñeca con una cuerda o un hilo, justo debajo del hueso, sin apretar.</li>" +
+            "<li>Marca con el dedo dónde se cruza la cuerda.</li>" +
+            "<li>Estira la cuerda sobre una regla o un metro y mira cuántos centímetros mide.</li>" +
+            "<li>Pon esa medida aquí abajo.</li>" +
+          "</ol>" +
+          '<div class="tallas-fila"><input type="range" id="rango" min="12" max="22" step="0.5" value="' + (m.genero === "Mujer" ? 15 : 17.5) + '" aria-label="Contorno de muñeca en centímetros"><output id="salida"></output></div>' +
+          '<div class="veredicto" id="veredicto"></div>' +
+          (munecaTxt ? '<p class="nota-correa">' + munecaTxt + " con la correa original.</p>" : "") + "</div>" +
+          '<details class="bloque" open><summary>Ficha técnica</summary><div class="bloque-cuerpo"><table class="specs"><tbody>' +
+            "<tr><th>Para</th><td>" + esc(m.genero) + "</td></tr>" +
+            "<tr><th>Tamaño de la cara</th><td>" + fmtMm(m.ancho) + " mm de ancho, " + fmtMm(m.grosor) + " mm de grosor<small>Medidas de la caja: " + fmtMm(m.largo) + " × " + fmtMm(m.ancho) + " × " + fmtMm(m.grosor) + " mm (largo × ancho × alto)</small></td></tr>" +
+            (m.peso ? "<tr><th>Peso</th><td>" + m.peso + " g</td></tr>" : "") +
+            "<tr><th>Movimiento</th><td>" + esc(MOV[m.tipoMov || "cuarzo"].nombre) + "<small>" + esc(MOV[m.tipoMov || "cuarzo"].como) + "</small></td></tr>" +
+            "<tr><th>Cristal</th><td>" + esc(cri.nombre) + "<small>" + esc(cri.como) + "</small></td></tr>" +
+            "<tr><th>Resistencia al agua</th><td>" + esc(wr.largo) + "<small><b>Sí:</b> " + esc(wr.si) + ".<br><b>No:</b> " + esc(wr.no) + ".</small></td></tr>" +
+            "<tr><th>Correa</th><td>" + esc(m.correaTxt) + (munecaTxt ? "<small>" + munecaTxt + ".</small>" : "") + "</td></tr>" +
+            "<tr><th>Caja</th><td>" + esc(m.caja) + "<small>La caja es el cuerpo del reloj: la pieza que guarda el mecanismo y sostiene el cristal.</small></td></tr>" +
+            "<tr><th>Funciones</th><td><ul>" + m.funciones.map(function (f) { return "<li>" + esc(f) + "</li>"; }).join("") + "</ul></td></tr>" +
+            "<tr><th>Pila</th><td>" + esc(m.pila) + "</td></tr>" +
+            "<tr><th>Garantía</th><td>12 meses por defectos de fábrica</td></tr>" +
+          "</tbody></table></div></details>" +
+        "</div>" +
+      "</div></div>" +
+      '<section class="otros"><div class="contenedor"><div class="seccion-cabeza"><div><span class="eyebrow">Selección</span><h2>Los otros relojes</h2></div></div><div class="grilla g4">' +
+      R.filter(function (x) { return x.id !== m.id; }).map(tarjeta).join("") + "</div></div></section>";
+
+    function mostrar(src, esFoto) {
+      var img = document.getElementById("imgPrincipal");
+      img.src = BASE + "/" + src;
+      img.alt = "Reloj Casio " + m.ref + " color " + v.color + (esFoto ? " puesto" : "");
+      img.classList.toggle("foto", !!esFoto);
+      img.parentElement.classList.toggle("con-foto", !!esFoto);
+      document.querySelectorAll("[data-img]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.img === src)); });
+    }
+    function pintarVariante() {
+      var imgs = [v.img].concat(v.fotos || []);
+      document.getElementById("miniaturas").innerHTML = imgs.length > 1 ? imgs.map(function (s, i) {
+        return '<button type="button" data-img="' + esc(s) + '" data-foto="' + (i > 0 ? 1 : 0) + '" aria-label="Ver foto ' + (i + 1) + '"><img src="' + BASE + "/" + s + '" alt=""' + (i > 0 ? ' class="foto"' : "") + "></button>";
+      }).join("") : "";
+      mostrar(v.img, false);
+      document.getElementById("refVar").textContent = v.code;
+      document.getElementById("colorVar").textContent = v.color;
+      document.getElementById("elegido").innerHTML = "¿Te gustó este? Dinos: <strong>Casio " + esc(m.ref) + ", " + esc(v.color).toLowerCase() + "</strong> (ref. " + esc(v.code) + ")";
+      document.querySelectorAll("[data-code]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.code === v.code)); });
+      history.replaceState(null, "", location.pathname + "#" + m.id + "/" + encodeURIComponent(v.code));
+    }
+    document.getElementById("variantes").innerHTML = m.variantes.map(function (x) {
+      return '<button class="var-btn" type="button" data-code="' + esc(x.code) + '" aria-label="Color ' + esc(x.color) + '"><img src="' + BASE + "/" + x.img + '" alt=""><span>' + esc(x.color) + "</span></button>";
+    }).join("");
+    document.querySelector(".ficha").addEventListener("click", function (e) {
+      var g = e.target.closest("[data-img]");
+      if (g) { mostrar(g.dataset.img, g.dataset.foto === "1"); return; }
+      var b = e.target.closest("[data-code]"); if (!b) return;
+      v = variante(m, b.dataset.code); pintarVariante();
+    });
+    pintarVariante();
+
+    var rango = document.getElementById("rango");
+    function veredicto() {
+      var cm = parseFloat(rango.value);
+      document.getElementById("salida").textContent = fmtMm(cm) + " cm";
+      var r = rangoRecomendado(cm, m.genero), txt;
+      if (m.ancho < r.min - 1) txt = "Te va a quedar <strong>pequeño y discreto</strong>. Para tu muñeca lo ideal son " + r.min + " a " + r.max + " mm y este mide " + fmtMm(m.ancho) + " mm.";
+      else if (m.ancho > r.max + 1) txt = "Te va a quedar <strong>grande, con mucha presencia</strong>. Para tu muñeca lo ideal son " + r.min + " a " + r.max + " mm y este mide " + fmtMm(m.ancho) + " mm.";
+      else txt = "<strong>Te queda bien.</strong> Para tu muñeca lo ideal son " + r.min + " a " + r.max + " mm y este mide " + fmtMm(m.ancho) + " mm.";
+      if (m.muneca && (cm * 10 < m.muneca[0] || cm * 10 > m.muneca[1])) txt += " Ojo: la correa original ajusta de " + fmtMm(m.muneca[0] / 10) + " a " + fmtMm(m.muneca[1] / 10) + " cm.";
+      document.getElementById("veredicto").innerHTML = txt;
+    }
+    rango.addEventListener("input", veredicto);
+    veredicto();
+  }
+
+  function ruta() {
+    var h = decodeURIComponent(location.hash.slice(1)).split("/");
+    var m = porId(h[0]);
+    if (m) pintarFicha(m, h[1]); else pintarLista();
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener("hashchange", ruta);
+  ruta();
+})();
+</script>
+</body>
+</html>
