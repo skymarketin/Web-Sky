@@ -18,17 +18,17 @@
   @media (min-width: 1400px) { #resultados { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   .lista { padding-top: 28px; padding-bottom: 80px; }
   .lista strong.conteo { display: block; font: 700 22px/1 var(--t-titulo); text-transform: uppercase; margin-bottom: 14px; }
-  .tarjeta-link { display: flex; flex-direction: column; flex: 1; }
-  .tarjeta-colores { padding: 0 14px 16px; }
-  .elige { display: block; font: 500 12px/1 var(--t-texto); letter-spacing: .1em; text-transform: uppercase; color: var(--gris); margin-bottom: 10px; }
-  .cajas { display: flex; flex-wrap: wrap; border-top: 1px solid var(--arena-300); border-left: 1px solid var(--arena-300); }
-  .caja { flex: 1 1 0; max-width: 33.333%; min-width: 0; min-height: 44px; padding: 0 4px; border-right: 1px solid var(--arena-300); border-bottom: 1px solid var(--arena-300); background: var(--blanco); font: 600 13px/1 var(--t-texto); color: var(--tinta); cursor: pointer; }
-  @media (min-width: 700px) { .caja { flex: 0 0 76px; max-width: none; font-size: 14px; } }
-  .caja[aria-pressed="true"] { box-shadow: inset 0 0 0 2px var(--verde-700); }
-  .caja { position: relative; }
-  .caja .mini { position: absolute; left: 50%; bottom: calc(100% + 8px); width: 84px; height: 84px; transform: translate(-50%, 6px); background: var(--blanco); border: 1px solid var(--arena-300); border-radius: var(--radio); box-shadow: 0 6px 18px rgba(0, 0, 0, .14); display: grid; place-items: center; opacity: 0; pointer-events: none; transition: opacity .15s, transform .15s; z-index: 3; }
-  .caja .mini img { width: 88%; height: 88%; object-fit: contain; }
-  @media (hover: hover) { .caja:hover .mini, .caja:focus-visible .mini { opacity: 1; transform: translate(-50%, 0); } }
+  .media { position: relative; }
+  .tarjeta-img img[hidden] { display: none !important; }
+  .tarjeta-cuerpo { color: inherit; }
+  .tira { position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; padding: 12px 10px; opacity: 0; transform: translateY(10px); pointer-events: none; transition: opacity .2s, transform .2s; }
+  @media (hover: hover) { .tarjeta:hover .tira { opacity: 1; transform: none; pointer-events: auto; } }
+  @media (hover: none) { .tira { display: none; } }
+  .mini-btn { width: 56px; height: 56px; padding: 0; background: var(--blanco); border: 1.5px solid var(--arena-300); border-radius: var(--radio); display: grid; place-items: center; cursor: pointer; box-shadow: 0 4px 12px rgba(0, 0, 0, .12); }
+  .mini-btn img { width: 86%; height: 86%; object-fit: contain; }
+  .mini-btn[aria-pressed="true"] { border-color: var(--verde-700); box-shadow: inset 0 0 0 1px var(--verde-700), 0 4px 12px rgba(0, 0, 0, .12); }
+  .tarjeta:has(.tira:hover) .tarjeta-img img.alt { opacity: 0; }
+  .tarjeta:has(.tira:hover) .tarjeta-img img.pri { transform: none; }
 
   .migas { font-size: 13px; color: var(--gris); padding: 18px 0; display: flex; gap: 8px; flex-wrap: wrap; }
   .migas a { text-decoration: underline; }
@@ -146,32 +146,31 @@ window.SELECCION = [{"id":"mtp-v002d","ref":"MTP-V002D","genero":"Hombre","linea
     return { min: tabla[3][1], max: tabla[3][2] };
   }
 
-  /* Tarjeta con cajas de color debajo (como el selector de tallas de una tienda de zapatos) */
+  /* Tarjeta: al pasar el cursor aparecen las miniaturas de cada color para escoger */
   function tarjeta(m) {
-    var v = m.variantes[0], alt = (v.fotos && v.fotos[0]) || "";
+    var v = m.variantes[0], alt = (v.fotos && v.fotos[0]) || "", href = "#" + m.id + "/" + encodeURIComponent(v.code);
     return '<div class="tarjeta" data-id="' + m.id + '">' +
-      '<a class="tarjeta-link" href="#' + m.id + "/" + encodeURIComponent(v.code) + '">' +
-      '<div class="tarjeta-img"><img class="pri" loading="lazy" src="' + BASE + "/" + v.img + '" alt="Reloj Casio ' + esc(m.ref) + " " + esc(v.color) + '">' +
-      '<img class="alt" loading="lazy" src="' + (alt ? BASE + "/" + alt : "") + '" alt=""' + (alt ? "" : " hidden") + "></div>" +
-      '<div class="tarjeta-cuerpo"><span class="tarjeta-linea">' + esc(m.linea) + " · " + esc(m.genero) + "</span>" +
+      '<div class="media"><a class="tarjeta-img" href="' + href + '"><img class="pri" loading="lazy" src="' + BASE + "/" + v.img + '" alt="Reloj Casio ' + esc(m.ref) + " " + esc(v.color) + '">' +
+      '<img class="alt" loading="lazy" src="' + (alt ? BASE + "/" + alt : "") + '" alt=""' + (alt ? "" : " hidden") + "></a>" +
+      '<div class="tira">' + m.variantes.map(function (x, i) {
+        return '<button class="mini-btn" type="button" data-cc="' + esc(x.code) + '" aria-pressed="' + (i === 0) + '" title="' + esc(x.color) + '" aria-label="Color ' + esc(x.color) + '"><img loading="lazy" src="' + BASE + "/" + x.img + '" alt=""></button>';
+      }).join("") + "</div></div>" +
+      '<a class="tarjeta-cuerpo" href="' + href + '"><span class="tarjeta-linea">' + esc(m.linea) + " · " + esc(m.genero) + "</span>" +
       '<span class="tarjeta-nombre">Casio ' + esc(m.ref) + "</span>" +
-      '<span class="tarjeta-specs">' + fmtMm(m.ancho) + " mm · " + esc(m.correa) + " · " + WR[m.wr].corto + "</span></div></a>" +
-      '<div class="tarjeta-colores"><span class="elige">Elige tu color</span><div class="cajas">' +
-      m.variantes.map(function (x, i) {
-        return '<button class="caja" type="button" data-cc="' + esc(x.code) + '" aria-pressed="' + (i === 0) + '">' + esc(x.color) +
-          '<span class="mini" aria-hidden="true"><img loading="lazy" src="' + BASE + "/" + x.img + '" alt=""></span></button>';
-      }).join("") + "</div></div></div>";
+      '<span class="tarjeta-specs">' + fmtMm(m.ancho) + " mm · " + esc(m.correa) + " · " + WR[m.wr].corto + "</span></a></div>";
   }
-  /* Tocar un color en la tarjeta cambia la foto y el link a ese color */
-  app.addEventListener("click", function (e) {
+  /* Pasar o tocar una miniatura cambia la foto y el link a ese color */
+  function elegir(e) {
     var b = e.target.closest("[data-cc]"); if (!b) return;
     var card = b.closest(".tarjeta"), m = porId(card.dataset.id), v = variante(m, b.dataset.cc);
     var pri = card.querySelector("img.pri"), alt = card.querySelector("img.alt"), foto = (v.fotos && v.fotos[0]) || "";
     pri.src = BASE + "/" + v.img; pri.alt = "Reloj Casio " + m.ref + " " + v.color;
     alt.hidden = !foto; if (foto) alt.src = BASE + "/" + foto;
-    card.querySelector(".tarjeta-link").href = "#" + m.id + "/" + encodeURIComponent(v.code);
+    card.querySelectorAll("a").forEach(function (a) { a.href = "#" + m.id + "/" + encodeURIComponent(v.code); });
     card.querySelectorAll("[data-cc]").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
-  });
+  }
+  app.addEventListener("mouseover", elegir);
+  app.addEventListener("click", elegir);
 
   function pintarLista() {
     document.title = "Elige tu reloj | Sky Relojes";
