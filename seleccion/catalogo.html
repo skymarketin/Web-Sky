@@ -25,6 +25,10 @@
   .caja { flex: 1 1 0; max-width: 33.333%; min-width: 0; min-height: 44px; padding: 0 4px; border-right: 1px solid var(--arena-300); border-bottom: 1px solid var(--arena-300); background: var(--blanco); font: 600 13px/1 var(--t-texto); color: var(--tinta); cursor: pointer; }
   @media (min-width: 700px) { .caja { flex: 0 0 76px; max-width: none; font-size: 14px; } }
   .caja[aria-pressed="true"] { box-shadow: inset 0 0 0 2px var(--verde-700); }
+  .caja { position: relative; }
+  .caja .mini { position: absolute; left: 50%; bottom: calc(100% + 8px); width: 84px; height: 84px; transform: translate(-50%, 6px); background: var(--blanco); border: 1px solid var(--arena-300); border-radius: var(--radio); box-shadow: 0 6px 18px rgba(0, 0, 0, .14); display: grid; place-items: center; opacity: 0; pointer-events: none; transition: opacity .15s, transform .15s; z-index: 3; }
+  .caja .mini img { width: 88%; height: 88%; object-fit: contain; }
+  @media (hover: hover) { .caja:hover .mini, .caja:focus-visible .mini { opacity: 1; transform: translate(-50%, 0); } }
 
   .migas { font-size: 13px; color: var(--gris); padding: 18px 0; display: flex; gap: 8px; flex-wrap: wrap; }
   .migas a { text-decoration: underline; }
@@ -154,7 +158,8 @@ window.SELECCION = [{"id":"mtp-v002d","ref":"MTP-V002D","genero":"Hombre","linea
       '<span class="tarjeta-specs">' + fmtMm(m.ancho) + " mm · " + esc(m.correa) + " · " + WR[m.wr].corto + "</span></div></a>" +
       '<div class="tarjeta-colores"><span class="elige">Elige tu color</span><div class="cajas">' +
       m.variantes.map(function (x, i) {
-        return '<button class="caja" type="button" data-cc="' + esc(x.code) + '" aria-pressed="' + (i === 0) + '">' + esc(x.color) + "</button>";
+        return '<button class="caja" type="button" data-cc="' + esc(x.code) + '" aria-pressed="' + (i === 0) + '">' + esc(x.color) +
+          '<span class="mini" aria-hidden="true"><img loading="lazy" src="' + BASE + "/" + x.img + '" alt=""></span></button>';
       }).join("") + "</div></div></div>";
   }
   /* Tocar un color en la tarjeta cambia la foto y el link a ese color */
