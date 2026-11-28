@@ -151,7 +151,7 @@ window.SELECCION = [{"id":"mtp-v002d","ref":"MTP-V002D","genero":"Hombre","linea
     var v = m.variantes[0], alt = (v.fotos && v.fotos[0]) || "", href = "#" + m.id + "/" + encodeURIComponent(v.code);
     return '<div class="tarjeta" data-id="' + m.id + '">' +
       '<div class="media"><a class="tarjeta-img" href="' + href + '"><img class="pri" loading="lazy" src="' + BASE + "/" + v.img + '" alt="Reloj Casio ' + esc(m.ref) + " " + esc(v.color) + '">' +
-      '<img class="alt" loading="lazy" src="' + (alt ? BASE + "/" + alt : "") + '" alt=""' + (alt ? "" : " hidden") + "></a>" +
+      (alt ? '<img class="alt" loading="lazy" src="' + BASE + "/" + alt + '" alt="">' : "") + "</a>" +
       '<div class="tira">' + m.variantes.map(function (x, i) {
         return '<button class="mini-btn" type="button" data-cc="' + esc(x.code) + '" aria-pressed="' + (i === 0) + '" title="' + esc(x.color) + '" aria-label="Color ' + esc(x.color) + '"><img loading="lazy" src="' + BASE + "/" + x.img + '" alt=""></button>';
       }).join("") + "</div></div>" +
@@ -165,7 +165,8 @@ window.SELECCION = [{"id":"mtp-v002d","ref":"MTP-V002D","genero":"Hombre","linea
     var card = b.closest(".tarjeta"), m = porId(card.dataset.id), v = variante(m, b.dataset.cc);
     var pri = card.querySelector("img.pri"), alt = card.querySelector("img.alt"), foto = (v.fotos && v.fotos[0]) || "";
     pri.src = BASE + "/" + v.img; pri.alt = "Reloj Casio " + m.ref + " " + v.color;
-    alt.hidden = !foto; if (foto) alt.src = BASE + "/" + foto;
+    if (alt) alt.remove();
+    if (foto) { var n = document.createElement("img"); n.className = "alt"; n.alt = ""; n.src = BASE + "/" + foto; card.querySelector(".tarjeta-img").appendChild(n); }
     card.querySelectorAll("a").forEach(function (a) { a.href = "#" + m.id + "/" + encodeURIComponent(v.code); });
     card.querySelectorAll("[data-cc]").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
   }
